@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-CONTENT = ROOT / "content"
+CONTENT = ROOT   # tout le projet tient dans un seul dossier
 
 EMOJI = re.compile("[\U0001F000-\U0001FAFF\u2600-\u27BF\u2B00-\u2BFF\uFE0F\u20E3\u2B50\u2757]")
 E = html.escape
@@ -469,8 +469,22 @@ def build(out: Path) -> Path:
 
 
 if __name__ == "__main__":
-    ap = argparse.ArgumentParser(description="Générateur du site YOSEI-DIF")
-    ap.add_argument("--out", default=str(ROOT.parent / "indexYoseikan.html"))
+    ap = argparse.ArgumentParser(
+        description="Générateur du site YOSEI-DIF. Écrit index.html et .nojekyll dans "
+                    "le dossier du projet, directement publiable par GitHub Pages.")
+    ap.add_argument("--site", default=str(ROOT),
+                    help="dossier de sortie (défaut : le dossier du projet)")
     a = ap.parse_args()
-    p = build(Path(a.out))
-    print(f"  Généré : {p}  ({p.stat().st_size / 1024:.0f} Ko)")
+
+    site = Path(a.site)
+    site.mkdir(parents=True, exist_ok=True)
+
+    # index.html : nom imposé par GitHub Pages pour la racine servie.
+    page_index = build(site / "index.html")
+    # .nojekyll : désactive le pipeline Jekyll. Nom imposé, fichier vide.
+    nojekyll = site / ".nojekyll"
+    nojekyll.touch()
+
+    print(f"  index.html  {page_index.stat().st_size / 1024:>6.0f} Ko")
+    print(f"  .nojekyll   {nojekyll.stat().st_size:>6} o")
+    print(f"  → {site}")

@@ -2,7 +2,7 @@
 """YOSEI-DIF — banque d'exercices, trame de saison, modèle de plan de séance."""
 import json
 from pathlib import Path
-C = Path(__file__).parent / "content"
+C = Path(__file__).parent
 def w(n, o):
     (C/n).write_text(json.dumps(o, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"  {n:22} {len(o)} entrées")

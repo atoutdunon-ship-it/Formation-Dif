@@ -1,0 +1,317 @@
+[
+ {
+  "cat": "Retour sur la séance",
+  "q": "Quel était l'objectif de votre séance, formulé en une phrase ?",
+  "attendu": "Un objectif opérationnel et unique : « à la fin de la séance, le pratiquant est capable de… ». Pas un thème, pas une liste."
+ },
+ {
+  "cat": "Retour sur la séance",
+  "q": "À quoi avez-vous vu que votre objectif était atteint ?",
+  "attendu": "Citer le critère de réussite observable retenu et ce que vous avez réellement observé, y compris les échecs."
+ },
+ {
+  "cat": "Retour sur la séance",
+  "q": "Qu'est-ce que vous changeriez si vous refaisiez cette séance demain ?",
+  "attendu": "Une ou deux modifications précises et justifiées. L'auto-analyse lucide est valorisée ; l'autosatisfaction est sanctionnée."
+ },
+ {
+  "cat": "Retour sur la séance",
+  "q": "Votre échauffement préparait-il vraiment la tâche principale ?",
+  "attendu": "Montrer le lien : sollicitations articulaires, filières, gestuelles communes avec le corps de séance."
+ },
+ {
+  "cat": "Retour sur la séance",
+  "q": "Comment avez-vous géré le pratiquant qui n'y arrivait pas ?",
+  "attendu": "Différenciation : simplification de la tâche, variable didactique modifiée, aide d'un partenaire, sans jamais l'exclure du groupe."
+ },
+ {
+  "cat": "Retour sur la séance",
+  "q": "Combien de temps vos pratiquants ont-ils réellement pratiqué ?",
+  "attendu": "Notion de temps moteur. Identifier les temps morts : consignes trop longues, files d'attente, démonstrations à rallonge."
+ },
+ {
+  "cat": "Retour sur la séance",
+  "q": "Pourquoi avoir choisi cette progression et pas une autre ?",
+  "attendu": "Justifier l'ordre : du simple au complexe, du connu vers l'inconnu, du sûr vers l'incertain, de la coopération vers l'opposition."
+ },
+ {
+  "cat": "Retour sur la séance",
+  "q": "Quelle variable didactique avez-vous fait varier ?",
+  "attendu": "Espace, temps, nombre, matériel, règles, incertitude. Nommer celle qui a été manipulée et l'effet recherché."
+ },
+ {
+  "cat": "Retour sur la séance",
+  "q": "Votre démonstration était-elle nécessaire ? Où étiez-vous placé ?",
+  "attendu": "Démonstration courte, visible de tous, orientée. Placement de l'enseignant : jamais dos à une partie du groupe."
+ },
+ {
+  "cat": "Retour sur la séance",
+  "q": "Comment avez-vous conclu votre séance ?",
+  "attendu": "Retour au calme, rappel de l'objectif, valorisation, annonce du lien avec la séance suivante."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Quelle différence faites-vous entre un thème et un objectif ?",
+  "attendu": "Le thème est le contenu tiré au sort ; l'objectif est le résultat attendu chez le pratiquant, formulé de façon observable et mesurable."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Méthode analytique ou méthode globale : que privilégiez-vous ?",
+  "attendu": "Ni l'une ni l'autre en absolu. Global pour donner du sens, analytique pour corriger un point précis, global à nouveau pour réintégrer."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Comment corrigez-vous une erreur technique ?",
+  "attendu": "Hiérarchiser : sécurité d'abord, puis erreur qui bloque la réussite, puis détail de forme. Une correction à la fois, formulée positivement."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Faut-il corriger devant tout le groupe ou individuellement ?",
+  "attendu": "Erreur collective : arrêt du groupe. Erreur individuelle : intervention discrète. Ne jamais exposer un pratiquant en difficulté."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Qu'est-ce qu'une consigne efficace ?",
+  "attendu": "Courte, une seule idée, orientée vers le but et non vers la forme, associée à un critère de réussite. Vérifiée par reformulation."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Comment maintenez-vous l'attention d'un groupe ?",
+  "attendu": "Densité de pratique, alternance des formats, variation du rythme, rotation des partenaires, consignes brèves, feedback fréquent."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Qu'est-ce que la pédagogie du détour ?",
+  "attendu": "Passer par une situation différente de la tâche cible pour lever un blocage, puis revenir à la tâche cible."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Comment évaluez-vous vos pratiquants au quotidien ?",
+  "attendu": "Évaluation continue par l'observation de critères annoncés, pas seulement au passage de grade. Traçabilité simple."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Quelle place donnez-vous à l'erreur dans l'apprentissage ?",
+  "attendu": "L'erreur est une information, pas une faute. Elle renseigne sur la représentation du pratiquant et oriente la régulation."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Comment gérez-vous un groupe à niveaux très hétérogènes ?",
+  "attendu": "Objectif commun, tâches à niveaux d'exigence différents, ateliers, tutorat entre pratiquants, appariement raisonné."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Quel rôle donnez-vous à la démonstration par un pratiquant ?",
+  "attendu": "Valorisation, modèle accessible, prise de recul de l'enseignant. Attention à ne pas exposer un pratiquant fragile."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Comment préparez-vous une séance concrètement ?",
+  "attendu": "Objectif, public, durée, matériel, sécurité, situations avec critères, plan B. Écrit avant, régulé pendant, analysé après."
+ },
+ {
+  "cat": "Publics",
+  "q": "Qu'est-ce qui change fondamentalement entre une séance enfant et une séance adulte ?",
+  "attendu": "Durée d'attention, capacité d'abstraction, motivation, tolérance à la répétition, rapport au corps et au risque. Le contenu ludique n'est pas un contenu au rabais."
+ },
+ {
+  "cat": "Publics",
+  "q": "Que faites-vous d'un enfant de 5 ans qui ne tient pas en place ?",
+  "attendu": "C'est la norme à cet âge, pas un problème de discipline. Réduire les temps d'attente, raccourcir les tâches, augmenter la rotation."
+ },
+ {
+  "cat": "Publics",
+  "q": "Quelles précautions particulières chez l'adolescent ?",
+  "attendu": "Croissance : prudence sur les charges, les impacts et les amplitudes articulaires. Besoin de sens, de reconnaissance et d'un cadre stable."
+ },
+ {
+  "cat": "Publics",
+  "q": "Comment intégrez-vous un pratiquant en situation de handicap ?",
+  "attendu": "Même objectif, moyens adaptés. Échanger avec la personne et son entourage, adapter la tâche et non la baisser, intégrer au groupe."
+ },
+ {
+  "cat": "Publics",
+  "q": "Comment accueillez-vous un débutant en cours de saison ?",
+  "attendu": "Référent désigné, objectifs propres, situations où il peut réussir immédiatement, explicitation des rituels et du vocabulaire."
+ },
+ {
+  "cat": "Publics",
+  "q": "Un adulte reprend après une longue interruption : que faites-vous ?",
+  "attendu": "Reprise progressive, questionnement sur les antécédents, dosage de l'intensité, valorisation des acquis conservés."
+ },
+ {
+  "cat": "Publics",
+  "q": "Séance mixte enfants et adultes : comment procédez-vous ?",
+  "attendu": "À éviter si possible. Sinon, ateliers séparés avec un temps commun ritualisé, et vigilance accrue sur les différences de gabarit."
+ },
+ {
+  "cat": "Publics",
+  "q": "Quel est le premier facteur de démotivation chez l'enfant ?",
+  "attendu": "L'absence de réussite et l'attente. Densité de pratique et réussite accessible sont les deux leviers principaux."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Que vérifiez-vous avant chaque séance ?",
+  "attendu": "Tatami, espace libre, matériel, ongles et bijoux, état de santé du jour, trousse de secours, moyen d'alerte, effectif présent."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Un pratiquant se blesse pendant votre cours : que faites-vous ?",
+  "attendu": "Arrêt du cours, mise en sécurité du groupe, protection et bilan, alerte des secours si nécessaire, prévenir les responsables légaux et le président, déclaration à l'assurance dans les délais."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Quelle est votre responsabilité en tant qu'encadrant ?",
+  "attendu": "Obligation de moyens : sécurité, surveillance, adaptation au niveau. La responsabilité civile est couverte par l'assurance fédérale ; la responsabilité pénale reste personnelle."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Que couvre la licence fédérale ?",
+  "attendu": "Affiliation, assurance en responsabilité civile et garanties de base, accès aux compétitions, stages et passages de grade. Les garanties complémentaires sont optionnelles."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Un pratiquant n'est pas licencié : peut-il monter sur le tatami ?",
+  "attendu": "Non au-delà de la période d'essai prévue par le club et son assurance. Sans couverture, l'encadrant et le club s'exposent."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Que faites-vous d'un certificat médical ou questionnaire de santé manquant ?",
+  "attendu": "Appliquer la réglementation en vigueur et la règle interne du club : pas de pratique tant que la situation administrative n'est pas régularisée."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Comment prévenez-vous le risque lié à l'opposition ?",
+  "attendu": "Appariement par gabarit et niveau, règles de contact explicites, signal d'arrêt commun, protections obligatoires, progressivité de l'incertitude."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Que faites-vous en cas de comportement violent d'un pratiquant ?",
+  "attendu": "Arrêt immédiat, mise à l'écart du tatami, entretien après le cours, information des responsables légaux et du président, rappel du règlement intérieur."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Connaissez-vous l'obligation d'honorabilité ?",
+  "attendu": "Tout encadrant, bénévole ou rémunéré, est soumis au contrôle d'honorabilité. La déclaration se fait via la fédération et le club en vérifie l'effectivité."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Quelles protections imposez-vous et quand ?",
+  "attendu": "Selon la discipline et le type d'opposition : protège-dents, protections de poings et de pieds, coquille, protège-tibias. Vérification avant chaque situation d'opposition."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Comment le Yoseikan Budo est-il rattaché au mouvement fédéral français ?",
+  "attendu": "Situer la discipline au sein de la fédération délégataire et de ses disciplines associées, et son lien avec la structure propre à la discipline. À compléter depuis vos documents officiels."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Décrivez l'organisation fédérale du club jusqu'au national.",
+  "attendu": "Club, comité départemental, ligue régionale, fédération nationale, puis instances internationales de la discipline."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Qu'est-ce qu'une discipline associée ?",
+  "attendu": "Discipline rattachée à une fédération délégataire, disposant de son propre programme technique, de ses grades et de ses commissions, dans le cadre fédéral commun."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Qui délivre les grades et selon quelle procédure ?",
+  "attendu": "La commission compétente, sur la base d'un programme technique, de conditions d'ancienneté, de licence et d'âge. À préciser depuis vos documents officiels."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "À quels événements fédéraux avez-vous participé cette saison ?",
+  "attendu": "Réponse personnelle et documentée : stages, formations, compétitions, passages de grade, coupes. Le jury attend des faits datés, pas des intentions."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Quel est le rôle du conseiller technique ?",
+  "attendu": "Accompagnement technique et pédagogique des clubs, formation des cadres, mise en œuvre de la politique technique fédérale sur le territoire."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Quelle est la différence entre le DIF et un CQP ou un diplôme d'État ?",
+  "attendu": "Le DIF est un diplôme fédéral d'encadrement bénévole. L'enseignement contre rémunération relève d'une qualification professionnelle inscrite au répertoire national."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Que trouve-t-on dans le calendrier fédéral d'une saison ?",
+  "attendu": "Stages techniques, formations de cadres, passages de grade, compétitions et coupes, assemblées générales, événements de la discipline."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Comment vous tenez-vous informé des évolutions techniques et réglementaires ?",
+  "attendu": "Sources officielles fédérales, circulaires, stages de cadres, réunions de ligue et de comité départemental."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Pourquoi passez-vous le DIF ?",
+  "attendu": "Réponse personnelle mais structurée : légitimité, montée en compétence, besoin du club, projet d'encadrement à moyen terme."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Comment fonctionne une association loi 1901 ?",
+  "attendu": "Assemblée générale souveraine, conseil d'administration, bureau (président, trésorier, secrétaire), statuts et règlement intérieur."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Quelle est la place de l'enseignant dans le projet du club ?",
+  "attendu": "Il traduit le projet associatif en projet pédagogique : publics accueillis, progression, objectifs de saison, événements."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Comment fidélisez-vous vos pratiquants sur une saison ?",
+  "attendu": "Réussite perceptible, progression lisible, événements fédérateurs, lien avec les familles, régularité et qualité de l'accueil."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Comment communiquez-vous avec les parents ?",
+  "attendu": "Cadre défini : réunion de début de saison, informations écrites, point individuel sur demande. Ne jamais gérer un différend au bord du tatami."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Que feriez-vous pour développer la section jeunes ?",
+  "attendu": "Créneaux adaptés, interventions scolaires ou périscolaires, événements de rentrée, valorisation des passages de grade, animation d'équipe."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Quel est le rôle du règlement intérieur ?",
+  "attendu": "Préciser les règles de vie, d'assiduité, de tenue, de sécurité et de sanction. Il est opposable et doit être porté à connaissance."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Comment organisez-vous un événement au sein du club ?",
+  "attendu": "Objectif, budget, autorisations, encadrement, sécurité et secours, communication, bilan. Validation par le bureau."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Travaillez-vous seul ou en équipe pédagogique ?",
+  "attendu": "Réponse personnelle : répartition des créneaux, réunions de coordination, tutorat des assistants, cohérence de la progression entre enseignants."
+ },
+ {
+  "cat": "Discipline",
+  "q": "Qu'est-ce qui caractérise le Yoseikan Budo par rapport aux autres budo ?",
+  "attendu": "Approche synthétique intégrant percussions, projections, travail au sol et travail avec armes, autour de principes communs de mouvement. À préciser et étayer depuis vos documents officiels."
+ },
+ {
+  "cat": "Discipline",
+  "q": "Quels sont les principes fondamentaux que vous enseignez en priorité ?",
+  "attendu": "Réponse personnelle et hiérarchisée : posture, déplacement, distance, timing, contrôle. Doit être cohérente avec la séance présentée."
+ },
+ {
+  "cat": "Discipline",
+  "q": "Comment expliquez-vous le sens du mot budo à un enfant ?",
+  "attendu": "Une voie, pas seulement une technique : apprendre à se maîtriser, à respecter l'autre et à progresser dans la durée."
+ },
+ {
+  "cat": "Discipline",
+  "q": "Comment articulez-vous pratique de loisir et pratique de compétition ?",
+  "attendu": "Objectifs distincts, tronc technique commun. La compétition est un outil de formation, pas la finalité de tous les pratiquants."
+ },
+ {
+  "cat": "Discipline",
+  "q": "Comment intégrez-vous les valeurs du budo dans une séance concrète ?",
+  "attendu": "Par les rituels, les règles de contrôle, la responsabilisation dans les rôles et l'exigence de sécurité mutuelle — pas par le discours seul."
+ }
+]

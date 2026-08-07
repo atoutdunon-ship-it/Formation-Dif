@@ -2,7 +2,7 @@
 """YOSEI-DIF — quiz par module (content/quiz.json)."""
 import json, re
 from pathlib import Path
-C = Path(__file__).parent / "content"
+C = Path(__file__).parent
 tronc = json.loads((C / "quiz_tronc_commun.json").read_text(encoding="utf-8"))
 
 def scrub(q):

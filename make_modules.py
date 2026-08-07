@@ -2,8 +2,8 @@
 """YOSEI-DIF — modules de connaissances (content/modules.json)."""
 import json, re
 from pathlib import Path
-C = Path(__file__).parent / "content"
-raw = json.loads((C / "_raw_pages.json").read_text(encoding="utf-8"))
+C = Path(__file__).parent
+raw = json.loads((C / "extrait_pages_karate.json").read_text(encoding="utf-8"))
 
 EMOJI = re.compile("[\U0001F000-\U0001FAFF\u2190-\u21FF\u2600-\u27BF\u2B00-\u2BFF\uFE0F\u20E3\u2B50\u2757]")
 

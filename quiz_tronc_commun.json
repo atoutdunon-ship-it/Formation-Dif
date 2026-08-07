@@ -1,0 +1,770 @@
+{
+ "q3": {
+  "title": "Quiz — Pédagogie",
+  "module": "m3",
+  "questions": [
+   {
+    "q": "Le DIF permet-il d'enseigner le karaté à titre professionnel (rémunéré) ?",
+    "opts": [
+     "Oui, dans tous les clubs",
+     "Oui, pour les mineurs uniquement",
+     "Non, c'est une habilitation bénévole",
+     "Oui, avec accord du Comité départemental"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Quelle est le bon ordre des phases d'une séance de karaté ?",
+    "opts": [
+     "Corps de séance Échauffement Salut Retour au calme",
+     "Salut Échauffement Corps de séance Retour au calme",
+     "Échauffement Salut Corps de séance Retour au calme",
+     "Salut Corps de séance Échauffement Retour au calme"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La méthode G-A-G signifie :",
+    "opts": [
+     "Globale-Adaptée-Guidée",
+     "Générale-Analytique-Globale",
+     "Globale-Analytique-Globale",
+     "Guidée-Analytique-Guidée"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Quel style d'apprentissage bénéficie le plus de la démonstration ?",
+    "opts": [
+     "Auditif",
+     "Kinesthésique",
+     "Tactile",
+     "Visuel"
+    ],
+    "correct": 3
+   },
+   {
+    "q": "Pour les enfants de 6-12 ans, quelle approche est recommandée ?",
+    "opts": [
+     "Séances longues avec technique complexe",
+     "Jeux éducatifs, séances courtes, sollicitation positive",
+     "Compétition intensive pour la motivation",
+     "Apprentissage identique aux adultes"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "L'ordre pédagogique idéal pour enseigner une technique est :",
+    "opts": [
+     "Expliquer Montrer Corriger Faire faire",
+     "Montrer Expliquer Faire faire Corriger",
+     "Faire faire Montrer Expliquer Corriger",
+     "Corriger Expliquer Faire faire Montrer"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La méthode analytique convient particulièrement :",
+    "opts": [
+     "Aux compétiteurs de haut niveau",
+     "Aux débutants",
+     "Aux grades 1er Dan et plus",
+     "Aux séances de Kumité libre"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le délai légal pour déclarer un accident FFKDA est :",
+    "opts": [
+     "24 heures",
+     "48 heures",
+     "72 heures",
+     "1 semaine"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Quelle qualification est nécessaire pour enseigner le karaté contre rémunération ?",
+    "opts": [
+     "DIF + 1er Dan",
+     "BPJEPS ou DEJEPS",
+     "CQP Instructeur",
+     "Brevet d'État ancien régime"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Quel diplôme de secourisme est recommandé pour un instructeur DIF ?",
+    "opts": [
+     "DEUST",
+     "BNSSA",
+     "PSC1",
+     "PADI"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Le DIF est délivré par :",
+    "opts": [
+     "Le Ministère des Sports",
+     "L'INSEP",
+     "La FFKDA",
+     "La Ligue régionale uniquement"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Quelle est la durée typique du corps de séance ?",
+    "opts": [
+     "5-10 min",
+     "15-20 min",
+     "30-40 min",
+     "60-70 min"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Un pratiquant kinesthésique apprend mieux via :",
+    "opts": [
+     "La lecture de supports théoriques",
+     "L'écoute d'explications verbales",
+     "La mise en situation et la pratique directe",
+     "Le visionnage de vidéos"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Pour les seniors, on adapte la séance en évitant principalement :",
+    "opts": [
+     "Les techniques de bras",
+     "Les sauts et les amplitudes articulaires extrêmes",
+     "Le travail de Kata",
+     "Le travail en binôme"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La méthode globale consiste à :",
+    "opts": [
+     "Décomposer chaque technique en éléments simples",
+     "Exécuter la technique complète d'emblée, puis corriger progressivement",
+     "Ne travailler qu'en exercices analytiques",
+     "Enseigner uniquement par démonstration"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Quelle est la durée typique de l'échauffement en karaté ?",
+    "opts": [
+     "2-3 min",
+     "5-7 min",
+     "10-15 min",
+     "25-30 min"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "L'instructeur DIF peut légalement :",
+    "opts": [
+     "Ouvrir son propre cours rémunéré",
+     "Encadrer bénévolement dans un club affilié FFKDA",
+     "Délivrer des diplômes fédéraux",
+     "Organiser seul des compétitions régionales"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La « différenciation pédagogique » consiste à :",
+    "opts": [
+     "Enseigner le même contenu à tous",
+     "Adapter le contenu et les méthodes aux niveaux et besoins de chacun",
+     "Séparer les hommes des femmes dans les cours",
+     "Changer de style de karaté selon le public"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Lors d'une correction technique, bonne pratique est de :",
+    "opts": [
+     "Corriger publiquement et fermement pour l'exemple",
+     "Valoriser d'abord le positif, puis corriger avec bienveillance",
+     "Ne corriger qu'en fin de séance",
+     "Laisser l'élève trouver seul ses erreurs sans intervention"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "En cas d'accident grave au dojo, l'instructeur doit :",
+    "opts": [
+     "Attendre que l'élève se relève",
+     "Sécuriser la zone, appeler les secours (15/18/112), ne pas mobiliser si fracture suspectée",
+     "Donner de l'eau et reprendre le cours",
+     "Contacter uniquement le club"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Quelle phase de séance est prioritairement consacrée aux étirements passifs ?",
+    "opts": [
+     "L'échauffement",
+     "Le début du corps de séance",
+     "Le milieu du corps de séance",
+     "Le retour au calme"
+    ],
+    "correct": 3
+   },
+   {
+    "q": "L'objectif du salut d'ouverture (Rei) en début de séance est :",
+    "opts": [
+     "Évaluer les niveaux",
+     "Marquer le passage du quotidien à la pratique martiale, instaurer le respect",
+     "Tester la souplesse des élèves",
+     "Commencer l'échauffement cardio"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Pour enseigner à des adolescents (13-17 ans), il est conseillé de :",
+    "opts": [
+     "Imposer des règles strictes sans explication",
+     "Favoriser l'autonomie progressive et expliquer le pourquoi des techniques",
+     "Traiter les ados exactement comme des adultes",
+     "Éviter tout travail de Kumité"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La notion de « gainage » est importante en karaté car :",
+    "opts": [
+     "Elle développe uniquement les abdominaux",
+     "Elle améliore la stabilité du tronc et la transmission de puissance",
+     "Elle remplace l'échauffement",
+     "Elle sert uniquement en compétition"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le Seiza est utilisé au dojo principalement pour :",
+    "opts": [
+     "L'échauffement des chevilles",
+     "Le salut formel et la méditation (Mokuso)",
+     "La pratique du Kihon assis",
+     "Le stretching des jambes"
+    ],
+    "correct": 1
+   }
+  ]
+ },
+ "q4": {
+  "title": "Quiz — Réglementation",
+  "module": "m4",
+  "questions": [
+   {
+    "q": "WKF signifie :",
+    "opts": [
+     "World Karate Federation",
+     "World Kung-Fu Federation",
+     "World Karate & Fighting",
+     "Western Karate Foundation"
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Combien de points vaut un Ippon en Kumité WKF ?",
+    "opts": [
+     "1 point",
+     "2 points",
+     "3 points",
+     "5 points"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Combien de points vaut un coup de poing (Yuko) ?",
+    "opts": [
+     "1 point",
+     "2 points",
+     "3 points",
+     "0,5 point"
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Quelle est la durée d'un combat senior masculin en WKF ?",
+    "opts": [
+     "1 minute 30",
+     "2 minutes",
+     "3 minutes",
+     "4 minutes"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Le Senshu est :",
+    "opts": [
+     "Une technique de compétition",
+     "La règle de la première marque en cas d'égalité",
+     "Un avertissement",
+     "Un kata de compétition"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Que signifie Hansoku ?",
+    "opts": [
+     "Avertissement léger",
+     "Disqualification du combat",
+     "Victoire par abandon",
+     "Premier score marqué"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La FFKDA est :",
+    "opts": [
+     "La Fédération Française de Karaté et Disciplines Associées",
+     "La Fédération Française de Kobudo et Disciplines d'Arts martiaux",
+     "La Fédération Féminine de Karaté, Défense et Arts martiaux",
+     "La Fédération Française de Karaté-do et Arts traditionnels"
+    ],
+    "correct": 0
+   },
+   {
+    "q": "En kata de compétition WKF, combien de juges y a-t-il ?",
+    "opts": [
+     "3 juges",
+     "4 juges",
+     "5 juges",
+     "7 juges"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Une licence FFKDA inclut :",
+    "opts": [
+     "Uniquement une assurance civile",
+     "Une assurance responsabilité civile ET individuelle accident",
+     "Aucune assurance (à souscrire séparément)",
+     "Une assurance valable à l'étranger uniquement"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le Shikkaku en compétition correspond à :",
+    "opts": [
+     "Un avertissement",
+     "Une disqualification du combat",
+     "Une exclusion du tournoi entier",
+     "Une pénalité d'un point"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Que vaut un Waza-ari en Kumité WKF ?",
+    "opts": [
+     "1 point",
+     "2 points",
+     "3 points",
+     "4 points"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La durée d'un combat senior féminin en WKF est :",
+    "opts": [
+     "1 minute 30",
+     "2 minutes",
+     "3 minutes",
+     "4 minutes"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "L'EKF est :",
+    "opts": [
+     "L'Équipe de Karaté de France",
+     "La fédération européenne de karaté",
+     "Un label de club d'excellence",
+     "Un diplôme fédéral européen"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le Chui en Kumité est :",
+    "opts": [
+     "Un point marqué",
+     "Un avertissement officiel",
+     "Une disqualification",
+     "Une sortie de surface"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La victoire par supériorité technique se déclenche avec un écart de :",
+    "opts": [
+     "5 points",
+     "6 points",
+     "8 points",
+     "10 points"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Quel document est requis à la première inscription en club FFKDA ?",
+    "opts": [
+     "Un justificatif de domicile",
+     "Un certificat médical de non contre-indication à la pratique",
+     "Une attestation scolaire",
+     "Un diplôme sportif"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "En kata WKF, la règle sur la répétition du même kata est :",
+    "opts": [
+     "Le même kata peut être répété autant de fois que souhaité",
+     "Un kata ne peut être exécuté qu'une seule fois par compétiteur",
+     "Interdit dans la même épreuve sauf en finale",
+     "Autorisé seulement en qualification"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Hansoku-chui est :",
+    "opts": [
+     "Un simple avertissement sans conséquence",
+     "Un avertissement lourd : la prochaine infraction entraîne Hansoku",
+     "Une disqualification immédiate",
+     "Une sortie de surface autorisée"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La durée d'un combat Cadet ou Junior en WKF est :",
+    "opts": [
+     "1 minute 30",
+     "2 minutes",
+     "3 minutes",
+     "4 minutes"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le terme « Jogai » désigne :",
+    "opts": [
+     "Un point de pénalité",
+     "Une sortie de la surface de combat",
+     "Un avertissement pour excès de contact",
+     "Une disqualification"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Quelle zone est interdite en Kumité WKF ?",
+    "opts": [
+     "Le torse",
+     "La tête",
+     "Les genoux et articulations",
+     "L'abdomen"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Le Shomen du dojo est :",
+    "opts": [
+     "Le vestiaire",
+     "La face principale/mur d'honneur du dojo",
+     "Le tatami central",
+     "Le coin réservé aux professeurs"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "En compétition kata WKF, après avoir retiré le meilleur et le moins bon score, on :",
+    "opts": [
+     "Garde le score médian",
+     "Additionne les 3 scores restants",
+     "Fait la moyenne des 5 scores",
+     "Prend uniquement le score le plus haut restant"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Un combattant ayant reçu 2 Chui de catégorie 1 reçoit automatiquement :",
+    "opts": [
+     "Un 3e Chui",
+     "Un Hansoku-chui",
+     "Un Hansoku (disqualification du combat)",
+     "Un Shikkaku"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "La durée d'un combat enfant en WKF est :",
+    "opts": [
+     "1 minute",
+     "1 minute 30",
+     "2 minutes",
+     "3 minutes"
+    ],
+    "correct": 1
+   }
+  ]
+ },
+ "q5": {
+  "title": "Quiz — Physiologie",
+  "module": "m5",
+  "questions": [
+   {
+    "q": "Quelle filière énergétique est sollicitée lors d'un Kime explosif (0-10 sec) ?",
+    "opts": [
+     "Aérobie",
+     "Anaérobie lactique",
+     "Anaérobie alactique",
+     "Mixte lactique/aérobie"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "L'acronyme RICE pour les blessures signifie :",
+    "opts": [
+     "Repos-Immobilisation-Compression-Élévation",
+     "Repos-Ice-Compression-Élévation",
+     "Repos-Ice-Chaleur-Exercice",
+     "Repos-Immobilisation-Chaleur-Élévation"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Les étirements statiques doivent être pratiqués :",
+    "opts": [
+     "Avant l'échauffement",
+     "Pendant l'échauffement",
+     "En milieu de séance",
+     "En retour au calme (fin de séance)"
+    ],
+    "correct": 3
+   },
+   {
+    "q": "La chaîne cinétique de puissance en karaté part de :",
+    "opts": [
+     "L'épaule vers le poing",
+     "Les hanches vers le pied",
+     "Le sol vers les hanches puis l'épaule",
+     "La tête vers le sol"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Quel muscle est principalement impliqué dans la flexion de hanche (Mae-geri) ?",
+    "opts": [
+     "Quadriceps uniquement",
+     "Psoas iliaque",
+     "Grand fessier",
+     "Gastrocnémien"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le transverse de l'abdomen joue un rôle clé dans :",
+    "opts": [
+     "La propulsion des bras",
+     "La flexion des genoux",
+     "La stabilisation du tronc et le Kime",
+     "La rotation de la cheville"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "L'objectif principal de l'échauffement articulaire est :",
+    "opts": [
+     "Brûler des calories",
+     "Améliorer la lubrification articulaire (synovie)",
+     "Développer la force maximale",
+     "Apprendre les techniques"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Pour prévenir les lombalgies chez le karatéka, on privilégie :",
+    "opts": [
+     "L'entraînement uniquement des membres inférieurs",
+     "Le renforcement du gainage et la correction posturale",
+     "Les étirements passifs quotidiens sans renforcement",
+     "La pratique exclusive du Kumité"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Combien de temps applique-t-on la glace lors d'une blessure aiguë ?",
+    "opts": [
+     "5 minutes",
+     "15-20 minutes",
+     "45 minutes",
+     "1 heure"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le karaté sollicite principalement quelles filières ?",
+    "opts": [
+     "Uniquement aérobie",
+     "Uniquement anaérobie lactique",
+     "Anaérobie alactique + anaérobie lactique principalement",
+     "Filière lipidique exclusive"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Les muscles principalement impliqués dans le Gyaku-zuki (coup de poing) sont :",
+    "opts": [
+     "Biceps et ischio-jambiers",
+     "Grand pectoral, deltoïde et triceps",
+     "Quadriceps et mollets",
+     "Trapèzes et lombaires"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le grand fessier est sollicité principalement dans :",
+    "opts": [
+     "La flexion de la hanche (Mae-geri)",
+     "La rotation du bassin en Kumité",
+     "L'extension de la hanche (propulsion en déplacement)",
+     "La flexion du coude"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "La fréquence cardiaque maximale théorique est estimée par :",
+    "opts": [
+     "180 - âge",
+     "200 - âge",
+     "220 - âge",
+     "240 - âge"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Les étirements dynamiques sont appropriés :",
+    "opts": [
+     "Uniquement en fin de séance",
+     "Pendant l'échauffement, avant l'effort",
+     "Après une blessure aiguë",
+     "Jamais en karaté"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La tendinite de l'épaule chez le karatéka touche souvent :",
+    "opts": [
+     "Le biceps distal",
+     "La coiffe des rotateurs",
+     "Le tendon d'Achille",
+     "Le ligament croisé"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "L'entorse de cheville se prévient notamment par :",
+    "opts": [
+     "Le port de chaussures épaisses",
+     "Le travail de proprioception et le renforcement musculaire",
+     "L'évitement de tout travail de pied",
+     "La pratique exclusive sur béton"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le rôle des muscles obliques en karaté est principalement :",
+    "opts": [
+     "La flexion des genoux",
+     "La rotation du bassin pour transférer la puissance",
+     "Le maintien de la nuque",
+     "L'extension du coude"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Une blessure fréquente aux doigts et orteils en karaté est :",
+    "opts": [
+     "La tendinite chronique",
+     "L'entorse du genou",
+     "La fracture par contact ou chute sur le tatami",
+     "La lombalgie"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Une augmentation de 1°C de température musculaire entraîne :",
+    "opts": [
+     "Une diminution de performance de 5%",
+     "Un gain de performance d'environ 5%",
+     "Aucune variation de performance",
+     "Une augmentation du risque de blessure uniquement"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le « gainage » désigne :",
+    "opts": [
+     "L'entraînement des mollets",
+     "Le renforcement des muscles profonds stabilisateurs du tronc",
+     "La résistance aux chocs du gi",
+     "Un type d'étirement"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Pourquoi les étirements passifs avant séance sont-ils déconseillés ?",
+    "opts": [
+     "Ils augmentent le risque de crampes",
+     "Ils diminuent temporairement la force et la tonicité musculaire",
+     "Ils provoquent des tendinites immédiates",
+     "Ils ne présentent aucun inconvénient"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La filière anaérobie lactique est sollicitée sur une durée d'environ :",
+    "opts": [
+     "0 à 10 secondes",
+     "10 à 90 secondes",
+     "2 à 5 minutes",
+     "Plus de 10 minutes"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le protocole RICE s'applique idéalement :",
+    "opts": [
+     "Uniquement après 24h",
+     "Dans les premières heures après une blessure aiguë",
+     "Seulement pour les fractures",
+     "En fin de semaine d'entraînement"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La coordination entre hikite (retrait du bras) et tsuki (coup de poing) fait appel à :",
+    "opts": [
+     "Uniquement aux muscles de l'épaule",
+     "La rotation des hanches et la co-contraction des membres supérieurs",
+     "Uniquement aux muscles du dos",
+     "La flexion des genoux"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Les ischio-jambiers jouent un rôle important dans :",
+    "opts": [
+     "L'extension du coude",
+     "La rotation de la cheville",
+     "La flexion du genou et l'extension de la hanche",
+     "La propulsion du bras"
+    ],
+    "correct": 2
+   }
+  ]
+ }
+}

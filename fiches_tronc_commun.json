@@ -1,0 +1,166 @@
+{
+ "m3": {
+  "title": "Pédagogie & Méthodologie",
+  "sections": [
+   {
+    "h": "Rôle et limites du DIF",
+    "items": [
+     "DIF = habilitation bénévole délivrée par la <b>FFKDA</b> (pas un diplôme d'État)",
+     "Encadrement uniquement dans un club affilié FFKDA, sous responsabilité d'un DE",
+     "Pas de rémunération possible — diplôme professionnel requis : <b>BPJEPS ou DEJEPS</b>",
+     "Conditions : 1er Dan minimum · 18 ans · licence en cours de validité",
+     "Déclaration accident : <b>48h</b> auprès de la FFKDA"
+    ]
+   },
+   {
+    "h": "Structure de séance (4 phases)",
+    "items": [
+     "<b>1. Salut (2-3 min)</b> — Seiza, Mokuso, Rei — passage du quotidien au Budo",
+     "<b>2. Échauffement (10-15 min)</b> — cardio général mobilisation étirements dyn.",
+     "<b>3. Corps de séance (30-40 min)</b> — kihon, kata ou kumité selon objectif",
+     "<b>4. Retour au calme (5-10 min)</b> — étirements statiques, bilan, salut final"
+    ]
+   },
+   {
+    "h": "Méthodes pédagogiques",
+    "items": [
+     "<b>Analytique</b> — décomposition en éléments idéal débutants",
+     "<b>Globale</b> — technique complète d'emblée idéal confirmés",
+     "<b>Méthode G-A-G</b> (Globale Analytique Globale) — recommandée",
+     "Ordre : <b>Montrer Expliquer Faire faire Corriger</b>",
+     "Styles VAK : <b>Visuel</b> (démo) · <b>Auditif</b> (explication) · <b>Kinesthésique</b> (pratique)"
+    ]
+   },
+   {
+    "h": "Adaptation aux publics",
+    "items": [
+     "<b>Enfants (6-12)</b> — jeux éducatifs, séances courtes, langage imagé, positif",
+     "<b>Ados (13-17)</b> — autonomie progressive, expliquer le pourquoi, groupes pairs",
+     "<b>Adultes</b> — objectifs personnels, respect du rythme, valoriser l'expérience",
+     "<b>Seniors</b> — pas de sauts, amplitudes réduites, équilibre, respiration",
+     "<b>Handicap</b> — adapter postures, partenariats, valoriser chaque progrès"
+    ]
+   },
+   {
+    "h": "Sécurité au dojo",
+    "items": [
+     "Vérification équipements : protège-dents, coquille, protège-pieds, casque",
+     "Ongles coupés, bijoux retirés, surface non glissante",
+     "Règles de contrôle en Kumité — contact contrôlé selon catégorie",
+     "PSC1 recommandé — numéros d'urgence affichés (15 / 18 / 112)",
+     "Déclaration accident FFKDA sous <b>48h</b>"
+    ]
+   }
+  ]
+ },
+ "m4": {
+  "title": "Réglementation & Arbitrage",
+  "sections": [
+   {
+    "h": "Structure institutionnelle",
+    "items": [
+     "<b>WKF</b> — World Karate Federation (mondiale) · <b>EKF</b> — European Karate Federation",
+     "<b>FFKDA</b> — Fédération Française de Karaté et Disciplines Associées",
+     "Ligue régionale Comité départemental Club affilié"
+    ]
+   },
+   {
+    "h": "Kumité WKF — Système de points",
+    "items": [
+     "<b>Yuko = 1 pt</b> — coup de poing technique en zone valide",
+     "<b>Waza-ari = 2 pts</b> — coup de pied chudan, balayage suivi de technique",
+     "<b>Ippon = 3 pts</b> — coup de pied jodan, balayage + technique au sol",
+     "Victoire par <b>8 pts d'écart</b> · Égalité règle du <b>Senshu</b> (1ère marque)"
+    ]
+   },
+   {
+    "h": "Durées des combats",
+    "items": [
+     "Senior H : <b>3 min</b> · Senior F : <b>2 min</b>",
+     "Junior / Cadet : <b>2 min</b> · Enfants : <b>1 min 30</b>",
+     "Surface : tatami <b>8×8 m</b> (zone combat) + 1m de sécurité"
+    ]
+   },
+   {
+    "h": "Pénalités Kumité",
+    "items": [
+     "<b>Chui</b> = avertissement (Cat.1 : excès contact, fuite, simulation)",
+     "<b>Hansoku-chui</b> = avertissement lourd (prochaine Hansoku)",
+     "<b>Hansoku</b> = disqualification du combat",
+     "<b>Shikkaku</b> = exclusion du tournoi entier",
+     "<b>Jogai</b> = sortie de surface (répétée Chui)"
+    ]
+   },
+   {
+    "h": "Kata compétition WKF",
+    "items": [
+     "5 juges — retrait meilleur + moins bon — addition des 3 restants",
+     "Même kata interdit dans la même épreuve (sauf finale)",
+     "Zones évaluées : technique + athlétisme (puissance, vitesse, équilibre)",
+     "Bunkai peut être demandé en haut niveau"
+    ]
+   },
+   {
+    "h": "Licences et assurances FFKDA",
+    "items": [
+     "Licence obligatoire — inclut <b>RC + individuelle accident</b>",
+     "1ère licence : <b>certificat médical</b> de non contre-indication",
+     "Années suivantes : questionnaire de santé (auto-certification)",
+     "Pratique sans licence = responsabilité du club"
+    ]
+   }
+  ]
+ },
+ "m5": {
+  "title": "Physiologie & Anatomie Sportive",
+  "sections": [
+   {
+    "h": "Filières énergétiques",
+    "items": [
+     "<b>Anaérobie alactique (0-10s)</b> — ATP-PC — kime, techniques explosives",
+     "<b>Anaérobie lactique (10-90s)</b> — glycolyse — séquences de kumité intense",
+     "<b>Aérobie (+90s)</b> — lipides + glucides — endurance de séance, katas longues",
+     "FC max théorique = <b>220 - âge</b>"
+    ]
+   },
+   {
+    "h": "Groupes musculaires clés",
+    "items": [
+     "<b>Tsuki (poing)</b> — grand pectoral, deltoïde, triceps + obliques (rotation bassin)",
+     "<b>Mae-geri (pied frontal)</b> — psoas iliaque (flex. hanche) + quadriceps (extension genou)",
+     "<b>Gainage (stabilisation)</b> — transverse abdominal, multifides, carré des lombes",
+     "<b>Chaîne cinétique</b> : sol appui bassin tronc épaule impact"
+    ]
+   },
+   {
+    "h": "Protocole d'échauffement",
+    "items": [
+     "<b>Phase 1 (5 min)</b> — Cardio général : courses, déplacements",
+     "<b>Phase 2 (5 min)</b> — Mobilisation articulaire : cervicales chevilles",
+     "<b>Phase 3 (3-5 min)</b> — Étirements dynamiques (sans à-coups)",
+     "<b>Phase 4 (5 min)</b> — Mise en route technique : kihon léger",
+     "1°C de T° musculaire ≈ +5% de performance"
+    ]
+   },
+   {
+    "h": "Blessures fréquentes & RICE",
+    "items": [
+     "Entorse cheville/genou proprioception + renforcement",
+     "Tendinite épaule (coiffe rotateurs) progressivité, repos",
+     "Fractures doigts/orteils protections, technique correcte",
+     "Lombalgie gainage, posture, renforcement profond",
+     "<b>RICE</b> : <b>R</b>epos · <b>I</b>ce (15-20min) · <b>C</b>ompression · <b>É</b>lévation"
+    ]
+   },
+   {
+    "h": "Étirements — Règles essentielles",
+    "items": [
+     "Étirements <b>dynamiques</b> : autorisés en échauffement (avant effort)",
+     "Étirements <b>statiques</b> : uniquement en retour au calme (fin de séance)",
+     "Étirements passifs avant séance diminuent temporairement force et tonicité",
+     "Durée étirement statique efficace : <b>20-30 secondes</b> par groupe musculaire"
+    ]
+   }
+  ]
+ }
+}

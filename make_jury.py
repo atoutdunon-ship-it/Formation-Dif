@@ -2,7 +2,7 @@
 """YOSEI-DIF — banque de questions d'entretien avec le jury."""
 import json
 from pathlib import Path
-C = Path(__file__).parent / "content"
+C = Path(__file__).parent
 
 Q = lambda cat, q, att: {"cat": cat, "q": q, "attendu": att}
 SEANCE, PEDA, PUB, SEC, FED, CLUB, DISC = (

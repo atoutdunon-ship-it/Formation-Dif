@@ -4,7 +4,7 @@ from __future__ import annotations
 import json
 from pathlib import Path
 
-C = Path(__file__).parent / "content"; C.mkdir(exist_ok=True)
+C = Path(__file__).parent
 def w(name, obj):
     (C / name).write_text(json.dumps(obj, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"  {name:26} {len(json.dumps(obj, ensure_ascii=False)):>7} o")

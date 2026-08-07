@@ -1,0 +1,1416 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="DIF Yoseikan Budo — Préparation au Diplôme d&#x27;Instructeur Fédéral">
+<title>DIF Yoseikan Budo — Préparation au Diplôme d&#x27;Instructeur Fédéral</title>
+<link rel="icon" href="data:,">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy-900:#050D1B; --navy-850:#081428; --navy-800:#0B1B33; --navy-700:#10294B;
+  --navy-600:#16386A; --navy-500:#1D4E8F; --steel:#3F6FA8; --steel-soft:#E8EEF6;
+  --black:#0A0C10; --ink:#151B24; --body:#2A3441; --gray:#5E6A7A; --muted:#8B95A3;
+  --line:#DFE4EB; --line-soft:#EDF0F4; --bg:#F5F7FA; --white:#FFFFFF;
+  --ok:#0F6B4F; --ok-bg:#EAF5F1; --warn:#8A5A00; --warn-bg:#FBF3E4; --alert:#8C2323; --alert-bg:#F9EDED;
+  --sh-1:0 1px 2px rgba(10,20,40,.05),0 1px 3px rgba(10,20,40,.04);
+  --sh-2:0 2px 8px rgba(10,20,40,.07),0 1px 3px rgba(10,20,40,.05);
+  --sh-3:0 16px 40px rgba(5,13,27,.14),0 4px 12px rgba(5,13,27,.08);
+  --r:4px; --r-lg:6px; --hdr:64px; --side:286px;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --sans:"Inter","Helvetica Neue",Helvetica,Arial,system-ui,sans-serif;
+  --mono:"SFMono-Regular",Menlo,Consolas,monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);background:var(--bg);color:var(--body);font-size:14.5px;line-height:1.62;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+
+/* ── HEADER ─────────────────────────────────────────── */
+header{height:var(--hdr);background:var(--navy-900);color:var(--white);display:flex;align-items:center;
+  padding:0 26px;position:sticky;top:0;z-index:300;border-bottom:1px solid rgba(255,255,255,.08)}
+.brand{display:flex;align-items:baseline;gap:14px}
+.brand .code{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;color:var(--steel);
+  border:1px solid rgba(63,111,168,.5);padding:3px 8px;border-radius:2px}
+.brand h1{font-family:var(--serif);font-size:1.12rem;font-weight:600;letter-spacing:.01em;color:#fff}
+.brand span{font-size:.74rem;color:rgba(255,255,255,.46);letter-spacing:.02em}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:10px}
+.hdr-stat{font-size:.72rem;color:rgba(255,255,255,.55);letter-spacing:.06em;text-transform:uppercase;
+  padding-right:14px;border-right:1px solid rgba(255,255,255,.12)}
+.hdr-stat b{color:#fff;font-weight:600}
+
+/* ── LAYOUT ─────────────────────────────────────────── */
+.shell{display:flex;min-height:calc(100vh - var(--hdr))}
+nav#sidebar{width:var(--side);flex-shrink:0;background:var(--navy-850);border-right:1px solid rgba(255,255,255,.06);
+  position:sticky;top:var(--hdr);height:calc(100vh - var(--hdr));overflow-y:auto;padding:20px 0 60px}
+nav#sidebar::-webkit-scrollbar{width:6px}
+nav#sidebar::-webkit-scrollbar-thumb{background:rgba(255,255,255,.12);border-radius:3px}
+.nav-sec{font-size:.63rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,.34);padding:20px 26px 8px}
+.nav-sec:first-child{padding-top:2px}
+nav#sidebar a{display:flex;align-items:center;gap:10px;padding:8px 26px;color:rgba(255,255,255,.72);
+  font-size:.845rem;cursor:pointer;border-left:2px solid transparent;transition:.13s;user-select:none}
+nav#sidebar a:hover{background:rgba(255,255,255,.045);color:#fff}
+nav#sidebar a.active{background:linear-gradient(90deg,rgba(29,78,143,.42),transparent);
+  color:#fff;border-left-color:var(--steel);font-weight:600}
+nav#sidebar a .n{font-family:var(--mono);font-size:.66rem;color:rgba(255,255,255,.34);min-width:20px}
+nav#sidebar a.active .n{color:var(--steel)}
+nav#sidebar a .flag{margin-left:auto;font-size:.58rem;letter-spacing:.09em;text-transform:uppercase;
+  padding:1px 5px;border-radius:2px;border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.5)}
+nav#sidebar a .flag.done{background:rgba(63,111,168,.28);border-color:transparent;color:#CFE0F2}
+nav#sidebar a .flag.todo{border-color:rgba(255,255,255,.14);color:rgba(255,255,255,.36)}
+main{flex:1;min-width:0;padding:30px 40px 90px;max-width:1180px}
+.page{display:none;animation:in .22s ease}
+.page.active{display:block}
+@keyframes in{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+
+/* ── TYPO ───────────────────────────────────────────── */
+h2{font-family:var(--serif);font-size:1.24rem;font-weight:600;color:var(--navy-900);margin-bottom:12px;letter-spacing:.005em}
+h3{font-size:.94rem;font-weight:700;color:var(--navy-700);margin:20px 0 8px;letter-spacing:.005em}
+h4{font-size:.82rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.1em;margin:16px 0 6px}
+p{margin-bottom:11px}
+ul,ol{margin:0 0 12px 20px}
+li{margin-bottom:5px}
+strong{color:var(--ink);font-weight:600}
+em{color:var(--navy-600);font-style:italic}
+code{font-family:var(--mono);font-size:.82em;background:var(--steel-soft);color:var(--navy-700);padding:1px 5px;border-radius:2px}
+a.lnk{color:var(--navy-500);text-decoration:underline;text-underline-offset:2px}
+
+/* ── CARTES ─────────────────────────────────────────── */
+.card{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:24px 26px;margin-bottom:16px;box-shadow:var(--sh-1)}
+.card.todo{border-style:dashed;background:#FBFCFD}
+.card>h2:first-child{padding-bottom:11px;border-bottom:1px solid var(--line-soft);margin-bottom:14px}
+.hero{background:var(--navy-900);color:#fff;border:none;padding:34px 34px 30px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-70px;top:-70px;width:280px;height:280px;
+  border:1px solid rgba(63,111,168,.22);border-radius:50%}
+.hero::before{content:"";position:absolute;right:-20px;top:-20px;width:180px;height:180px;
+  border:1px solid rgba(63,111,168,.14);border-radius:50%}
+.hero h2{color:#fff;font-size:1.5rem;border:none;margin-bottom:8px}
+.hero p{color:rgba(255,255,255,.62);max-width:660px}
+.hero .kicker{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;color:var(--steel);
+  text-transform:uppercase;margin-bottom:12px}
+.banner{background:linear-gradient(100deg,var(--navy-800),var(--navy-600));color:#fff;
+  border-radius:var(--r-lg);padding:26px 30px;margin-bottom:18px;box-shadow:var(--sh-2)}
+.banner .b-num{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;color:rgba(255,255,255,.5);
+  text-transform:uppercase;margin-bottom:6px}
+.banner h2{color:#fff;border:none;margin-bottom:5px;padding:0}
+.banner p{color:rgba(255,255,255,.68);margin:0}
+.b-tags{display:flex;gap:7px;margin-top:13px;flex-wrap:wrap}
+.b-tag{font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;padding:3px 9px;
+  border:1px solid rgba(255,255,255,.28);border-radius:2px;color:rgba(255,255,255,.85)}
+.b-tag-gold{background:rgba(255,255,255,.14);border-color:transparent}
+
+/* ── ENCADRES ───────────────────────────────────────── */
+.memo{display:flex;gap:13px;background:var(--steel-soft);border-left:3px solid var(--navy-500);
+  border-radius:0 var(--r) var(--r) 0;padding:14px 17px;margin:14px 0}
+.memo-icon{font-family:var(--serif);font-weight:700;color:var(--navy-500);font-size:1rem;line-height:1.4}
+.memo-body{font-size:.88rem;color:var(--ink)}
+.memo-body strong{display:block;color:var(--navy-700);margin-bottom:3px;font-size:.78rem;
+  text-transform:uppercase;letter-spacing:.08em}
+.info-box{background:var(--ok-bg);border-left:3px solid var(--ok);padding:13px 16px;
+  border-radius:0 var(--r) var(--r) 0;margin:13px 0;font-size:.89rem}
+.warn-box{background:var(--warn-bg);border-left:3px solid var(--warn);padding:13px 16px;
+  border-radius:0 var(--r) var(--r) 0;margin:13px 0;font-size:.89rem}
+.alert-box{background:var(--alert-bg);border-left:3px solid var(--alert);padding:13px 16px;
+  border-radius:0 var(--r) var(--r) 0;margin:13px 0;font-size:.89rem}
+
+/* ── TABLEAUX ───────────────────────────────────────── */
+.table-wrap{overflow-x:auto;margin:13px 0;border:1px solid var(--line);border-radius:var(--r)}
+table{width:100%;border-collapse:collapse;font-size:.87rem;background:var(--white)}
+th{background:var(--navy-800);color:#fff;text-align:left;padding:9px 13px;font-weight:600;
+  font-size:.72rem;letter-spacing:.09em;text-transform:uppercase;white-space:nowrap}
+td{padding:9px 13px;border-top:1px solid var(--line-soft);vertical-align:top}
+tr:nth-child(even) td{background:#FAFBFD}
+
+/* ── BOUTONS ────────────────────────────────────────── */
+.btn{font-family:var(--sans);font-size:.83rem;font-weight:600;letter-spacing:.02em;
+  padding:9px 18px;border:1px solid transparent;border-radius:var(--r);cursor:pointer;transition:.14s;
+  background:var(--navy-800);color:#fff}
+.btn:hover{background:var(--navy-600)}
+.btn:disabled{opacity:.4;cursor:not-allowed}
+.btn-ghost{background:transparent;color:var(--navy-700);border-color:var(--line)}
+.btn-ghost:hover{background:var(--steel-soft);border-color:var(--steel)}
+.btn-red,.btn-primary{background:var(--navy-500)}
+.btn-red:hover,.btn-primary:hover{background:var(--navy-600)}
+.btn-sm{padding:6px 12px;font-size:.76rem}
+.btn-lg{padding:12px 26px;font-size:.9rem}
+.btn-danger{background:transparent;color:var(--alert);border-color:var(--alert)}
+.btn-danger:hover{background:var(--alert-bg)}
+.btn-row{display:flex;gap:9px;flex-wrap:wrap;margin-top:16px}
+.nav-btns{display:flex;justify-content:space-between;gap:10px;margin-top:22px}
+.btn-download{background:var(--white);color:var(--navy-800);border-color:var(--line);font-weight:600;
+  padding:9px 18px;border-radius:var(--r);cursor:pointer;font-size:.83rem}
+
+/* ── GRILLES ────────────────────────────────────────── */
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(300px,1fr))}
+.g3{grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(190px,1fr))}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:900px){.two-col{grid-template-columns:1fr}}
+
+/* ── CARTES MODULE ──────────────────────────────────── */
+.mcard{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:18px 20px;
+  cursor:pointer;transition:.15s;box-shadow:var(--sh-1);position:relative;overflow:hidden}
+.mcard:hover{border-color:var(--steel);box-shadow:var(--sh-2);transform:translateY(-1px)}
+.mcard .m-n{font-family:var(--mono);font-size:.65rem;letter-spacing:.16em;color:var(--muted);margin-bottom:7px}
+.mcard .m-t{font-weight:700;color:var(--navy-900);font-size:.94rem;line-height:1.35;margin-bottom:5px}
+.mcard .m-s{font-size:.79rem;color:var(--gray);line-height:1.45}
+.mcard .m-st{margin-top:12px;font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;font-weight:700;color:var(--muted)}
+.mcard .m-st.done{color:var(--ok)}
+.mcard .m-st.todo{color:var(--warn)}
+
+/* ── PROGRESSION ────────────────────────────────────── */
+.prog{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);
+  padding:20px 24px;margin-bottom:16px;display:flex;align-items:center;gap:26px;box-shadow:var(--sh-1)}
+.prog-main{flex:1}
+.prog-lbl{display:flex;justify-content:space-between;font-size:.74rem;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--gray);margin-bottom:9px}
+.prog-lbl b{color:var(--navy-800)}
+.bar{height:5px;background:var(--line-soft);border-radius:3px;overflow:hidden}
+.fill{height:100%;background:linear-gradient(90deg,var(--navy-700),var(--steel));border-radius:3px;transition:width .5s}
+.prog-pct{font-family:var(--serif);font-size:2.1rem;font-weight:600;color:var(--navy-900);min-width:76px;text-align:right}
+
+/* ── OBJECTIFS DIF ──────────────────────────────────── */
+.obj{display:flex;gap:15px;padding:14px 0;border-bottom:1px solid var(--line-soft)}
+.obj:last-child{border-bottom:none}
+.obj .o-n{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--steel);
+  min-width:34px;line-height:1}
+.obj .o-t{font-weight:700;color:var(--navy-900);font-size:.92rem;margin-bottom:2px}
+.obj .o-d{font-size:.85rem;color:var(--gray)}
+
+/* ── QUIZ ───────────────────────────────────────────── */
+.q-num{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;color:var(--muted);
+  text-transform:uppercase;margin-bottom:8px}
+.q-txt{font-weight:600;color:var(--navy-900);font-size:.97rem;margin-bottom:14px;line-height:1.5}
+.opt{display:block;width:100%;text-align:left;background:var(--white);border:1px solid var(--line);
+  border-radius:var(--r);padding:11px 15px;margin-bottom:7px;cursor:pointer;font-size:.88rem;
+  color:var(--body);transition:.13s;font-family:var(--sans);position:relative;padding-left:44px}
+.opt::before{content:attr(data-letter);position:absolute;left:0;top:0;bottom:0;width:32px;
+  display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-size:.72rem;
+  font-weight:600;color:var(--muted);background:var(--line-soft);border-right:1px solid var(--line)}
+.opt:hover:not(:disabled){border-color:var(--steel);background:#FBFCFE}
+.opt.good{border-color:var(--ok);background:var(--ok-bg);color:var(--ok);font-weight:600}
+.opt.good::before{background:var(--ok);color:#fff;border-color:var(--ok)}
+.opt.bad{border-color:var(--alert);background:var(--alert-bg);color:var(--alert)}
+.opt.bad::before{background:var(--alert);color:#fff;border-color:var(--alert)}
+.opt:disabled{cursor:default}
+.qp-row{display:flex;gap:4px;flex-wrap:wrap;margin-bottom:16px}
+.qp-dot{width:8px;height:8px;border-radius:50%;background:var(--line);transition:.2s}
+.qp-dot.good{background:var(--ok)}
+.qp-dot.bad{background:var(--alert)}
+.score{text-align:center;padding:30px}
+.score .s-pct{font-family:var(--serif);font-size:3.4rem;font-weight:600;color:var(--navy-900);line-height:1}
+.score .s-lbl{font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--gray);margin:8px 0 18px}
+.verdict{display:inline-block;padding:5px 16px;border-radius:2px;font-size:.74rem;font-weight:700;
+  letter-spacing:.1em;text-transform:uppercase}
+.verdict.ok{background:var(--ok-bg);color:var(--ok)}
+.verdict.ko{background:var(--alert-bg);color:var(--alert)}
+
+/* ── CHRONO ─────────────────────────────────────────── */
+.chrono{background:var(--navy-900);color:#fff;border-radius:var(--r-lg);padding:22px 26px;
+  display:flex;align-items:center;gap:24px;margin-bottom:16px;box-shadow:var(--sh-2)}
+.chrono .c-time{font-family:var(--mono);font-size:2.8rem;font-weight:600;letter-spacing:.02em;
+  line-height:1;font-variant-numeric:tabular-nums}
+.chrono .c-phase{font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;color:var(--steel);margin-bottom:5px}
+.chrono .c-sub{font-size:.8rem;color:rgba(255,255,255,.55)}
+.chrono.warn .c-time{color:#8FB4DC}
+.chrono.over .c-time{color:#E2726B}
+.chrono-actions{margin-left:auto;display:flex;gap:8px}
+.chrono .btn-ghost{color:#fff;border-color:rgba(255,255,255,.28)}
+.chrono .btn-ghost:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.5)}
+.phase-track{display:flex;gap:2px;margin-top:14px}
+.ph{flex:1;height:3px;background:rgba(255,255,255,.16);border-radius:2px}
+.ph.on{background:var(--steel)}
+.ph.done{background:rgba(63,111,168,.55)}
+
+/* ── FORMULAIRE ─────────────────────────────────────── */
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.75rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;
+  color:var(--gray);margin-bottom:5px}
+.field input,.field textarea,.field select{width:100%;font-family:var(--sans);font-size:.88rem;
+  color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:var(--r);
+  padding:9px 12px;transition:.13s;line-height:1.55}
+.field textarea{min-height:74px;resize:vertical}
+.field input:focus,.field textarea:focus,.field select:focus{outline:none;border-color:var(--navy-500);
+  box-shadow:0 0 0 3px rgba(29,78,143,.1)}
+.field .hint{font-size:.75rem;color:var(--muted);margin-top:3px}
+fieldset{border:none;margin-bottom:20px}
+fieldset legend{font-family:var(--serif);font-size:1.02rem;font-weight:600;color:var(--navy-900);
+  padding-bottom:8px;margin-bottom:13px;border-bottom:1px solid var(--line-soft);width:100%}
+
+/* ── FILTRES / PUCES ────────────────────────────────── */
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px}
+.chip{font-size:.76rem;font-weight:600;padding:5px 13px;border:1px solid var(--line);border-radius:14px;
+  background:var(--white);color:var(--gray);cursor:pointer;transition:.13s;font-family:var(--sans)}
+.chip:hover{border-color:var(--steel);color:var(--navy-700)}
+.chip.on{background:var(--navy-800);border-color:var(--navy-800);color:#fff}
+
+/* ── FICHE EXERCICE ─────────────────────────────────── */
+.ex{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:17px 20px;box-shadow:var(--sh-1)}
+.ex .ex-h{display:flex;align-items:baseline;gap:10px;margin-bottom:9px}
+.ex .ex-id{font-family:var(--mono);font-size:.66rem;color:var(--muted);letter-spacing:.1em}
+.ex .ex-n{font-weight:700;color:var(--navy-900);font-size:.93rem}
+.ex .ex-meta{margin-left:auto;font-size:.7rem;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.ex dl{font-size:.84rem}
+.ex dt{font-size:.67rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--steel);margin-top:9px}
+.ex dd{color:var(--body);margin-left:0}
+
+/* ── TIRAGE ─────────────────────────────────────────── */
+.draw{background:var(--white);border:2px solid var(--navy-800);border-radius:var(--r-lg);
+  padding:28px 30px;margin-bottom:16px;box-shadow:var(--sh-2)}
+.draw .d-kick{font-family:var(--mono);font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--steel);margin-bottom:9px}
+.draw .d-title{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--navy-900);line-height:1.25;margin-bottom:7px}
+.draw .d-meta{font-size:.78rem;color:var(--gray);letter-spacing:.05em}
+.rolling{animation:roll .5s ease}
+@keyframes roll{0%{opacity:.25;transform:translateY(-6px)}100%{opacity:1;transform:none}}
+
+/* ── SAISON ─────────────────────────────────────────── */
+.cyc{background:var(--white);border:1px solid var(--line);border-left:3px solid var(--navy-500);
+  border-radius:0 var(--r-lg) var(--r-lg) 0;padding:18px 22px;margin-bottom:12px;box-shadow:var(--sh-1)}
+.cyc .c-p{font-family:var(--mono);font-size:.67rem;letter-spacing:.13em;text-transform:uppercase;color:var(--steel);margin-bottom:4px}
+.cyc h3{margin:0 0 9px;color:var(--navy-900);font-size:1rem}
+
+/* ── DIVERS ─────────────────────────────────────────── */
+.stat{background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:16px 18px;box-shadow:var(--sh-1)}
+.stat .s-v{font-family:var(--serif);font-size:1.9rem;font-weight:600;color:var(--navy-900);line-height:1}
+.stat .s-k{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gray);margin-top:5px}
+.empty{text-align:center;padding:44px 20px;color:var(--muted);font-size:.88rem}
+.divider{height:1px;background:var(--line);margin:22px 0}
+.tag{display:inline-block;font-size:.66rem;letter-spacing:.09em;text-transform:uppercase;font-weight:700;
+  padding:2px 8px;border-radius:2px;background:var(--steel-soft);color:var(--navy-700);margin-right:5px}
+.tag.warn{background:var(--warn-bg);color:var(--warn)}
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(80px);
+  background:var(--navy-900);color:#fff;padding:12px 24px;border-radius:var(--r);font-size:.85rem;
+  box-shadow:var(--sh-3);z-index:900;opacity:0;transition:.28s;pointer-events:none}
+.toast.on{transform:translateX(-50%);opacity:1}
+@media(max-width:860px){
+  nav#sidebar{position:fixed;left:0;transform:translateX(-100%);transition:.25s;z-index:250}
+  nav#sidebar.open{transform:none}
+  main{padding:20px 18px 70px}
+  .prog{flex-direction:column;align-items:stretch;gap:14px}
+  .chrono{flex-wrap:wrap}
+}
+@media print{
+  header,nav#sidebar,.btn,.btn-row,.nav-btns,.chrono,.chips{display:none!important}
+  main{padding:0;max-width:none}
+  .card{break-inside:avoid;box-shadow:none;border-color:#ccc}
+  body{background:#fff;font-size:11pt}
+}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">
+    <span class="code">YOSEI-DIF</span>
+    <h1>DIF Yoseikan Budo</h1>
+    <span>Préparation au Diplôme d&#x27;Instructeur Fédéral</span>
+  </div>
+  <div class="hdr-right">
+    <span class="hdr-stat">Progression <b id="hdr-prog">0%</b></span>
+    <button class="btn btn-ghost btn-sm" style="color:#fff;border-color:rgba(255,255,255,.25)"
+            onclick="document.getElementById('sidebar').classList.toggle('open')">Menu</button>
+  </div>
+</header>
+
+<div class="shell">
+<nav id="sidebar">
+<div class="nav-sec">Pilotage</div>
+<a data-page="home" onclick="showPage('home')"><span class="n">00</span><span>Tableau de bord</span></a>
+<div class="nav-sec">Épreuve — outils actifs</div>
+<a data-page="sim" onclick="showPage('sim')"><span class="n">A</span><span>Simulateur d&#x27;épreuve</span></a>
+<a data-page="plan" onclick="showPage('plan')"><span class="n">B</span><span>Plan de séance</span></a>
+<a data-page="jury" onclick="showPage('jury')"><span class="n">C</span><span>Entretien avec le jury</span></a>
+<a data-page="saison" onclick="showPage('saison')"><span class="n">D</span><span>Planification de saison</span></a>
+<a data-page="exos" onclick="showPage('exos')"><span class="n">E</span><span>Banque d&#x27;exercices</span></a>
+<div class="nav-sec">Modules de connaissances</div>
+<a data-page="m1" data-track="1" data-status="a_completer" onclick="showPage('m1')"><span class="n">01</span><span>Yoseikan Budo — histoire, filiation, principes</span><span class="flag"></span></a>
+<a data-page="m2" data-track="1" data-status="a_completer" onclick="showPage('m2')"><span class="n">02</span><span>Contenu technique Yoseikan Budo</span><span class="flag"></span></a>
+<a data-page="m3" data-track="1" data-status="pret" onclick="showPage('m3')"><span class="n">03</span><span>Pédagogie et méthodologie d&#x27;enseignement</span><span class="flag"></span></a>
+<a data-page="m4" data-track="1" data-status="pret" onclick="showPage('m4')"><span class="n">04</span><span>Environnement fédéral, réglementation et vie du club</span><span class="flag"></span></a>
+<a data-page="m5" data-track="1" data-status="pret" onclick="showPage('m5')"><span class="n">05</span><span>Anatomie, physiologie et sécurité du pratiquant</span><span class="flag"></span></a>
+<a data-page="m6" data-track="1" data-status="a_completer" onclick="showPage('m6')"><span class="n">06</span><span>Vocabulaire et terminologie</span><span class="flag"></span></a>
+<div class="nav-sec">Évaluation</div>
+<a data-page="q1" data-track="1" data-status="a_completer" onclick="showPage('q1')"><span class="n">Q1</span><span>Histoire et principes</span><span class="flag"></span></a>
+<a data-page="q2" data-track="1" data-status="a_completer" onclick="showPage('q2')"><span class="n">Q2</span><span>Contenu technique</span><span class="flag"></span></a>
+<a data-page="q3" data-track="1" data-status="pret" onclick="showPage('q3')"><span class="n">Q3</span><span>Pédagogie et méthodologie</span><span class="flag"></span></a>
+<a data-page="q4" data-track="1" data-status="pret" onclick="showPage('q4')"><span class="n">Q4</span><span>Environnement fédéral et vie du club</span><span class="flag"></span></a>
+<a data-page="q5" data-track="1" data-status="pret" onclick="showPage('q5')"><span class="n">Q5</span><span>Physiologie et sécurité</span><span class="flag"></span></a>
+<a data-page="q6" data-track="1" data-status="a_completer" onclick="showPage('q6')"><span class="n">Q6</span><span>Terminologie</span><span class="flag"></span></a>
+<a data-page="exam" onclick="showPage('exam')"><span class="n">EB</span><span>Examen blanc</span></a>
+<div class="nav-sec">Données</div>
+<a data-page="data" onclick="showPage('data')"><span class="n">--</span><span>Sauvegarde et restauration</span></a>
+</nav>
+<main>
+<div id="page-home" class="page">
+
+<div class="card hero">
+  <div class="kicker">YOSEI-DIF — version 1.0</div>
+  <h2>DIF Yoseikan Budo</h2>
+  <p>Préparation au Diplôme d&#x27;Instructeur Fédéral. Cet espace est construit autour d'un principe : le DIF n'évalue pas
+  ce que vous savez, il évalue ce que vous êtes capable de concevoir, d'animer et de justifier
+  devant un jury. Les outils actifs passent donc avant les modules de connaissances.</p>
+</div>
+
+<div class="warn-box" id="warn-storage" style="display:none">
+  Votre navigateur n'autorise pas l'enregistrement local sur ce fichier. Vos plans de séance
+  resteront disponibles pendant la session mais seront perdus à la fermeture : utilisez
+  <strong>Sauvegarde et restauration</strong> pour exporter votre travail.
+</div>
+
+<div class="prog">
+  <div class="prog-main">
+    <div class="prog-lbl"><span>Progression sur les contenus disponibles</span><b id="prog-text">0 / 0</b></div>
+    <div class="bar"><div class="fill" id="prog-fill" style="width:0%"></div></div>
+  </div>
+  <div class="prog-pct" id="prog-pct">0%</div>
+</div>
+
+<div class="grid g3" style="margin-bottom:16px">
+  <div class="stat"><div class="s-v" id="stat-sim">0</div><div class="s-k">Simulations lancées</div></div>
+  <div class="stat"><div class="s-v" id="stat-plans">0</div><div class="s-k">Plans de séance enregistrés</div></div>
+  <div class="stat"><div class="s-v" id="stat-jury">0</div><div class="s-k">Questions de jury travaillées</div></div>
+</div>
+
+<div class="card">
+  <h2>Ce que le jury évalue</h2>
+  <p>Cinq objectifs, une seule finalité : votre capacité à concevoir, animer, planifier et adapter
+  votre enseignement à différents publics et contextes.</p>
+  <div class="obj"><div class="o-n">1</div><div><div class="o-t">Concevoir et mettre en œuvre des exercices et des séances</div><div class="o-d">Traduire un thème imposé en objectif opérationnel, en situations d&#x27;apprentissage et en critères de réussite observables.</div></div></div><div class="obj"><div class="o-n">2</div><div><div class="o-t">Planifier et programmer une saison sportive</div><div class="o-d">Construire une progression annuelle cohérente : cycles, passages de grade, événements, évaluation.</div></div></div><div class="obj"><div class="o-n">3</div><div><div class="o-t">Prendre en compte la spécificité de différents publics</div><div class="o-d">Adapter volume, consignes, sécurité et intention pédagogique au public réellement en face de soi.</div></div></div><div class="obj"><div class="o-n">4</div><div><div class="o-t">Connaître l&#x27;environnement fédéral et du club</div><div class="o-d">Maîtriser la structure fédérale, le cadre réglementaire de l&#x27;encadrement et la vie associative du club.</div></div></div><div class="obj"><div class="o-n">5</div><div><div class="o-t">Participer à des événements fédéraux</div><div class="o-d">Savoir situer et justifier son implication dans le calendrier et la vie de la discipline.</div></div></div>
+  <div class="divider"></div>
+  <h3>Déroulé de l'épreuve</h3>
+  <div class="table-wrap"><table>
+    <tr><th>Phase</th><th>Durée</th><th>Ce qui se joue</th></tr>
+    <tr><td>Préparation écrite</td><td>30 minutes</td><td>Le thème est tiré au sort en tout début d'épreuve. Vous élaborez seul votre plan de séance.</td></tr>
+    <tr><td>Animation</td><td>20 minutes</td><td>Mise en situation pédagogique réelle : consignes, organisation, sécurité, régulation.</td></tr>
+    <tr><td>Entretien pédagogique</td><td>10 minutes</td><td>Questions sur la séance conduite, votre vision pédagogique et la vie fédérale.</td></tr>
+  </table></div>
+  <div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Durée totale</strong>
+  1 heure si le public tiré au sort concerne les enfants, 1 h 30 pour les adolescents et les adultes.
+  Le suivi de l'intégralité de la formation en présentiel conditionne la présentation à l'examen.</div></div>
+</div>
+
+<div class="card"><h2>Outils d'entraînement</h2>
+  <p>Le cœur du dispositif. Utilisez-les dans l'ordre : simuler, construire, défendre.</p>
+  <div class="grid g3"><div class="mcard" onclick="showPage('sim')"><div class="m-n">OUTIL</div><div class="m-t">Simulateur d&#x27;épreuve</div><div class="m-s">Tirage au sort du thème, chronomètre à trois phases, attendus et pièges du jury.</div></div><div class="mcard" onclick="showPage('plan')"><div class="m-n">OUTIL</div><div class="m-t">Constructeur de plan de séance</div><div class="m-s">Trame complète conforme aux attendus, enregistrement et impression.</div></div><div class="mcard" onclick="showPage('jury')"><div class="m-n">OUTIL</div><div class="m-t">Entretien avec le jury</div><div class="m-s">63 questions classées, chronomètre et éléments de réponse.</div></div><div class="mcard" onclick="showPage('saison')"><div class="m-n">OUTIL</div><div class="m-t">Planification de saison</div><div class="m-s">Cycles annuels, objectifs et repères fédéraux, notes personnelles.</div></div><div class="mcard" onclick="showPage('exos')"><div class="m-n">OUTIL</div><div class="m-t">Banque d&#x27;exercices</div><div class="m-s">Situations filtrables par phase et par public, avec critères et variables.</div></div></div>
+</div>
+
+<div class="card"><h2>Modules de connaissances</h2><div class="grid g3"><div class="mcard" onclick="showPage('m1')"><div class="m-n">MODULE 01</div><div class="m-t">Yoseikan Budo — histoire, filiation, principes</div><div class="m-s">Origines, transmission, esprit de la discipline</div><div class="m-st" data-mst="m1" data-status="a_completer"></div></div><div class="mcard" onclick="showPage('m2')"><div class="m-n">MODULE 02</div><div class="m-t">Contenu technique Yoseikan Budo</div><div class="m-s">Répertoire technique, progression, programme de grades</div><div class="m-st" data-mst="m2" data-status="a_completer"></div></div><div class="mcard" onclick="showPage('m3')"><div class="m-n">MODULE 03</div><div class="m-t">Pédagogie et méthodologie d&#x27;enseignement</div><div class="m-s">Rôle de l&#x27;instructeur, structure de séance, méthodes, adaptation aux publics</div><div class="m-st" data-mst="m3" data-status="pret"></div></div><div class="mcard" onclick="showPage('m4')"><div class="m-n">MODULE 04</div><div class="m-t">Environnement fédéral, réglementation et vie du club</div><div class="m-s">Structure fédérale, licence et assurance, cadre d&#x27;encadrement, vie associative</div><div class="m-st" data-mst="m4" data-status="pret"></div></div><div class="mcard" onclick="showPage('m5')"><div class="m-n">MODULE 05</div><div class="m-t">Anatomie, physiologie et sécurité du pratiquant</div><div class="m-s">Bases physiologiques, charge de travail, prévention et conduite à tenir</div><div class="m-st" data-mst="m5" data-status="pret"></div></div><div class="mcard" onclick="showPage('m6')"><div class="m-n">MODULE 06</div><div class="m-t">Vocabulaire et terminologie</div><div class="m-s">Termes japonais utilisés dans la discipline et commandements du dojo</div><div class="m-st" data-mst="m6" data-status="a_completer"></div></div></div></div>
+<div class="card"><h2>Auto-évaluation</h2><div class="grid g3"><div class="mcard" onclick="showPage('q1')"><div class="m-n">QUIZ 01</div><div class="m-t">Histoire et principes</div><div class="m-s">0 questions</div><div class="m-st" data-mst="q1" data-status="a_completer"></div></div><div class="mcard" onclick="showPage('q2')"><div class="m-n">QUIZ 02</div><div class="m-t">Contenu technique</div><div class="m-s">0 questions</div><div class="m-st" data-mst="q2" data-status="a_completer"></div></div><div class="mcard" onclick="showPage('q3')"><div class="m-n">QUIZ 03</div><div class="m-t">Pédagogie et méthodologie</div><div class="m-s">25 questions</div><div class="m-st" data-mst="q3" data-status="pret"></div></div><div class="mcard" onclick="showPage('q4')"><div class="m-n">QUIZ 04</div><div class="m-t">Environnement fédéral et vie du club</div><div class="m-s">20 questions</div><div class="m-st" data-mst="q4" data-status="pret"></div></div><div class="mcard" onclick="showPage('q5')"><div class="m-n">QUIZ 05</div><div class="m-t">Physiologie et sécurité</div><div class="m-s">25 questions</div><div class="m-st" data-mst="q5" data-status="pret"></div></div><div class="mcard" onclick="showPage('q6')"><div class="m-n">QUIZ 06</div><div class="m-t">Terminologie</div><div class="m-s">0 questions</div><div class="m-st" data-mst="q6" data-status="a_completer"></div></div></div>
+  <div class="btn-row"><button class="btn btn-primary" onclick="showPage('exam')">Lancer un examen blanc</button></div>
+</div>
+</div>
+<div id="page-sim" class="page">
+
+<div class="banner"><div class="b-num">Outil A</div><h2>Simulateur d'épreuve</h2>
+  <p>Conditions réelles : tirage au sort du thème, puis les trois phases enchaînées au chronomètre.</p>
+  <div class="b-tags"><span class="b-tag">Tirage au sort</span><span class="b-tag">Chronomètre</span>
+  <span class="b-tag b-tag-gold">16 thèmes</span></div></div>
+
+<div class="card"><h2>1. Choisir le public de l'épreuve</h2>
+  <p>Le public conditionne la durée totale et la banque de thèmes mobilisée.</p>
+  <div class="chips" id="sim-publics"><button class="chip" data-p="enfants" onclick="simSetPublic('enfants')">Enfants</button><button class="chip" data-p="ados" onclick="simSetPublic('ados')">Ados / Adultes</button><button class="chip" data-p="baby" onclick="simSetPublic('baby')">Baby (4-6 ans)</button><button class="chip" data-p="adapte" onclick="simSetPublic('adapte')">Public adapté</button></div>
+  <div class="info-box" id="sim-format"></div>
+  <div class="btn-row"><button class="btn btn-primary btn-lg" onclick="simDraw()">Tirer un thème au sort</button></div>
+</div>
+
+<div class="draw" id="sim-draw"><div class="d-kick">En attente</div>
+  <div class="d-title">Aucun thème tiré</div>
+  <div class="d-meta">Choisissez un public, puis lancez le tirage.</div></div>
+
+<div id="sim-after" style="display:none">
+  <div class="chrono" id="sim-chrono"></div>
+  <div class="card"><h2>2. Préparation</h2>
+    <p>Vous disposez de 30 minutes pour élaborer votre plan de séance. Ouvrez le constructeur :
+    le thème et le public y sont déjà reportés.</p>
+    <div class="btn-row">
+      <button class="btn btn-primary" onclick="showPage('plan')">Ouvrir le constructeur de plan de séance</button>
+      <button class="btn btn-ghost" onclick="simRevealHints()">Afficher / masquer les attendus du jury</button>
+    </div>
+  </div>
+  <div id="sim-hints" style="display:none"></div>
+  <div id="sim-debrief" style="display:none">
+    <div class="card"><h2>3. Auto-analyse à chaud</h2>
+      <p>À faire immédiatement après l'animation, avant de consulter quoi que ce soit.</p>
+      <ul>
+        <li>Mon objectif était-il unique, opérationnel, et l'ai-je annoncé ?</li>
+        <li>Quel critère de réussite ai-je réellement observé, et sur combien de pratiquants ?</li>
+        <li>Quel a été mon temps de parole cumulé par rapport au temps de pratique ?</li>
+        <li>Quelle variable didactique ai-je fait varier, et pourquoi celle-là ?</li>
+        <li>Qu'est-ce que je change si je refais cette séance demain ?</li>
+      </ul>
+      <div class="btn-row"><button class="btn btn-primary" onclick="showPage('jury')">Passer à l'entretien avec le jury</button></div>
+    </div>
+  </div>
+</div>
+</div>
+<div id="page-plan" class="page">
+
+<div class="banner"><div class="b-num">Outil B</div><h2>Constructeur de plan de séance</h2>
+  <p>La trame attendue par le jury, champ par champ. Rien de ce qui compte n'y est facultatif.</p>
+  <div class="b-tags"><span class="b-tag">Trame complète</span><span class="b-tag">Enregistrement</span>
+  <span class="b-tag b-tag-gold">Impression</span></div></div>
+
+<div class="card"><h2>Trois erreurs qui coûtent des points</h2>
+  <ul>
+    <li><strong>Un thème pris pour un objectif.</strong> Le thème est tiré au sort ; l'objectif, c'est ce dont
+    le pratiquant sera capable à la fin. Formulez-le en une phrase, avec un verbe d'action.</li>
+    <li><strong>Un critère de réussite non observable.</strong> « Mieux maîtriser » n'est pas un critère.
+    « Toucher la cible sans être touché sur six répétitions sur dix » en est un.</li>
+    <li><strong>Aucune régulation prévue.</strong> Le jury attend un plan B et une différenciation, dans les
+    deux sens : pour celui qui échoue comme pour celui qui a déjà réussi.</li>
+  </ul>
+</div>
+
+<div class="card"><fieldset><legend>Contexte</legend><div class="field"><label for="f-public">Public et effectif</label><select id="f-public"><option value="enfants">Enfants</option><option value="ados">Ados / Adultes</option><option value="baby">Baby (4-6 ans)</option><option value="adapte">Public adapté</option></select></div><div class="field"><label for="f-niveau">Niveau et grades</label><input type="text" id="f-niveau"></div><div class="field"><label for="f-duree">Durée de la séance</label><input type="text" id="f-duree"></div><div class="field"><label for="f-lieu">Lieu et surface disponible</label><input type="text" id="f-lieu"></div><div class="field"><label for="f-materiel">Matériel nécessaire</label><textarea id="f-materiel"></textarea></div></fieldset><fieldset><legend>Objectif et critères</legend><div class="field"><label for="f-theme">Thème tiré au sort</label><input type="text" id="f-theme"></div><div class="field"><label for="f-objectif">Objectif opérationnel — « à la fin de la séance, le pratiquant est capable de… »</label><textarea id="f-objectif"></textarea></div><div class="field"><label for="f-critere">Critère de réussite observable</label><textarea id="f-critere"></textarea></div><div class="field"><label for="f-prerequis">Prérequis supposés</label><textarea id="f-prerequis"></textarea></div></fieldset><fieldset><legend>Sécurité</legend><div class="field"><label for="f-risques">Risques identifiés</label><textarea id="f-risques"></textarea></div><div class="field"><label for="f-mesures">Mesures de prévention et consignes d&#x27;arrêt</label><textarea id="f-mesures"></textarea></div><div class="field"><label for="f-verif">Vérifications avant la séance</label><textarea id="f-verif"></textarea></div></fieldset><fieldset><legend>Échauffement</legend><div class="field"><label for="f-ech_duree">Durée</label><input type="text" id="f-ech_duree"></div><div class="field"><label for="f-ech_contenu">Contenu et lien avec l&#x27;objectif</label><textarea id="f-ech_contenu"></textarea></div><div class="field"><label for="f-ech_org">Organisation du groupe</label><textarea id="f-ech_org"></textarea></div></fieldset><fieldset><legend>Corps de séance</legend><div class="field"><label for="f-s1">Situation 1 — consigne, organisation, critère</label><textarea id="f-s1"></textarea></div><div class="field"><label for="f-s1_var">Situation 1 — variables et différenciation</label><textarea id="f-s1_var"></textarea></div><div class="field"><label for="f-s2">Situation 2 — consigne, organisation, critère</label><textarea id="f-s2"></textarea></div><div class="field"><label for="f-s2_var">Situation 2 — variables et différenciation</label><textarea id="f-s2_var"></textarea></div><div class="field"><label for="f-s3">Situation 3 — mise en opposition ou application</label><textarea id="f-s3"></textarea></div><div class="field"><label for="f-s3_var">Situation 3 — variables et différenciation</label><textarea id="f-s3_var"></textarea></div></fieldset><fieldset><legend>Retour au calme et bilan</legend><div class="field"><label for="f-rac">Contenu du retour au calme</label><textarea id="f-rac"></textarea></div><div class="field"><label for="f-bilan">Bilan avec le groupe et lien avec la séance suivante</label><textarea id="f-bilan"></textarea></div></fieldset><fieldset><legend>Régulation et plan B</legend><div class="field"><label for="f-planb">Plan B si la situation ne fonctionne pas</label><textarea id="f-planb"></textarea></div><div class="field"><label for="f-diff">Adaptation pour un pratiquant en difficulté</label><textarea id="f-diff"></textarea></div><div class="field"><label for="f-avance">Adaptation pour un pratiquant en avance</label><textarea id="f-avance"></textarea></div></fieldset>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="planSave()">Enregistrer ce plan</button>
+    <button class="btn btn-ghost" onclick="planPrint()">Imprimer / exporter en PDF</button>
+    <button class="btn btn-ghost" onclick="planClear()">Vider le formulaire</button>
+  </div>
+</div>
+
+<div class="card"><h2>Plans enregistrés</h2><div id="plan-list"></div></div>
+</div>
+<div id="page-jury" class="page">
+
+<div class="banner"><div class="b-num">Outil C</div><h2>Entretien avec le jury</h2>
+  <p>Dix minutes de questions, c'est court. Ce qui se joue : la lucidité sur sa propre séance
+  et la cohérence de sa vision pédagogique.</p>
+  <div class="b-tags"><span class="b-tag">63 questions</span><span class="b-tag">Tirage aléatoire</span>
+  <span class="b-tag b-tag-gold">Chronomètre</span></div></div>
+
+<div class="card"><h2>Méthode de réponse en quatre temps</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Temps</th><th>Ce que vous dites</th></tr>
+    <tr><td>1. Le fait</td><td>Ce que j'ai fait, concrètement, dans la séance.</td></tr>
+    <tr><td>2. L'intention</td><td>Pourquoi ce choix plutôt qu'un autre.</td></tr>
+    <tr><td>3. L'observation</td><td>Ce que j'ai vu se produire, y compris ce qui n'a pas fonctionné.</td></tr>
+    <tr><td>4. La régulation</td><td>Ce que j'en tire et ce que je changerais.</td></tr>
+  </table></div>
+  <div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Ce qui est valorisé</strong>
+  L'auto-analyse lucide. Un candidat qui identifie lui-même la faiblesse de sa séance et propose une
+  correction pertinente est mieux noté qu'un candidat qui défend une séance imparfaite.</div></div>
+</div>
+
+<div class="card"><h2>Choisir un domaine</h2><div class="chips" id="jury-cats"><button class="chip on" data-c="*" onclick="juryStart('*')">Toutes les catégories</button><button class="chip" data-c="Retour sur la séance" onclick="juryStart('Retour sur la séance')">Retour sur la séance</button><button class="chip" data-c="Vision pédagogique" onclick="juryStart('Vision pédagogique')">Vision pédagogique</button><button class="chip" data-c="Publics" onclick="juryStart('Publics')">Publics</button><button class="chip" data-c="Sécurité et responsabilité" onclick="juryStart('Sécurité et responsabilité')">Sécurité et responsabilité</button><button class="chip" data-c="Environnement fédéral" onclick="juryStart('Environnement fédéral')">Environnement fédéral</button><button class="chip" data-c="Vie du club" onclick="juryStart('Vie du club')">Vie du club</button><button class="chip" data-c="Discipline" onclick="juryStart('Discipline')">Discipline</button></div></div>
+<div id="jury-box"></div>
+</div>
+<div id="page-saison" class="page">
+
+<div class="banner"><div class="b-num">Outil D</div><h2>Planification de saison</h2>
+  <p>Deuxième objectif du DIF. Le jury vérifie que votre séance n'est pas isolée mais s'inscrit
+  dans une progression annuelle assumée.</p>
+  <div class="b-tags"><span class="b-tag">5 cycles</span><span class="b-tag">Éditable</span></div></div>
+
+<div class="card"><h2>Les trois niveaux de planification</h2>
+  <div class="table-wrap"><table>
+    <tr><th>Niveau</th><th>Horizon</th><th>Ce qu'on y décide</th></tr>
+    <tr><td>Macrocycle</td><td>La saison</td><td>Grands objectifs, échéances, cycles, évaluation</td></tr>
+    <tr><td>Mésocycle</td><td>4 à 8 semaines</td><td>Thème dominant, progression technique, montée en charge</td></tr>
+    <tr><td>Microcycle</td><td>La semaine, la séance</td><td>Objectif opérationnel, situations, critères</td></tr>
+  </table></div>
+  <div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Question fréquente</strong>
+  « Où se situe la séance que vous venez de conduire dans votre saison ? » Préparez une réponse
+  précise : cycle, semaine, ce qui précède et ce qui suit.</div></div>
+</div>
+
+<div class="cyc"><div class="c-p">Septembre → vacances de Toussaint</div><h3>Cycle 1 — Rentrée et remise en route</h3><h4>Objectifs</h4><ul><li>Réintégrer les fondamentaux : posture, déplacement, distance</li><li>Intégrer les nouveaux pratiquants et poser les rituels du dojo</li><li>Évaluer le niveau réel du groupe</li></ul><h4>Repères fédéraux et vie du club</h4><ul><li>Portes ouvertes et séances d&#x27;essai</li><li>Régularisation des licences et de la situation médicale</li><li>Réunion d&#x27;information aux familles</li></ul><div class="field"><label>Déclinaison pour mon club</label><textarea data-cyc="c0" placeholder="Contenus retenus, créneaux, publics concernés, dates clés…"></textarea></div></div><div class="cyc"><div class="c-p">Toussaint → vacances de Noël</div><h3>Cycle 2 — Construction technique</h3><h4>Objectifs</h4><ul><li>Développer le répertoire technique de la tranche d&#x27;âge</li><li>Introduire l&#x27;opposition aménagée</li><li>Installer les règles de contrôle</li></ul><h4>Repères fédéraux et vie du club</h4><ul><li>Stage technique de ligue ou de comité départemental</li><li>Premier point d&#x27;étape individuel</li></ul><div class="field"><label>Déclinaison pour mon club</label><textarea data-cyc="c1" placeholder="Contenus retenus, créneaux, publics concernés, dates clés…"></textarea></div></div><div class="cyc"><div class="c-p">Janvier → vacances d&#x27;hiver</div><h3>Cycle 3 — Mise en opposition</h3><h4>Objectifs</h4><ul><li>Transférer la technique en situation d&#x27;opposition</li><li>Développer la lecture de l&#x27;adversaire et le timing</li><li>Préparer les échéances compétitives</li></ul><h4>Repères fédéraux et vie du club</h4><ul><li>Compétitions et coupes</li><li>Formation continue des cadres</li></ul><div class="field"><label>Déclinaison pour mon club</label><textarea data-cyc="c2" placeholder="Contenus retenus, créneaux, publics concernés, dates clés…"></textarea></div></div><div class="cyc"><div class="c-p">Vacances d&#x27;hiver → vacances de printemps</div><h3>Cycle 4 — Approfondissement et armes</h3><h4>Objectifs</h4><ul><li>Enrichir le répertoire : liaisons, sol, travail avec matériel</li><li>Consolider les acquis sous contrainte</li><li>Préparer le programme de passage de grade</li></ul><h4>Repères fédéraux et vie du club</h4><ul><li>Stage de discipline</li><li>Inscription aux passages de grade</li></ul><div class="field"><label>Déclinaison pour mon club</label><textarea data-cyc="c3" placeholder="Contenus retenus, créneaux, publics concernés, dates clés…"></textarea></div></div><div class="cyc"><div class="c-p">Printemps → fin de saison</div><h3>Cycle 5 — Évaluation et valorisation</h3><h4>Objectifs</h4><ul><li>Valider les acquis de la saison</li><li>Passer les grades</li><li>Valoriser la progression de chaque pratiquant</li></ul><h4>Repères fédéraux et vie du club</h4><ul><li>Passages de grade</li><li>Fête du club et démonstration</li><li>Assemblée générale</li><li>Bilan pédagogique et projection sur la saison suivante</li></ul><div class="field"><label>Déclinaison pour mon club</label><textarea data-cyc="c4" placeholder="Contenus retenus, créneaux, publics concernés, dates clés…"></textarea></div></div>
+<div class="btn-row"><button class="btn btn-primary" onclick="saisonSave()">Enregistrer ma planification</button>
+<button class="btn btn-ghost" onclick="window.print()">Imprimer</button></div>
+</div>
+<div id="page-exos" class="page">
+
+<div class="banner"><div class="b-num">Outil E</div><h2>Banque d'exercices</h2>
+  <p>Des situations prêtes à l'emploi, chacune avec son critère de réussite, ses variables
+  didactiques et ses consignes de sécurité — exactement ce que le jury vous demandera de justifier.</p>
+  <div class="b-tags"><span class="b-tag">12 situations</span><span class="b-tag">Filtrable</span></div></div>
+
+<div class="card"><h2>Filtres</h2><div class="chips"><button class="chip on" data-f="phase" data-v="*" onclick="exFilter('phase','*')">Toutes les phases</button><button class="chip" data-f="phase" data-v="Échauffement" onclick="exFilter('phase','Échauffement')">Échauffement</button><button class="chip" data-f="phase" data-v="Corps de séance" onclick="exFilter('phase','Corps de séance')">Corps de séance</button><button class="chip" data-f="phase" data-v="Opposition" onclick="exFilter('phase','Opposition')">Opposition</button><button class="chip" data-f="phase" data-v="Retour au calme" onclick="exFilter('phase','Retour au calme')">Retour au calme</button></div><div class="chips"><button class="chip on" data-f="pub" data-v="*" onclick="exFilter('pub','*')">Tous les publics</button><button class="chip" data-f="pub" data-v="enfants" onclick="exFilter('pub','enfants')">Enfants</button><button class="chip" data-f="pub" data-v="ados" onclick="exFilter('pub','ados')">Ados / Adultes</button><button class="chip" data-f="pub" data-v="baby" onclick="exFilter('pub','baby')">Baby (4-6 ans)</button><button class="chip" data-f="pub" data-v="adapte" onclick="exFilter('pub','adapte')">Public adapté</button></div></div>
+<div id="ex-list"></div>
+
+<div class="card"><h2>Enrichir cette banque</h2>
+  <p>Ajoutez vos propres situations dans <code>content/exercices.json</code>, puis relancez
+  <code>python3 build.py</code>. Chaque entrée doit comporter un critère de réussite observable
+  et des consignes de sécurité : c'est la grille de lecture du jury.</p></div>
+</div>
+<div id="page-m1" class="page">
+
+<div class="banner"><div class="b-num">Module 01 / 06</div><h2>Yoseikan Budo — histoire, filiation, principes</h2>
+  <p>Origines, transmission, esprit de la discipline</p><div class="b-tags"><span class="b-tag">Discipline</span><span class="b-tag">Culture</span></div></div>
+<div class="card todo"><h2>Contenu à compléter</h2><p>Ce module doit être renseigné à partir de vos <strong>documents officiels</strong> déposés dans le dossier <code>sources/</code> : historique de la discipline, filiation et transmission, principes directeurs, textes de référence.</p><p>Structure attendue : sections numérotées, tableaux de synthèse, encadrés mémo, puis fiche de synthèse imprimable. Le générateur reprend automatiquement le contenu placé dans <code>content/modules.json</code>.</p></div>
+<div class="btn-row"><button class="btn btn-ghost" onclick="showPage('q1')">Tester mes connaissances sur ce module</button></div>
+<div class="nav-btns"><span></span><button class="btn btn-primary" onclick="markDone('m1'); showPage('m2')">Valider et continuer</button></div>
+</div>
+<div id="page-m2" class="page">
+
+<div class="banner"><div class="b-num">Module 02 / 06</div><h2>Contenu technique Yoseikan Budo</h2>
+  <p>Répertoire technique, progression, programme de grades</p><div class="b-tags"><span class="b-tag">Technique</span><span class="b-tag">Grades</span></div></div>
+<div class="card todo"><h2>Contenu à compléter</h2><p>Ce module doit être renseigné à partir de vos <strong>documents officiels</strong> déposés dans le dossier <code>sources/</code> : programme technique officiel, progression par grade, nomenclature des techniques, exigences des passages de grade.</p><p>Structure attendue : sections numérotées, tableaux de synthèse, encadrés mémo, puis fiche de synthèse imprimable. Le générateur reprend automatiquement le contenu placé dans <code>content/modules.json</code>.</p></div>
+<div class="btn-row"><button class="btn btn-ghost" onclick="showPage('q2')">Tester mes connaissances sur ce module</button></div>
+<div class="nav-btns"><button class="btn btn-ghost" onclick="showPage('m1')">Module précédent</button><button class="btn btn-primary" onclick="markDone('m2'); showPage('m3')">Valider et continuer</button></div>
+</div>
+<div id="page-m3" class="page">
+
+<div class="banner"><div class="b-num">Module 03 / 06</div><h2>Pédagogie et méthodologie d&#x27;enseignement</h2>
+  <p>Rôle de l&#x27;instructeur, structure de séance, méthodes, adaptation aux publics</p><div class="b-tags"><span class="b-tag">Cœur du DIF</span><span class="b-tag">Enseignement</span></div></div>
+<div class="card">
+ <h2>1. Rôles et Responsabilités de l'Instructeur DIF</h2>
+ <p>L'instructeur DIF est habilité à <strong>animer et encadrer</strong> des séances de Yoseikan Budo en club sous la responsabilité d'un éducateur diplômé d'État.</p>
+ <ul>
+ <li>Encadrement bénévole d'activité physique et sportive</li>
+ <li>Planification et conduite de séances pédagogiques</li>
+ <li>Transmission des valeurs du Budo</li>
+ <li>Suivi et progression des pratiquants</li>
+ <li>Application des consignes de sécurité</li>
+ </ul>
+ <div class="memo"><div class="memo-body"><strong>Limite du DIF</strong>Le DIF n'est PAS un diplôme d'État. Il ne permet pas d'enseigner contre rémunération. Pour enseigner à titre professionnel : BPJEPS ou DEJEPS.</div></div>
+ </div>
+<div class="card">
+ <h2>2. Structure d'une Séance</h2>
+ <p>Toute séance doit suivre une <strong>progression logique</strong> en 4 phases :</p>
+ <div class="table-wrap"><table>
+ <tr><th>Phase</th><th>Durée</th><th>Objectif</th><th>Contenu</th></tr>
+ <tr><td><strong>1. Salut & Mise en place</strong></td><td>2-3 min</td><td>Cohésion, respect</td><td>Seiza, salut, annonce des objectifs</td></tr>
+ <tr><td><strong>2. Échauffement</strong></td><td>10-15 min</td><td>Préparer le corps</td><td>Cardio, mobilité articulaire, étirements dynamiques</td></tr>
+ <tr><td><strong>3. Corps de séance</strong></td><td>30-40 min</td><td>Apprentissage</td><td>Kihon, Kata ou Kumité selon objectif</td></tr>
+ <tr><td><strong>4. Retour au calme & bilan</strong></td><td>5-10 min</td><td>Récupération</td><td>Étirements passifs, debriefing, salut final</td></tr>
+ </table></div>
+ </div>
+<div class="card">
+ <h2>3. Méthodes Pédagogiques</h2>
+ <h3>Méthode analytique</h3>
+ <p>Découpage d'une technique complexe en éléments simples appris séparément, puis réassemblés. Idéale pour les <strong>débutants</strong>.</p>
+ <h3>Méthode globale</h3>
+ <p>Exécution complète de la technique d'emblée, corrections progressives. Idéale pour les <strong>confirmés</strong>.</p>
+ <h3>Méthode mixte (progressive)</h3>
+ <p>Globale analytique globale (G-A-G). Méthode recommandée en général.</p>
+
+ <h3>Styles d'apprentissage (VAK)</h3>
+ <ul>
+ <li><strong>Visuel</strong> — Démonstration, supports visuels</li>
+ <li><strong>Auditif</strong> — Explication verbale, décompte</li>
+ <li><strong>Kinesthésique</strong> — Mise en situation, guidage physique</li>
+ </ul>
+ <div class="memo"><div class="memo-body"><strong>Conseil</strong>Toujours <em>démontrer</em> avant d'expliquer : le Yoseikan Budo est un art visuel. Appliquer le principe : <strong>Montrer Expliquer Faire faire Corriger</strong>.</div></div>
+ </div>
+<div class="card">
+ <h2>4. Adaptation aux Publics</h2>
+ <div class="table-wrap"><table>
+ <tr><th>Public</th><th>Adaptations clés</th></tr>
+ <tr><td><strong>Enfants (6-12 ans)</strong></td><td>Séances courtes, jeux éducatifs, images concrètes, sollicitation positive</td></tr>
+ <tr><td><strong>Ados (13-17 ans)</strong></td><td>Autonomie progressive, compétition adaptée, groupes de pairs</td></tr>
+ <tr><td><strong>Adultes</strong></td><td>Objectifs personnels, explication du pourquoi, respect du rythme</td></tr>
+ <tr><td><strong>Seniors</strong></td><td>Amplitude réduite, équilibre, pas de sauts, travail de respiration</td></tr>
+ <tr><td><strong>Personnes en situation de handicap</strong></td><td>Adapter postures, partenariats adaptés, valoriser l'effort</td></tr>
+ </table></div>
+ </div>
+<div class="card">
+ <h2>5. Sécurité au Dojo</h2>
+ <ul>
+ <li>Vérification des équipements de protection (protège-dents, coquille, protège-pieds...)</li>
+ <li>Ongles coupés courts, bijoux retirés</li>
+ <li>Surface d'entraînement adaptée (tatami non glissant)</li>
+ <li>Règles de sécurité lors du Kumité (contrôle, distance)</li>
+ <li>Connaissance des gestes de premiers secours (PSC1 recommandé)</li>
+ <li>Déclaration d'accident la fédération sous 48h</li>
+ </ul>
+ </div>
+<div class="card">
+ <h2>6. Planification d'une Séance Type</h2>
+ <p>L'instructeur DIF doit être capable de <strong>préparer une séance écrite</strong> avec des objectifs clairs, mesurables et adaptés au niveau du groupe.</p>
+ <h3>Fiche de séance — éléments obligatoires</h3>
+ <div class="table-wrap"><table>
+ <tr><th>Élément</th><th>Contenu</th></tr>
+ <tr><td><strong>Objectif général</strong></td><td>Ce que le pratiquant apprendra (ex : maîtriser Gyaku-zuki)</td></tr>
+ <tr><td><strong>Objectifs spécifiques</strong></td><td>Étapes intermédiaires (posture, hikite, kime)</td></tr>
+ <tr><td><strong>Public</strong></td><td>Âge, niveau, effectif, particularités</td></tr>
+ <tr><td><strong>Matériel</strong></td><td>Tatami, protections, paos, miroirs…</td></tr>
+ <tr><td><strong>Déroulé chronométré</strong></td><td>4 phases avec durées précises</td></tr>
+ <tr><td><strong>Critères d'évaluation</strong></td><td>Comment juger l'atteinte de l'objectif</td></tr>
+ </table></div>
+ <h3>Cycle annuel d'enseignement</h3>
+ <ul>
+ <li><strong>Septembre–Décembre</strong> : Remise en forme, bases kihon, révision katas du niveau</li>
+ <li><strong>Janvier–Mars</strong> : Approfondissement, préparation examens grades (Kyu)</li>
+ <li><strong>Avril–Juin</strong> : Compétitions, préparation kumité, projets de fin d'année</li>
+ <li><strong>Juillet–Août</strong> : Stages d'été, travail libre, repos actif</li>
+ </ul>
+ <div class="memo"><div class="memo-body"><strong>Conseil pratique</strong>Un objectif pédagogique doit être <strong>SMART</strong> : Spécifique, Mesurable, Atteignable, Réaliste, Temporel. Exemple : «&nbsp;En fin de séance, 80% des élèves exécuteront Gyaku-zuki avec rotation des hanches.&nbsp;»</div></div>
+ </div>
+<div class="card">
+ <h2>7. Gestion de Groupe et Communication</h2>
+ <h3>Positionnement de l'instructeur</h3>
+ <ul>
+ <li>Face au groupe pour la démonstration (élèves voient le miroir)</li>
+ <li>Dos au miroir pour les corrections individuelles</li>
+ <li>Circulation dans le groupe pour les corrections (jamais statique)</li>
+ </ul>
+ <h3>Voix et communication</h3>
+ <div class="table-wrap"><table>
+ <tr><th>Situation</th><th>Technique de communication</th></tr>
+ <tr><td>Attention du groupe</td><td>Ton ferme, pause, regard panoramique</td></tr>
+ <tr><td>Encouragements</td><td>Positif, spécifique («&nbsp;bon hikite&nbsp;»), immédiat</td></tr>
+ <tr><td>Correction</td><td>Sandwich : positif + correction + positif</td></tr>
+ <tr><td>Décompte</td><td>Japonais (Ichi, Ni, San…) pour l'immersion culturelle</td></tr>
+ </table></div>
+ <h3>Gestion des conflits et des situations difficiles</h3>
+ <ul>
+ <li><strong>Élève turbulent</strong> : Lui donner un rôle valorisant (uke de démonstration)</li>
+ <li><strong>Élève en échec</strong> : Décomposer encore plus, valoriser les progrès</li>
+ <li><strong>Groupe hétérogène</strong> : Travail en ateliers, tutorat senior/junior</li>
+ <li><strong>Blessure légère</strong> : Adapter l'exercice (rôle d'observateur, travail bras/jambes séparément)</li>
+ </ul>
+ <div class="memo"><div class="memo-body"><strong>Principe éthique</strong>L'instructeur DIF ne doit jamais ridiculiser un élève ni le mettre en situation d'échec devant le groupe. Le dojo est un espace de progression, pas de compétition entre pratiquants.</div></div>
+ </div>
+<div class="btn-row"><button class="btn btn-ghost" onclick="showPage('q3')">Tester mes connaissances sur ce module</button></div>
+<div class="nav-btns"><button class="btn btn-ghost" onclick="showPage('m2')">Module précédent</button><button class="btn btn-primary" onclick="markDone('m3'); showPage('m4')">Valider et continuer</button></div>
+</div>
+<div id="page-m4" class="page">
+
+<div class="banner"><div class="b-num">Module 04 / 06</div><h2>Environnement fédéral, réglementation et vie du club</h2>
+  <p>Structure fédérale, licence et assurance, cadre d&#x27;encadrement, vie associative</p><div class="b-tags"><span class="b-tag">Fédéral</span><span class="b-tag">Réglementation</span></div></div>
+<div class="card"><h2>1. L'architecture du mouvement sportif</h2>
+<p>Le jury attend une lecture claire de la chaîne institutionnelle, du pratiquant jusqu'à l'État. Savoir la restituer de mémoire est un attendu de base du DIF.</p>
+<div class="table-wrap"><table>
+<tr><th>Niveau</th><th>Structure</th><th>Rôle principal</th></tr>
+<tr><td>International</td><td>Instances internationales de la discipline</td><td>Règles techniques, calendrier mondial, reconnaissance des grades</td></tr>
+<tr><td>National</td><td>Fédération délégataire et discipline associée</td><td>Délégation ministérielle, grades, diplômes fédéraux, réglementation</td></tr>
+<tr><td>Régional</td><td>Ligue</td><td>Formation des cadres, compétitions régionales, relais de la politique technique</td></tr>
+<tr><td>Départemental</td><td>Comité départemental</td><td>Animation de proximité, stages, détection, soutien aux clubs</td></tr>
+<tr><td>Local</td><td>Club (association loi 1901)</td><td>Accueil, enseignement, licences, vie associative</td></tr>
+</table></div>
+<div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Point de vigilance</strong>Le rattachement exact du Yoseikan Budo, le nom des instances et les intitulés des commissions doivent être vérifiés dans vos documents fédéraux à jour avant l'oral. Une erreur de dénomination est immédiatement relevée par le jury.</div></div>
+</div>
+
+<div class="card"><h2>2. Le club, association loi 1901</h2>
+<h3>Organes</h3>
+<ul>
+<li><strong>Assemblée générale</strong> — organe souverain : approuve les comptes, le rapport moral, élit les dirigeants.</li>
+<li><strong>Conseil d'administration</strong> — met en œuvre les décisions de l'AG entre deux assemblées.</li>
+<li><strong>Bureau</strong> — président, trésorier, secrétaire : gestion courante et représentation.</li>
+</ul>
+<h3>Documents structurants</h3>
+<ul>
+<li><strong>Statuts</strong> — objet, fonctionnement, conditions d'adhésion et de radiation.</li>
+<li><strong>Règlement intérieur</strong> — règles de vie, tenue, assiduité, sécurité, sanctions. Opposable dès lors qu'il est porté à connaissance.</li>
+<li><strong>Projet associatif et projet pédagogique</strong> — ce que le club veut être, et comment l'enseignement le traduit sur le tatami.</li>
+</ul>
+<div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Place de l'instructeur</strong>L'instructeur fédéral n'est pas un prestataire technique isolé : il traduit le projet du club en progression pédagogique et rend compte au bureau.</div></div>
+</div>
+
+<div class="card"><h2>3. Licence, assurance et couverture</h2>
+<p>La licence fédérale ouvre trois droits et une protection.</p>
+<ul>
+<li><strong>Adhésion</strong> à la fédération via le club, pour la saison sportive.</li>
+<li><strong>Accès</strong> aux compétitions, stages, formations et passages de grade.</li>
+<li><strong>Assurance</strong> en responsabilité civile et garanties de base, avec options complémentaires à la charge du licencié.</li>
+</ul>
+<h3>Ce que l'instructeur doit vérifier</h3>
+<ul>
+<li>Aucun pratiquant sur le tatami hors période d'essai sans licence en cours de validité.</li>
+<li>Situation médicale conforme à la réglementation en vigueur (certificat ou questionnaire de santé, selon le public et l'année).</li>
+<li>Autorisation parentale et personnes à prévenir, pour les mineurs.</li>
+</ul>
+<div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Conséquence directe</strong>Faire pratiquer une personne non couverte engage la responsabilité du club et celle de l'encadrant. C'est une question classique de l'entretien.</div></div>
+</div>
+
+<div class="card"><h2>4. Cadre réglementaire de l'encadrement</h2>
+<h3>Bénévolat et rémunération</h3>
+<div class="table-wrap"><table>
+<tr><th></th><th>Encadrement bénévole</th><th>Enseignement contre rémunération</th></tr>
+<tr><td>Titre requis</td><td>Diplôme fédéral (DIF et suite du cursus)</td><td>Certification professionnelle inscrite au répertoire national</td></tr>
+<tr><td>Cadre</td><td>Fédéral</td><td>Code du sport</td></tr>
+<tr><td>Déclaration</td><td>Via le club et la fédération</td><td>Déclaration d'éducateur sportif, carte professionnelle</td></tr>
+</table></div>
+<h3>Obligations communes</h3>
+<ul>
+<li><strong>Honorabilité</strong> — tout encadrant, bénévole ou rémunéré, est soumis au contrôle d'honorabilité.</li>
+<li><strong>Obligation de moyens</strong> — sécurité des pratiquants, surveillance effective, adaptation au niveau et à l'âge.</li>
+<li><strong>Obligation d'assistance</strong> — porter secours et alerter.</li>
+<li><strong>Affichage</strong> — diplômes et attestations d'assurance affichés dans les locaux.</li>
+</ul>
+<div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Distinction à maîtriser</strong>La responsabilité civile est assurée ; la responsabilité pénale, elle, reste personnelle et ne s'assure pas. Le jury vérifie souvent que le candidat connaît cette différence.</div></div>
+</div>
+
+<div class="card"><h2>5. Le cursus fédéral de formation</h2>
+<p>Le DIF s'inscrit dans un parcours progressif de formation de cadres. Situer son diplôme dans ce parcours, et savoir dire ce qu'il autorise et ce qu'il n'autorise pas, fait partie de l'évaluation.</p>
+<ul>
+<li><strong>Prérogatives du DIF</strong> — animer et encadrer des séances en club, à titre bénévole, dans le cadre défini par la fédération.</li>
+<li><strong>Limites</strong> — pas d'enseignement contre rémunération, pas de substitution à un éducateur diplômé d'État là où celui-ci est requis.</li>
+<li><strong>Suite du cursus</strong> — diplômes fédéraux supérieurs, puis voie professionnelle.</li>
+</ul>
+<div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>À vérifier</strong>L'intitulé exact des diplômes du cursus et leurs prérogatives évoluent. Confirmez-les dans les textes fédéraux de la saison en cours.</div></div>
+</div>
+
+<div class="card"><h2>6. La saison et les événements fédéraux</h2>
+<p>« À quels événements fédéraux avez-vous participé cette saison ? » est une question quasi certaine. Le jury attend des faits datés, pas des intentions.</p>
+<div class="table-wrap"><table>
+<tr><th>Période</th><th>Type d'événement</th><th>Ce que l'instructeur y fait</th></tr>
+<tr><td>Rentrée</td><td>Assemblées générales, réunions de comité</td><td>Représenter le club, récupérer les informations de saison</td></tr>
+<tr><td>Automne</td><td>Stages techniques, formations de cadres</td><td>Se former, faire progresser ses pratiquants</td></tr>
+<tr><td>Hiver</td><td>Compétitions et coupes</td><td>Accompagner, encadrer, arbitrer selon les qualifications</td></tr>
+<tr><td>Printemps</td><td>Passages de grade, stages de discipline</td><td>Présenter ses pratiquants, participer au jury selon son grade</td></tr>
+<tr><td>Fin de saison</td><td>Démonstrations, fête du club, bilan</td><td>Valoriser la progression et préparer la saison suivante</td></tr>
+</table></div>
+<div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Préparation concrète</strong>Constituez avant l'oral une liste écrite de votre participation réelle sur la saison : dates, lieux, intitulés, rôle tenu. C'est la réponse la plus forte possible à cette question.</div></div>
+</div>
+
+<div class="card"><h2>7. Gestion des situations sensibles</h2>
+<ul>
+<li><strong>Accident</strong> — arrêt du cours, mise en sécurité du groupe, protection et bilan, alerte, information des responsables légaux et du président, déclaration à l'assurance dans les délais prévus.</li>
+<li><strong>Comportement violent</strong> — arrêt immédiat, mise à l'écart du tatami, entretien après le cours, information des responsables légaux et du bureau, rappel du règlement intérieur.</li>
+<li><strong>Suspicion de situation préoccupante concernant un mineur</strong> — ne pas enquêter soi-même, ne rien promettre de confidentiel, consigner les faits, alerter sans délai le président et les autorités compétentes.</li>
+<li><strong>Conflit avec une famille</strong> — jamais au bord du tatami : entretien programmé, en présence d'un dirigeant si nécessaire.</li>
+</ul>
+</div>
+<div class="btn-row"><button class="btn btn-ghost" onclick="showPage('q4')">Tester mes connaissances sur ce module</button></div>
+<div class="nav-btns"><button class="btn btn-ghost" onclick="showPage('m3')">Module précédent</button><button class="btn btn-primary" onclick="markDone('m4'); showPage('m5')">Valider et continuer</button></div>
+</div>
+<div id="page-m5" class="page">
+
+<div class="banner"><div class="b-num">Module 05 / 06</div><h2>Anatomie, physiologie et sécurité du pratiquant</h2>
+  <p>Bases physiologiques, charge de travail, prévention et conduite à tenir</p><div class="b-tags"><span class="b-tag">Sécurité</span><span class="b-tag">Physiologie</span></div></div>
+<div class="card">
+ <h2>1. Filières Énergétiques</h2>
+ <p>Le Yoseikan Budo sollicite principalement les filières <strong>anaérobie alactique</strong> et <strong>anaérobie lactique</strong>.</p>
+ <div class="table-wrap"><table>
+ <tr><th>Filière</th><th>Durée</th><th>Carburant</th><th>En Yoseikan Budo</th></tr>
+ <tr><td><strong>Anaérobie alactique</strong></td><td>0-10 sec</td><td>ATP-PC (phosphocréatine)</td><td>Techniques explosives, kime</td></tr>
+ <tr><td><strong>Anaérobie lactique</strong></td><td>10-90 sec</td><td>Glycolyse</td><td>Séquences de Kumité intense</td></tr>
+ <tr><td><strong>Aérobie</strong></td><td>+90 sec</td><td>Lipides + glucides</td><td>Katas longues, endurance de séance</td></tr>
+ </table></div>
+ </div>
+<div class="card">
+ <h2>2. Groupes Musculaires Sollicités</h2>
+ <h3>Membres supérieurs</h3>
+ <ul>
+ <li>Grand pectoral, deltoïde propulsion des bras (Tsuki)</li>
+ <li>Triceps extension du coude (Gyaku-zuki)</li>
+ <li>Avant-bras rotation (hikite)</li>
+ </ul>
+ <h3>Tronc / Ceinture</h3>
+ <ul>
+ <li><strong>Transverse de l'abdomen</strong> stabilisation, kime</li>
+ <li>Obliques rotation du bassin (hanches)</li>
+ <li>Dorsaux blocages, hanchi</li>
+ </ul>
+ <h3>Membres inférieurs</h3>
+ <ul>
+ <li>Quadriceps, ischio-jambiers propulsion (keri-waza)</li>
+ <li>Psoas flexion de hanche (Mae-geri)</li>
+ <li>Fessiers, adducteurs stabilisation (positions)</li>
+ </ul>
+ <div class="memo"><div class="memo-body"><strong>Principe biomécanique</strong>La puissance en Yoseikan Budo part du sol hanches épaule poing. Ce <em>transfert de force en chaîne cinétique</em> est le fondement du Kime.</div></div>
+ </div>
+<div class="card">
+ <h2>3. L'Échauffement</h2>
+ <h3>Objectifs</h3>
+ <ul>
+ <li>Augmenter la température musculaire (+1°C +5% de performance)</li>
+ <li>Augmenter la fréquence cardiaque et la vascularisation</li>
+ <li>Améliorer la lubrification articulaire (synovie)</li>
+ <li>Préparer mentalement le pratiquant</li>
+ </ul>
+ <h3>Phases de l'échauffement</h3>
+ <ol style="padding-left:20px">
+ <li><strong>Cardio général</strong> (5 min) — course, déplacements</li>
+ <li><strong>Mobilisation articulaire</strong> (5 min) — cervicales chevilles</li>
+ <li><strong>Étirements dynamiques</strong> (3-5 min) — sans à-coups</li>
+ <li><strong>Mise en route technique</strong> (5 min) — kihon léger</li>
+ </ol>
+ <div class="memo"><div class="memo-body"><strong>Important</strong>Les étirements STATIQUES se font EN FIN de séance (retour au calme), pas avant. Les étirements dynamiques sont autorisés en échauffement.</div></div>
+ </div>
+<div class="card">
+ <h2>4. Blessures Fréquentes & Prévention</h2>
+ <div class="table-wrap"><table>
+ <tr><th>Blessure</th><th>Zone</th><th>Prévention</th></tr>
+ <tr><td>Entorse</td><td>Cheville, genou</td><td>Travail proprioception, renforcement, sol adapté</td></tr>
+ <tr><td>Tendinite</td><td>Épaule, genou (rotule)</td><td>Progressivité, repos, hydratation</td></tr>
+ <tr><td>Fracture</td><td>Orteils, doigts</td><td>Port de protections, technique correcte</td></tr>
+ <tr><td>Contusion / KO</td><td>Tête</td><td>Port de casque, maîtrise du contrôle</td></tr>
+ <tr><td>Lombalgie</td><td>Dos</td><td>Renforcement gainage, posture</td></tr>
+ </table></div>
+
+ <h3>Protocole RICE (blessure aiguë)</h3>
+ <ul>
+ <li><strong>R</strong>est — Repos immédiat</li>
+ <li><strong>I</strong>ce — Glace 15-20 min (jamais directement sur la peau)</li>
+ <li><strong>C</strong>ompression — Bandage compressif</li>
+ <li><strong>E</strong>levation — Élever le membre blessé</li>
+ </ul>
+ </div>
+<div class="card">
+ <h2>5. Nutrition &amp; Hydratation du Karatéka</h2>
+ <h3>Avant l'entraînement</h3>
+ <ul>
+ <li>Repas léger 2-3h avant (glucides complexes : pâtes, riz)</li>
+ <li>Éviter les graisses et fibres en excès (digestion lente)</li>
+ <li>Hydratation : 500 ml d'eau dans les 2h précédant la séance</li>
+ </ul>
+ <h3>Pendant l'entraînement</h3>
+ <ul>
+ <li>Eau régulièrement (150-200 ml toutes les 20 min)</li>
+ <li>Pas besoin de boissons énergétiques pour séances &lt; 1h</li>
+ <li>Signal de soif = déjà 1% de déshydratation (performance réduite)</li>
+ </ul>
+ <h3>Après l'entraînement</h3>
+ <ul>
+ <li><strong>Fenêtre anabolique</strong> : protéines + glucides dans les 30 min post-séance</li>
+ <li>Réhydratation : 1,5× le poids perdu en eau (exemple : -500g 750ml)</li>
+ </ul>
+ <div class="info-box">
+ <strong>Besoins nutritionnels d'un karatéka adulte :</strong>
+ <ul style="margin-top:8px">
+ <li>Glucides : 5-7 g/kg/jour (énergie principale)</li>
+ <li>Protéines : 1,4-1,6 g/kg/jour (reconstruction musculaire)</li>
+ <li>Lipides : 1 g/kg/jour minimum (hormones, articulations)</li>
+ </ul>
+ </div>
+ </div>
+<div class="card">
+ <h2>6. Charge d'Entraînement &amp; Récupération</h2>
+ <p>La <strong>surcompensation</strong> est le principe fondamental de la progression : on stresse le corps repos adaptation performances supérieures.</p>
+ <h3>Les 3 phases du cycle d'entraînement</h3>
+ <div class="table-wrap"><table>
+ <tr><th>Phase</th><th>Durée</th><th>Contenu</th></tr>
+ <tr><td><strong>Charge (stimulation)</strong></td><td>3-4 semaines</td><td>Volume élevé, intensité progressive</td></tr>
+ <tr><td><strong>Surcharge (stress)</strong></td><td>1 semaine</td><td>Volume maximum, intensité maximale</td></tr>
+ <tr><td><strong>Récupération (supercompensation)</strong></td><td>1 semaine</td><td>Volume réduit, laisser le corps s'adapter</td></tr>
+ </table></div>
+ <h3>Signes de surmenage (overtraining)</h3>
+ <ul>
+ <li>Baisse de performance malgré l'entraînement intensif</li>
+ <li>Fatigue chronique, troubles du sommeil</li>
+ <li>Irritabilité, perte de motivation</li>
+ <li>Fréquence cardiaque de repos élevée (+5-10 bpm)</li>
+ <li>Infections répétées (immunité affaiblie)</li>
+ </ul>
+ <h3>Moyens de récupération</h3>
+ <div class="two-col">
+ <ul>
+ <li>Sommeil (7-9h) — principal</li>
+ <li>Bain froid / chaud alterné</li>
+ <li>Massage et automassage</li>
+ </ul>
+ <ul>
+ <li>Étirements doux post-séance</li>
+ <li>Nutrition adaptée (cf. ci-dessus)</li>
+ <li>Relaxation / cohérence cardiaque</li>
+ </ul>
+ </div>
+ <div class="memo"><div class="memo-body"><strong>Pour l'instructeur</strong>Chez les enfants et adolescents, le temps de récupération est plus long et les signes de surmenage plus discrets. Observer les comportements et adapter le programme en conséquence.</div></div>
+ </div>
+<div class="btn-row"><button class="btn btn-ghost" onclick="showPage('q5')">Tester mes connaissances sur ce module</button></div>
+<div class="nav-btns"><button class="btn btn-ghost" onclick="showPage('m4')">Module précédent</button><button class="btn btn-primary" onclick="markDone('m5'); showPage('m6')">Valider et continuer</button></div>
+</div>
+<div id="page-m6" class="page">
+
+<div class="banner"><div class="b-num">Module 06 / 06</div><h2>Vocabulaire et terminologie</h2>
+  <p>Termes japonais utilisés dans la discipline et commandements du dojo</p><div class="b-tags"><span class="b-tag">Terminologie</span></div></div>
+<div class="card todo"><h2>Contenu à compléter</h2><p>Ce module doit être renseigné à partir de vos <strong>documents officiels</strong> déposés dans le dossier <code>sources/</code> : lexique officiel de la discipline, commandements du dojo, comptage, nomenclature technique.</p><p>Structure attendue : sections numérotées, tableaux de synthèse, encadrés mémo, puis fiche de synthèse imprimable. Le générateur reprend automatiquement le contenu placé dans <code>content/modules.json</code>.</p></div>
+<div class="btn-row"><button class="btn btn-ghost" onclick="showPage('q6')">Tester mes connaissances sur ce module</button></div>
+<div class="nav-btns"><button class="btn btn-ghost" onclick="showPage('m5')">Module précédent</button><button class="btn btn-primary" onclick="markDone('m6'); showPage('exam')">Valider et passer à l'examen blanc</button></div>
+</div>
+<div id="page-q1" class="page">
+
+<div class="banner"><div class="b-num">Auto-évaluation 01</div><h2>Histoire et principes</h2>
+  <p>0 questions, seuil de réussite 70 %. Les questions sont tirées dans un ordre aléatoire à chaque tentative.</p></div>
+<div id="quiz-q1"></div>
+<div class="nav-btns"><button class="btn btn-ghost" onclick="showPage('m1')">Revenir au module</button>
+<button class="btn btn-ghost" onclick="renderQuiz('q1')">Réinitialiser</button></div>
+</div>
+<div id="page-q2" class="page">
+
+<div class="banner"><div class="b-num">Auto-évaluation 02</div><h2>Contenu technique</h2>
+  <p>0 questions, seuil de réussite 70 %. Les questions sont tirées dans un ordre aléatoire à chaque tentative.</p></div>
+<div id="quiz-q2"></div>
+<div class="nav-btns"><button class="btn btn-ghost" onclick="showPage('m2')">Revenir au module</button>
+<button class="btn btn-ghost" onclick="renderQuiz('q2')">Réinitialiser</button></div>
+</div>
+<div id="page-q3" class="page">
+
+<div class="banner"><div class="b-num">Auto-évaluation 03</div><h2>Pédagogie et méthodologie</h2>
+  <p>25 questions, seuil de réussite 70 %. Les questions sont tirées dans un ordre aléatoire à chaque tentative.</p></div>
+<div id="quiz-q3"></div>
+<div class="nav-btns"><button class="btn btn-ghost" onclick="showPage('m3')">Revenir au module</button>
+<button class="btn btn-ghost" onclick="renderQuiz('q3')">Réinitialiser</button></div>
+</div>
+<div id="page-q4" class="page">
+
+<div class="banner"><div class="b-num">Auto-évaluation 04</div><h2>Environnement fédéral et vie du club</h2>
+  <p>20 questions, seuil de réussite 70 %. Les questions sont tirées dans un ordre aléatoire à chaque tentative.</p></div>
+<div id="quiz-q4"></div>
+<div class="nav-btns"><button class="btn btn-ghost" onclick="showPage('m4')">Revenir au module</button>
+<button class="btn btn-ghost" onclick="renderQuiz('q4')">Réinitialiser</button></div>
+</div>
+<div id="page-q5" class="page">
+
+<div class="banner"><div class="b-num">Auto-évaluation 05</div><h2>Physiologie et sécurité</h2>
+  <p>25 questions, seuil de réussite 70 %. Les questions sont tirées dans un ordre aléatoire à chaque tentative.</p></div>
+<div id="quiz-q5"></div>
+<div class="nav-btns"><button class="btn btn-ghost" onclick="showPage('m5')">Revenir au module</button>
+<button class="btn btn-ghost" onclick="renderQuiz('q5')">Réinitialiser</button></div>
+</div>
+<div id="page-q6" class="page">
+
+<div class="banner"><div class="b-num">Auto-évaluation 06</div><h2>Terminologie</h2>
+  <p>0 questions, seuil de réussite 70 %. Les questions sont tirées dans un ordre aléatoire à chaque tentative.</p></div>
+<div id="quiz-q6"></div>
+<div class="nav-btns"><button class="btn btn-ghost" onclick="showPage('m6')">Revenir au module</button>
+<button class="btn btn-ghost" onclick="renderQuiz('q6')">Réinitialiser</button></div>
+</div>
+<div id="page-exam" class="page">
+
+<div class="banner"><div class="b-num">Évaluation générale</div><h2>Examen blanc</h2>
+  <p>Dix questions par section disponible, tirées au sort. Seuil de réussite : 70 %.</p></div>
+<div id="exam-intro">
+  <div class="card"><h2>Sections mobilisées</h2>
+  <div class="table-wrap"><table><tr><th>Section</th><th>Banque</th><th>Tirées</th></tr><tr><td>Pédagogie et méthodologie</td><td>25</td><td>10</td></tr><tr><td>Environnement fédéral et vie du club</td><td>20</td><td>10</td></tr><tr><td>Physiologie et sécurité</td><td>25</td><td>10</td></tr></table></div>
+  <div class="info-box">L'examen blanc porte sur les connaissances. Il ne remplace pas le
+  simulateur d'épreuve, qui travaille la compétence réellement évaluée le jour J.</div>
+  <div class="btn-row"><button class="btn btn-primary btn-lg" onclick="examStart()">Démarrer l'examen blanc</button></div>
+  </div>
+</div>
+<div id="exam-body" style="display:none"></div>
+</div>
+<div id="page-data" class="page">
+
+<div class="banner"><div class="b-num">Données</div><h2>Sauvegarde et restauration</h2>
+  <p>Vos plans de séance, votre planification et votre progression sont stockés dans le navigateur.
+  Exportez-les régulièrement.</p></div>
+<div class="card"><h2>Exporter</h2>
+  <p>Génère un fichier JSON contenant l'intégralité de votre travail.</p>
+  <div class="btn-row"><button class="btn btn-primary" onclick="exportData()">Télécharger ma sauvegarde</button></div>
+  <h3>Restaurer</h3>
+  <p>Le contenu importé remplace les données actuelles.</p>
+  <input type="file" accept="application/json" onchange="importData(this)" style="font-size:.85rem">
+</div>
+<div class="card"><h2>Faire évoluer ce site</h2>
+  <p>Le site est généré. Pour le modifier, éditez les fichiers de <code>content/</code> puis relancez :</p>
+  <div class="table-wrap"><table>
+    <tr><th>Fichier</th><th>Contenu</th></tr>
+    <tr><td><code>modules.json</code></td><td>Les six modules de connaissances (HTML)</td></tr>
+    <tr><td><code>quiz.json</code></td><td>Les banques de questions par module</td></tr>
+    <tr><td><code>themes.json</code></td><td>Les thèmes de tirage au sort, par public</td></tr>
+    <tr><td><code>exercices.json</code></td><td>La banque de situations d'apprentissage</td></tr>
+    <tr><td><code>jury.json</code></td><td>Les questions d'entretien et les éléments attendus</td></tr>
+    <tr><td><code>saison.json</code></td><td>Les cycles de la saison sportive</td></tr>
+    <tr><td><code>plan_modele.json</code></td><td>La trame du plan de séance</td></tr>
+  </table></div>
+  <p>Déposez vos documents officiels dans <code>sources/</code> : ils serviront à renseigner les
+  modules marqués « à compléter ».</p>
+  <div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Nom de code</strong>
+  YOSEI-DIF — à citer pour réimplanter ce dispositif dans une autre discipline ou une autre formation.</div></div>
+</div>
+</div>
+</main>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>window.DATA = {"config":{"code":"YOSEI-DIF","titre":"DIF Yoseikan Budo","sous_titre":"Préparation au Diplôme d'Instructeur Fédéral","version":"1.0","epreuve":{"enfants":{"label":"Enfants","total":60,"prep":30,"animation":20,"entretien":10},"ados":{"label":"Ados / Adultes","total":90,"prep":30,"animation":20,"entretien":10},"baby":{"label":"Baby (4-6 ans)","total":60,"prep":30,"animation":20,"entretien":10},"adapte":{"label":"Public adapté","total":90,"prep":30,"animation":20,"entretien":10}},"objectifs":[["Concevoir et mettre en œuvre des exercices et des séances","Traduire un thème imposé en objectif opérationnel, en situations d'apprentissage et en critères de réussite observables."],["Planifier et programmer une saison sportive","Construire une progression annuelle cohérente : cycles, passages de grade, événements, évaluation."],["Prendre en compte la spécificité de différents publics","Adapter volume, consignes, sécurité et intention pédagogique au public réellement en face de soi."],["Connaître l'environnement fédéral et du club","Maîtriser la structure fédérale, le cadre réglementaire de l'encadrement et la vie associative du club."],["Participer à des événements fédéraux","Savoir situer et justifier son implication dans le calendrier et la vie de la discipline."]]},"modules":[{"id":"m1","num":1,"titre":"Yoseikan Budo — histoire, filiation, principes","sous_titre":"Origines, transmission, esprit de la discipline","tags":["Discipline","Culture"],"statut":"a_completer"},{"id":"m2","num":2,"titre":"Contenu technique Yoseikan Budo","sous_titre":"Répertoire technique, progression, programme de grades","tags":["Technique","Grades"],"statut":"a_completer"},{"id":"m3","num":3,"titre":"Pédagogie et méthodologie d'enseignement","sous_titre":"Rôle de l'instructeur, structure de séance, méthodes, adaptation aux publics","tags":["Cœur du DIF","Enseignement"],"statut":"pret"},{"id":"m4","num":4,"titre":"Environnement fédéral, réglementation et vie du club","sous_titre":"Structure fédérale, licence et assurance, cadre d'encadrement, vie associative","tags":["Fédéral","Réglementation"],"statut":"pret"},{"id":"m5","num":5,"titre":"Anatomie, physiologie et sécurité du pratiquant","sous_titre":"Bases physiologiques, charge de travail, prévention et conduite à tenir","tags":["Sécurité","Physiologie"],"statut":"pret"},{"id":"m6","num":6,"titre":"Vocabulaire et terminologie","sous_titre":"Termes japonais utilisés dans la discipline et commandements du dojo","tags":["Terminologie"],"statut":"a_completer"}],"quiz":{"q1":{"module":"m1","titre":"Quiz — Histoire et principes","statut":"a_completer","questions":[]},"q2":{"module":"m2","titre":"Quiz — Contenu technique","statut":"a_completer","questions":[]},"q3":{"module":"m3","titre":"Quiz — Pédagogie et méthodologie","statut":"pret","questions":[{"q":"Le DIF permet-il d'enseigner le Yoseikan Budo à titre professionnel (rémunéré) ?","opts":["Oui, dans tous les clubs","Oui, pour les mineurs uniquement","Non, c'est une habilitation bénévole","Oui, avec accord du Comité départemental"],"correct":2},{"q":"Quelle est le bon ordre des phases d'une séance de Yoseikan Budo ?","opts":["Corps de séance Échauffement Salut Retour au calme","Salut Échauffement Corps de séance Retour au calme","Échauffement Salut Corps de séance Retour au calme","Salut Corps de séance Échauffement Retour au calme"],"correct":1},{"q":"La méthode G-A-G signifie :","opts":["Globale-Adaptée-Guidée","Générale-Analytique-Globale","Globale-Analytique-Globale","Guidée-Analytique-Guidée"],"correct":2},{"q":"Quel style d'apprentissage bénéficie le plus de la démonstration ?","opts":["Auditif","Kinesthésique","Tactile","Visuel"],"correct":3},{"q":"Pour les enfants de 6-12 ans, quelle approche est recommandée ?","opts":["Séances longues avec technique complexe","Jeux éducatifs, séances courtes, sollicitation positive","Compétition intensive pour la motivation","Apprentissage identique aux adultes"],"correct":1},{"q":"L'ordre pédagogique idéal pour enseigner une technique est :","opts":["Expliquer Montrer Corriger Faire faire","Montrer Expliquer Faire faire Corriger","Faire faire Montrer Expliquer Corriger","Corriger Expliquer Faire faire Montrer"],"correct":1},{"q":"La méthode analytique convient particulièrement :","opts":["Aux compétiteurs de haut niveau","Aux débutants","Aux grades 1er Dan et plus","Aux séances de Kumité libre"],"correct":1},{"q":"Le délai légal pour déclarer un accident la fédération est :","opts":["24 heures","48 heures","72 heures","1 semaine"],"correct":1},{"q":"Quelle qualification est nécessaire pour enseigner le Yoseikan Budo contre rémunération ?","opts":["DIF + 1er Dan","BPJEPS ou DEJEPS","CQP Instructeur","Brevet d'État ancien régime"],"correct":1},{"q":"Quel diplôme de secourisme est recommandé pour un instructeur DIF ?","opts":["DEUST","BNSSA","PSC1","PADI"],"correct":2},{"q":"Le DIF est délivré par :","opts":["Le Ministère des Sports","L'INSEP","La la fédération","La Ligue régionale uniquement"],"correct":2},{"q":"Quelle est la durée typique du corps de séance ?","opts":["5-10 min","15-20 min","30-40 min","60-70 min"],"correct":2},{"q":"Un pratiquant kinesthésique apprend mieux via :","opts":["La lecture de supports théoriques","L'écoute d'explications verbales","La mise en situation et la pratique directe","Le visionnage de vidéos"],"correct":2},{"q":"Pour les seniors, on adapte la séance en évitant principalement :","opts":["Les techniques de bras","Les sauts et les amplitudes articulaires extrêmes","Le travail de Kata","Le travail en binôme"],"correct":1},{"q":"La méthode globale consiste à :","opts":["Décomposer chaque technique en éléments simples","Exécuter la technique complète d'emblée, puis corriger progressivement","Ne travailler qu'en exercices analytiques","Enseigner uniquement par démonstration"],"correct":1},{"q":"Quelle est la durée typique de l'échauffement en Yoseikan Budo ?","opts":["2-3 min","5-7 min","10-15 min","25-30 min"],"correct":2},{"q":"L'instructeur DIF peut légalement :","opts":["Ouvrir son propre cours rémunéré","Encadrer bénévolement dans un club affilié la fédération","Délivrer des diplômes fédéraux","Organiser seul des compétitions régionales"],"correct":1},{"q":"La « différenciation pédagogique » consiste à :","opts":["Enseigner le même contenu à tous","Adapter le contenu et les méthodes aux niveaux et besoins de chacun","Séparer les hommes des femmes dans les cours","Changer de style de Yoseikan Budo selon le public"],"correct":1},{"q":"Lors d'une correction technique, bonne pratique est de :","opts":["Corriger publiquement et fermement pour l'exemple","Valoriser d'abord le positif, puis corriger avec bienveillance","Ne corriger qu'en fin de séance","Laisser l'élève trouver seul ses erreurs sans intervention"],"correct":1},{"q":"En cas d'accident grave au dojo, l'instructeur doit :","opts":["Attendre que l'élève se relève","Sécuriser la zone, appeler les secours (15/18/112), ne pas mobiliser si fracture suspectée","Donner de l'eau et reprendre le cours","Contacter uniquement le club"],"correct":1},{"q":"Quelle phase de séance est prioritairement consacrée aux étirements passifs ?","opts":["L'échauffement","Le début du corps de séance","Le milieu du corps de séance","Le retour au calme"],"correct":3},{"q":"L'objectif du salut d'ouverture (Rei) en début de séance est :","opts":["Évaluer les niveaux","Marquer le passage du quotidien à la pratique martiale, instaurer le respect","Tester la souplesse des élèves","Commencer l'échauffement cardio"],"correct":1},{"q":"Pour enseigner à des adolescents (13-17 ans), il est conseillé de :","opts":["Imposer des règles strictes sans explication","Favoriser l'autonomie progressive et expliquer le pourquoi des techniques","Traiter les ados exactement comme des adultes","Éviter tout travail de Kumité"],"correct":1},{"q":"La notion de « gainage » est importante en Yoseikan Budo car :","opts":["Elle développe uniquement les abdominaux","Elle améliore la stabilité du tronc et la transmission de puissance","Elle remplace l'échauffement","Elle sert uniquement en compétition"],"correct":1},{"q":"Le Seiza est utilisé au dojo principalement pour :","opts":["L'échauffement des chevilles","Le salut formel et la méditation (Mokuso)","La pratique du Kihon assis","Le stretching des jambes"],"correct":1}]},"q4":{"module":"m4","titre":"Quiz — Environnement fédéral et vie du club","statut":"pret","questions":[{"q":"Quel est l'organe souverain d'une association loi 1901 ?","opts":["Le bureau","Le conseil d'administration","L'assemblée générale","Le président"],"correct":2},{"q":"Le règlement intérieur d'un club est opposable :","opts":["Toujours, même non communiqué","Dès lors qu'il est porté à la connaissance des adhérents","Uniquement s'il est déposé en préfecture","Jamais, il n'a qu'une valeur indicative"],"correct":1},{"q":"Le contrôle d'honorabilité concerne :","opts":["Les seuls éducateurs rémunérés","Les seuls dirigeants élus","Tout encadrant, bénévole comme rémunéré","Les seuls encadrants de mineurs"],"correct":2},{"q":"La responsabilité pénale d'un encadrant :","opts":["Est couverte par l'assurance fédérale","Est couverte par le club","Reste personnelle et ne s'assure pas","N'existe pas pour un bénévole"],"correct":2},{"q":"Le DIF autorise :","opts":["L'enseignement contre rémunération","L'encadrement bénévole de séances en club","La direction technique d'une ligue","La délivrance de grades Dan"],"correct":1},{"q":"L'obligation de l'encadrant en matière de sécurité est une obligation :","opts":["De résultat","De moyens","De conseil uniquement","Sans portée juridique"],"correct":1},{"q":"Un pratiquant sans licence en cours de validité :","opts":["Peut pratiquer toute la saison","Peut pratiquer s'il signe une décharge","Ne peut pas pratiquer au-delà de la période d'essai prévue","Peut pratiquer s'il est majeur"],"correct":2},{"q":"La ligue régionale a principalement pour rôle :","opts":["De délivrer les licences directement aux pratiquants","La formation des cadres et les compétitions régionales","De fixer les règles internationales","De gérer la comptabilité des clubs"],"correct":1},{"q":"En cas d'accident pendant un cours, la première action est :","opts":["Prévenir l'assurance","Arrêter le cours et mettre le groupe en sécurité","Appeler les parents","Remplir le registre"],"correct":1},{"q":"Le projet pédagogique d'un club :","opts":["Remplace les statuts","Traduit le projet associatif en progression d'enseignement","Est imposé par la fédération","Est facultatif et sans usage"],"correct":1},{"q":"Une discipline associée se caractérise par :","opts":["Son indépendance totale du mouvement fédéral","Son rattachement à une fédération délégataire avec programme et grades propres","L'absence de grades","L'interdiction de compétition"],"correct":1},{"q":"La déclaration d'un accident à l'assurance doit être faite :","opts":["Quand le club en a le temps","Dans les délais prévus par le contrat","Uniquement en cas d'hospitalisation","Par la famille seule"],"correct":1},{"q":"Les attestations d'assurance et les diplômes des encadrants doivent être :","opts":["Conservés au domicile de l'enseignant","Affichés dans les locaux","Transmis à la mairie chaque mois","Détruits en fin de saison"],"correct":1},{"q":"Face à une suspicion de situation préoccupante concernant un mineur, l'instructeur doit :","opts":["Mener sa propre enquête","Promettre la confidentialité à l'enfant","Consigner les faits et alerter sans délai les autorités compétentes","Attendre confirmation par un tiers"],"correct":2},{"q":"L'enseignement contre rémunération relève :","opts":["Du seul règlement fédéral","Du Code du sport et d'une certification professionnelle","D'une simple déclaration au club","Du DIF"],"correct":1},{"q":"Le comité départemental intervient principalement sur :","opts":["Les règles techniques internationales","L'animation de proximité et le soutien aux clubs","La délivrance des cartes professionnelles","La gestion des sélections nationales"],"correct":1},{"q":"Un conflit avec une famille se traite :","opts":["Immédiatement au bord du tatami","Lors d'un entretien programmé, si besoin avec un dirigeant","Par message collectif au groupe","En excluant l'enfant sans explication"],"correct":1},{"q":"Le bureau d'une association est composé au minimum de :","opts":["Président seul","Président, trésorier, secrétaire","Cinq membres élus","Deux co-présidents"],"correct":1},{"q":"La question « à quels événements fédéraux avez-vous participé ? » attend :","opts":["Une intention pour la saison prochaine","Des faits datés : stages, formations, compétitions, grades","Une réponse sur le club uniquement","Un avis sur la politique fédérale"],"correct":1},{"q":"Une garantie complémentaire d'assurance (indemnités, invalidité) est :","opts":["Incluse d'office dans la licence","Optionnelle et à la charge du licencié","Interdite","Réservée aux compétiteurs"],"correct":1}]},"q5":{"module":"m5","titre":"Quiz — Physiologie et sécurité","statut":"pret","questions":[{"q":"Quelle filière énergétique est sollicitée lors d'un Kime explosif (0-10 sec) ?","opts":["Aérobie","Anaérobie lactique","Anaérobie alactique","Mixte lactique/aérobie"],"correct":2},{"q":"L'acronyme RICE pour les blessures signifie :","opts":["Repos-Immobilisation-Compression-Élévation","Repos-Ice-Compression-Élévation","Repos-Ice-Chaleur-Exercice","Repos-Immobilisation-Chaleur-Élévation"],"correct":1},{"q":"Les étirements statiques doivent être pratiqués :","opts":["Avant l'échauffement","Pendant l'échauffement","En milieu de séance","En retour au calme (fin de séance)"],"correct":3},{"q":"La chaîne cinétique de puissance en Yoseikan Budo part de :","opts":["L'épaule vers le poing","Les hanches vers le pied","Le sol vers les hanches puis l'épaule","La tête vers le sol"],"correct":2},{"q":"Quel muscle est principalement impliqué dans la flexion de hanche (Mae-geri) ?","opts":["Quadriceps uniquement","Psoas iliaque","Grand fessier","Gastrocnémien"],"correct":1},{"q":"Le transverse de l'abdomen joue un rôle clé dans :","opts":["La propulsion des bras","La flexion des genoux","La stabilisation du tronc et le Kime","La rotation de la cheville"],"correct":2},{"q":"L'objectif principal de l'échauffement articulaire est :","opts":["Brûler des calories","Améliorer la lubrification articulaire (synovie)","Développer la force maximale","Apprendre les techniques"],"correct":1},{"q":"Pour prévenir les lombalgies chez le karatéka, on privilégie :","opts":["L'entraînement uniquement des membres inférieurs","Le renforcement du gainage et la correction posturale","Les étirements passifs quotidiens sans renforcement","La pratique exclusive du Kumité"],"correct":1},{"q":"Combien de temps applique-t-on la glace lors d'une blessure aiguë ?","opts":["5 minutes","15-20 minutes","45 minutes","1 heure"],"correct":1},{"q":"Le Yoseikan Budo sollicite principalement quelles filières ?","opts":["Uniquement aérobie","Uniquement anaérobie lactique","Anaérobie alactique + anaérobie lactique principalement","Filière lipidique exclusive"],"correct":2},{"q":"Les muscles principalement impliqués dans le Gyaku-zuki (coup de poing) sont :","opts":["Biceps et ischio-jambiers","Grand pectoral, deltoïde et triceps","Quadriceps et mollets","Trapèzes et lombaires"],"correct":1},{"q":"Le grand fessier est sollicité principalement dans :","opts":["La flexion de la hanche (Mae-geri)","La rotation du bassin en Kumité","L'extension de la hanche (propulsion en déplacement)","La flexion du coude"],"correct":2},{"q":"La fréquence cardiaque maximale théorique est estimée par :","opts":["180 - âge","200 - âge","220 - âge","240 - âge"],"correct":2},{"q":"Les étirements dynamiques sont appropriés :","opts":["Uniquement en fin de séance","Pendant l'échauffement, avant l'effort","Après une blessure aiguë","Jamais en Yoseikan Budo"],"correct":1},{"q":"La tendinite de l'épaule chez le karatéka touche souvent :","opts":["Le biceps distal","La coiffe des rotateurs","Le tendon d'Achille","Le ligament croisé"],"correct":1},{"q":"L'entorse de cheville se prévient notamment par :","opts":["Le port de chaussures épaisses","Le travail de proprioception et le renforcement musculaire","L'évitement de tout travail de pied","La pratique exclusive sur béton"],"correct":1},{"q":"Le rôle des muscles obliques en Yoseikan Budo est principalement :","opts":["La flexion des genoux","La rotation du bassin pour transférer la puissance","Le maintien de la nuque","L'extension du coude"],"correct":1},{"q":"Une blessure fréquente aux doigts et orteils en Yoseikan Budo est :","opts":["La tendinite chronique","L'entorse du genou","La fracture par contact ou chute sur le tatami","La lombalgie"],"correct":2},{"q":"Une augmentation de 1°C de température musculaire entraîne :","opts":["Une diminution de performance de 5%","Un gain de performance d'environ 5%","Aucune variation de performance","Une augmentation du risque de blessure uniquement"],"correct":1},{"q":"Le « gainage » désigne :","opts":["L'entraînement des mollets","Le renforcement des muscles profonds stabilisateurs du tronc","La résistance aux chocs du gi","Un type d'étirement"],"correct":1},{"q":"Pourquoi les étirements passifs avant séance sont-ils déconseillés ?","opts":["Ils augmentent le risque de crampes","Ils diminuent temporairement la force et la tonicité musculaire","Ils provoquent des tendinites immédiates","Ils ne présentent aucun inconvénient"],"correct":1},{"q":"La filière anaérobie lactique est sollicitée sur une durée d'environ :","opts":["0 à 10 secondes","10 à 90 secondes","2 à 5 minutes","Plus de 10 minutes"],"correct":1},{"q":"Le protocole RICE s'applique idéalement :","opts":["Uniquement après 24h","Dans les premières heures après une blessure aiguë","Seulement pour les fractures","En fin de semaine d'entraînement"],"correct":1},{"q":"La coordination entre hikite (retrait du bras) et tsuki (coup de poing) fait appel à :","opts":["Uniquement aux muscles de l'épaule","La rotation des hanches et la co-contraction des membres supérieurs","Uniquement aux muscles du dos","La flexion des genoux"],"correct":1},{"q":"Les ischio-jambiers jouent un rôle important dans :","opts":["L'extension du coude","La rotation de la cheville","La flexion du genou et l'extension de la hanche","La propulsion du bras"],"correct":2}]},"q6":{"module":"m6","titre":"Quiz — Terminologie","statut":"a_completer","questions":[]}},"themes":[{"id":"TH01","publics":["enfants","ados"],"titre":"Construire et conserver la distance (ma-ai)","axe":"Opposition","attendus":["Définir trois distances de travail et les faire vivre corporellement","Une situation d'opposition aménagée où la distance est la seule variable","Un critère de réussite observable : toucher sans être touché sur N répétitions"],"pieges":["Rester en démonstration technique sans jamais mettre en opposition","Ne pas faire varier la distance : le thème se réduit à un travail de frappe"]},{"id":"TH02","publics":["enfants","baby"],"titre":"Découverte des chutes et protection du corps","axe":"Sécurité","attendus":["Progression du plus bas vers le plus haut : assis, accroupi, debout","Consignes de sécurité explicites et vérifiées avant chaque répétition","Aménagement du milieu : surface, espacement, sens de chute imposé"],"pieges":["Passer trop vite au debout : risque réel de blessure devant le jury","Oublier de vérifier l'espace entre les pratiquants"]},{"id":"TH03","publics":["ados"],"titre":"Enchaîner percussion et projection","axe":"Liaison technique","attendus":["Montrer explicitement la liaison : ce qui rend la projection possible","Décomposition puis recomposition (analytique puis global)","Travail par vagues pour garder tout le groupe actif"],"pieges":["Empiler deux techniques sans traiter le lien entre elles","Complexité excessive : le groupe ne réussit rien"]},{"id":"TH04","publics":["enfants"],"titre":"Coordination et latéralité par le jeu","axe":"Motricité","attendus":["Situations ludiques à règles simples, forte densité de répétitions","Alternance droite / gauche systématique","Réussite accessible dès les premières tentatives, puis complexification"],"pieges":["Consignes trop longues : perte d'attention immédiate","Jeu sans lien avec l'objectif martial annoncé"]},{"id":"TH05","publics":["ados","adapte"],"titre":"Blocage et riposte immédiate","axe":"Défense","attendus":["Chaîne défense — contrôle — riposte, jamais le blocage seul","Travail à deux avec rôle d'attaquant défini et responsabilisé","Montée progressive de l'incertitude : signal, puis choix, puis libre"],"pieges":["Laisser l'attaquant sans consigne : la situation perd toute valeur","Rester sur un temps unique sans jamais riposter"]},{"id":"TH06","publics":["baby"],"titre":"Parcours moteur et imaginaire du budoka","axe":"Motricité","attendus":["Parcours à stations courtes, rotation rapide, aucun temps d'attente","Vocabulaire imagé, une consigne à la fois","Rituel d'entrée et de sortie du tatami"],"pieges":["Files d'attente : première cause d'échec sur ce public","Technique codifiée inadaptée à l'âge"]},{"id":"TH07","publics":["ados"],"titre":"Saisies et libérations","axe":"Préhension","attendus":["Identifier le moment de la saisie et le principe de libération","Opposition progressive : saisie consentie, résistante, puis dynamique","Sécurité articulaire : consignes d'arrêt claires"],"pieges":["Aller au blocage articulaire sans cadre de sécurité","Rester sur une seule saisie pendant vingt minutes"]},{"id":"TH08","publics":["enfants","ados"],"titre":"Déplacements et changements de direction","axe":"Mobilité","attendus":["Déplacements orientés par une cible ou un partenaire, jamais à vide","Repères spatiaux matérialisés sur le tatami","Densité : tout le groupe se déplace en même temps"],"pieges":["Déplacements en lignes sans intention ni adversaire","Correction individuelle prolongée pendant que le groupe attend"]},{"id":"TH09","publics":["adapte"],"titre":"Adapter une séance à un public à besoins spécifiques","axe":"Adaptation","attendus":["Identifier une contrainte précise et annoncer l'adaptation retenue","Même objectif pour tous, moyens différenciés","Valorisation systématique de la réussite"],"pieges":["Sous-solliciter le public par prudence excessive","Créer un groupe à part : exclusion de fait"]},{"id":"TH10","publics":["ados"],"titre":"Introduire le travail avec arme souple ou bâton","axe":"Matériel","attendus":["Règles de sécurité et de manipulation posées avant toute distribution","Progression : sans partenaire, puis cible, puis partenaire","Rangement et comptage du matériel intégrés à la séance"],"pieges":["Distribuer le matériel avant d'avoir donné les règles","Distance de travail non recalculée avec l'arme"]},{"id":"TH11","publics":["enfants","ados","adapte"],"titre":"Échauffement spécifique orienté par l'objectif","axe":"Structure","attendus":["Un échauffement qui prépare la tâche principale, pas un échauffement générique","Élévation progressive : général, articulaire, spécifique","Savoir justifier chaque bloc devant le jury"],"pieges":["Échauffement décorrélé du corps de séance","Durée excessive qui ampute le temps d'apprentissage"]},{"id":"TH12","publics":["ados"],"titre":"Randori aménagé : gérer l'intensité et la sécurité","axe":"Opposition","attendus":["Règles d'opposition explicites : cibles, intensité, signal d'arrêt","Appariement raisonné par gabarit et par niveau","Rôles alternés et temps de travail courts"],"pieges":["Opposition libre sans cadre : sanction immédiate du jury","Appariement laissé au hasard"]},{"id":"TH13","publics":["enfants"],"titre":"Rythme, tempo et explosivité","axe":"Qualités physiques","attendus":["Faire varier le tempo sur une même technique : lent, normal, explosif","Support sonore ou comptage pour matérialiser le rythme","Récupération réelle entre les séries"],"pieges":["Confondre vitesse et précipitation : dégradation technique","Absence de temps de récupération"]},{"id":"TH14","publics":["ados","adapte"],"titre":"Préparer un passage de grade","axe":"Évaluation","attendus":["Annoncer les critères d'évaluation en début de séance","Mise en situation réelle avec observation croisée entre pratiquants","Retour individualisé et axe de progrès formulé"],"pieges":["Évaluer sans avoir énoncé les critères","Retour collectif vague, sans axe de travail"]},{"id":"TH15","publics":["enfants","ados"],"titre":"Le contrôle : toucher sans blesser","axe":"Éthique et sécurité","attendus":["Définir le contrôle et le rendre observable","Progression de la cible : matérielle, puis partenaire","Lien explicite avec les valeurs du budo"],"pieges":["Discours moral sans traduction dans l'exercice","Cibles inadaptées qui poussent au contact excessif"]},{"id":"TH16","publics":["baby","enfants"],"titre":"Rituel et respect du cadre du dojo","axe":"Éthique","attendus":["Rituels courts, expliqués, systématiquement appliqués","Règles du dojo formulées positivement","Intégration du rituel dans une situation active"],"pieges":["Long discours statique : perte totale d'attention","Rituel plaqué, jamais expliqué"]}],"jury":[{"cat":"Retour sur la séance","q":"Quel était l'objectif de votre séance, formulé en une phrase ?","attendu":"Un objectif opérationnel et unique : « à la fin de la séance, le pratiquant est capable de… ». Pas un thème, pas une liste."},{"cat":"Retour sur la séance","q":"À quoi avez-vous vu que votre objectif était atteint ?","attendu":"Citer le critère de réussite observable retenu et ce que vous avez réellement observé, y compris les échecs."},{"cat":"Retour sur la séance","q":"Qu'est-ce que vous changeriez si vous refaisiez cette séance demain ?","attendu":"Une ou deux modifications précises et justifiées. L'auto-analyse lucide est valorisée ; l'autosatisfaction est sanctionnée."},{"cat":"Retour sur la séance","q":"Votre échauffement préparait-il vraiment la tâche principale ?","attendu":"Montrer le lien : sollicitations articulaires, filières, gestuelles communes avec le corps de séance."},{"cat":"Retour sur la séance","q":"Comment avez-vous géré le pratiquant qui n'y arrivait pas ?","attendu":"Différenciation : simplification de la tâche, variable didactique modifiée, aide d'un partenaire, sans jamais l'exclure du groupe."},{"cat":"Retour sur la séance","q":"Combien de temps vos pratiquants ont-ils réellement pratiqué ?","attendu":"Notion de temps moteur. Identifier les temps morts : consignes trop longues, files d'attente, démonstrations à rallonge."},{"cat":"Retour sur la séance","q":"Pourquoi avoir choisi cette progression et pas une autre ?","attendu":"Justifier l'ordre : du simple au complexe, du connu vers l'inconnu, du sûr vers l'incertain, de la coopération vers l'opposition."},{"cat":"Retour sur la séance","q":"Quelle variable didactique avez-vous fait varier ?","attendu":"Espace, temps, nombre, matériel, règles, incertitude. Nommer celle qui a été manipulée et l'effet recherché."},{"cat":"Retour sur la séance","q":"Votre démonstration était-elle nécessaire ? Où étiez-vous placé ?","attendu":"Démonstration courte, visible de tous, orientée. Placement de l'enseignant : jamais dos à une partie du groupe."},{"cat":"Retour sur la séance","q":"Comment avez-vous conclu votre séance ?","attendu":"Retour au calme, rappel de l'objectif, valorisation, annonce du lien avec la séance suivante."},{"cat":"Vision pédagogique","q":"Quelle différence faites-vous entre un thème et un objectif ?","attendu":"Le thème est le contenu tiré au sort ; l'objectif est le résultat attendu chez le pratiquant, formulé de façon observable et mesurable."},{"cat":"Vision pédagogique","q":"Méthode analytique ou méthode globale : que privilégiez-vous ?","attendu":"Ni l'une ni l'autre en absolu. Global pour donner du sens, analytique pour corriger un point précis, global à nouveau pour réintégrer."},{"cat":"Vision pédagogique","q":"Comment corrigez-vous une erreur technique ?","attendu":"Hiérarchiser : sécurité d'abord, puis erreur qui bloque la réussite, puis détail de forme. Une correction à la fois, formulée positivement."},{"cat":"Vision pédagogique","q":"Faut-il corriger devant tout le groupe ou individuellement ?","attendu":"Erreur collective : arrêt du groupe. Erreur individuelle : intervention discrète. Ne jamais exposer un pratiquant en difficulté."},{"cat":"Vision pédagogique","q":"Qu'est-ce qu'une consigne efficace ?","attendu":"Courte, une seule idée, orientée vers le but et non vers la forme, associée à un critère de réussite. Vérifiée par reformulation."},{"cat":"Vision pédagogique","q":"Comment maintenez-vous l'attention d'un groupe ?","attendu":"Densité de pratique, alternance des formats, variation du rythme, rotation des partenaires, consignes brèves, feedback fréquent."},{"cat":"Vision pédagogique","q":"Qu'est-ce que la pédagogie du détour ?","attendu":"Passer par une situation différente de la tâche cible pour lever un blocage, puis revenir à la tâche cible."},{"cat":"Vision pédagogique","q":"Comment évaluez-vous vos pratiquants au quotidien ?","attendu":"Évaluation continue par l'observation de critères annoncés, pas seulement au passage de grade. Traçabilité simple."},{"cat":"Vision pédagogique","q":"Quelle place donnez-vous à l'erreur dans l'apprentissage ?","attendu":"L'erreur est une information, pas une faute. Elle renseigne sur la représentation du pratiquant et oriente la régulation."},{"cat":"Vision pédagogique","q":"Comment gérez-vous un groupe à niveaux très hétérogènes ?","attendu":"Objectif commun, tâches à niveaux d'exigence différents, ateliers, tutorat entre pratiquants, appariement raisonné."},{"cat":"Vision pédagogique","q":"Quel rôle donnez-vous à la démonstration par un pratiquant ?","attendu":"Valorisation, modèle accessible, prise de recul de l'enseignant. Attention à ne pas exposer un pratiquant fragile."},{"cat":"Vision pédagogique","q":"Comment préparez-vous une séance concrètement ?","attendu":"Objectif, public, durée, matériel, sécurité, situations avec critères, plan B. Écrit avant, régulé pendant, analysé après."},{"cat":"Publics","q":"Qu'est-ce qui change fondamentalement entre une séance enfant et une séance adulte ?","attendu":"Durée d'attention, capacité d'abstraction, motivation, tolérance à la répétition, rapport au corps et au risque. Le contenu ludique n'est pas un contenu au rabais."},{"cat":"Publics","q":"Que faites-vous d'un enfant de 5 ans qui ne tient pas en place ?","attendu":"C'est la norme à cet âge, pas un problème de discipline. Réduire les temps d'attente, raccourcir les tâches, augmenter la rotation."},{"cat":"Publics","q":"Quelles précautions particulières chez l'adolescent ?","attendu":"Croissance : prudence sur les charges, les impacts et les amplitudes articulaires. Besoin de sens, de reconnaissance et d'un cadre stable."},{"cat":"Publics","q":"Comment intégrez-vous un pratiquant en situation de handicap ?","attendu":"Même objectif, moyens adaptés. Échanger avec la personne et son entourage, adapter la tâche et non la baisser, intégrer au groupe."},{"cat":"Publics","q":"Comment accueillez-vous un débutant en cours de saison ?","attendu":"Référent désigné, objectifs propres, situations où il peut réussir immédiatement, explicitation des rituels et du vocabulaire."},{"cat":"Publics","q":"Un adulte reprend après une longue interruption : que faites-vous ?","attendu":"Reprise progressive, questionnement sur les antécédents, dosage de l'intensité, valorisation des acquis conservés."},{"cat":"Publics","q":"Séance mixte enfants et adultes : comment procédez-vous ?","attendu":"À éviter si possible. Sinon, ateliers séparés avec un temps commun ritualisé, et vigilance accrue sur les différences de gabarit."},{"cat":"Publics","q":"Quel est le premier facteur de démotivation chez l'enfant ?","attendu":"L'absence de réussite et l'attente. Densité de pratique et réussite accessible sont les deux leviers principaux."},{"cat":"Sécurité et responsabilité","q":"Que vérifiez-vous avant chaque séance ?","attendu":"Tatami, espace libre, matériel, ongles et bijoux, état de santé du jour, trousse de secours, moyen d'alerte, effectif présent."},{"cat":"Sécurité et responsabilité","q":"Un pratiquant se blesse pendant votre cours : que faites-vous ?","attendu":"Arrêt du cours, mise en sécurité du groupe, protection et bilan, alerte des secours si nécessaire, prévenir les responsables légaux et le président, déclaration à l'assurance dans les délais."},{"cat":"Sécurité et responsabilité","q":"Quelle est votre responsabilité en tant qu'encadrant ?","attendu":"Obligation de moyens : sécurité, surveillance, adaptation au niveau. La responsabilité civile est couverte par l'assurance fédérale ; la responsabilité pénale reste personnelle."},{"cat":"Sécurité et responsabilité","q":"Que couvre la licence fédérale ?","attendu":"Affiliation, assurance en responsabilité civile et garanties de base, accès aux compétitions, stages et passages de grade. Les garanties complémentaires sont optionnelles."},{"cat":"Sécurité et responsabilité","q":"Un pratiquant n'est pas licencié : peut-il monter sur le tatami ?","attendu":"Non au-delà de la période d'essai prévue par le club et son assurance. Sans couverture, l'encadrant et le club s'exposent."},{"cat":"Sécurité et responsabilité","q":"Que faites-vous d'un certificat médical ou questionnaire de santé manquant ?","attendu":"Appliquer la réglementation en vigueur et la règle interne du club : pas de pratique tant que la situation administrative n'est pas régularisée."},{"cat":"Sécurité et responsabilité","q":"Comment prévenez-vous le risque lié à l'opposition ?","attendu":"Appariement par gabarit et niveau, règles de contact explicites, signal d'arrêt commun, protections obligatoires, progressivité de l'incertitude."},{"cat":"Sécurité et responsabilité","q":"Que faites-vous en cas de comportement violent d'un pratiquant ?","attendu":"Arrêt immédiat, mise à l'écart du tatami, entretien après le cours, information des responsables légaux et du président, rappel du règlement intérieur."},{"cat":"Sécurité et responsabilité","q":"Connaissez-vous l'obligation d'honorabilité ?","attendu":"Tout encadrant, bénévole ou rémunéré, est soumis au contrôle d'honorabilité. La déclaration se fait via la fédération et le club en vérifie l'effectivité."},{"cat":"Sécurité et responsabilité","q":"Quelles protections imposez-vous et quand ?","attendu":"Selon la discipline et le type d'opposition : protège-dents, protections de poings et de pieds, coquille, protège-tibias. Vérification avant chaque situation d'opposition."},{"cat":"Environnement fédéral","q":"Comment le Yoseikan Budo est-il rattaché au mouvement fédéral français ?","attendu":"Situer la discipline au sein de la fédération délégataire et de ses disciplines associées, et son lien avec la structure propre à la discipline. À compléter depuis vos documents officiels."},{"cat":"Environnement fédéral","q":"Décrivez l'organisation fédérale du club jusqu'au national.","attendu":"Club, comité départemental, ligue régionale, fédération nationale, puis instances internationales de la discipline."},{"cat":"Environnement fédéral","q":"Qu'est-ce qu'une discipline associée ?","attendu":"Discipline rattachée à une fédération délégataire, disposant de son propre programme technique, de ses grades et de ses commissions, dans le cadre fédéral commun."},{"cat":"Environnement fédéral","q":"Qui délivre les grades et selon quelle procédure ?","attendu":"La commission compétente, sur la base d'un programme technique, de conditions d'ancienneté, de licence et d'âge. À préciser depuis vos documents officiels."},{"cat":"Environnement fédéral","q":"À quels événements fédéraux avez-vous participé cette saison ?","attendu":"Réponse personnelle et documentée : stages, formations, compétitions, passages de grade, coupes. Le jury attend des faits datés, pas des intentions."},{"cat":"Environnement fédéral","q":"Quel est le rôle du conseiller technique ?","attendu":"Accompagnement technique et pédagogique des clubs, formation des cadres, mise en œuvre de la politique technique fédérale sur le territoire."},{"cat":"Environnement fédéral","q":"Quelle est la différence entre le DIF et un CQP ou un diplôme d'État ?","attendu":"Le DIF est un diplôme fédéral d'encadrement bénévole. L'enseignement contre rémunération relève d'une qualification professionnelle inscrite au répertoire national."},{"cat":"Environnement fédéral","q":"Que trouve-t-on dans le calendrier fédéral d'une saison ?","attendu":"Stages techniques, formations de cadres, passages de grade, compétitions et coupes, assemblées générales, événements de la discipline."},{"cat":"Environnement fédéral","q":"Comment vous tenez-vous informé des évolutions techniques et réglementaires ?","attendu":"Sources officielles fédérales, circulaires, stages de cadres, réunions de ligue et de comité départemental."},{"cat":"Environnement fédéral","q":"Pourquoi passez-vous le DIF ?","attendu":"Réponse personnelle mais structurée : légitimité, montée en compétence, besoin du club, projet d'encadrement à moyen terme."},{"cat":"Vie du club","q":"Comment fonctionne une association loi 1901 ?","attendu":"Assemblée générale souveraine, conseil d'administration, bureau (président, trésorier, secrétaire), statuts et règlement intérieur."},{"cat":"Vie du club","q":"Quelle est la place de l'enseignant dans le projet du club ?","attendu":"Il traduit le projet associatif en projet pédagogique : publics accueillis, progression, objectifs de saison, événements."},{"cat":"Vie du club","q":"Comment fidélisez-vous vos pratiquants sur une saison ?","attendu":"Réussite perceptible, progression lisible, événements fédérateurs, lien avec les familles, régularité et qualité de l'accueil."},{"cat":"Vie du club","q":"Comment communiquez-vous avec les parents ?","attendu":"Cadre défini : réunion de début de saison, informations écrites, point individuel sur demande. Ne jamais gérer un différend au bord du tatami."},{"cat":"Vie du club","q":"Que feriez-vous pour développer la section jeunes ?","attendu":"Créneaux adaptés, interventions scolaires ou périscolaires, événements de rentrée, valorisation des passages de grade, animation d'équipe."},{"cat":"Vie du club","q":"Quel est le rôle du règlement intérieur ?","attendu":"Préciser les règles de vie, d'assiduité, de tenue, de sécurité et de sanction. Il est opposable et doit être porté à connaissance."},{"cat":"Vie du club","q":"Comment organisez-vous un événement au sein du club ?","attendu":"Objectif, budget, autorisations, encadrement, sécurité et secours, communication, bilan. Validation par le bureau."},{"cat":"Vie du club","q":"Travaillez-vous seul ou en équipe pédagogique ?","attendu":"Réponse personnelle : répartition des créneaux, réunions de coordination, tutorat des assistants, cohérence de la progression entre enseignants."},{"cat":"Discipline","q":"Qu'est-ce qui caractérise le Yoseikan Budo par rapport aux autres budo ?","attendu":"Approche synthétique intégrant percussions, projections, travail au sol et travail avec armes, autour de principes communs de mouvement. À préciser et étayer depuis vos documents officiels."},{"cat":"Discipline","q":"Quels sont les principes fondamentaux que vous enseignez en priorité ?","attendu":"Réponse personnelle et hiérarchisée : posture, déplacement, distance, timing, contrôle. Doit être cohérente avec la séance présentée."},{"cat":"Discipline","q":"Comment expliquez-vous le sens du mot budo à un enfant ?","attendu":"Une voie, pas seulement une technique : apprendre à se maîtriser, à respecter l'autre et à progresser dans la durée."},{"cat":"Discipline","q":"Comment articulez-vous pratique de loisir et pratique de compétition ?","attendu":"Objectifs distincts, tronc technique commun. La compétition est un outil de formation, pas la finalité de tous les pratiquants."},{"cat":"Discipline","q":"Comment intégrez-vous les valeurs du budo dans une séance concrète ?","attendu":"Par les rituels, les règles de contrôle, la responsabilisation dans les rôles et l'exigence de sécurité mutuelle — pas par le discours seul."}],"exercices":[{"id":"EX01","nom":"Réveil articulaire orienté","phase":"Échauffement","publics":["enfants","ados","adapte"],"axe":"Préparation","duree":"6-8 min","organisation":"En dispersion, face à l'enseignant, mobilisation descendante ou ascendante complète.","critere":"Amplitude complète sans douleur sur chaque articulation sollicitée par la tâche du jour.","variables":["Ajouter un déplacement","Faire mener par un pratiquant","Associer une respiration comptée"],"securite":"Aucune amplitude forcée ; adapter en cas d'antécédent articulaire."},{"id":"EX02","nom":"Le miroir","phase":"Échauffement","publics":["baby","enfants"],"axe":"Attention","duree":"4-6 min","organisation":"Par deux, face à face. L'un mène un mouvement lent, l'autre reproduit, puis inversion.","critere":"Le suiveur reste synchrone pendant 20 secondes consécutives.","variables":["Fermer les yeux du suiveur un instant","Imposer un thème gestuel","Accélérer le meneur"],"securite":"Pas de contact ; distance d'un bras tendu."},{"id":"EX03","nom":"Gestion de la distance aux plots","phase":"Corps de séance","publics":["enfants","ados"],"axe":"Distance","duree":"8-10 min","organisation":"Deux lignes de plots matérialisant longue, moyenne et courte distance. Aller-retour sur signal.","critere":"Le pratiquant se place à la bonne distance en moins d'une seconde après le signal.","variables":["Signal sonore puis visuel","Ajouter un partenaire mobile","Réduire l'espace disponible"],"securite":"Espacement latéral d'au moins deux mètres entre binômes."},{"id":"EX04","nom":"Attaque annoncée, riposte libre","phase":"Corps de séance","publics":["ados"],"axe":"Défense","duree":"10-12 min","organisation":"Par deux. L'attaquant annonce sa cible, le défenseur choisit sa réponse dans un répertoire donné.","critere":"Trois ripostes différentes réussies sur dix attaques.","variables":["Supprimer l'annonce","Ajouter une deuxième attaque possible","Réduire la distance de départ"],"securite":"Contrôle obligatoire ; intensité annoncée et vérifiée avant le départ."},{"id":"EX05","nom":"Chute arrière depuis la position assise","phase":"Corps de séance","publics":["baby","enfants","adapte"],"axe":"Chute","duree":"8 min","organisation":"Assis, menton rentré, bras en diagonale, bascule contrôlée puis frappe des bras.","critere":"Menton rentré et frappe simultanée des deux bras sur cinq répétitions consécutives.","variables":["Passer accroupi","Puis debout","Ajouter un déséquilibre léger du partenaire"],"securite":"Un seul rang à la fois ; vérifier l'absence de voisin dans l'axe de chute."},{"id":"EX06","nom":"Parcours des quatre stations","phase":"Corps de séance","publics":["baby","enfants"],"axe":"Motricité","duree":"10-12 min","organisation":"Quatre ateliers de 45 secondes, rotation au signal, groupes de trois maximum.","critere":"Chaque pratiquant passe aux quatre stations sans temps d'attente supérieur à 10 secondes.","variables":["Chronométrer","Ajouter une contrainte de latéralité","Introduire un déplacement imposé"],"securite":"Stations éloignées les unes des autres ; un adulte visible depuis chaque station."},{"id":"EX07","nom":"Saisie et libération progressive","phase":"Corps de séance","publics":["ados"],"axe":"Préhension","duree":"10 min","organisation":"Par deux, saisie du poignet. Trois niveaux : consentie, résistante, dynamique.","critere":"Libération obtenue sans force sur le niveau consenti, puis sur le niveau résistant.","variables":["Changer la saisie","Saisie à deux mains","Ajouter un déplacement"],"securite":"Aucune torsion articulaire ; signal d'arrêt par double frappe."},{"id":"EX08","nom":"Vagues de déplacement orientées","phase":"Corps de séance","publics":["enfants","ados"],"axe":"Mobilité","duree":"8 min","organisation":"Le groupe traverse le tatami par vagues de quatre, cible mobile tenue par l'enseignant.","critere":"Orientation du corps maintenue vers la cible sur toute la traversée.","variables":["Changer la cible en cours de traversée","Imposer un changement de direction","Ajouter un temps de frappe"],"securite":"Sens de circulation unique ; retour par l'extérieur du tatami."},{"id":"EX09","nom":"Randori à thème imposé","phase":"Opposition","publics":["ados"],"axe":"Opposition","duree":"10-12 min","organisation":"Opposition souple de 90 secondes avec un seul objectif autorisé, rotation des partenaires.","critere":"Le thème imposé apparaît au moins trois fois dans la séquence.","variables":["Limiter les cibles","Imposer un handicap à l'un des deux","Réduire l'espace"],"securite":"Appariement par gabarit ; intensité annoncée ; protections vérifiées."},{"id":"EX10","nom":"Le roi du tatami","phase":"Opposition","publics":["enfants"],"axe":"Opposition","duree":"8 min","organisation":"Zones délimitées, opposition de déséquilibre debout, rotation rapide des adversaires.","critere":"Chaque pratiquant réalise au moins six oppositions courtes.","variables":["Réduire la zone","Interdire les saisies hautes","Opposition à genoux"],"securite":"Pas de projection ; sortie de zone = arrêt immédiat."},{"id":"EX11","nom":"Retour au calme respiratoire","phase":"Retour au calme","publics":["enfants","ados","adapte","baby"],"axe":"Récupération","duree":"4-5 min","organisation":"Assis en cercle, respiration guidée en trois temps, puis rappel de l'objectif de la séance.","critere":"Le rythme cardiaque redescend et le groupe reformule l'objectif du jour.","variables":["Étirements légers associés","Faire reformuler par un pratiquant","Annoncer la séance suivante"],"securite":"Sol non froid ; pas d'étirement passif intense après opposition."},{"id":"EX12","nom":"Observation croisée par binôme","phase":"Corps de séance","publics":["ados","adapte"],"axe":"Évaluation","duree":"8-10 min","organisation":"Un pratique, un observe avec deux critères écrits, puis inversion et retour oral.","critere":"L'observateur formule un point réussi et un axe de progrès pour son partenaire.","variables":["Trois critères","Observation par groupe de trois","Auto-évaluation préalable"],"securite":"Cadrer le retour : factuel, sur le geste, jamais sur la personne."}],"saison":[{"cycle":"Cycle 1 — Rentrée et remise en route","periode":"Septembre → vacances de Toussaint","objectifs":["Réintégrer les fondamentaux : posture, déplacement, distance","Intégrer les nouveaux pratiquants et poser les rituels du dojo","Évaluer le niveau réel du groupe"],"reperes":["Portes ouvertes et séances d'essai","Régularisation des licences et de la situation médicale","Réunion d'information aux familles"]},{"cycle":"Cycle 2 — Construction technique","periode":"Toussaint → vacances de Noël","objectifs":["Développer le répertoire technique de la tranche d'âge","Introduire l'opposition aménagée","Installer les règles de contrôle"],"reperes":["Stage technique de ligue ou de comité départemental","Premier point d'étape individuel"]},{"cycle":"Cycle 3 — Mise en opposition","periode":"Janvier → vacances d'hiver","objectifs":["Transférer la technique en situation d'opposition","Développer la lecture de l'adversaire et le timing","Préparer les échéances compétitives"],"reperes":["Compétitions et coupes","Formation continue des cadres"]},{"cycle":"Cycle 4 — Approfondissement et armes","periode":"Vacances d'hiver → vacances de printemps","objectifs":["Enrichir le répertoire : liaisons, sol, travail avec matériel","Consolider les acquis sous contrainte","Préparer le programme de passage de grade"],"reperes":["Stage de discipline","Inscription aux passages de grade"]},{"cycle":"Cycle 5 — Évaluation et valorisation","periode":"Printemps → fin de saison","objectifs":["Valider les acquis de la saison","Passer les grades","Valoriser la progression de chaque pratiquant"],"reperes":["Passages de grade","Fête du club et démonstration","Assemblée générale","Bilan pédagogique et projection sur la saison suivante"]}],"plan":[{"id":"contexte","titre":"Contexte","champs":[["public","Public et effectif","select_public"],["niveau","Niveau et grades","text"],["duree","Durée de la séance","text"],["lieu","Lieu et surface disponible","text"],["materiel","Matériel nécessaire","textarea"]]},{"id":"objectif","titre":"Objectif et critères","champs":[["theme","Thème tiré au sort","text"],["objectif","Objectif opérationnel — « à la fin de la séance, le pratiquant est capable de… »","textarea"],["critere","Critère de réussite observable","textarea"],["prerequis","Prérequis supposés","textarea"]]},{"id":"securite","titre":"Sécurité","champs":[["risques","Risques identifiés","textarea"],["mesures","Mesures de prévention et consignes d'arrêt","textarea"],["verif","Vérifications avant la séance","textarea"]]},{"id":"echauffement","titre":"Échauffement","champs":[["ech_duree","Durée","text"],["ech_contenu","Contenu et lien avec l'objectif","textarea"],["ech_org","Organisation du groupe","textarea"]]},{"id":"corps","titre":"Corps de séance","champs":[["s1","Situation 1 — consigne, organisation, critère","textarea"],["s1_var","Situation 1 — variables et différenciation","textarea"],["s2","Situation 2 — consigne, organisation, critère","textarea"],["s2_var","Situation 2 — variables et différenciation","textarea"],["s3","Situation 3 — mise en opposition ou application","textarea"],["s3_var","Situation 3 — variables et différenciation","textarea"]]},{"id":"retour","titre":"Retour au calme et bilan","champs":[["rac","Contenu du retour au calme","textarea"],["bilan","Bilan avec le groupe et lien avec la séance suivante","textarea"]]},{"id":"regulation","titre":"Régulation et plan B","champs":[["planb","Plan B si la situation ne fonctionne pas","textarea"],["diff","Adaptation pour un pratiquant en difficulté","textarea"],["avance","Adaptation pour un pratiquant en avance","textarea"]]}]};</script>
+<script>
+/* YOSEI-DIF — moteur applicatif. Données injectées par le générateur dans window.DATA. */
+'use strict';
+const D = window.DATA;
+
+/* ══ Persistance : localStorage si disponible, mémoire sinon ══ */
+const Store = (() => {
+  const KEY = 'YOSEI_DIF_v1';
+  let mem = {};
+  let ok = false;
+  try { localStorage.setItem('__t', '1'); localStorage.removeItem('__t'); ok = true; } catch (e) { ok = false; }
+  const read = () => {
+    if (!ok) return mem;
+    try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch (e) { return {}; }
+  };
+  const write = o => { if (ok) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} } else mem = o; };
+  return {
+    get(k, dflt) { const v = read()[k]; return v === undefined ? dflt : v; },
+    set(k, v) { const o = read(); o[k] = v; write(o); },
+    all: read,
+    load(o) { write(o); },
+    available: ok
+  };
+})();
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+const shuffle = a => a.map(v => [Math.random(), v]).sort((x, y) => x[0] - y[0]).map(x => x[1]);
+const mmss = s => (s < 0 ? '-' : '') + String(Math.floor(Math.abs(s) / 60)).padStart(2, '0') + ':' + String(Math.abs(s) % 60).padStart(2, '0');
+
+function toast(msg) {
+  const t = $('toast'); t.textContent = msg; t.classList.add('on');
+  clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('on'), 2400);
+}
+
+/* ══ Navigation ══ */
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  const p = $('page-' + id); if (p) p.classList.add('active');
+  document.querySelectorAll('#sidebar a').forEach(a => a.classList.toggle('active', a.dataset.page === id));
+  document.getElementById('sidebar').classList.remove('open');
+  window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+  Store.set('lastPage', id);
+  if (id === 'home') renderHome();
+}
+
+/* ══ Progression ══ */
+const TRACKED = D.modules.filter(m => m.statut === 'pret').map(m => m.id)
+  .concat(Object.keys(D.quiz).filter(q => D.quiz[q].statut === 'pret'));
+
+function markDone(id) {
+  const d = Store.get('done', {}); d[id] = true; Store.set('done', d); renderProgress();
+}
+function renderProgress() {
+  const done = Store.get('done', {});
+  const n = TRACKED.filter(k => done[k]).length, t = TRACKED.length;
+  const pct = t ? Math.round(n / t * 100) : 0;
+  const set = (i, v) => { const e = $(i); if (e) e.textContent = v; };
+  set('prog-text', n + ' / ' + t + ' validés'); set('prog-pct', pct + '%');
+  set('hdr-prog', pct + '%');
+  const f = $('prog-fill'); if (f) f.style.width = pct + '%';
+  document.querySelectorAll('#sidebar a[data-track]').forEach(a => {
+    const fl = a.querySelector('.flag'); if (!fl) return;
+    if (a.dataset.status === 'a_completer') { fl.textContent = 'à compléter'; fl.className = 'flag todo'; }
+    else { fl.textContent = done[a.dataset.page] ? 'validé' : '—'; fl.className = 'flag' + (done[a.dataset.page] ? ' done' : ''); }
+  });
+  document.querySelectorAll('[data-mst]').forEach(e => {
+    const k = e.dataset.mst;
+    if (e.dataset.status === 'a_completer') { e.textContent = 'À compléter'; e.className = 'm-st todo'; }
+    else { e.textContent = done[k] ? 'Validé' : 'À faire'; e.className = 'm-st' + (done[k] ? ' done' : ''); }
+  });
+}
+function renderHome() {
+  renderProgress();
+  const s = Store.get('sessions', []);
+  const set = (i, v) => { const e = $(i); if (e) e.textContent = v; };
+  set('stat-plans', s.length);
+  set('stat-sim', Store.get('simCount', 0));
+  set('stat-jury', (Store.get('juryVus', []) || []).length + ' / ' + D.jury.length);
+}
+
+/* ══ Quiz ══ */
+const qState = {};
+function renderQuiz(qid) {
+  const data = D.quiz[qid], host = $('quiz-' + qid);
+  if (!data.questions.length) { host.innerHTML = '<div class="card todo"><h2>Banque de questions à constituer</h2><p>Ce quiz sera généré dès que le module correspondant sera renseigné à partir de vos documents officiels.</p></div>'; return; }
+  const qs = shuffle(data.questions).map((q, i) => ({ ...q, i }));
+  qState[qid] = { qs, answers: {} };
+  host.innerHTML = '<div class="qp-row" id="dots-' + qid + '">' + qs.map((q, i) => '<div class="qp-dot" id="dot-' + qid + '-' + i + '"></div>').join('') + '</div>' +
+    qs.map((q, i) => {
+      const opts = q.opts.map((o, oi) => '<button class="opt" data-letter="' + 'ABCD'[oi] + '" id="o-' + qid + '-' + i + '-' + oi + '" onclick="answer(\'' + qid + '\',' + i + ',' + oi + ')">' + esc(o) + '</button>').join('');
+      return '<div class="card"><div class="q-num">Question ' + (i + 1) + ' / ' + qs.length + '</div><div class="q-txt">' + esc(q.q) + '</div>' + opts + '</div>';
+    }).join('') + '<div id="res-' + qid + '"></div>';
+}
+function answer(qid, i, oi) {
+  const st = qState[qid]; if (st.answers[i] !== undefined) return;
+  const q = st.qs[i]; st.answers[i] = oi;
+  q.opts.forEach((_, k) => { const b = $('o-' + qid + '-' + i + '-' + k); b.disabled = true; if (k === q.correct) b.classList.add('good'); });
+  if (oi !== q.correct) $('o-' + qid + '-' + i + '-' + oi).classList.add('bad');
+  $('dot-' + qid + '-' + i).className = 'qp-dot ' + (oi === q.correct ? 'good' : 'bad');
+  if (Object.keys(st.answers).length === st.qs.length) finishQuiz(qid);
+}
+function finishQuiz(qid) {
+  const st = qState[qid];
+  const sc = st.qs.filter((q, i) => st.answers[i] === q.correct).length;
+  const pct = Math.round(sc / st.qs.length * 100), pass = pct >= 70;
+  $('res-' + qid).innerHTML = '<div class="card score"><div class="s-pct">' + pct + '%</div>' +
+    '<div class="s-lbl">' + sc + ' bonnes réponses sur ' + st.qs.length + '</div>' +
+    '<span class="verdict ' + (pass ? 'ok' : 'ko') + '">' + (pass ? 'Seuil atteint' : 'Seuil non atteint — 70 % requis') + '</span>' +
+    '<div class="btn-row" style="justify-content:center"><button class="btn btn-ghost" onclick="renderQuiz(\'' + qid + '\')">Recommencer</button></div></div>';
+  if (pass) markDone(qid);
+  $('res-' + qid).scrollIntoView({ behavior: 'smooth', block: 'center' });
+}
+
+/* ══ Chronomètre à phases ══ */
+class Chrono {
+  constructor(el, phases, onEnd) {
+    this.el = el; this.phases = phases; this.onEnd = onEnd || (() => {});
+    this.idx = 0; this.left = phases[0].sec; this.timer = null; this.render();
+  }
+  render() {
+    const p = this.phases[this.idx], over = this.left < 0;
+    const warn = !over && this.left <= Math.min(60, p.sec * .15);
+    this.el.className = 'chrono' + (over ? ' over' : warn ? ' warn' : '');
+    this.el.innerHTML =
+      '<div><div class="c-phase">' + esc(p.label) + '</div><div class="c-time">' + mmss(this.left) + '</div>' +
+      '<div class="c-sub">' + esc(p.sub || '') + (over ? ' — temps dépassé' : '') + '</div>' +
+      '<div class="phase-track">' + this.phases.map((_, i) => '<div class="ph ' + (i < this.idx ? 'done' : i === this.idx ? 'on' : '') + '"></div>').join('') + '</div></div>' +
+      '<div class="chrono-actions">' +
+      '<button class="btn btn-ghost btn-sm" onclick="CH.toggle()">' + (this.timer ? 'Pause' : 'Démarrer') + '</button>' +
+      '<button class="btn btn-ghost btn-sm" onclick="CH.next()">Phase suivante</button>' +
+      '<button class="btn btn-ghost btn-sm" onclick="CH.reset()">Réinitialiser</button></div>';
+  }
+  tick() { this.left--; if (this.left === 0) { try { beep(); } catch (e) {} } this.render(); }
+  toggle() { if (this.timer) { clearInterval(this.timer); this.timer = null; } else { this.timer = setInterval(() => this.tick(), 1000); } this.render(); }
+  next() {
+    if (this.idx < this.phases.length - 1) { this.idx++; this.left = this.phases[this.idx].sec; this.render(); }
+    else { this.stop(); this.onEnd(); }
+  }
+  reset() { this.stop(); this.idx = 0; this.left = this.phases[0].sec; this.render(); }
+  stop() { if (this.timer) clearInterval(this.timer); this.timer = null; }
+}
+let CH = null;
+function beep() {
+  const C = window.AudioContext || window.webkitAudioContext; if (!C) return;
+  const c = new C(), o = c.createOscillator(), g = c.createGain();
+  o.connect(g); g.connect(c.destination); o.frequency.value = 660; g.gain.value = .07;
+  o.start(); setTimeout(() => { o.stop(); c.close(); }, 260);
+}
+
+/* ══ Simulateur d'épreuve ══ */
+let SIM = { public: 'ados', theme: null };
+function simSetPublic(p) {
+  SIM.public = p;
+  document.querySelectorAll('#sim-publics .chip').forEach(c => c.classList.toggle('on', c.dataset.p === p));
+  const c = D.config.epreuve[p];
+  $('sim-format').textContent = c.total + ' min au total — ' + c.prep + "' de préparation, " + c.animation + "' d'animation, " + c.entretien + "' d'entretien";
+}
+function simDraw() {
+  const pool = D.themes.filter(t => t.publics.includes(SIM.public));
+  const box = $('sim-draw'); box.classList.add('rolling');
+  let n = 0;
+  const roll = setInterval(() => {
+    const t = pool[Math.floor(Math.random() * pool.length)];
+    box.innerHTML = '<div class="d-kick">Tirage en cours</div><div class="d-title">' + esc(t.titre) + '</div>';
+    if (++n > 9) {
+      clearInterval(roll);
+      SIM.theme = pool[Math.floor(Math.random() * pool.length)];
+      const t2 = SIM.theme;
+      box.innerHTML = '<div class="d-kick">Thème tiré au sort — ' + esc(t2.id) + '</div>' +
+        '<div class="d-title">' + esc(t2.titre) + '</div>' +
+        '<div class="d-meta">Public : ' + esc(D.config.epreuve[SIM.public].label) + ' &nbsp;·&nbsp; Axe : ' + esc(t2.axe) + '</div>';
+      $('sim-after').style.display = 'block';
+      Store.set('simCount', Store.get('simCount', 0) + 1);
+      const c = D.config.epreuve[SIM.public];
+      CH = new Chrono($('sim-chrono'), [
+        { label: 'Phase 1 — Préparation écrite', sec: c.prep * 60, sub: 'Rédigez votre plan de séance. Aucun retour en arrière ensuite.' },
+        { label: 'Phase 2 — Animation', sec: c.animation * 60, sub: 'Mise en situation pédagogique devant le groupe.' },
+        { label: 'Phase 3 — Entretien', sec: c.entretien * 60, sub: 'Questions du jury sur la séance et la vision pédagogique.' }
+      ], () => { toast('Simulation terminée'); simDebrief(); });
+      $('sim-hints').innerHTML =
+        '<div class="card"><h2>Attendus du jury sur ce thème</h2><ul>' + t2.attendus.map(a => '<li>' + esc(a) + '</li>').join('') + '</ul>' +
+        '<h3>Pièges classiques</h3><ul>' + t2.pieges.map(a => '<li>' + esc(a) + '</li>').join('') + '</ul>' +
+        '<div class="warn-box">Ne consultez ce bloc qu\'<strong>après</strong> votre préparation, sous peine de fausser l\'exercice.</div></div>';
+      $('sim-hints').style.display = 'none';
+      // Pré-remplissage du constructeur de plan
+      planSet('theme', t2.titre); planSet('public', SIM.public);
+    }
+  }, 90);
+}
+function simRevealHints() { const h = $('sim-hints'); h.style.display = h.style.display === 'none' ? 'block' : 'none'; }
+function simDebrief() {
+  $('sim-debrief').style.display = 'block';
+  $('sim-debrief').scrollIntoView({ behavior: 'smooth' });
+}
+
+/* ══ Constructeur de plan de séance ══ */
+function planSet(k, v) { const e = $('f-' + k); if (e) e.value = v; }
+function planCollect() {
+  const o = {};
+  D.plan.forEach(s => s.champs.forEach(c => { const e = $('f-' + c[0]); if (e) o[c[0]] = e.value; }));
+  return o;
+}
+function planFill(o) { Object.keys(o || {}).forEach(k => planSet(k, o[k])); }
+function planSave() {
+  const o = planCollect();
+  if (!o.objectif && !o.theme) { toast('Renseignez au moins le thème ou l\'objectif'); return; }
+  const l = Store.get('sessions', []);
+  l.unshift({ ts: Date.now(), titre: o.theme || o.objectif.slice(0, 60), data: o });
+  Store.set('sessions', l.slice(0, 40)); renderSessions(); renderHome(); toast('Plan de séance enregistré');
+}
+function planClear() { D.plan.forEach(s => s.champs.forEach(c => planSet(c[0], ''))); toast('Formulaire réinitialisé'); }
+function renderSessions() {
+  const l = Store.get('sessions', []), h = $('plan-list');
+  if (!l.length) { h.innerHTML = '<div class="empty">Aucun plan enregistré pour le moment.</div>'; return; }
+  h.innerHTML = '<div class="table-wrap"><table><tr><th>Date</th><th>Thème</th><th>Public</th><th></th></tr>' +
+    l.map((s, i) => '<tr><td>' + new Date(s.ts).toLocaleString('fr-FR', { dateStyle: 'short', timeStyle: 'short' }) + '</td>' +
+      '<td>' + esc(s.titre) + '</td><td>' + esc((D.config.epreuve[s.data.public] || {}).label || s.data.public || '—') + '</td>' +
+      '<td style="white-space:nowrap"></td></tr>').join('') +
+    '</table></div>';
+  // Boutons câblés en JS : aucune donnée utilisateur n'est réinjectée dans du HTML inline.
+  h.querySelectorAll('tr').forEach((tr, i) => {
+    if (i === 0) return; const s = l[i - 1]; const td = tr.lastElementChild;
+    td.innerHTML = '';
+    const b1 = document.createElement('button'); b1.className = 'btn btn-ghost btn-sm'; b1.textContent = 'Charger';
+    b1.onclick = () => { planFill(s.data); toast('Plan chargé'); window.scrollTo({ top: 0, behavior: 'smooth' }); };
+    const b2 = document.createElement('button'); b2.className = 'btn btn-ghost btn-sm'; b2.textContent = 'Imprimer';
+    b2.style.marginLeft = '6px'; b2.onclick = () => planPrint(s.data);
+    const b3 = document.createElement('button'); b3.className = 'btn btn-danger btn-sm'; b3.textContent = 'Supprimer';
+    b3.style.marginLeft = '6px'; b3.onclick = () => { const a = Store.get('sessions', []); a.splice(i - 1, 1); Store.set('sessions', a); renderSessions(); renderHome(); };
+    td.append(b1, b2, b3);
+  });
+}
+function planPrint(data) {
+  const o = data || planCollect();
+  const pub = (D.config.epreuve[o.public] || {}).label || o.public || '';
+  const blocs = D.plan.map(s => {
+    const rows = s.champs.filter(c => (o[c[0]] || '').trim()).map(c =>
+      '<tr><th>' + esc(c[1]) + '</th><td>' + esc(o[c[0]]).replace(/\n/g, '<br>') + '</td></tr>').join('');
+    return rows ? '<h2>' + esc(s.titre) + '</h2><table>' + rows + '</table>' : '';
+  }).join('');
+  const w = window.open('', '_blank');
+  if (!w) { toast('Autorisez les fenêtres pop-up pour imprimer'); return; }
+  w.document.write('<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title>Plan de séance — ' +
+    esc(o.theme || 'DIF Yoseikan Budo') + '</title><style>' +
+    'body{font-family:Georgia,serif;color:#151B24;max-width:780px;margin:34px auto;padding:0 22px;line-height:1.55}' +
+    'header{border-bottom:3px solid #0B1B33;padding-bottom:12px;margin-bottom:22px}' +
+    '.k{font-family:monospace;font-size:10px;letter-spacing:.2em;color:#3F6FA8;text-transform:uppercase}' +
+    'h1{font-size:19px;color:#050D1B;margin:5px 0 4px}.sub{font-size:12px;color:#5E6A7A}' +
+    'h2{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#10294B;margin:22px 0 7px;' +
+    'border-bottom:1px solid #DFE4EB;padding-bottom:4px}' +
+    'table{width:100%;border-collapse:collapse;font-family:Helvetica,Arial,sans-serif;font-size:12px;margin-bottom:6px}' +
+    'th{text-align:left;width:32%;vertical-align:top;padding:7px 10px 7px 0;color:#5E6A7A;font-weight:600;' +
+    'font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #EDF0F4}' +
+    'td{padding:7px 0;border-bottom:1px solid #EDF0F4;vertical-align:top}' +
+    'footer{margin-top:34px;padding-top:11px;border-top:1px solid #DFE4EB;font-size:10px;color:#8B95A3}' +
+    '@media print{body{margin:0}}</style></head><body>' +
+    '<header><div class="k">' + esc(D.config.code) + ' — Plan de séance</div>' +
+    '<h1>' + esc(o.theme || 'Séance') + '</h1>' +
+    '<div class="sub">' + esc(pub) + (o.duree ? ' · ' + esc(o.duree) : '') + ' · ' + new Date().toLocaleDateString('fr-FR') + '</div></header>' +
+    blocs + '<footer>' + esc(D.config.titre) + ' — ' + esc(D.config.sous_titre) + '</footer></body></html>');
+  w.document.close(); setTimeout(() => w.print(), 350);
+}
+
+/* ══ Entretien jury ══ */
+let JU = { pool: [], i: 0, timer: null, left: 0 };
+function juryStart(cat) {
+  const pool = cat === '*' ? D.jury.slice() : D.jury.filter(q => q.cat === cat);
+  JU.pool = shuffle(pool); JU.i = 0;
+  document.querySelectorAll('#jury-cats .chip').forEach(c => c.classList.toggle('on', c.dataset.c === cat));
+  juryShow();
+}
+function juryShow() {
+  if (JU.timer) { clearInterval(JU.timer); JU.timer = null; }
+  const q = JU.pool[JU.i];
+  if (!q) { $('jury-box').innerHTML = '<div class="empty">Série terminée.</div>'; return; }
+  const vus = Store.get('juryVus', []); if (!vus.includes(q.q)) { vus.push(q.q); Store.set('juryVus', vus); }
+  JU.left = 90;
+  $('jury-box').innerHTML =
+    '<div class="draw"><div class="d-kick">' + esc(q.cat) + ' — question ' + (JU.i + 1) + ' / ' + JU.pool.length + '</div>' +
+    '<div class="d-title">' + esc(q.q) + '</div>' +
+    '<div class="d-meta" id="jury-timer">Temps de réponse conseillé : 01:30</div></div>' +
+    '<div class="btn-row"><button class="btn btn-primary" onclick="juryReveal()">Afficher les éléments attendus</button>' +
+    '<button class="btn btn-ghost" onclick="JU.i++;juryShow()">Question suivante</button>' +
+    '<button class="btn btn-ghost" onclick="juryTimer()">Lancer le chronomètre</button></div>' +
+    '<div id="jury-ans" style="display:none"><div class="card"><h2>Éléments attendus</h2><p>' + esc(q.attendu) + '</p>' +
+    '<div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Méthode</strong>' +
+    'Structurez à voix haute : ce que j\'ai fait, pourquoi je l\'ai fait, ce que j\'en ai observé, ce que je changerais. ' +
+    'Une réponse construite en trois temps vaut mieux qu\'une réponse exhaustive et décousue.</div></div></div></div>';
+  renderHome();
+}
+function juryReveal() { $('jury-ans').style.display = 'block'; }
+function juryTimer() {
+  if (JU.timer) { clearInterval(JU.timer); JU.timer = null; return; }
+  JU.timer = setInterval(() => {
+    JU.left--; const e = $('jury-timer'); if (!e) { clearInterval(JU.timer); return; }
+    e.textContent = 'Temps écoulé : ' + mmss(90 - JU.left) + (JU.left <= 0 ? ' — au-delà du temps conseillé' : '');
+    if (JU.left === 0) { try { beep(); } catch (x) {} }
+  }, 1000);
+}
+
+/* ══ Banque d'exercices ══ */
+let EXF = { phase: '*', pub: '*' };
+function exFilter(k, v) { EXF[k] = v; document.querySelectorAll('[data-f="' + k + '"]').forEach(c => c.classList.toggle('on', c.dataset.v === v)); renderEx(); }
+function renderEx() {
+  const l = D.exercices.filter(e => (EXF.phase === '*' || e.phase === EXF.phase) && (EXF.pub === '*' || e.publics.includes(EXF.pub)));
+  $('ex-list').innerHTML = l.length ? '<div class="grid g2">' + l.map(e =>
+    '<div class="ex"><div class="ex-h"><span class="ex-id">' + esc(e.id) + '</span><span class="ex-n">' + esc(e.nom) + '</span>' +
+    '<span class="ex-meta">' + esc(e.duree) + '</span></div>' +
+    '<div style="margin-bottom:6px">' + e.publics.map(p => '<span class="tag">' + esc((D.config.epreuve[p] || {}).label || p) + '</span>').join('') + '</div>' +
+    '<dl><dt>Organisation</dt><dd>' + esc(e.organisation) + '</dd>' +
+    '<dt>Critère de réussite</dt><dd>' + esc(e.critere) + '</dd>' +
+    '<dt>Variables didactiques</dt><dd>' + e.variables.map(esc).join(' · ') + '</dd>' +
+    '<dt>Sécurité</dt><dd>' + esc(e.securite) + '</dd></dl></div>').join('') + '</div>'
+    : '<div class="empty">Aucun exercice ne correspond à ces filtres.</div>';
+}
+
+/* ══ Saison ══ */
+function saisonSave() {
+  const o = {}; document.querySelectorAll('[data-cyc]').forEach(t => o[t.dataset.cyc] = t.value);
+  Store.set('saison', o); toast('Planification enregistrée');
+}
+function saisonLoad() {
+  const o = Store.get('saison', {}); document.querySelectorAll('[data-cyc]').forEach(t => { if (o[t.dataset.cyc]) t.value = o[t.dataset.cyc]; });
+}
+
+/* ══ Examen blanc ══ */
+let EX = { secs: [], ans: {} };
+function examStart() {
+  const secs = Object.keys(D.quiz).filter(q => D.quiz[q].questions.length);
+  let gi = 0, html = '';
+  EX = { secs: [], ans: {} };
+  secs.forEach((qid, si) => {
+    const qs = shuffle(D.quiz[qid].questions).slice(0, 10).map(q => ({ ...q, gi: gi++ }));
+    EX.secs.push({ qid, titre: D.quiz[qid].titre, qs });
+    html += '<div class="card"><h2>Section ' + (si + 1) + ' — ' + esc(D.quiz[qid].titre.replace('Quiz — ', '')) + '</h2>' +
+      qs.map((q, i) => '<div class="q-num">Question ' + (i + 1) + ' / ' + qs.length + '</div><div class="q-txt">' + esc(q.q) + '</div>' +
+        q.opts.map((o, oi) => '<button class="opt" data-letter="' + 'ABCD'[oi] + '" id="e-' + q.gi + '-' + oi + '" onclick="examAns(' + q.gi + ',' + oi + ')">' + esc(o) + '</button>').join('') +
+        '<div class="divider"></div>').join('') + '</div>';
+  });
+  $('exam-intro').style.display = 'none';
+  $('exam-body').style.display = 'block';
+  $('exam-body').innerHTML = html + '<div class="btn-row"><button class="btn btn-primary btn-lg" onclick="examEnd()">Terminer et corriger</button>' +
+    '<button class="btn btn-ghost" onclick="examReset()">Abandonner</button></div><div id="exam-res"></div>';
+}
+function examAns(gi, oi) {
+  if (EX.ans[gi] !== undefined) return; EX.ans[gi] = oi;
+  const q = EX.secs.flatMap(s => s.qs).find(x => x.gi === gi);
+  q.opts.forEach((_, k) => { $('e-' + gi + '-' + k).disabled = true; });
+  $('e-' + gi + '-' + oi).classList.add(oi === q.correct ? 'good' : 'bad');
+}
+function examEnd() {
+  let tot = 0, good = 0, lignes = '';
+  EX.secs.forEach(s => {
+    const g = s.qs.filter(q => EX.ans[q.gi] === q.correct).length;
+    tot += s.qs.length; good += g;
+    const p = Math.round(g / s.qs.length * 100);
+    lignes += '<tr><td>' + esc(s.titre.replace('Quiz — ', '')) + '</td><td>' + g + ' / ' + s.qs.length + '</td>' +
+      '<td>' + p + ' %</td><td>' + (p >= 70 ? 'Acquis' : 'À retravailler') + '</td></tr>';
+  });
+  const pct = Math.round(good / tot * 100);
+  $('exam-res').innerHTML = '<div class="card score"><div class="s-pct">' + pct + '%</div>' +
+    '<div class="s-lbl">' + good + ' / ' + tot + ' — seuil de réussite : 70 %</div>' +
+    '<span class="verdict ' + (pct >= 70 ? 'ok' : 'ko') + '">' + (pct >= 70 ? 'Seuil atteint' : 'Seuil non atteint') + '</span></div>' +
+    '<div class="card"><h2>Détail par section</h2><div class="table-wrap"><table>' +
+    '<tr><th>Section</th><th>Score</th><th>Taux</th><th>Statut</th></tr>' + lignes + '</table></div>' +
+    '<div class="btn-row"><button class="btn btn-ghost" onclick="examReset()">Nouvel examen blanc</button></div></div>';
+  $('exam-res').scrollIntoView({ behavior: 'smooth' });
+}
+function examReset() { $('exam-body').style.display = 'none'; $('exam-intro').style.display = 'block'; }
+
+/* ══ Sauvegarde / restauration ══ */
+function exportData() {
+  const blob = new Blob([JSON.stringify(Store.all(), null, 1)], { type: 'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = 'YOSEI-DIF_sauvegarde_' + new Date().toISOString().slice(0, 10) + '.json';
+  a.click(); URL.revokeObjectURL(a.href); toast('Sauvegarde téléchargée');
+}
+function importData(input) {
+  const f = input.files[0]; if (!f) return;
+  const r = new FileReader();
+  r.onload = () => { try { Store.load(JSON.parse(r.result)); location.reload(); } catch (e) { toast('Fichier illisible'); } };
+  r.readAsText(f);
+}
+
+/* ══ Amorçage ══ */
+document.addEventListener('DOMContentLoaded', () => {
+  Object.keys(D.quiz).forEach(renderQuiz);
+  simSetPublic('ados'); renderEx(); renderSessions(); saisonLoad();
+  juryStart('*'); renderProgress(); renderHome();
+  if (!Store.available) $('warn-storage').style.display = 'block';
+  showPage(Store.get('lastPage', 'home'));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') $('sidebar').classList.remove('open'); });
+});
+
+</script>
+</body>
+</html>
