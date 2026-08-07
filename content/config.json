@@ -1,0 +1,58 @@
+{
+ "code": "YOSEI-DIF",
+ "titre": "DIF Yoseikan Budo",
+ "sous_titre": "Préparation au Diplôme d'Instructeur Fédéral",
+ "version": "1.0",
+ "epreuve": {
+  "enfants": {
+   "label": "Enfants",
+   "total": 60,
+   "prep": 30,
+   "animation": 20,
+   "entretien": 10
+  },
+  "ados": {
+   "label": "Ados / Adultes",
+   "total": 90,
+   "prep": 30,
+   "animation": 20,
+   "entretien": 10
+  },
+  "baby": {
+   "label": "Baby (4-6 ans)",
+   "total": 60,
+   "prep": 30,
+   "animation": 20,
+   "entretien": 10
+  },
+  "adapte": {
+   "label": "Public adapté",
+   "total": 90,
+   "prep": 30,
+   "animation": 20,
+   "entretien": 10
+  }
+ },
+ "objectifs": [
+  [
+   "Concevoir et mettre en œuvre des exercices et des séances",
+   "Traduire un thème imposé en objectif opérationnel, en situations d'apprentissage et en critères de réussite observables."
+  ],
+  [
+   "Planifier et programmer une saison sportive",
+   "Construire une progression annuelle cohérente : cycles, passages de grade, événements, évaluation."
+  ],
+  [
+   "Prendre en compte la spécificité de différents publics",
+   "Adapter volume, consignes, sécurité et intention pédagogique au public réellement en face de soi."
+  ],
+  [
+   "Connaître l'environnement fédéral et du club",
+   "Maîtriser la structure fédérale, le cadre réglementaire de l'encadrement et la vie associative du club."
+  ],
+  [
+   "Participer à des événements fédéraux",
+   "Savoir situer et justifier son implication dans le calendrier et la vie de la discipline."
+  ]
+ ]
+}

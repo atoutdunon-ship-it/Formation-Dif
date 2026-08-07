@@ -1,0 +1,283 @@
+[
+ {
+  "id": "TH01",
+  "publics": [
+   "enfants",
+   "ados"
+  ],
+  "titre": "Construire et conserver la distance (ma-ai)",
+  "axe": "Opposition",
+  "attendus": [
+   "Définir trois distances de travail et les faire vivre corporellement",
+   "Une situation d'opposition aménagée où la distance est la seule variable",
+   "Un critère de réussite observable : toucher sans être touché sur N répétitions"
+  ],
+  "pieges": [
+   "Rester en démonstration technique sans jamais mettre en opposition",
+   "Ne pas faire varier la distance : le thème se réduit à un travail de frappe"
+  ]
+ },
+ {
+  "id": "TH02",
+  "publics": [
+   "enfants",
+   "baby"
+  ],
+  "titre": "Découverte des chutes et protection du corps",
+  "axe": "Sécurité",
+  "attendus": [
+   "Progression du plus bas vers le plus haut : assis, accroupi, debout",
+   "Consignes de sécurité explicites et vérifiées avant chaque répétition",
+   "Aménagement du milieu : surface, espacement, sens de chute imposé"
+  ],
+  "pieges": [
+   "Passer trop vite au debout : risque réel de blessure devant le jury",
+   "Oublier de vérifier l'espace entre les pratiquants"
+  ]
+ },
+ {
+  "id": "TH03",
+  "publics": [
+   "ados"
+  ],
+  "titre": "Enchaîner percussion et projection",
+  "axe": "Liaison technique",
+  "attendus": [
+   "Montrer explicitement la liaison : ce qui rend la projection possible",
+   "Décomposition puis recomposition (analytique puis global)",
+   "Travail par vagues pour garder tout le groupe actif"
+  ],
+  "pieges": [
+   "Empiler deux techniques sans traiter le lien entre elles",
+   "Complexité excessive : le groupe ne réussit rien"
+  ]
+ },
+ {
+  "id": "TH04",
+  "publics": [
+   "enfants"
+  ],
+  "titre": "Coordination et latéralité par le jeu",
+  "axe": "Motricité",
+  "attendus": [
+   "Situations ludiques à règles simples, forte densité de répétitions",
+   "Alternance droite / gauche systématique",
+   "Réussite accessible dès les premières tentatives, puis complexification"
+  ],
+  "pieges": [
+   "Consignes trop longues : perte d'attention immédiate",
+   "Jeu sans lien avec l'objectif martial annoncé"
+  ]
+ },
+ {
+  "id": "TH05",
+  "publics": [
+   "ados",
+   "adapte"
+  ],
+  "titre": "Blocage et riposte immédiate",
+  "axe": "Défense",
+  "attendus": [
+   "Chaîne défense — contrôle — riposte, jamais le blocage seul",
+   "Travail à deux avec rôle d'attaquant défini et responsabilisé",
+   "Montée progressive de l'incertitude : signal, puis choix, puis libre"
+  ],
+  "pieges": [
+   "Laisser l'attaquant sans consigne : la situation perd toute valeur",
+   "Rester sur un temps unique sans jamais riposter"
+  ]
+ },
+ {
+  "id": "TH06",
+  "publics": [
+   "baby"
+  ],
+  "titre": "Parcours moteur et imaginaire du budoka",
+  "axe": "Motricité",
+  "attendus": [
+   "Parcours à stations courtes, rotation rapide, aucun temps d'attente",
+   "Vocabulaire imagé, une consigne à la fois",
+   "Rituel d'entrée et de sortie du tatami"
+  ],
+  "pieges": [
+   "Files d'attente : première cause d'échec sur ce public",
+   "Technique codifiée inadaptée à l'âge"
+  ]
+ },
+ {
+  "id": "TH07",
+  "publics": [
+   "ados"
+  ],
+  "titre": "Saisies et libérations",
+  "axe": "Préhension",
+  "attendus": [
+   "Identifier le moment de la saisie et le principe de libération",
+   "Opposition progressive : saisie consentie, résistante, puis dynamique",
+   "Sécurité articulaire : consignes d'arrêt claires"
+  ],
+  "pieges": [
+   "Aller au blocage articulaire sans cadre de sécurité",
+   "Rester sur une seule saisie pendant vingt minutes"
+  ]
+ },
+ {
+  "id": "TH08",
+  "publics": [
+   "enfants",
+   "ados"
+  ],
+  "titre": "Déplacements et changements de direction",
+  "axe": "Mobilité",
+  "attendus": [
+   "Déplacements orientés par une cible ou un partenaire, jamais à vide",
+   "Repères spatiaux matérialisés sur le tatami",
+   "Densité : tout le groupe se déplace en même temps"
+  ],
+  "pieges": [
+   "Déplacements en lignes sans intention ni adversaire",
+   "Correction individuelle prolongée pendant que le groupe attend"
+  ]
+ },
+ {
+  "id": "TH09",
+  "publics": [
+   "adapte"
+  ],
+  "titre": "Adapter une séance à un public à besoins spécifiques",
+  "axe": "Adaptation",
+  "attendus": [
+   "Identifier une contrainte précise et annoncer l'adaptation retenue",
+   "Même objectif pour tous, moyens différenciés",
+   "Valorisation systématique de la réussite"
+  ],
+  "pieges": [
+   "Sous-solliciter le public par prudence excessive",
+   "Créer un groupe à part : exclusion de fait"
+  ]
+ },
+ {
+  "id": "TH10",
+  "publics": [
+   "ados"
+  ],
+  "titre": "Introduire le travail avec arme souple ou bâton",
+  "axe": "Matériel",
+  "attendus": [
+   "Règles de sécurité et de manipulation posées avant toute distribution",
+   "Progression : sans partenaire, puis cible, puis partenaire",
+   "Rangement et comptage du matériel intégrés à la séance"
+  ],
+  "pieges": [
+   "Distribuer le matériel avant d'avoir donné les règles",
+   "Distance de travail non recalculée avec l'arme"
+  ]
+ },
+ {
+  "id": "TH11",
+  "publics": [
+   "enfants",
+   "ados",
+   "adapte"
+  ],
+  "titre": "Échauffement spécifique orienté par l'objectif",
+  "axe": "Structure",
+  "attendus": [
+   "Un échauffement qui prépare la tâche principale, pas un échauffement générique",
+   "Élévation progressive : général, articulaire, spécifique",
+   "Savoir justifier chaque bloc devant le jury"
+  ],
+  "pieges": [
+   "Échauffement décorrélé du corps de séance",
+   "Durée excessive qui ampute le temps d'apprentissage"
+  ]
+ },
+ {
+  "id": "TH12",
+  "publics": [
+   "ados"
+  ],
+  "titre": "Randori aménagé : gérer l'intensité et la sécurité",
+  "axe": "Opposition",
+  "attendus": [
+   "Règles d'opposition explicites : cibles, intensité, signal d'arrêt",
+   "Appariement raisonné par gabarit et par niveau",
+   "Rôles alternés et temps de travail courts"
+  ],
+  "pieges": [
+   "Opposition libre sans cadre : sanction immédiate du jury",
+   "Appariement laissé au hasard"
+  ]
+ },
+ {
+  "id": "TH13",
+  "publics": [
+   "enfants"
+  ],
+  "titre": "Rythme, tempo et explosivité",
+  "axe": "Qualités physiques",
+  "attendus": [
+   "Faire varier le tempo sur une même technique : lent, normal, explosif",
+   "Support sonore ou comptage pour matérialiser le rythme",
+   "Récupération réelle entre les séries"
+  ],
+  "pieges": [
+   "Confondre vitesse et précipitation : dégradation technique",
+   "Absence de temps de récupération"
+  ]
+ },
+ {
+  "id": "TH14",
+  "publics": [
+   "ados",
+   "adapte"
+  ],
+  "titre": "Préparer un passage de grade",
+  "axe": "Évaluation",
+  "attendus": [
+   "Annoncer les critères d'évaluation en début de séance",
+   "Mise en situation réelle avec observation croisée entre pratiquants",
+   "Retour individualisé et axe de progrès formulé"
+  ],
+  "pieges": [
+   "Évaluer sans avoir énoncé les critères",
+   "Retour collectif vague, sans axe de travail"
+  ]
+ },
+ {
+  "id": "TH15",
+  "publics": [
+   "enfants",
+   "ados"
+  ],
+  "titre": "Le contrôle : toucher sans blesser",
+  "axe": "Éthique et sécurité",
+  "attendus": [
+   "Définir le contrôle et le rendre observable",
+   "Progression de la cible : matérielle, puis partenaire",
+   "Lien explicite avec les valeurs du budo"
+  ],
+  "pieges": [
+   "Discours moral sans traduction dans l'exercice",
+   "Cibles inadaptées qui poussent au contact excessif"
+  ]
+ },
+ {
+  "id": "TH16",
+  "publics": [
+   "baby",
+   "enfants"
+  ],
+  "titre": "Rituel et respect du cadre du dojo",
+  "axe": "Éthique",
+  "attendus": [
+   "Rituels courts, expliqués, systématiquement appliqués",
+   "Règles du dojo formulées positivement",
+   "Intégration du rituel dans une situation active"
+  ],
+  "pieges": [
+   "Long discours statique : perte totale d'attention",
+   "Rituel plaqué, jamais expliqué"
+  ]
+ }
+]

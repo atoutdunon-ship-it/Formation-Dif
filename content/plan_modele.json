@@ -1,0 +1,174 @@
+[
+ {
+  "id": "contexte",
+  "titre": "Contexte",
+  "champs": [
+   [
+    "public",
+    "Public et effectif",
+    "select_public"
+   ],
+   [
+    "niveau",
+    "Niveau et grades",
+    "text"
+   ],
+   [
+    "duree",
+    "Durée de la séance",
+    "text"
+   ],
+   [
+    "lieu",
+    "Lieu et surface disponible",
+    "text"
+   ],
+   [
+    "materiel",
+    "Matériel nécessaire",
+    "textarea"
+   ]
+  ]
+ },
+ {
+  "id": "objectif",
+  "titre": "Objectif et critères",
+  "champs": [
+   [
+    "theme",
+    "Thème tiré au sort",
+    "text"
+   ],
+   [
+    "objectif",
+    "Objectif opérationnel — « à la fin de la séance, le pratiquant est capable de… »",
+    "textarea"
+   ],
+   [
+    "critere",
+    "Critère de réussite observable",
+    "textarea"
+   ],
+   [
+    "prerequis",
+    "Prérequis supposés",
+    "textarea"
+   ]
+  ]
+ },
+ {
+  "id": "securite",
+  "titre": "Sécurité",
+  "champs": [
+   [
+    "risques",
+    "Risques identifiés",
+    "textarea"
+   ],
+   [
+    "mesures",
+    "Mesures de prévention et consignes d'arrêt",
+    "textarea"
+   ],
+   [
+    "verif",
+    "Vérifications avant la séance",
+    "textarea"
+   ]
+  ]
+ },
+ {
+  "id": "echauffement",
+  "titre": "Échauffement",
+  "champs": [
+   [
+    "ech_duree",
+    "Durée",
+    "text"
+   ],
+   [
+    "ech_contenu",
+    "Contenu et lien avec l'objectif",
+    "textarea"
+   ],
+   [
+    "ech_org",
+    "Organisation du groupe",
+    "textarea"
+   ]
+  ]
+ },
+ {
+  "id": "corps",
+  "titre": "Corps de séance",
+  "champs": [
+   [
+    "s1",
+    "Situation 1 — consigne, organisation, critère",
+    "textarea"
+   ],
+   [
+    "s1_var",
+    "Situation 1 — variables et différenciation",
+    "textarea"
+   ],
+   [
+    "s2",
+    "Situation 2 — consigne, organisation, critère",
+    "textarea"
+   ],
+   [
+    "s2_var",
+    "Situation 2 — variables et différenciation",
+    "textarea"
+   ],
+   [
+    "s3",
+    "Situation 3 — mise en opposition ou application",
+    "textarea"
+   ],
+   [
+    "s3_var",
+    "Situation 3 — variables et différenciation",
+    "textarea"
+   ]
+  ]
+ },
+ {
+  "id": "retour",
+  "titre": "Retour au calme et bilan",
+  "champs": [
+   [
+    "rac",
+    "Contenu du retour au calme",
+    "textarea"
+   ],
+   [
+    "bilan",
+    "Bilan avec le groupe et lien avec la séance suivante",
+    "textarea"
+   ]
+  ]
+ },
+ {
+  "id": "regulation",
+  "titre": "Régulation et plan B",
+  "champs": [
+   [
+    "planb",
+    "Plan B si la situation ne fonctionne pas",
+    "textarea"
+   ],
+   [
+    "diff",
+    "Adaptation pour un pratiquant en difficulté",
+    "textarea"
+   ],
+   [
+    "avance",
+    "Adaptation pour un pratiquant en avance",
+    "textarea"
+   ]
+  ]
+ }
+]

@@ -1,0 +1,70 @@
+[
+ {
+  "cycle": "Cycle 1 — Rentrée et remise en route",
+  "periode": "Septembre → vacances de Toussaint",
+  "objectifs": [
+   "Réintégrer les fondamentaux : posture, déplacement, distance",
+   "Intégrer les nouveaux pratiquants et poser les rituels du dojo",
+   "Évaluer le niveau réel du groupe"
+  ],
+  "reperes": [
+   "Portes ouvertes et séances d'essai",
+   "Régularisation des licences et de la situation médicale",
+   "Réunion d'information aux familles"
+  ]
+ },
+ {
+  "cycle": "Cycle 2 — Construction technique",
+  "periode": "Toussaint → vacances de Noël",
+  "objectifs": [
+   "Développer le répertoire technique de la tranche d'âge",
+   "Introduire l'opposition aménagée",
+   "Installer les règles de contrôle"
+  ],
+  "reperes": [
+   "Stage technique de ligue ou de comité départemental",
+   "Premier point d'étape individuel"
+  ]
+ },
+ {
+  "cycle": "Cycle 3 — Mise en opposition",
+  "periode": "Janvier → vacances d'hiver",
+  "objectifs": [
+   "Transférer la technique en situation d'opposition",
+   "Développer la lecture de l'adversaire et le timing",
+   "Préparer les échéances compétitives"
+  ],
+  "reperes": [
+   "Compétitions et coupes",
+   "Formation continue des cadres"
+  ]
+ },
+ {
+  "cycle": "Cycle 4 — Approfondissement et armes",
+  "periode": "Vacances d'hiver → vacances de printemps",
+  "objectifs": [
+   "Enrichir le répertoire : liaisons, sol, travail avec matériel",
+   "Consolider les acquis sous contrainte",
+   "Préparer le programme de passage de grade"
+  ],
+  "reperes": [
+   "Stage de discipline",
+   "Inscription aux passages de grade"
+  ]
+ },
+ {
+  "cycle": "Cycle 5 — Évaluation et valorisation",
+  "periode": "Printemps → fin de saison",
+  "objectifs": [
+   "Valider les acquis de la saison",
+   "Passer les grades",
+   "Valoriser la progression de chaque pratiquant"
+  ],
+  "reperes": [
+   "Passages de grade",
+   "Fête du club et démonstration",
+   "Assemblée générale",
+   "Bilan pédagogique et projection sur la saison suivante"
+  ]
+ }
+]

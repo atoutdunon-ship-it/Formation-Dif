@@ -1,0 +1,230 @@
+[
+ {
+  "id": "EX01",
+  "nom": "Réveil articulaire orienté",
+  "phase": "Échauffement",
+  "publics": [
+   "enfants",
+   "ados",
+   "adapte"
+  ],
+  "axe": "Préparation",
+  "duree": "6-8 min",
+  "organisation": "En dispersion, face à l'enseignant, mobilisation descendante ou ascendante complète.",
+  "critere": "Amplitude complète sans douleur sur chaque articulation sollicitée par la tâche du jour.",
+  "variables": [
+   "Ajouter un déplacement",
+   "Faire mener par un pratiquant",
+   "Associer une respiration comptée"
+  ],
+  "securite": "Aucune amplitude forcée ; adapter en cas d'antécédent articulaire."
+ },
+ {
+  "id": "EX02",
+  "nom": "Le miroir",
+  "phase": "Échauffement",
+  "publics": [
+   "baby",
+   "enfants"
+  ],
+  "axe": "Attention",
+  "duree": "4-6 min",
+  "organisation": "Par deux, face à face. L'un mène un mouvement lent, l'autre reproduit, puis inversion.",
+  "critere": "Le suiveur reste synchrone pendant 20 secondes consécutives.",
+  "variables": [
+   "Fermer les yeux du suiveur un instant",
+   "Imposer un thème gestuel",
+   "Accélérer le meneur"
+  ],
+  "securite": "Pas de contact ; distance d'un bras tendu."
+ },
+ {
+  "id": "EX03",
+  "nom": "Gestion de la distance aux plots",
+  "phase": "Corps de séance",
+  "publics": [
+   "enfants",
+   "ados"
+  ],
+  "axe": "Distance",
+  "duree": "8-10 min",
+  "organisation": "Deux lignes de plots matérialisant longue, moyenne et courte distance. Aller-retour sur signal.",
+  "critere": "Le pratiquant se place à la bonne distance en moins d'une seconde après le signal.",
+  "variables": [
+   "Signal sonore puis visuel",
+   "Ajouter un partenaire mobile",
+   "Réduire l'espace disponible"
+  ],
+  "securite": "Espacement latéral d'au moins deux mètres entre binômes."
+ },
+ {
+  "id": "EX04",
+  "nom": "Attaque annoncée, riposte libre",
+  "phase": "Corps de séance",
+  "publics": [
+   "ados"
+  ],
+  "axe": "Défense",
+  "duree": "10-12 min",
+  "organisation": "Par deux. L'attaquant annonce sa cible, le défenseur choisit sa réponse dans un répertoire donné.",
+  "critere": "Trois ripostes différentes réussies sur dix attaques.",
+  "variables": [
+   "Supprimer l'annonce",
+   "Ajouter une deuxième attaque possible",
+   "Réduire la distance de départ"
+  ],
+  "securite": "Contrôle obligatoire ; intensité annoncée et vérifiée avant le départ."
+ },
+ {
+  "id": "EX05",
+  "nom": "Chute arrière depuis la position assise",
+  "phase": "Corps de séance",
+  "publics": [
+   "baby",
+   "enfants",
+   "adapte"
+  ],
+  "axe": "Chute",
+  "duree": "8 min",
+  "organisation": "Assis, menton rentré, bras en diagonale, bascule contrôlée puis frappe des bras.",
+  "critere": "Menton rentré et frappe simultanée des deux bras sur cinq répétitions consécutives.",
+  "variables": [
+   "Passer accroupi",
+   "Puis debout",
+   "Ajouter un déséquilibre léger du partenaire"
+  ],
+  "securite": "Un seul rang à la fois ; vérifier l'absence de voisin dans l'axe de chute."
+ },
+ {
+  "id": "EX06",
+  "nom": "Parcours des quatre stations",
+  "phase": "Corps de séance",
+  "publics": [
+   "baby",
+   "enfants"
+  ],
+  "axe": "Motricité",
+  "duree": "10-12 min",
+  "organisation": "Quatre ateliers de 45 secondes, rotation au signal, groupes de trois maximum.",
+  "critere": "Chaque pratiquant passe aux quatre stations sans temps d'attente supérieur à 10 secondes.",
+  "variables": [
+   "Chronométrer",
+   "Ajouter une contrainte de latéralité",
+   "Introduire un déplacement imposé"
+  ],
+  "securite": "Stations éloignées les unes des autres ; un adulte visible depuis chaque station."
+ },
+ {
+  "id": "EX07",
+  "nom": "Saisie et libération progressive",
+  "phase": "Corps de séance",
+  "publics": [
+   "ados"
+  ],
+  "axe": "Préhension",
+  "duree": "10 min",
+  "organisation": "Par deux, saisie du poignet. Trois niveaux : consentie, résistante, dynamique.",
+  "critere": "Libération obtenue sans force sur le niveau consenti, puis sur le niveau résistant.",
+  "variables": [
+   "Changer la saisie",
+   "Saisie à deux mains",
+   "Ajouter un déplacement"
+  ],
+  "securite": "Aucune torsion articulaire ; signal d'arrêt par double frappe."
+ },
+ {
+  "id": "EX08",
+  "nom": "Vagues de déplacement orientées",
+  "phase": "Corps de séance",
+  "publics": [
+   "enfants",
+   "ados"
+  ],
+  "axe": "Mobilité",
+  "duree": "8 min",
+  "organisation": "Le groupe traverse le tatami par vagues de quatre, cible mobile tenue par l'enseignant.",
+  "critere": "Orientation du corps maintenue vers la cible sur toute la traversée.",
+  "variables": [
+   "Changer la cible en cours de traversée",
+   "Imposer un changement de direction",
+   "Ajouter un temps de frappe"
+  ],
+  "securite": "Sens de circulation unique ; retour par l'extérieur du tatami."
+ },
+ {
+  "id": "EX09",
+  "nom": "Randori à thème imposé",
+  "phase": "Opposition",
+  "publics": [
+   "ados"
+  ],
+  "axe": "Opposition",
+  "duree": "10-12 min",
+  "organisation": "Opposition souple de 90 secondes avec un seul objectif autorisé, rotation des partenaires.",
+  "critere": "Le thème imposé apparaît au moins trois fois dans la séquence.",
+  "variables": [
+   "Limiter les cibles",
+   "Imposer un handicap à l'un des deux",
+   "Réduire l'espace"
+  ],
+  "securite": "Appariement par gabarit ; intensité annoncée ; protections vérifiées."
+ },
+ {
+  "id": "EX10",
+  "nom": "Le roi du tatami",
+  "phase": "Opposition",
+  "publics": [
+   "enfants"
+  ],
+  "axe": "Opposition",
+  "duree": "8 min",
+  "organisation": "Zones délimitées, opposition de déséquilibre debout, rotation rapide des adversaires.",
+  "critere": "Chaque pratiquant réalise au moins six oppositions courtes.",
+  "variables": [
+   "Réduire la zone",
+   "Interdire les saisies hautes",
+   "Opposition à genoux"
+  ],
+  "securite": "Pas de projection ; sortie de zone = arrêt immédiat."
+ },
+ {
+  "id": "EX11",
+  "nom": "Retour au calme respiratoire",
+  "phase": "Retour au calme",
+  "publics": [
+   "enfants",
+   "ados",
+   "adapte",
+   "baby"
+  ],
+  "axe": "Récupération",
+  "duree": "4-5 min",
+  "organisation": "Assis en cercle, respiration guidée en trois temps, puis rappel de l'objectif de la séance.",
+  "critere": "Le rythme cardiaque redescend et le groupe reformule l'objectif du jour.",
+  "variables": [
+   "Étirements légers associés",
+   "Faire reformuler par un pratiquant",
+   "Annoncer la séance suivante"
+  ],
+  "securite": "Sol non froid ; pas d'étirement passif intense après opposition."
+ },
+ {
+  "id": "EX12",
+  "nom": "Observation croisée par binôme",
+  "phase": "Corps de séance",
+  "publics": [
+   "ados",
+   "adapte"
+  ],
+  "axe": "Évaluation",
+  "duree": "8-10 min",
+  "organisation": "Un pratique, un observe avec deux critères écrits, puis inversion et retour oral.",
+  "critere": "L'observateur formule un point réussi et un axe de progrès pour son partenaire.",
+  "variables": [
+   "Trois critères",
+   "Observation par groupe de trois",
+   "Auto-évaluation préalable"
+  ],
+  "securite": "Cadrer le retour : factuel, sur le geste, jamais sur la personne."
+ }
+]
