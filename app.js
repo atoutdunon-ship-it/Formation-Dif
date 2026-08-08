@@ -209,6 +209,8 @@ function simDraw() {
       $('sim-hints').style.display = 'none';
       // Pré-remplissage du constructeur de plan
       planSet('theme', t2.titre); planSet('public', SIM.public);
+      planSet('duree', D.config.epreuve[SIM.public].total + ' min');
+      planSet('eleves', D.config.epreuve[SIM.public].label);
     }
   }, 90);
 }
@@ -218,71 +220,118 @@ function simDebrief() {
   $('sim-debrief').scrollIntoView({ behavior: 'smooth' });
 }
 
-/* ══ Constructeur de plan de séance ══ */
+/* ══ Plan de séance — format officiel FFKDA (UF1c) ══════
+   En-tête d'identification + tableau à quatre colonnes.  */
+let NLIG = 0;
+
+function planRowHTML(i) {
+  const c = D.plan.colonnes;
+  return '<div class="pl-row" id="pl-' + i + '">' +
+    '<div class="pl-n">Séquence ' + (i + 1) + '</div>' +
+    '<div class="pl-grid">' + c.map(col =>
+      '<div class="field"><label for="r-' + i + '-' + col[0] + '">' + esc(col[1]) + '</label>' +
+      (col[0] === 'minutage'
+        ? '<input type="text" id="r-' + i + '-' + col[0] + '" placeholder="ex. 10 min">'
+        : '<textarea id="r-' + i + '-' + col[0] + '" rows="3"></textarea>') +
+      '</div>').join('') + '</div></div>';
+}
+function planAddRow(n) {
+  const h = $('plan-lignes');
+  for (let k = 0; k < (n || 1); k++) { h.insertAdjacentHTML('beforeend', planRowHTML(NLIG)); NLIG++; }
+}
+function planDelRow() {
+  if (NLIG <= 1) { toast('Il faut au moins une séquence'); return; }
+  NLIG--; $('pl-' + NLIG).remove();
+}
 function planSet(k, v) { const e = $('f-' + k); if (e) e.value = v; }
 function planCollect() {
-  const o = {};
-  D.plan.forEach(s => s.champs.forEach(c => { const e = $('f-' + c[0]); if (e) o[c[0]] = e.value; }));
-  return o;
+  const entete = {};
+  D.plan.entete.forEach(c => { const e = $('f-' + c[0]); if (e) entete[c[0]] = e.value; });
+  const lignes = [];
+  for (let i = 0; i < NLIG; i++) {
+    if (!$('pl-' + i)) continue;
+    const l = {};
+    D.plan.colonnes.forEach(col => { const e = $('r-' + i + '-' + col[0]); if (e) l[col[0]] = e.value; });
+    if (Object.values(l).some(v => (v || '').trim())) lignes.push(l);
+  }
+  return { entete, lignes };
 }
-function planFill(o) { Object.keys(o || {}).forEach(k => planSet(k, o[k])); }
+function planFill(o) {
+  o = o || {};
+  Object.keys(o.entete || {}).forEach(k => planSet(k, o.entete[k]));
+  $('plan-lignes').innerHTML = ''; NLIG = 0;
+  const l = o.lignes || [];
+  planAddRow(Math.max(l.length, D.plan.lignes_defaut));
+  l.forEach((lig, i) => D.plan.colonnes.forEach(col => {
+    const e = $('r-' + i + '-' + col[0]); if (e) e.value = lig[col[0]] || '';
+  }));
+}
+function planClear() {
+  D.plan.entete.forEach(c => planSet(c[0], ''));
+  $('plan-lignes').innerHTML = ''; NLIG = 0; planAddRow(D.plan.lignes_defaut);
+  toast('Formulaire réinitialisé');
+}
 function planSave() {
   const o = planCollect();
-  if (!o.objectif && !o.theme) { toast('Renseignez au moins le thème ou l\'objectif'); return; }
+  if (!o.entete.theme && !o.entete.objectif) { toast("Renseignez au moins le thème ou l'objectif principal"); return; }
   const l = Store.get('sessions', []);
-  l.unshift({ ts: Date.now(), titre: o.theme || o.objectif.slice(0, 60), data: o });
+  l.unshift({ ts: Date.now(), titre: o.entete.theme || o.entete.objectif.slice(0, 60), data: o });
   Store.set('sessions', l.slice(0, 40)); renderSessions(); renderHome(); toast('Plan de séance enregistré');
 }
-function planClear() { D.plan.forEach(s => s.champs.forEach(c => planSet(c[0], ''))); toast('Formulaire réinitialisé'); }
 function renderSessions() {
   const l = Store.get('sessions', []), h = $('plan-list');
   if (!l.length) { h.innerHTML = '<div class="empty">Aucun plan enregistré pour le moment.</div>'; return; }
-  h.innerHTML = '<div class="table-wrap"><table><tr><th>Date</th><th>Thème</th><th>Public</th><th></th></tr>' +
-    l.map((s, i) => '<tr><td>' + new Date(s.ts).toLocaleString('fr-FR', { dateStyle: 'short', timeStyle: 'short' }) + '</td>' +
-      '<td>' + esc(s.titre) + '</td><td>' + esc((D.config.epreuve[s.data.public] || {}).label || s.data.public || '—') + '</td>' +
-      '<td style="white-space:nowrap"></td></tr>').join('') +
-    '</table></div>';
-  // Boutons câblés en JS : aucune donnée utilisateur n'est réinjectée dans du HTML inline.
+  h.innerHTML = '<div class="table-wrap"><table><tr><th>Date</th><th>Thème</th><th>Séquences</th><th></th></tr>' +
+    l.map(s => '<tr><td>' + new Date(s.ts).toLocaleString('fr-FR', { dateStyle: 'short', timeStyle: 'short' }) + '</td>' +
+      '<td>' + esc(s.titre) + '</td><td>' + ((s.data.lignes || []).length) + '</td>' +
+      '<td style="white-space:nowrap"></td></tr>').join('') + '</table></div>';
   h.querySelectorAll('tr').forEach((tr, i) => {
-    if (i === 0) return; const s = l[i - 1]; const td = tr.lastElementChild;
-    td.innerHTML = '';
-    const b1 = document.createElement('button'); b1.className = 'btn btn-ghost btn-sm'; b1.textContent = 'Charger';
-    b1.onclick = () => { planFill(s.data); toast('Plan chargé'); window.scrollTo({ top: 0, behavior: 'smooth' }); };
-    const b2 = document.createElement('button'); b2.className = 'btn btn-ghost btn-sm'; b2.textContent = 'Imprimer';
-    b2.style.marginLeft = '6px'; b2.onclick = () => planPrint(s.data);
-    const b3 = document.createElement('button'); b3.className = 'btn btn-danger btn-sm'; b3.textContent = 'Supprimer';
-    b3.style.marginLeft = '6px'; b3.onclick = () => { const a = Store.get('sessions', []); a.splice(i - 1, 1); Store.set('sessions', a); renderSessions(); renderHome(); };
-    td.append(b1, b2, b3);
+    if (i === 0) return; const s = l[i - 1], td = tr.lastElementChild; td.innerHTML = '';
+    const b = (txt, cls, fn) => { const x = document.createElement('button');
+      x.className = 'btn ' + cls + ' btn-sm'; x.textContent = txt; x.style.marginLeft = '6px'; x.onclick = fn; return x; };
+    td.append(
+      b('Charger', 'btn-ghost', () => { planFill(s.data); toast('Plan chargé'); window.scrollTo(0, 0); }),
+      b('Imprimer', 'btn-ghost', () => planPrint(s.data)),
+      b('Supprimer', 'btn-danger', () => { const a = Store.get('sessions', []); a.splice(i - 1, 1);
+        Store.set('sessions', a); renderSessions(); renderHome(); }));
   });
 }
 function planPrint(data) {
   const o = data || planCollect();
-  const pub = (D.config.epreuve[o.public] || {}).label || o.public || '';
-  const blocs = D.plan.map(s => {
-    const rows = s.champs.filter(c => (o[c[0]] || '').trim()).map(c =>
-      '<tr><th>' + esc(c[1]) + '</th><td>' + esc(o[c[0]]).replace(/\n/g, '<br>') + '</td></tr>').join('');
-    return rows ? '<h2>' + esc(s.titre) + '</h2><table>' + rows + '</table>' : '';
-  }).join('');
+  const g = k => esc(o.entete[k] || '');
+  const pub = (D.config.epreuve[o.entete.public] || {}).label || '';
+  const cols = D.plan.colonnes;
+  const corps = (o.lignes || []).map(l =>
+    '<tr>' + cols.map(c => '<td>' + esc(l[c[0]] || '').replace(/\n/g, '<br>') + '</td>').join('') + '</tr>').join('')
+    || '<tr>' + cols.map(() => '<td>&nbsp;</td>').join('') + '</tr>';
   const w = window.open('', '_blank');
   if (!w) { toast('Autorisez les fenêtres pop-up pour imprimer'); return; }
-  w.document.write('<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8"><title>Plan de séance — ' +
-    esc(o.theme || 'DIF Yoseikan Budo') + '</title><style>' +
-    'body{font-family:Georgia,serif;color:#151B24;max-width:780px;margin:34px auto;padding:0 22px;line-height:1.55}' +
-    'header{border-bottom:3px solid #0B1B33;padding-bottom:12px;margin-bottom:22px}' +
-    '.k{font-family:monospace;font-size:10px;letter-spacing:.2em;color:#3F6FA8;text-transform:uppercase}' +
-    'h1{font-size:19px;color:#050D1B;margin:5px 0 4px}.sub{font-size:12px;color:#5E6A7A}' +
-    'h2{font-size:13px;text-transform:uppercase;letter-spacing:.1em;color:#10294B;margin:22px 0 7px;' +
-    'border-bottom:1px solid #DFE4EB;padding-bottom:4px}' +
-    'table{width:100%;border-collapse:collapse;font-family:Helvetica,Arial,sans-serif;font-size:12px;margin-bottom:6px}' +
-    'th{text-align:left;width:32%;vertical-align:top;padding:7px 10px 7px 0;color:#5E6A7A;font-weight:600;' +
-    'font-size:10.5px;text-transform:uppercase;letter-spacing:.05em;border-bottom:1px solid #EDF0F4}' +
-    'td{padding:7px 0;border-bottom:1px solid #EDF0F4;vertical-align:top}' +
-    'footer{margin-top:34px;padding-top:11px;border-top:1px solid #DFE4EB;font-size:10px;color:#8B95A3}' +
-    '@media print{body{margin:0}}</style></head><body>' +
-    '<header><div class="k">' + esc(D.config.code) + ' — Plan de séance</div>' +
-    '<h1>' + esc(o.theme || 'Séance') + '</h1>' +
-    '<div class="sub">' + esc(pub) + (o.duree ? ' · ' + esc(o.duree) : '') + ' · ' + new Date().toLocaleDateString('fr-FR') + '</div></header>' +
-    blocs + '<footer>' + esc(D.config.titre) + ' — ' + esc(D.config.sous_titre) + '</footer></body></html>');
+  w.document.write('<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">' +
+    '<title>Plan de séance — ' + g('theme') + '</title><style>' +
+    '@page{size:A4 landscape;margin:12mm}' +
+    'body{font-family:Helvetica,Arial,sans-serif;color:#151B24;font-size:11px;line-height:1.45;margin:0}' +
+    '.id{margin-bottom:12px;border-bottom:2px solid #0B1B33;padding-bottom:9px}' +
+    '.id .k{font-family:monospace;font-size:9px;letter-spacing:.18em;color:#17457F;text-transform:uppercase}' +
+    '.id p{margin:3px 0}.id .lbl{display:inline-block;min-width:190px;color:#5E6A7A;font-weight:600}' +
+    '.id .val{font-weight:600;color:#050D1B}' +
+    'table{width:100%;border-collapse:collapse;font-size:10.5px}' +
+    'th{background:#0B1B33;color:#fff;text-align:left;padding:7px 9px;font-size:9.5px;' +
+    'text-transform:uppercase;letter-spacing:.06em;border:1px solid #0B1B33}' +
+    'td{border:1px solid #C7CEDA;padding:7px 9px;vertical-align:top}' +
+    'td:nth-child(1){width:26%}td:nth-child(2){width:31%}td:nth-child(3){width:31%}td:nth-child(4){width:12%}' +
+    'tr:nth-child(even) td{background:#F7F9FC}' +
+    'footer{margin-top:10px;font-size:8.5px;color:#5E6A7A}' +
+    '</style></head><body>' +
+    '<div class="id"><div class="k">' + esc(D.config.code) + ' — Plan de séance (format FFKDA UF1c)</div>' +
+    '<p><span class="lbl">Nom :</span> <span class="val">' + g('nom') + '</span>' +
+    ' &nbsp;&nbsp; <span class="lbl" style="min-width:60px">Prénom :</span> <span class="val">' + g('prenom') + '</span></p>' +
+    '<p><span class="lbl">Thème de la séance :</span> <span class="val">' + g('theme') + '</span></p>' +
+    '<p><span class="lbl">Objectif principal de la séance :</span> <span class="val">' + g('objectif') + '</span></p>' +
+    '<p><span class="lbl">Élèves concernés :</span> <span class="val">' + g('eleves') +
+    (pub ? ' (' + esc(pub) + ')' : '') + '</span>' +
+    ' &nbsp;&nbsp; <span class="lbl" style="min-width:130px">Durée de la séance :</span> <span class="val">' + g('duree') + '</span></p></div>' +
+    '<table><tr>' + cols.map(c => '<th>' + esc(c[1]) + '</th>').join('') + '</tr>' + corps + '</table>' +
+    '<footer>' + esc(D.config.titre) + ' — ' + esc(D.config.sous_titre) + '</footer></body></html>');
   w.document.close(); setTimeout(() => w.print(), 350);
 }
 
@@ -355,21 +404,37 @@ function corToggle(id) {
   t.textContent = ouvert ? 'Ouvrir le corrigé' : 'Replier';
   if (!ouvert) b.scrollIntoView({ behavior: 'smooth', block: 'start' });
 }
+
+function corTableau(c) {
+  const ent = D.config.epreuve[c.public] || {};
+  const lignes = c.plan.map(b =>
+    '<tr><td>' + esc(b.objectifs) + '</td>' +
+    '<td>' + esc(b.exercices) + '</td>' +
+    '<td>' + b.organisation + '</td>' +
+    '<td>' + esc(b.minutage) + '</td></tr>').join('');
+  return '<div class="entete-off">' +
+    '<div class="eo-l"><span>Thème de la séance</span>' + esc(c.theme) + '</div>' +
+    '<div class="eo-l"><span>Objectif principal de la séance</span>' + esc(c.objectif) + '</div>' +
+    '<div class="eo-l"><span>Élèves concernés</span>' + esc(c.contexte.effectif) + ' — ' + esc(c.contexte.niveau) +
+    ' (' + esc(ent.label || c.public) + ')</div>' +
+    '<div class="eo-l"><span>Durée de la séance</span>' + esc(c.contexte.duree) + '</div></div>' +
+    '<div class="table-wrap"><table class="t-plan"><tr>' +
+    D.plan.colonnes.map(x => '<th>' + esc(x[1]) + '</th>').join('') + '</tr>' + lignes + '</table></div>';
+}
+
 function corHTML(c) {
   const ctx = c.contexte;
   const ligne = (k, v) => '<tr><th>' + esc(k) + '</th><td>' + esc(v) + '</td></tr>';
   const liste = a => '<ul>' + a.map(x => '<li>' + x + '</li>').join('') + '</ul>';
   const listeEsc = a => '<ul>' + a.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>';
 
-  const plan = c.plan.map(b =>
-    '<div class="seq"><div class="seq-h"><span class="seq-t">' + esc(b.temps) + '</span>' +
-    '<span class="seq-n">' + esc(b.titre) + '</span>' +
-    '<span class="seq-o">' + esc(b.objet) + '</span></div>' +
-    '<dl><dt>Consigne</dt><dd>' + esc(b.consigne) + '</dd>' +
-    '<dt>Organisation</dt><dd>' + esc(b.organisation) + '</dd>' +
-    '<dt>Critère de réussite</dt><dd>' + esc(b.critere) + '</dd>' +
-    (b.variables.length ? '<dt>Variables</dt><dd>' + b.variables.map(esc).join(' · ') + '</dd>' : '') +
-    '<dt>Sécurité</dt><dd>' + esc(b.securite) + '</dd></dl></div>').join('');
+  const plan = c.plan.filter(b => b.critere || (b.variables && b.variables.length)).map((b, i) =>
+    '<div class="seq"><div class="seq-h"><span class="seq-t">' + esc(b.minutage) + '</span>' +
+    '<span class="seq-n">' + esc(b.objectifs) + '</span></div><dl>' +
+    (b.critere ? '<dt>Critère de réussite observable</dt><dd>' + esc(b.critere) + '</dd>' : '') +
+    (b.variables && b.variables.length
+      ? '<dt>Variables didactiques</dt><dd>' + b.variables.map(esc).join(' · ') + '</dd>' : '') +
+    '</dl></div>').join('');
 
   const entretien = c.entretien.map((q, i) =>
     '<div class="qa"><div class="qa-q">' + (i + 1) + '. ' + esc(q[0]) + '</div>' +
@@ -395,7 +460,12 @@ function corHTML(c) {
    '<h4>Mesures de prévention</h4>' + listeEsc(c.securite.mesures) +
    '<h4>Vérifications avant la séance</h4>' + listeEsc(c.securite.verifications) +
 
-   '<h3>Plan de séance minuté</h3>' + plan +
+   '<h3>Plan de séance — format officiel FFKDA</h3>' +
+   '<p class="src">Tableau à quatre colonnes de la fiche UF1c. C\'est ce document que vous ' +
+   'remettez au jury à l\'issue de vos 30 minutes de préparation.</p>' + corTableau(c) +
+
+   '<h3>Critères de réussite et variables, séquence par séquence</h3>' +
+   '<p class="src">Ce que vous gardez en tête pour animer et pour répondre au jury — cela ne figure pas dans le tableau remis.</p>' + plan +
 
    '<h3>Régulation</h3><div class="table-wrap"><table>' +
    ligne('Pratiquant en difficulté', c.regulation.difficulte) +
@@ -454,6 +524,13 @@ function corPrint(id) {
    'dl{font-family:Helvetica,Arial,sans-serif;font-size:11.5px;margin:0}' +
    'dt{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:#17457F;font-weight:700;margin-top:6px}' +
    'dd{margin:1px 0 0;color:#2A3441}' +
+   'table.t-plan td:nth-child(1){width:26%}table.t-plan td:nth-child(2){width:29%}' +
+   'table.t-plan td:nth-child(3){width:33%}table.t-plan td:nth-child(4){width:12%}' +
+   'table.t-plan td b{color:#10294B}' +
+   '.entete-off{border:1px solid #C7CEDA;border-radius:3px;padding:9px 12px;margin:8px 0}' +
+   '.eo-l{font-size:11px;margin-bottom:4px}' +
+   '.eo-l span{display:block;font-size:8.5px;text-transform:uppercase;letter-spacing:.09em;color:#5E6A7A;font-weight:700}' +
+   '.src{font-size:10px;color:#5E6A7A;font-style:italic;margin:2px 0 6px}' +
    '.qa{margin-bottom:11px;break-inside:avoid}' +
    '.qa-q{font-weight:700;color:#10294B;font-size:12.5px}' +
    '.qa-a{font-family:Helvetica,Arial,sans-serif;font-size:11.5px;color:#2A3441;margin-top:3px;' +
@@ -523,6 +600,42 @@ function examEnd() {
 }
 function examReset() { $('exam-body').style.display = 'none'; $('exam-intro').style.display = 'block'; }
 
+/* ══ QCM de préformation ══════════════════════════════
+   Tirage de 40 questions dans les seules banques UF1 et UF2. */
+function prefoStart() {
+  const pool = shuffle(D.quiz.q3.questions.map(q => ({ ...q, uf: 'UF1' }))
+    .concat(D.quiz.q4.questions.map(q => ({ ...q, uf: 'UF2' })))).slice(0, 40);
+  EX = { secs: [{ qid: 'prefo', titre: 'Préformation UF1 et UF2', qs: pool.map((q, i) => ({ ...q, gi: i })) }], ans: {} };
+  $('prefo-body').innerHTML = '<div class="card">' +
+    EX.secs[0].qs.map((q, i) =>
+      '<div class="q-num">Question ' + (i + 1) + ' / 40 · ' + esc(q.uf) + '</div>' +
+      '<div class="q-txt">' + esc(q.q) + '</div>' +
+      q.opts.map((o, oi) => '<button class="opt" data-letter="' + 'ABCD'[oi] + '" id="e-' + q.gi + '-' + oi +
+        '" onclick="examAns(' + q.gi + ',' + oi + ')">' + esc(o) + '</button>').join('') +
+      '<div class="divider"></div>').join('') + '</div>' +
+    '<div class="btn-row"><button class="btn btn-primary btn-lg" onclick="prefoEnd()">Terminer et corriger</button>' +
+    '<button class="btn btn-ghost" onclick="prefoStart()">Nouveau tirage</button></div><div id="prefo-res"></div>';
+  $('prefo-body').scrollIntoView({ behavior: 'smooth' });
+}
+function prefoEnd() {
+  const qs = EX.secs[0].qs;
+  const good = qs.filter(q => EX.ans[q.gi] === q.correct).length;
+  const pct = Math.round(good / qs.length * 100);
+  const par = uf => { const s = qs.filter(q => q.uf === uf);
+    return s.length ? Math.round(s.filter(q => EX.ans[q.gi] === q.correct).length / s.length * 100) : 0; };
+  $('prefo-res').innerHTML = '<div class="card score"><div class="s-pct">' + pct + '%</div>' +
+    '<div class="s-lbl">' + good + ' / ' + qs.length + ' — seuil 70 %</div>' +
+    '<span class="verdict ' + (pct >= 70 ? 'ok' : 'ko') + '">' +
+    (pct >= 70 ? 'Seuil atteint' : 'Seuil non atteint') + '</span></div>' +
+    '<div class="card"><h2>Détail par unité de formation</h2><div class="table-wrap"><table>' +
+    '<tr><th>Unité</th><th>Taux</th><th>Statut</th></tr>' +
+    ['UF1', 'UF2'].map(uf => { const p = par(uf);
+      return '<tr><td>' + uf + '</td><td>' + p + ' %</td><td>' +
+        (p >= 70 ? 'Acquis' : 'À retravailler') + '</td></tr>'; }).join('') +
+    '</table></div></div>';
+  $('prefo-res').scrollIntoView({ behavior: 'smooth' });
+}
+
 /* ══ Sauvegarde / restauration ══ */
 function exportData() {
   const blob = new Blob([JSON.stringify(Store.all(), null, 1)], { type: 'application/json' });
@@ -541,7 +654,8 @@ function importData(input) {
 /* ══ Amorçage ══ */
 document.addEventListener('DOMContentLoaded', () => {
   Object.keys(D.quiz).forEach(renderQuiz);
-  simSetPublic('ados'); renderEx(); renderSessions(); saisonLoad(); renderCor();
+  simSetPublic('ados'); renderEx(); planAddRow(D.plan.lignes_defaut);
+  renderSessions(); saisonLoad(); renderCor();
   juryStart('*'); renderProgress(); renderHome();
   if (!Store.available) $('warn-storage').style.display = 'block';
   showPage(Store.get('lastPage', 'home'));

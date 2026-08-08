@@ -1,174 +1,20 @@
-[
- {
-  "id": "contexte",
-  "titre": "Contexte",
-  "champs": [
-   [
-    "public",
-    "Public et effectif",
-    "select_public"
-   ],
-   [
-    "niveau",
-    "Niveau et grades",
-    "text"
-   ],
-   [
-    "duree",
-    "Durée de la séance",
-    "text"
-   ],
-   [
-    "lieu",
-    "Lieu et surface disponible",
-    "text"
-   ],
-   [
-    "materiel",
-    "Matériel nécessaire",
-    "textarea"
-   ]
-  ]
- },
- {
-  "id": "objectif",
-  "titre": "Objectif et critères",
-  "champs": [
-   [
-    "theme",
-    "Thème tiré au sort",
-    "text"
-   ],
-   [
-    "objectif",
-    "Objectif opérationnel — « à la fin de la séance, le pratiquant est capable de… »",
-    "textarea"
-   ],
-   [
-    "critere",
-    "Critère de réussite observable",
-    "textarea"
-   ],
-   [
-    "prerequis",
-    "Prérequis supposés",
-    "textarea"
-   ]
-  ]
- },
- {
-  "id": "securite",
-  "titre": "Sécurité",
-  "champs": [
-   [
-    "risques",
-    "Risques identifiés",
-    "textarea"
-   ],
-   [
-    "mesures",
-    "Mesures de prévention et consignes d'arrêt",
-    "textarea"
-   ],
-   [
-    "verif",
-    "Vérifications avant la séance",
-    "textarea"
-   ]
-  ]
- },
- {
-  "id": "echauffement",
-  "titre": "Échauffement",
-  "champs": [
-   [
-    "ech_duree",
-    "Durée",
-    "text"
-   ],
-   [
-    "ech_contenu",
-    "Contenu et lien avec l'objectif",
-    "textarea"
-   ],
-   [
-    "ech_org",
-    "Organisation du groupe",
-    "textarea"
-   ]
-  ]
- },
- {
-  "id": "corps",
-  "titre": "Corps de séance",
-  "champs": [
-   [
-    "s1",
-    "Situation 1 — consigne, organisation, critère",
-    "textarea"
-   ],
-   [
-    "s1_var",
-    "Situation 1 — variables et différenciation",
-    "textarea"
-   ],
-   [
-    "s2",
-    "Situation 2 — consigne, organisation, critère",
-    "textarea"
-   ],
-   [
-    "s2_var",
-    "Situation 2 — variables et différenciation",
-    "textarea"
-   ],
-   [
-    "s3",
-    "Situation 3 — mise en opposition ou application",
-    "textarea"
-   ],
-   [
-    "s3_var",
-    "Situation 3 — variables et différenciation",
-    "textarea"
-   ]
-  ]
- },
- {
-  "id": "retour",
-  "titre": "Retour au calme et bilan",
-  "champs": [
-   [
-    "rac",
-    "Contenu du retour au calme",
-    "textarea"
-   ],
-   [
-    "bilan",
-    "Bilan avec le groupe et lien avec la séance suivante",
-    "textarea"
-   ]
-  ]
- },
- {
-  "id": "regulation",
-  "titre": "Régulation et plan B",
-  "champs": [
-   [
-    "planb",
-    "Plan B si la situation ne fonctionne pas",
-    "textarea"
-   ],
-   [
-    "diff",
-    "Adaptation pour un pratiquant en difficulté",
-    "textarea"
-   ],
-   [
-    "avance",
-    "Adaptation pour un pratiquant en avance",
-    "textarea"
-   ]
-  ]
- }
-]
+{
+ "source": "FFKDA — Fiche de préformation UF1c « Méthode pour établir un plan de séance type », cours de M. Robert DI MEO, Service Formation.",
+ "entete": [
+  ["nom", "Nom", "text", "Écrire lisiblement : nécessaire au retour de vos exercices corrigés."],
+  ["prenom", "Prénom", "text", ""],
+  ["theme", "Thème de la séance", "textarea", "Indique de manière GÉNÉRIQUE le sujet traité. Il ne précise ni la technique exacte, ni la manière de l'utiliser. Exemple officiel : « perfectionnement des techniques de poing en situation d'opposition »."],
+  ["objectif", "Objectif principal de la séance", "textarea", "Indique PRÉCISÉMENT l'élément technique étudié, en cohérence avec le thème. Exemple officiel : « optimiser la réactivité d'une attaque en coup de poing avant (mae-te) et arrière (gyaku zuki) »."],
+  ["eleves", "Élèves concernés", "text", "Le public ET son niveau de pratique. Exemple officiel : « public enfants (pupilles) niveau débutant »."],
+  ["public", "Catégorie", "select_public", "Détermine la durée de l'épreuve."],
+  ["duree", "Durée de la séance", "text", "À déterminer en tenant compte de l'âge du public. Exemple officiel : juniors 16-17 ans = 1 h 30."]
+ ],
+ "colonnes": [
+  ["objectifs", "Objectifs poursuivis", "Ils définissent des paliers d'apprentissage. Chaque palier exprime une compétence à développer : ce que l'apprenant devra savoir faire à l'issue de cette séquence. L'énoncé doit être UNIVOQUE — « il est impossible pour l'élève de faire autre chose que ce que vous lui avez demandé de faire »."],
+  ["exercices", "Description des exercices", "Décrire succinctement l'exercice proposé, en cohérence avec l'objectif pédagogique décrit."],
+  ["organisation", "Organisation matérielle et consignes", "Le matériel pédagogique utilisé, puis les points essentiels à respecter : critères de réalisation technique, rapidité, puissance, intensité de l'effort, temps de récupération."],
+  ["minutage", "Minutage", "Le temps nécessaire à la réalisation de l'exercice."]
+ ],
+ "lignes_defaut": 6,
+ "rappel_ppo": "L'objectif poursuivi décrit le produit final de l'action : ce que l'apprenant doit être capable de réaliser à la fin de cette séquence d'apprentissage. Cette manière de raisonner découle de la pédagogie par objectifs (PPO) et s'applique à tous les compartiments du plan de séance."
+}

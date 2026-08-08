@@ -157,7 +157,7 @@
  {
   "cat": "Sécurité et responsabilité",
   "q": "Un pratiquant se blesse pendant votre cours : que faites-vous ?",
-  "attendu": "Arrêt du cours, mise en sécurité du groupe, protection et bilan, alerte des secours si nécessaire, prévenir les responsables légaux et le président, déclaration à l'assurance dans les délais."
+  "attendu": "Arrêt du cours, mise en sécurité du groupe, protection et bilan, alerte des secours si nécessaire, information des responsables légaux et du président. Puis déclaration d'accident auprès de l'assureur fédéral — la Mutuelle des Sportifs — dans les 5 jours suivant la survenance, en ligne ou par formulaire."
  },
  {
   "cat": "Sécurité et responsabilité",
@@ -167,17 +167,17 @@
  {
   "cat": "Sécurité et responsabilité",
   "q": "Que couvre la licence fédérale ?",
-  "attendu": "Affiliation, assurance en responsabilité civile et garanties de base, accès aux compétitions, stages et passages de grade. Les garanties complémentaires sont optionnelles."
+  "attendu": "Adhésion à l'objet social et aux règlements de la fédération pour la saison, du 1er septembre au 31 août. Accès aux compétitions, passages de grades, stages techniques et formations diplômantes. Assurance en responsabilité civile et accidents corporels, dans la pratique comme dans les activités bénévoles. Elle n'est valable qu'après enregistrement informatique par la fédération."
  },
  {
   "cat": "Sécurité et responsabilité",
   "q": "Un pratiquant n'est pas licencié : peut-il monter sur le tatami ?",
-  "attendu": "Non au-delà de la période d'essai prévue par le club et son assurance. Sans couverture, l'encadrant et le club s'exposent."
+  "attendu": "Seulement dans le cadre déclaré des cours d'essai : nombre illimité du 1er septembre au 31 octobre, 2 jours par club le reste de l'année, sous réserve d'une déclaration préalable 48 h avant à la Mutuelle des Sportifs et au service juridique de la FFK. Hors de ce cadre, non : la licence est obligatoire pour tous les adhérents, y compris dirigeants et professeurs."
  },
  {
   "cat": "Sécurité et responsabilité",
-  "q": "Que faites-vous d'un certificat médical ou questionnaire de santé manquant ?",
-  "attendu": "Appliquer la réglementation en vigueur et la règle interne du club : pas de pratique tant que la situation administrative n'est pas régularisée."
+  "q": "Que faites-vous si le certificat médical d'un adhérent manque ?",
+  "attendu": "Pas de pratique tant que la situation n'est pas régularisée. Attention au piège : la FFK est DÉROGATOIRE au régime général. Le certificat est exigé CHAQUE ANNÉE, de moins d'un an, pour toute délivrance ou tout renouvellement de licence. Le questionnaire de santé du régime triennal ne s'applique pas. Le contrôle relève de la responsabilité des dirigeants."
  },
  {
   "cat": "Sécurité et responsabilité",
@@ -201,13 +201,13 @@
  },
  {
   "cat": "Environnement fédéral",
-  "q": "Comment le Yoseikan Budo est-il rattaché au mouvement fédéral français ?",
-  "attendu": "Situer la discipline au sein de la fédération délégataire et de ses disciplines associées, et son lien avec la structure propre à la discipline. À compléter depuis vos documents officiels."
+  "q": "Comment votre discipline est-elle rattachée au mouvement fédéral français ?",
+  "attendu": "Discipline associée de la FFKDA, fédération délégataire. Le mouvement fédéral se compose de la fédération et de ses organismes déconcentrés : 13 ligues régionales, 16 zones interdépartementales, 84 comités départementaux métropolitains et 9 comités d'outre-mer dotés de prérogatives de ligue."
  },
  {
   "cat": "Environnement fédéral",
-  "q": "Décrivez l'organisation fédérale du club jusqu'au national.",
-  "attendu": "Club, comité départemental, ligue régionale, fédération nationale, puis instances internationales de la discipline."
+  "q": "Décrivez l'organisation fédérale, du club jusqu'au national.",
+  "attendu": "Club affilié, comité départemental (4 à 14 membres au comité directeur), zone interdépartementale (6 à 14), ligue régionale (8 à 14), fédération nationale. La ligue encaisse la cotisation fédérale et conclut annuellement une convention d'objectifs avec la fédération. Les structures déconcentrées ne perçoivent pas de cotisation propre."
  },
  {
   "cat": "Environnement fédéral",
@@ -216,8 +216,8 @@
  },
  {
   "cat": "Environnement fédéral",
-  "q": "Qui délivre les grades et selon quelle procédure ?",
-  "attendu": "La commission compétente, sur la base d'un programme technique, de conditions d'ancienneté, de licence et d'âge. À préciser depuis vos documents officiels."
+  "q": "Qui participe à la délivrance des grades ?",
+  "attendu": "Les ligues régionales et les comités départementaux ont pour objet, dans leur ressort, de participer à la délivrance des dan et grades équivalents, conformément à la réglementation en vigueur. Le règlement des grades est publié par la CSDGE. Le détail jusqu'au 1er dan de votre discipline est à vérifier dans les textes de la saison en cours."
  },
  {
   "cat": "Environnement fédéral",
@@ -226,13 +226,13 @@
  },
  {
   "cat": "Environnement fédéral",
-  "q": "Quel est le rôle du conseiller technique ?",
-  "attendu": "Accompagnement technique et pédagogique des clubs, formation des cadres, mise en œuvre de la politique technique fédérale sur le territoire."
+  "q": "Quel est le rôle des écoles de formation ?",
+  "attendu": "Les ligues régionales et les comités départementaux ont pour objet d'assurer la formation et le perfectionnement des dirigeants, animateurs, formateurs et entraîneurs fédéraux ; à cet effet, ils disposent d'écoles de formation dont ils contrôlent la qualité. Les comités départementaux organisent l'AFA et le DAF, les ligues régionales le DIF."
  },
  {
   "cat": "Environnement fédéral",
-  "q": "Quelle est la différence entre le DIF et un CQP ou un diplôme d'État ?",
-  "attendu": "Le DIF est un diplôme fédéral d'encadrement bénévole. L'enseignement contre rémunération relève d'une qualification professionnelle inscrite au répertoire national."
+  "q": "Quelle est la différence entre le DIF et le CQP ?",
+  "attendu": "Le DIF est un diplôme fédéral d'encadrement bénévole autonome, 70 h, organisé par les ligues régionales. Le CQP MAM est une certification professionnelle de 110 h, organisée au niveau national, qui autorise l'enseignement contre rémunération dans la limite de 360 h par an et ouvre droit à la carte professionnelle. Le DIF en est le prérequis obligatoire."
  },
  {
   "cat": "Environnement fédéral",
@@ -252,7 +252,7 @@
  {
   "cat": "Vie du club",
   "q": "Comment fonctionne une association loi 1901 ?",
-  "attendu": "Assemblée générale souveraine, conseil d'administration, bureau (président, trésorier, secrétaire), statuts et règlement intérieur."
+  "attendu": "Convention par laquelle deux personnes ou plus mettent en commun de façon permanente leurs connaissances ou leur activité dans un but autre que le partage des bénéfices. Trois éléments : un contrat — les statuts —, un apport permanent, un but non lucratif. AG souveraine, comité directeur, bureau d'au moins trois personnes toutes licenciées. Réaliser des bénéfices est licite ; les partager ne l'est pas."
  },
  {
   "cat": "Vie du club",
@@ -313,5 +313,95 @@
   "cat": "Discipline",
   "q": "Comment intégrez-vous les valeurs du budo dans une séance concrète ?",
   "attendu": "Par les rituels, les règles de contrôle, la responsabilisation dans les rôles et l'exigence de sécurité mutuelle — pas par le discours seul."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Quelle différence faites-vous entre le thème, l'objectif principal et un objectif poursuivi ?",
+  "attendu": "Le thème indique le sujet de manière générique — il est tiré au sort. L'objectif principal indique précisément l'élément technique étudié, en cohérence avec le thème. Les objectifs poursuivis sont les paliers d'apprentissage, un par séquence, chacun exprimant une compétence à développer. C'est la distinction centrale de la fiche UF1c."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Qu'est-ce qu'un objectif univoque ?",
+  "attendu": "« Ce qui est prononcé clairement par l'enseignant, entendu et appliqué sans équivoque par l'élève. » Il se construit en deux temps : ce que l'on veut faire, puis comment on veut le faire. Le test : il doit être impossible pour l'élève de faire autre chose que ce qui est demandé."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Citez les quatre colonnes du plan de séance officiel.",
+  "attendu": "Objectifs poursuivis, Description des exercices, Organisation matérielle et consignes, Minutage. Précédées d'un en-tête placé en haut de page à l'extérieur du tableau : nom, prénom, thème, objectif principal, élèves concernés, durée."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "À quoi sert un plan de séance ?",
+  "attendu": "C'est le tableau de bord : guide de l'action et outil d'évaluation du déroulement. Il permet de situer la séance dans la progression, de créer des situations de formation, de prévoir l'utilisation des prérequis, de repérer les notions essentielles, de décrire les activités des élèves et le déroulement des actions pour enseigner."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Que met-on dans la colonne « organisation matérielle et consignes » ?",
+  "attendu": "Le matériel pédagogique utilisé, puis les points essentiels à respecter : critères de réalisation technique, niveau de rapidité et de puissance, intensité de l'effort, temps de récupération. C'est la colonne la plus souvent bâclée, et le jury y regarde."
+ },
+ {
+  "cat": "Vision pédagogique",
+  "q": "Selon la fiche officielle, qu'est-ce qu'enseigner ?",
+  "attendu": "Connaître sa discipline, avoir du vécu et une bonne analyse de cette discipline, élaborer des méthodes d'entraînement, établir une progressivité des apprentissages, planifier des objectifs, déterminer des moyens d'évaluation, soigner ses formes d'expression."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Quel est le volume du DIF et comment se répartit-il ?",
+  "attendu": "70 heures : 12 h de préformation, 40 h de présentiel en école de formation, 18 h de participations fédérales. UF1 34 h, UF2 17 h, UF3 19 h. Aucun diplôme ne peut être décerné tant que les trois temps n'ont pas été effectués."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Qui organise la formation DIF ?",
+  "attendu": "Les ligues régionales — et non les comités départementaux, qui organisent l'AFA et le DAF. Le candidat passe son diplôme dans sa ligue d'appartenance ; à défaut, une dérogation doit être validée par les deux ligues AVANT l'entrée en formation."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Quels sont les prérequis d'entrée en formation DIF ?",
+  "attendu": "18 ans minimum, ceinture noire 1er dan minimum, licence fédérale de l'année en cours, DAF depuis au moins un an, diplôme de secourisme, certificat médical de non contre-indication à la pratique ET à l'enseignement de moins de trois mois."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Que contient l'UF1 du DIF ?",
+  "attendu": "34 heures : 1A concevoir et mettre en œuvre des exercices (6 h), 1B concevoir et mettre en œuvre des séances (18 h), 1C concevoir et mettre en œuvre une saison (6 h), et 4 h d'évaluation formative."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Décrivez la filière de formation fédérale.",
+  "attendu": "Un escalier dont les marches sont complémentaires : AFA, DAF, DIF pour l'enseignement bénévole ; puis CQP MAM pour l'enseignement rémunéré ; puis BPJEPS, DEJEPS, DESJEPS et professorat de sport pour la voie d'État. Le DIF est le prérequis obligatoire du CQP."
+ },
+ {
+  "cat": "Environnement fédéral",
+  "q": "Comment est évaluée la préformation ?",
+  "attendu": "En trois phases lors du stage : un test de connaissances, une correction collective et interactive avec le formateur, puis un QCM d'évaluation. Les fiches sont fournies au minimum un mois avant et doivent avoir été étudiées."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Quelles sont les normes de la salle où vous enseignez ?",
+  "attendu": "Norme AFNOR NF P 90-209 depuis juillet 2016, l'article A322-141 du Code du sport ayant été abrogé. Aire de 25 m² minimum sans obstacle, largeur ≥ 3,50 m, +4 m² par couple au-delà de six couples, 1 m de dégagement périphérique matérialisé, 2,50 m sous plafond, capitonnage sur 2 m de haut, 18 °C minimum, moyens d'appel des secours et de premiers secours."
+ },
+ {
+  "cat": "Sécurité et responsabilité",
+  "q": "Comment se règle un accident, du tatami à l'assurance ?",
+  "attendu": "Arrêt et mise en sécurité, protection et bilan, alerte des secours, information des responsables légaux et du président, puis déclaration à la Mutuelle des Sportifs dans les 5 jours. L'assurance individuelle accident couvre les dommages sans tiers responsable ; la responsabilité civile couvre les dommages causés à autrui."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Comment crée-t-on un club et l'affilie-t-on à la FFK ?",
+  "attendu": "AG constitutive avec adoption des statuts et élection des dirigeants ; déclaration au greffe des associations par cerfa 13973*03 ; publication au JOAFE (44 €) qui confère la personnalité morale. Puis quatre étapes d'affiliation : contact avec la municipalité pour le dojo, statuts conformes au modèle FFK déposés en préfecture, dossier d'affiliation en ligne après parution au JO, prise de contact par le président de ligue."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Que doit respecter un club pour rester affilié ?",
+  "attendu": "Siège social et lieu principal d'activité dans le même département ; organe de direction d'au moins un président, un trésorier et un secrétaire général, tous licenciés ; statuts et règlement intérieur conformes à ceux de la fédération ; enseignants titulaires des diplômes permettant l'enseignement."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Un bénévole peut-il être défrayé ?",
+  "attendu": "Oui, sur frais réels et justifiés, engagés pour les besoins de l'activité associative et conformes à l'objet social. Justificatifs conservés trois ans. Le forfait est déconseillé — risque de requalification en salaires par l'URSSAF. Le bénévole peut aussi abandonner sa créance : c'est alors un don ouvrant droit à réduction d'impôt, attesté par un reçu CERFA."
+ },
+ {
+  "cat": "Vie du club",
+  "q": "Vous êtes à la fois professeur et membre du bureau. Est-ce possible ?",
+  "attendu": "Oui si vous êtes bénévole. Si vous êtes rémunéré, la vigilance s'impose : la loi interdit la rémunération des dirigeants. Vous ne pouvez alors l'être qu'au titre de la fonction de professeur, et il est conseillé de ne pas participer aux réunions fixant votre rémunération."
  }
 ]

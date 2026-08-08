@@ -401,3 +401,31 @@ fieldset legend{font-family:var(--serif);font-size:1.02rem;font-weight:600;color
   .seq-h{gap:7px}
   .cle{padding:10px 13px}
 }
+
+/* ── PLAN DE SÉANCE — format officiel ───────────────── */
+.pl-row{border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin-bottom:11px;background:var(--white)}
+.pl-n{font-family:var(--mono);font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent-on-light);margin-bottom:10px;padding-bottom:7px;border-bottom:1px solid var(--line-soft)}
+.pl-grid{display:grid;grid-template-columns:1fr 1fr 1fr 130px;gap:12px}
+.pl-grid .field{margin-bottom:0}
+@media(max-width:1100px){.pl-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:900px){.pl-grid{grid-template-columns:1fr}.pl-row{padding:13px}}
+
+/* ── EN-TÊTE OFFICIEL DE PLAN DE SÉANCE ─────────────── */
+.entete-off{border:1px solid var(--line);border-radius:var(--r);padding:13px 16px;margin:11px 0;background:#FAFBFD}
+.eo-l{font-size:.89rem;color:var(--ink);margin-bottom:8px}
+.eo-l:last-child{margin-bottom:0}
+.eo-l span{display:block;font-size:.65rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent-on-light);margin-bottom:1px}
+.src{font-size:.8rem;color:var(--gray);font-style:italic;margin:-4px 0 10px}
+.cor-body table em{font-style:italic;color:var(--gray);font-size:.94em}
+
+/* ── TABLEAU DE PLAN AU FORMAT OFFICIEL ─────────────── */
+table.t-plan td{font-size:.83rem;line-height:1.5}
+table.t-plan td:nth-child(1){width:25%}
+table.t-plan td:nth-child(2){width:28%}
+table.t-plan td:nth-child(3){width:35%}
+table.t-plan td:nth-child(4){width:12%;white-space:nowrap;font-family:var(--mono);font-size:.76rem;color:var(--accent-on-light);font-weight:700}
+table.t-plan td b{color:var(--navy-700);font-weight:700}
+table.t-plan td i{color:var(--gray);font-style:italic}
+@media(max-width:900px){table.t-plan td{font-size:.79rem}}

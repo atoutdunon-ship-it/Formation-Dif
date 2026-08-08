@@ -121,6 +121,7 @@ def sidebar(mods, quiz) -> str:
     out.append('<div class="nav-sec">Évaluation</div>')
     out += [link(q, f'Q{i+1}', quiz[q]["titre"].replace("Quiz — ", ""), True, quiz[q]["statut"])
             for i, q in enumerate(quiz)]
+    out.append(link("prefo", "QP", "QCM de préformation"))
     out.append(link("exam", "EB", "Examen blanc"))
     out.append('<div class="nav-sec">Données</div>')
     out.append(link("data", "--", "Sauvegarde et restauration"))
@@ -215,7 +216,8 @@ def home(cfg, mods, quiz) -> str:
 
 <div class="card"><h2>Modules de connaissances</h2><div class="grid g3">{cards}</div></div>
 <div class="card"><h2>Auto-évaluation</h2><div class="grid g3">{qcards}</div>
-  <div class="btn-row"><button class="btn btn-primary" onclick="showPage('exam')">Lancer un examen blanc</button></div>
+  <div class="btn-row"><button class="btn btn-primary" onclick="showPage('prefo')">QCM de préformation</button>
+  <button class="btn btn-ghost" onclick="showPage('exam')">Examen blanc</button></div>
 </div>""")
 
 
@@ -267,43 +269,111 @@ def page_sim(cfg, themes) -> str:
 
 
 def page_plan(cfg, plan) -> str:
-    def field(cid, label, kind):
+    def champ(cid, label, kind, aide):
         if kind == "select_public":
             opts = "".join(f'<option value="{k}">{E(v["label"])}</option>' for k, v in cfg["epreuve"].items())
             ctrl = f'<select id="f-{cid}">{opts}</select>'
         elif kind == "textarea":
-            ctrl = f'<textarea id="f-{cid}"></textarea>'
+            ctrl = f'<textarea id="f-{cid}" rows="2"></textarea>'
         else:
             ctrl = f'<input type="text" id="f-{cid}">'
-        return f'<div class="field"><label for="f-{cid}">{E(label)}</label>{ctrl}</div>'
+        h = f'<div class="hint">{E(aide)}</div>' if aide else ""
+        return f'<div class="field"><label for="f-{cid}">{E(label)}</label>{ctrl}{h}</div>'
 
-    blocks = "".join(
-        f'<fieldset><legend>{E(s["titre"])}</legend>'
-        + "".join(field(*c) for c in s["champs"]) + "</fieldset>" for s in plan)
+    entete = "".join(champ(*c) for c in plan["entete"])
+    colonnes = "".join(
+        f'<tr><th>{E(c[1])}</th><td>{E(c[2])}</td></tr>' for c in plan["colonnes"])
 
     return page("plan", f"""
-<div class="banner"><div class="b-num">Outil B</div><h2>Constructeur de plan de séance</h2>
-  <p>La trame attendue par le jury, champ par champ. Rien de ce qui compte n'y est facultatif.</p>
-  <div class="b-tags"><span class="b-tag">Trame complète</span><span class="b-tag">Enregistrement</span>
+<div class="banner"><div class="b-num">Outil B</div><h2>Plan de séance — format officiel</h2>
+  <p>La trame exacte de la fiche fédérale UF1c : un en-tête d'identification, puis un tableau
+  à quatre colonnes. C'est ce document que vous produisez pendant vos 30 minutes de préparation.</p>
+  <div class="b-tags"><span class="b-tag">Format FFKDA</span><span class="b-tag">Enregistrement</span>
   <span class="b-tag b-tag-gold">Impression</span></div></div>
+
+<div class="card"><h2>Thème, objectif principal, objectifs poursuivis</h2>
+  <p>Trois notions distinctes que la fiche officielle sépare rigoureusement. Les confondre est
+  l'erreur la plus lourdement sanctionnée.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Notion</th><th>Ce qu'elle dit</th><th>Exemple officiel (karaté)</th></tr>
+    <tr><td><strong>Thème</strong></td>
+        <td>Le sujet, de manière <strong>générique</strong>. Ne précise ni la technique exacte,
+        ni la manière de l'utiliser.</td>
+        <td>« Perfectionnement des techniques de poing en situation d'opposition »</td></tr>
+    <tr><td><strong>Objectif principal</strong></td>
+        <td>L'élément technique <strong>précis</strong>, en cohérence avec le thème.</td>
+        <td>« Optimiser la réactivité d'une attaque en coup de poing avant (mae-te)
+        et arrière (gyaku zuki) »</td></tr>
+    <tr><td><strong>Objectifs poursuivis</strong></td>
+        <td>Les <strong>paliers d'apprentissage</strong>, un par séquence. Ce que l'élève
+        devra savoir faire à l'issue de la séquence.</td>
+        <td>« Viser une cible fixe avec un coup de poing avant et arrière, après un signal visuel »</td></tr>
+  </table></div>
+  <div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>La règle d'univocité</strong>
+  « Ce qui est prononcé clairement par l'enseignant, entendu et appliqué sans équivoque par l'élève. »
+  L'énoncé se construit en deux temps : <strong>ce que</strong> vous voulez faire — « viser une cible fixe » —
+  puis <strong>comment</strong> vous voulez le faire — « à mon signal ». Il doit être impossible pour l'élève
+  de faire autre chose que ce qui est demandé.</div></div>
+  <div class="cle"><div class="cle-k">À retenir mot pour mot</div><div class="cle-v">
+  {E(plan["rappel_ppo"])}</div></div>
+</div>
+
+<div class="card"><h2>Transposition en Yoseikan Budo</h2>
+  <p>Les exemples de la fiche fédérale sont en terminologie karaté. Voici la même construction,
+  transposée à votre spécialité — la méthode est identique, seul le vocabulaire change.</p>
+  <div class="table-wrap"><table>
+    <tr><th>Notion</th><th>Exemple officiel (karaté)</th><th>Transposition (Yoseikan Budo)</th></tr>
+    <tr><td>Thème</td>
+        <td>Perfectionnement des techniques de poing en situation d'opposition</td>
+        <td>Perfectionnement de la liaison percussion-projection en situation d'opposition</td></tr>
+    <tr><td>Objectif principal</td>
+        <td>Optimiser la réactivité d'une attaque en coup de poing avant et arrière</td>
+        <td>Optimiser l'entrée qui suit une percussion directe, pour amener la projection</td></tr>
+    <tr><td>Objectif poursuivi</td>
+        <td>Viser une cible fixe avec un coup de poing avant et arrière, après un signal visuel</td>
+        <td>Entrer dans l'espace ouvert par la percussion, après un signal du partenaire</td></tr>
+    <tr><td>Description de l'exercice</td>
+        <td>Par binôme, uke place une cible jodan et une cible chudan. Tori, en garde,
+        porte mae-te / gyaku zuki sur les cibles correspondantes. Cinq répétitions de chaque côté.</td>
+        <td>Par binôme, uke tient une cible et exagère sa réaction. Tori frappe, puis entre
+        dans l'espace ouvert. Cinq répétitions de chaque côté.</td></tr>
+  </table></div>
+  <div class="info-box">La méthode fédérale ne change pas d'une discipline à l'autre : elle est
+  transversale. Devant le jury, c'est la <strong>rigueur de construction</strong> qui est évaluée,
+  pas le vocabulaire employé.</div>
+</div>
+
+<div class="card"><h2>1. Présentation de la séance et identification</h2>
+  <p class="hint" style="margin-bottom:14px">Cette partie se place en haut de page,
+  à l'extérieur du tableau.</p>
+  {entete}
+</div>
+
+<div class="card"><h2>2. Le tableau de séance</h2>
+  <div class="table-wrap"><table>{colonnes}</table></div>
+  <div id="plan-lignes"></div>
+  <div class="btn-row">
+    <button class="btn btn-ghost" onclick="planAddRow()">Ajouter une séquence</button>
+    <button class="btn btn-ghost" onclick="planDelRow()">Retirer la dernière</button>
+  </div>
+  <div class="divider"></div>
+  <div class="btn-row">
+    <button class="btn btn-primary" onclick="planSave()">Enregistrer ce plan</button>
+    <button class="btn btn-ghost" onclick="planPrint()">Imprimer au format officiel</button>
+    <button class="btn btn-ghost" onclick="planClear()">Vider le formulaire</button>
+  </div>
+</div>
 
 <div class="card"><h2>Trois erreurs qui coûtent des points</h2>
   <ul>
-    <li><strong>Un thème pris pour un objectif.</strong> Le thème est tiré au sort ; l'objectif, c'est ce dont
-    le pratiquant sera capable à la fin. Formulez-le en une phrase, avec un verbe d'action.</li>
-    <li><strong>Un critère de réussite non observable.</strong> « Mieux maîtriser » n'est pas un critère.
-    « Toucher la cible sans être touché sur six répétitions sur dix » en est un.</li>
-    <li><strong>Aucune régulation prévue.</strong> Le jury attend un plan B et une différenciation, dans les
-    deux sens : pour celui qui échoue comme pour celui qui a déjà réussi.</li>
+    <li><strong>Confondre le thème et l'objectif.</strong> Le thème est générique et vous est imposé
+    par le tirage ; l'objectif principal est précis et c'est vous qui le formulez.</li>
+    <li><strong>Un objectif poursuivi équivoque.</strong> « Travailler les déplacements » laisse
+    l'élève libre de faire n'importe quoi. « Se déplacer en gardant la cible dans l'axe, au signal »
+    ne laisse aucune ambiguïté.</li>
+    <li><strong>Une colonne « organisation et consignes » vide ou vague.</strong> Le jury y cherche
+    le matériel, les critères de réalisation, l'intensité et les temps de récupération.</li>
   </ul>
-</div>
-
-<div class="card">{blocks}
-  <div class="btn-row">
-    <button class="btn btn-primary" onclick="planSave()">Enregistrer ce plan</button>
-    <button class="btn btn-ghost" onclick="planPrint()">Imprimer / exporter en PDF</button>
-    <button class="btn btn-ghost" onclick="planClear()">Vider le formulaire</button>
-  </div>
 </div>
 
 <div class="card"><h2>Plans enregistrés</h2><div id="plan-list"></div></div>""")
@@ -449,6 +519,35 @@ def page_quiz(qid, q, idx) -> str:
 <button class="btn btn-ghost" onclick="renderQuiz('{qid}')">Réinitialiser</button></div>""")
 
 
+
+def page_prefo(quiz) -> str:
+    n = len(quiz["q3"]["questions"]) + len(quiz["q4"]["questions"])
+    return page("prefo", f"""
+<div class="banner"><div class="b-num">Évaluation formative</div><h2>QCM de préformation</h2>
+  <p>Les 12 heures de préformation sont évaluées dès le premier jour de stage. Ce QCM reprend
+  exclusivement le contenu des fiches officielles UF1 et UF2.</p>
+  <div class="b-tags"><span class="b-tag">40 questions tirées au sort</span>
+  <span class="b-tag">Banque de {n}</span><span class="b-tag b-tag-gold">Seuil 70 %</span></div></div>
+
+<div class="card"><h2>Comment se déroule l'évaluation réelle</h2>
+  <p>La fiche officielle décrit une évaluation formative <strong>en trois phases</strong>, conduite
+  lors du stage en école de formation :</p>
+  <div class="table-wrap"><table>
+    <tr><th>Phase</th><th>Ce qui se passe</th></tr>
+    <tr><td>1. Test de connaissances</td><td>Vous êtes évalué sur les fiches que vous deviez avoir
+    étudiées avant de venir.</td></tr>
+    <tr><td>2. Correction collective</td><td>Correction interactive avec le formateur, sur les points
+    manqués par le groupe.</td></tr>
+    <tr><td>3. QCM d'évaluation</td><td>Le contrôle final des connaissances de préformation.</td></tr>
+  </table></div>
+  <div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Le calendrier</strong>
+  Les supports sont fournis <strong>au minimum un mois avant</strong> le début des stages, et doivent
+  avoir été étudiés à l'arrivée. Arriver sans les avoir lues, c'est perdre le bénéfice des trois phases.</div></div>
+  <div class="btn-row"><button class="btn btn-primary btn-lg" onclick="prefoStart()">Lancer le QCM</button></div>
+</div>
+<div id="prefo-body"></div>""")
+
+
 def page_exam(quiz) -> str:
     dispo = [q for q in quiz.values() if q["questions"]]
     return page("exam", f"""
@@ -520,7 +619,7 @@ def build(out: Path) -> Path:
         page_saison(saison), page_exos(cfg, exos), page_corriges(cfg, corriges),
         *[page_module(m) for m in mods],
         *[page_quiz(q, quiz[q], i) for i, q in enumerate(quiz)],
-        page_exam(quiz), page_data(cfg),
+        page_prefo(quiz), page_exam(quiz), page_data(cfg),
     ])
 
     doc = f"""<!DOCTYPE html>

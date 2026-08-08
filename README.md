@@ -82,11 +82,14 @@ six outils actifs, les modules de connaissances venant en appui.
 | Outil | Ce qu'il travaille | Objectif DIF |
 |---|---|---|
 | A — Simulateur d'épreuve | 16 thèmes tirés au sort, chronomètre 30′ / 20′ / 10′ | 1, 3 |
-| B — Constructeur de plan de séance | 7 blocs, 24 champs, export imprimable | 1 |
-| C — Entretien avec le jury | 63 questions en 7 domaines, éléments attendus | 1, 3, 4, 5 |
+| B — Plan de séance au format officiel | En-tête + tableau 4 colonnes FFKDA, impression A4 paysage | 1 |
+| C — Entretien avec le jury | 81 questions en 7 domaines, éléments attendus | 1, 3, 4, 5 |
 | D — Planification de saison | 5 cycles annuels éditables | 2 |
 | E — Banque d'exercices | 12 situations filtrables, critères et variables | 1, 3 |
 | F — Corrigés types d'examen | 8 épreuves traitées de bout en bout, imprimables | 1, 2, 3, 4, 5 |
+
+Évaluation : **QCM de préformation** (40 questions tirées dans les 95 issues des fiches
+officielles UF1 et UF2) et **examen blanc** par module.
 
 ### Les corrigés types
 
@@ -99,19 +102,42 @@ le jury observe, quatre questions d'entretien avec réponses modèles, erreurs �
 propre plan en 30 minutes, *puis seulement* ouvrez le corrigé et comparez. Lu avant
 l'effort, un corrigé ne vous apprend rien : il vous rassure.
 
+## Sources officielles
+
+Les modules 03 et 04 sont construits sur les **fiches de préformation DAF/DIF** du
+Service Formation de la FFKDA, publiées par le Comité Départemental de Lot-et-Garonne :
+
+- **UF1a, UF1b, UF1c** (M. Robert DI MEO) — note préliminaire sur l'enseignement,
+  préparation d'une séance, méthode pour établir un plan de séance type
+- **UF2 2A** — se situer dans la filière de formation fédérale
+- **UF2 2B** items 1 à 7 — environnement du club
+- **UF2 2C** items 1 à 7 — environnement fédéral
+
+Le **plan de séance suit le format officiel** : en-tête d'identification, puis tableau à
+quatre colonnes — Objectifs poursuivis, Description des exercices, Organisation matérielle
+et consignes, Minutage.
+
+Les exemples techniques des fiches sont en terminologie karaté. Le site les cite tels quels,
+**puis les transpose en Yoseikan Budo** : la méthode fédérale est transversale, seul le
+vocabulaire change.
+
+> Les montants, volumes horaires et références réglementaires évoluent. Les fiches
+> consultées datent de 2022 : vérifiez-les dans les documents de la saison en cours.
+
 ## État du contenu
 
-| Module | Statut |
-|---|---|
-| 01 — Yoseikan Budo : histoire, filiation, principes | à compléter |
-| 02 — Contenu technique Yoseikan Budo | à compléter |
-| 03 — Pédagogie et méthodologie | prêt |
-| 04 — Environnement fédéral, réglementation, vie du club | prêt |
-| 05 — Anatomie, physiologie et sécurité | prêt |
-| 06 — Vocabulaire et terminologie | à compléter |
+| Module | Statut | Source |
+|---|---|---|
+| 01 — Yoseikan Budo : histoire, filiation, principes | à compléter | vos documents |
+| 02 — Contenu technique Yoseikan Budo | à compléter | vos documents |
+| 03 — Enseignement et animation (UF1) | prêt | fiches officielles |
+| 04 — Environnement associatif et fédéral (UF2) | prêt | fiches officielles |
+| 05 — Anatomie, physiologie et sécurité | prêt | tronc commun |
+| 06 — Vocabulaire et terminologie | à compléter | vos documents |
 
-Les modules 01, 02 et 06 attendent vos documents officiels : programme technique,
-passages de grade, lexique, textes fédéraux.
+Les modules 01, 02 et 06 relèvent du **programme technique propre au Yoseikan Budo**,
+qui ne figure pas dans les fiches fédérales génériques. Ils attendent vos documents :
+programme technique, passages de grade, lexique.
 
 ## Données personnelles
 

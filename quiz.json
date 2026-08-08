@@ -13,9 +13,209 @@
  },
  "q3": {
   "module": "m3",
-  "titre": "Quiz — Pédagogie et méthodologie",
+  "titre": "Quiz — Enseignement et animation (UF1)",
   "statut": "pret",
   "questions": [
+   {
+    "q": "Selon la fiche UF1a, l'enseignement est fondé sur l'acquisition de connaissances à transmettre :",
+    "opts": [
+     "Par l'exemple et la répétition",
+     "Avec méthode, sous la forme d'objectifs à atteindre",
+     "Par la démonstration technique",
+     "Selon le niveau de chacun"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Combien de conditions la fiche UF1a énumère-t-elle pour enseigner ?",
+    "opts": [
+     "Deux",
+     "Trois",
+     "Quatre",
+     "Six"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Le thème de la séance indique le sujet :",
+    "opts": [
+     "De manière précise et technique",
+     "De manière générique",
+     "Sous forme d'objectif mesurable",
+     "Sous forme de consigne à l'élève"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "L'objectif principal de la séance :",
+    "opts": [
+     "Reprend le thème mot pour mot",
+     "Indique précisément l'élément technique étudié",
+     "Décrit l'exercice à réaliser",
+     "Fixe le minutage"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Les objectifs poursuivis définissent :",
+    "opts": [
+     "Le matériel nécessaire",
+     "Des paliers d'apprentissage",
+     "Le niveau des élèves",
+     "La durée de chaque exercice"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Un objectif poursuivi doit être univoque, c'est-à-dire :",
+    "opts": [
+     "Court et facile à retenir",
+     "Formulé en japonais",
+     "Impossible à interpréter autrement que ce qui est demandé",
+     "Identique pour tous les élèves"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "La construction d'un objectif poursuivi se fait en deux temps :",
+    "opts": [
+     "Le quoi puis le pourquoi",
+     "Ce que l'on veut faire, puis comment on veut le faire",
+     "Le niveau puis la durée",
+     "La technique puis la correction"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "« L'objectif poursuivi décrit… »",
+    "opts": [
+     "Le déroulement de l'exercice",
+     "Le produit final de l'action",
+     "Le matériel utilisé",
+     "La consigne de sécurité"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Cette manière de raisonner découle de :",
+    "opts": [
+     "La méthode globale",
+     "La pédagogie différenciée",
+     "La pédagogie par objectifs (PPO)",
+     "La pédagogie active"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Le plan de séance type comporte :",
+    "opts": [
+     "Une seule partie : le tableau",
+     "Deux parties : la présentation et le tableau",
+     "Trois parties dont une évaluation",
+     "Autant de parties que de séquences"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La présentation de la séance se place :",
+    "opts": [
+     "Dans la première ligne du tableau",
+     "En bas de page",
+     "En haut de page, à l'extérieur du tableau",
+     "Sur une feuille séparée"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Quelles sont les quatre colonnes du plan de séance officiel ?",
+    "opts": [
+     "Échauffement / Corps / Opposition / Retour au calme",
+     "Objectifs poursuivis / Description des exercices / Organisation matérielle et consignes / Minutage",
+     "Objectif / Exercice / Sécurité / Évaluation",
+     "Temps / Contenu / Consigne / Critère"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La colonne « organisation matérielle et consignes » contient notamment :",
+    "opts": [
+     "Le nom des élèves",
+     "Le matériel, les critères de réalisation, l'intensité et les temps de récupération",
+     "Le thème et l'objectif",
+     "Les résultats obtenus"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le champ « élèves concernés » doit préciser :",
+    "opts": [
+     "Le nombre exact",
+     "Le public et son niveau de pratique",
+     "Les prénoms",
+     "Les grades individuels"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le plan de séance est décrit dans la fiche UF1b comme :",
+    "opts": [
+     "Un document administratif",
+     "Un tableau de bord",
+     "Une fiche d'évaluation",
+     "Un support de communication"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Parmi les fonctions du plan de séance figure :",
+    "opts": [
+     "Justifier le montant de la cotisation",
+     "Situer la séance dans la progression",
+     "Remplacer le règlement intérieur",
+     "Attester de la présence des élèves"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "« Prévoir l'utilisation des prérequis », c'est :",
+    "opts": [
+     "Vérifier les licences",
+     "Faire émerger la connaissance des élèves",
+     "Contrôler le matériel",
+     "Rappeler les règles de sécurité"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le plan de séance est aussi appelé, dans la fiche :",
+    "opts": [
+     "Le carnet de bord",
+     "Le tableau de commande",
+     "La feuille de route",
+     "Le cahier des charges"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Connaître sa discipline suppose, selon la fiche UF1a :",
+    "opts": [
+     "Un palmarès en compétition",
+     "Du vécu et un esprit d'analyse",
+     "Un grade élevé",
+     "Une formation universitaire"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Les objectifs de l'enseignant se classent en deux catégories :",
+    "opts": [
+     "Techniques et tactiques",
+     "Individuels et collectifs",
+     "Liés à la progression technique, et liés au calendrier sportif ou au loisir",
+     "Court terme et long terme"
+    ],
+    "correct": 2
+   },
    {
     "q": "Le DIF permet-il d'enseigner le Yoseikan Budo à titre professionnel (rémunéré) ?",
     "opts": [
@@ -270,206 +470,506 @@
  },
  "q4": {
   "module": "m4",
-  "titre": "Quiz — Environnement fédéral et vie du club",
+  "titre": "Quiz — Environnement associatif et fédéral (UF2)",
   "statut": "pret",
   "questions": [
    {
-    "q": "Quel est l'organe souverain d'une association loi 1901 ?",
+    "q": "Quelle instance organise la formation DIF ?",
     "opts": [
-     "Le bureau",
-     "Le conseil d'administration",
-     "L'assemblée générale",
-     "Le président"
+     "Le comité départemental",
+     "La ligue régionale",
+     "La zone interdépartementale",
+     "La FFK nationale"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Quel est le volume global de la formation DIF ?",
+    "opts": [
+     "37 heures",
+     "40 heures",
+     "70 heures",
+     "110 heures"
     ],
     "correct": 2
    },
    {
-    "q": "Le règlement intérieur d'un club est opposable :",
+    "q": "Comment se répartissent les 70 heures du DIF ?",
     "opts": [
-     "Toujours, même non communiqué",
-     "Dès lors qu'il est porté à la connaissance des adhérents",
-     "Uniquement s'il est déposé en préfecture",
-     "Jamais, il n'a qu'une valeur indicative"
+     "12 h préformation + 40 h école de formation + 18 h participations fédérales",
+     "12 h préformation + 15 h école de formation + 10 h participations",
+     "26 h à distance + 43 h présentiel + 40 h stage",
+     "34 h UF1 + 17 h UF2 + 19 h UF3 uniquement en présentiel"
+    ],
+    "correct": 0
+   },
+   {
+    "q": "Depuis combien de temps faut-il détenir le DAF pour entrer en formation DIF ?",
+    "opts": [
+     "Six mois",
+     "Un an",
+     "Deux ans",
+     "Aucune ancienneté requise"
     ],
     "correct": 1
    },
    {
-    "q": "Le contrôle d'honorabilité concerne :",
+    "q": "Le certificat médical exigé à l'entrée en formation DIF doit dater de moins de :",
     "opts": [
-     "Les seuls éducateurs rémunérés",
-     "Les seuls dirigeants élus",
-     "Tout encadrant, bénévole comme rémunéré",
-     "Les seuls encadrants de mineurs"
+     "Un mois",
+     "Trois mois",
+     "Six mois",
+     "Un an"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Quel volume représente l'UF1 dans le DIF ?",
+    "opts": [
+     "11 heures",
+     "17 heures",
+     "19 heures",
+     "34 heures"
+    ],
+    "correct": 3
+   },
+   {
+    "q": "Dans l'UF1 du DIF, le bloc 1B « concevoir et mettre en œuvre des séances » représente :",
+    "opts": [
+     "6 heures",
+     "12 heures",
+     "18 heures",
+     "24 heures"
     ],
     "correct": 2
    },
    {
-    "q": "La responsabilité pénale d'un encadrant :",
+    "q": "Le bloc 1C du DIF porte sur :",
     "opts": [
-     "Est couverte par l'assurance fédérale",
-     "Est couverte par le club",
-     "Reste personnelle et ne s'assure pas",
-     "N'existe pas pour un bénévole"
+     "Les exercices",
+     "Les séances",
+     "Une saison",
+     "L'évaluation"
     ],
     "correct": 2
    },
    {
-    "q": "Le DIF autorise :",
+    "q": "Un diplôme fédéral peut-il être décerné si les heures de participation fédérale ne sont pas faites ?",
     "opts": [
-     "L'enseignement contre rémunération",
-     "L'encadrement bénévole de séances en club",
-     "La direction technique d'une ligue",
-     "La délivrance de grades Dan"
-    ],
-    "correct": 1
-   },
-   {
-    "q": "L'obligation de l'encadrant en matière de sécurité est une obligation :",
-    "opts": [
-     "De résultat",
-     "De moyens",
-     "De conseil uniquement",
-     "Sans portée juridique"
-    ],
-    "correct": 1
-   },
-   {
-    "q": "Un pratiquant sans licence en cours de validité :",
-    "opts": [
-     "Peut pratiquer toute la saison",
-     "Peut pratiquer s'il signe une décharge",
-     "Ne peut pas pratiquer au-delà de la période d'essai prévue",
-     "Peut pratiquer s'il est majeur"
+     "Oui, elles sont facultatives",
+     "Oui, avec dérogation du club",
+     "Non, aucun diplôme ne peut être validé",
+     "Oui, si l'école de formation est validée"
     ],
     "correct": 2
    },
    {
-    "q": "La ligue régionale a principalement pour rôle :",
+    "q": "L'AFA permet :",
     "opts": [
-     "De délivrer les licences directement aux pratiquants",
-     "La formation des cadres et les compétitions régionales",
-     "De fixer les règles internationales",
-     "De gérer la comptabilité des clubs"
+     "D'enseigner en autonomie",
+     "D'assister un enseignant titulaire au minimum du DAF et présent dans la salle",
+     "D'ouvrir un club",
+     "D'enseigner contre rémunération"
     ],
     "correct": 1
    },
    {
-    "q": "En cas d'accident pendant un cours, la première action est :",
+    "q": "Le DIF est le prérequis obligatoire de :",
     "opts": [
-     "Prévenir l'assurance",
-     "Arrêter le cours et mettre le groupe en sécurité",
-     "Appeler les parents",
-     "Remplir le registre"
+     "Du BPJEPS",
+     "Du CQP MAM",
+     "Du DEJEPS",
+     "Du DAF"
     ],
     "correct": 1
    },
    {
-    "q": "Le projet pédagogique d'un club :",
+    "q": "Le CQP autorise l'enseignement rémunéré dans la limite de :",
     "opts": [
-     "Remplace les statuts",
-     "Traduit le projet associatif en progression d'enseignement",
-     "Est imposé par la fédération",
-     "Est facultatif et sans usage"
-    ],
-    "correct": 1
-   },
-   {
-    "q": "Une discipline associée se caractérise par :",
-    "opts": [
-     "Son indépendance totale du mouvement fédéral",
-     "Son rattachement à une fédération délégataire avec programme et grades propres",
-     "L'absence de grades",
-     "L'interdiction de compétition"
-    ],
-    "correct": 1
-   },
-   {
-    "q": "La déclaration d'un accident à l'assurance doit être faite :",
-    "opts": [
-     "Quand le club en a le temps",
-     "Dans les délais prévus par le contrat",
-     "Uniquement en cas d'hospitalisation",
-     "Par la famille seule"
-    ],
-    "correct": 1
-   },
-   {
-    "q": "Les attestations d'assurance et les diplômes des encadrants doivent être :",
-    "opts": [
-     "Conservés au domicile de l'enseignant",
-     "Affichés dans les locaux",
-     "Transmis à la mairie chaque mois",
-     "Détruits en fin de saison"
-    ],
-    "correct": 1
-   },
-   {
-    "q": "Face à une suspicion de situation préoccupante concernant un mineur, l'instructeur doit :",
-    "opts": [
-     "Mener sa propre enquête",
-     "Promettre la confidentialité à l'enfant",
-     "Consigner les faits et alerter sans délai les autorités compétentes",
-     "Attendre confirmation par un tiers"
+     "180 h par an",
+     "250 h par an",
+     "360 h par an",
+     "Sans limite"
     ],
     "correct": 2
    },
    {
-    "q": "L'enseignement contre rémunération relève :",
+    "q": "L'évaluation de la préformation se déroule en trois phases :",
     "opts": [
-     "Du seul règlement fédéral",
-     "Du Code du sport et d'une certification professionnelle",
-     "D'une simple déclaration au club",
-     "Du DIF"
+     "Écrit, oral, pratique",
+     "Test de connaissances, correction collective interactive, QCM d'évaluation",
+     "QCM, entretien, mise en situation",
+     "Auto-évaluation, correction, rattrapage"
     ],
     "correct": 1
    },
    {
-    "q": "Le comité départemental intervient principalement sur :",
+    "q": "Les supports de préformation doivent être fournis aux stagiaires :",
     "opts": [
-     "Les règles techniques internationales",
-     "L'animation de proximité et le soutien aux clubs",
-     "La délivrance des cartes professionnelles",
-     "La gestion des sélections nationales"
+     "Le jour du stage",
+     "Une semaine avant",
+     "Au minimum un mois avant le début des stages",
+     "Après le stage"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Une licence STAPS donne droit, en UF1, à une dispense de :",
+    "opts": [
+     "4 heures",
+     "8 heures",
+     "14 heures",
+     "Aucune"
     ],
     "correct": 1
    },
    {
-    "q": "Un conflit avec une famille se traite :",
+    "q": "Les arbitres nationaux et régionaux bénéficient en UF3 d'une dispense de :",
     "opts": [
-     "Immédiatement au bord du tatami",
-     "Lors d'un entretien programmé, si besoin avec un dirigeant",
-     "Par message collectif au groupe",
-     "En excluant l'enfant sans explication"
+     "7 heures",
+     "8 heures",
+     "14 heures",
+     "18 heures"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "La saison sportive court du :",
+    "opts": [
+     "1er janvier au 31 décembre",
+     "1er juillet au 30 juin",
+     "1er septembre au 31 août",
+     "1er octobre au 30 septembre"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Pour les licenciés FFK, le certificat médical est exigé :",
+    "opts": [
+     "Tous les trois ans, avec questionnaire de santé les autres années",
+     "Chaque année, sans exception",
+     "Uniquement pour les compétiteurs",
+     "Uniquement à la première licence"
     ],
     "correct": 1
    },
    {
-    "q": "Le bureau d'une association est composé au minimum de :",
+    "q": "Pourquoi la FFK déroge-t-elle au régime triennal du certificat médical ?",
     "opts": [
-     "Président seul",
-     "Président, trésorier, secrétaire",
+     "Parce qu'elle est une fédération délégataire",
+     "Parce que le combat peut prendre fin sur un état d'incapacité à se défendre",
+     "Parce qu'elle propose plusieurs disciplines",
+     "Parce que le ministère l'a imposé"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "L'obligation d'être licencié concerne :",
+    "opts": [
+     "Les seuls pratiquants",
+     "Les pratiquants et les professeurs",
+     "Les pratiquants, les professeurs et tous les dirigeants",
+     "Les seuls compétiteurs"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Un dirigeant peut-il être dirigeant de deux clubs affiliés à la FFKDA ?",
+    "opts": [
+     "Oui, sans restriction",
+     "Oui, avec accord des deux présidents",
+     "Non, l'article 431 du règlement intérieur l'interdit",
+     "Oui, s'il n'est pas rémunéré"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "L'organe de direction d'un club affilié doit comporter au minimum :",
+    "opts": [
+     "Deux personnes",
+     "Trois personnes : président, secrétaire général, trésorier",
      "Cinq membres élus",
-     "Deux co-présidents"
+     "Un président et un trésorier"
     ],
     "correct": 1
    },
    {
-    "q": "La question « à quels événements fédéraux avez-vous participé ? » attend :",
+    "q": "À partir de quel âge un mineur peut-il accéder aux fonctions de direction d'une association ?",
     "opts": [
-     "Une intention pour la saison prochaine",
-     "Des faits datés : stages, formations, compétitions, grades",
-     "Une réponse sur le club uniquement",
-     "Un avis sur la politique fédérale"
+     "14 ans",
+     "16 ans révolus",
+     "17 ans",
+     "18 ans"
     ],
     "correct": 1
    },
    {
-    "q": "Une garantie complémentaire d'assurance (indemnités, invalidité) est :",
+    "q": "Un changement de dirigeant doit être signalé au greffe des associations dans un délai de :",
     "opts": [
-     "Incluse d'office dans la licence",
-     "Optionnelle et à la charge du licencié",
+     "Huit jours",
+     "Un mois",
+     "Trois mois",
+     "Six mois"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "L'ordonnateur des dépenses d'une association est :",
+    "opts": [
+     "Le trésorier",
+     "Le président, sauf stipulation contraire des statuts",
+     "Le secrétaire général",
+     "L'assemblée générale"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La loi de 1901 impose-t-elle un quorum pour l'assemblée générale ?",
+    "opts": [
+     "Oui, la moitié des membres",
+     "Oui, le tiers des membres",
+     "Non, tout dépend des statuts",
+     "Oui, pour les seules AG extraordinaires"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Une association loi 1901 peut-elle réaliser des bénéfices ?",
+    "opts": [
+     "Non, c'est interdit",
+     "Oui, seul le partage des bénéfices entre membres est interdit",
+     "Oui, dans la limite de 10 % du budget",
+     "Uniquement si elle est reconnue d'utilité publique"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Dans quels départements la loi de 1901 ne s'applique-t-elle pas ?",
+    "opts": [
+     "Corse-du-Sud et Haute-Corse",
+     "Haut-Rhin, Bas-Rhin et Moselle",
+     "Les départements d'outre-mer",
+     "Paris, Lyon et Marseille"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La publication au Journal Officiel des associations coûte :",
+    "opts": [
+     "Gratuite",
+     "31 euros",
+     "44 euros",
+     "70 euros"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Depuis l'ordonnance du 23 juillet 2015, l'affiliation à une fédération agréée :",
+    "opts": [
+     "Dispense de statuts",
+     "Vaut agrément",
+     "Ouvre droit à une subvention automatique",
+     "Remplace la déclaration en préfecture"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Une déclaration d'accident doit être faite à l'assureur fédéral dans un délai de :",
+    "opts": [
+     "48 heures",
+     "5 jours",
+     "8 jours",
+     "1 mois"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Une journée portes ouvertes doit être déclarée à la Mutuelle des Sportifs et à la FFK :",
+    "opts": [
+     "24 h avant",
+     "48 h avant",
+     "Une semaine avant",
+     "Après l'événement"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Les non-licenciés sont couverts en nombre illimité lors des cours d'essai :",
+    "opts": [
+     "Toute l'année",
+     "Du 1er septembre au 31 octobre",
+     "Du 1er septembre au 31 décembre",
+     "Jamais"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "L'assurance responsabilité civile est :",
+    "opts": [
+     "Facultative",
+     "Obligatoire pour les associations et fédérations sportives",
+     "Réservée aux compétiteurs",
+     "Incluse dans le passeport sportif"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "L'assurance individuelle accident est :",
+    "opts": [
+     "Obligatoire",
+     "Facultative, mais avec obligation d'information de l'adhérent",
      "Interdite",
-     "Réservée aux compétiteurs"
+     "Réservée aux dirigeants"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "En cas de manquement à l'obligation d'information sur l'assurance individuelle, le dirigeant :",
+    "opts": [
+     "N'encourt rien",
+     "Encourt des poursuites pénales et engage sa responsabilité civile",
+     "Reçoit un simple avertissement fédéral",
+     "Doit rembourser la licence"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Les arbitres et juges sont-ils couverts par la responsabilité civile fédérale ?",
+    "opts": [
+     "Non",
+     "Oui, dans l'exercice de leurs activités",
+     "Uniquement les arbitres nationaux",
+     "Seulement s'ils sont licenciés compétiteurs"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Les justificatifs de frais des bénévoles doivent être conservés par l'association pendant :",
+    "opts": [
+     "Un an",
+     "Deux ans",
+     "Trois ans après l'expiration de l'année en cours",
+     "Dix ans"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Un bénévole qui renonce au remboursement de ses frais :",
+    "opts": [
+     "Perd tout avantage",
+     "Réalise un don pouvant ouvrir droit à une réduction d'impôt",
+     "Doit le déclarer comme un salaire",
+     "Ne peut plus demander de remboursement ensuite"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Le remboursement forfaitaire des frais de bénévoles est :",
+    "opts": [
+     "Recommandé pour simplifier",
+     "Déconseillé, admis à titre exceptionnel si l'approximation est sérieuse",
+     "Interdit",
+     "Obligatoire au-delà de 100 euros"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Combien la FFK compte-t-elle de ligues régionales ?",
+    "opts": [
+     "9",
+     "13",
+     "16",
+     "22"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Quelle instance encaisse la cotisation fédérale ?",
+    "opts": [
+     "Le club",
+     "Le comité départemental",
+     "La ligue régionale",
+     "La fédération directement"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Le comité directeur d'un comité départemental compte :",
+    "opts": [
+     "3 à 8 membres",
+     "4 à 14 membres",
+     "6 à 14 membres",
+     "8 à 14 membres"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Les structures déconcentrées perçoivent-elles une cotisation de leurs membres ?",
+    "opts": [
+     "Oui, en plus de la cotisation fédérale",
+     "Non, seule la cotisation fédérale est obligatoire",
+     "Oui, mais facultative",
+     "Uniquement les ligues"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "La surface minimum d'une aire d'évolution en arts martiaux est de :",
+    "opts": [
+     "16 m²",
+     "20 m²",
+     "25 m²",
+     "36 m²"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Au-delà de six couples de pratiquants, la surface doit être augmentée de :",
+    "opts": [
+     "2 m² par couple",
+     "4 m² par couple",
+     "6 m² par couple",
+     "Elle reste inchangée"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "Depuis la norme AFNOR NF P 90-209, le capitonnage des obstacles se fait sur une hauteur de :",
+    "opts": [
+     "1 mètre",
+     "1,50 mètre",
+     "2 mètres",
+     "2,50 mètres"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "La température d'une salle d'arts martiaux ne doit pas être inférieure à :",
+    "opts": [
+     "15 °C",
+     "16 °C",
+     "18 °C",
+     "20 °C"
+    ],
+    "correct": 2
+   },
+   {
+    "q": "Les taches de sang sur le tatami doivent être :",
+    "opts": [
+     "Nettoyées en fin de séance",
+     "Immédiatement nettoyées et désinfectées",
+     "Simplement recouvertes",
+     "Signalées au président"
+    ],
+    "correct": 1
+   },
+   {
+    "q": "L'article A322-141 du Code du sport relatif aux salles d'arts martiaux :",
+    "opts": [
+     "Est toujours en vigueur",
+     "A été abrogé et remplacé par la norme AFNOR NF P 90-209",
+     "N'a jamais existé",
+     "Ne concerne que les salles municipales"
     ],
     "correct": 1
    }
