@@ -33,10 +33,14 @@ def sidebar(mods, quiz) -> str:
     def link(pid, num, label, track=False, statut="pret"):
         flag = '<span class="flag"></span>' if track else ""
         attrs = f' data-track="1" data-status="{statut}"' if track else ""
-        return (f'<a data-page="{pid}"{attrs} onclick="showPage(\'{pid}\')">'
+        return (f'<a data-page="{pid}" data-label="{E(label)}"{attrs} role="link" tabindex="0" '
+                f'onclick="showPage(\'{pid}\')" onkeydown="navKey(event,\'{pid}\')">'
                 f'<span class="n">{num}</span><span>{E(label)}</span>{flag}</a>')
 
-    out = ['<nav id="sidebar">', '<div class="nav-sec">Pilotage</div>',
+    out = ['<nav id="sidebar" aria-label="Navigation principale" aria-hidden="false">',
+           '<div class="drawer-head"><span class="dh-t">Navigation</span>'
+           '<button class="dh-x" type="button" onclick="closeNav()">Fermer</button></div>',
+           '<div class="nav-sec">Pilotage</div>',
            link("home", "00", "Tableau de bord"),
            '<div class="nav-sec">Épreuve — outils actifs</div>',
            link("sim", "A", "Simulateur d'épreuve"),
@@ -440,14 +444,23 @@ def build(out: Path) -> Path:
   </div>
   <div class="hdr-right">
     <span class="hdr-stat">Progression <b id="hdr-prog">0%</b></span>
-    <button class="btn btn-ghost btn-sm" style="color:#fff;border-color:rgba(255,255,255,.25)"
-            onclick="document.getElementById('sidebar').classList.toggle('open')">Menu</button>
   </div>
 </header>
 
+<div class="mobilebar">
+  <span class="mb-lbl">
+    <span class="mb-where">Vous consultez</span>
+    <span class="mb-title" id="mb-title">Tableau de bord</span>
+  </span>
+  <button class="mb-btn" type="button" id="mb-btn" aria-controls="sidebar"
+          aria-expanded="false" onclick="toggleNav()">Menu</button>
+</div>
+
+<div class="backdrop" id="backdrop" onclick="closeNav()" aria-hidden="true"></div>
+
 <div class="shell">
 {sidebar(mods, quiz)}
-<main>
+<main id="main">
 {body}
 </main>
 </div>

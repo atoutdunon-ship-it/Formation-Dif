@@ -32,13 +32,38 @@ function toast(msg) {
   clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('on'), 2400);
 }
 
-/* ══ Navigation ══ */
+/* ══ Navigation ══════════════════════════════════════════
+   Un seul point d'entrée : showPage(). Le tiroir mobile,
+   le voile de fond et le verrou de défilement sont pilotés
+   par openNav / closeNav, jamais en dehors.               */
+function openNav() {
+  $('sidebar').classList.add('open');
+  $('backdrop').classList.add('on');
+  document.body.classList.add('nav-open');
+  $('mb-btn').setAttribute('aria-expanded', 'true');
+  $('mb-btn').textContent = 'Fermer';
+  const cur = document.querySelector('#sidebar a.active') || document.querySelector('#sidebar a');
+  if (cur) { try { cur.focus({ preventScroll: true }); } catch (e) { cur.focus(); } }
+}
+function closeNav() {
+  $('sidebar').classList.remove('open');
+  $('backdrop').classList.remove('on');
+  document.body.classList.remove('nav-open');
+  $('mb-btn').setAttribute('aria-expanded', 'false');
+  $('mb-btn').textContent = 'Menu';
+}
+function toggleNav() { $('sidebar').classList.contains('open') ? closeNav() : openNav(); }
+function navKey(e, id) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showPage(id); } }
+
 function showPage(id) {
+  const link = document.querySelector('#sidebar a[data-page="' + id + '"]');
+  if (!$('page-' + id)) id = 'home';
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const p = $('page-' + id); if (p) p.classList.add('active');
+  $('page-' + id).classList.add('active');
   document.querySelectorAll('#sidebar a').forEach(a => a.classList.toggle('active', a.dataset.page === id));
-  document.getElementById('sidebar').classList.remove('open');
-  window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+  closeNav();
+  const t = $('mb-title'); if (t) t.textContent = (link && link.dataset.label) || 'Tableau de bord';
+  window.scrollTo(0, 0);
   Store.set('lastPage', id);
   if (id === 'home') renderHome();
 }
@@ -390,5 +415,23 @@ document.addEventListener('DOMContentLoaded', () => {
   juryStart('*'); renderProgress(); renderHome();
   if (!Store.available) $('warn-storage').style.display = 'block';
   showPage(Store.get('lastPage', 'home'));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') $('sidebar').classList.remove('open'); });
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+  // Le tiroir n'a plus lieu d'être si l'on repasse en affichage large.
+  if (typeof window.matchMedia === 'function') {
+    const wide = window.matchMedia('(min-width: 901px)');
+    const onWide = e => { if (e.matches) closeNav(); };
+    if (wide.addEventListener) wide.addEventListener('change', onWide);
+    else if (wide.addListener) wide.addListener(onWide);
+  } else {
+    window.addEventListener('resize', () => { if (window.innerWidth > 900) closeNav(); });
+  }
+  // Fermeture au balayage vers la gauche, sans dépendance externe.
+  let x0 = null;
+  document.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', e => {
+    if (x0 === null || !$('sidebar').classList.contains('open')) { x0 = null; return; }
+    if (e.changedTouches[0].clientX - x0 < -55) closeNav();
+    x0 = null;
+  }, { passive: true });
 });

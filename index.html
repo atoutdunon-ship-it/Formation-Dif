@@ -288,12 +288,93 @@ fieldset legend{font-family:var(--serif);font-size:1.02rem;font-weight:600;color
   background:var(--navy-900);color:#fff;padding:12px 24px;border-radius:var(--r);font-size:.85rem;
   box-shadow:var(--sh-3);z-index:900;opacity:0;transition:.28s;pointer-events:none}
 .toast.on{transform:translateX(-50%);opacity:1}
-@media(max-width:860px){
-  nav#sidebar{position:fixed;left:0;transform:translateX(-100%);transition:.25s;z-index:250}
-  nav#sidebar.open{transform:none}
-  main{padding:20px 18px 70px}
-  .prog{flex-direction:column;align-items:stretch;gap:14px}
-  .chrono{flex-wrap:wrap}
+/* ── NAVIGATION MOBILE ──────────────────────────────────
+   Éléments masqués sur grand écran, activés sous 900 px. */
+.mobilebar{display:none}
+.drawer-head{display:none}
+.backdrop{position:fixed;inset:0;background:rgba(5,13,27,.55);z-index:350;
+  opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s;
+  -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.backdrop.on{opacity:1;visibility:visible}
+
+@media(max-width:900px){
+  body.nav-open{overflow:hidden}
+
+  /* En-tête réduit : le titre long ne doit jamais chasser la navigation */
+  header{padding:0 16px;height:56px}
+  .brand{gap:10px;min-width:0}
+  .brand h1{font-size:.98rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand span,.hdr-stat{display:none}
+  .hdr-right{gap:8px}
+
+  /* Barre de contexte : où je suis, et comment aller ailleurs */
+  .mobilebar{display:flex;align-items:center;gap:12px;position:sticky;top:56px;z-index:280;
+    background:var(--white);border-bottom:1px solid var(--line);padding:9px 16px;
+    box-shadow:0 1px 3px rgba(10,20,40,.05)}
+  .mobilebar .mb-where{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);display:block;margin-bottom:1px}
+  .mobilebar .mb-title{font-weight:700;color:var(--navy-900);font-size:.9rem;line-height:1.25;
+    display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mobilebar .mb-lbl{flex:1;min-width:0}
+  .mobilebar .mb-btn{flex-shrink:0;min-height:40px;padding:0 18px;font-size:.82rem;font-weight:700;
+    letter-spacing:.06em;text-transform:uppercase;background:var(--navy-800);color:#fff;
+    border:none;border-radius:var(--r);cursor:pointer;font-family:var(--sans)}
+  .mobilebar .mb-btn:active{background:var(--navy-600)}
+
+  /* Tiroir de navigation */
+  nav#sidebar{position:fixed;top:0;left:0;bottom:0;height:100%;height:100dvh;
+    width:min(86vw,330px);transform:translateX(-101%);transition:transform .24s cubic-bezier(.4,0,.2,1);
+    z-index:400;padding:0 0 40px;overscroll-behavior:contain;
+    box-shadow:none;border-right:none}
+  nav#sidebar.open{transform:none;box-shadow:14px 0 40px rgba(5,13,27,.4)}
+  .drawer-head{display:flex;align-items:center;gap:12px;padding:14px 18px;
+    background:var(--navy-900);border-bottom:1px solid rgba(255,255,255,.1);
+    position:sticky;top:0;z-index:2}
+  .drawer-head .dh-t{font-family:var(--serif);font-size:.95rem;color:#fff;font-weight:600}
+  .drawer-head .dh-x{margin-left:auto;min-height:38px;padding:0 14px;font-size:.76rem;
+    font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;
+    background:transparent;border:1px solid rgba(255,255,255,.3);border-radius:var(--r);
+    cursor:pointer;font-family:var(--sans)}
+  .drawer-head .dh-x:active{background:rgba(255,255,255,.12)}
+  .nav-sec{padding:16px 18px 6px}
+  nav#sidebar a{padding:11px 18px;font-size:.9rem;min-height:44px;border-left-width:3px}
+  nav#sidebar a .n{min-width:26px}
+  nav#sidebar a span:not(.n):not(.flag){flex:1;min-width:0}
+
+  /* Contenu */
+  main{padding:18px 16px 64px}
+  .card{padding:18px 17px;margin-bottom:13px}
+  .hero{padding:24px 20px 22px}
+  .hero h2{font-size:1.24rem}
+  .hero::before,.hero::after{display:none}
+  .banner{padding:20px 18px}
+  h2{font-size:1.12rem}
+  .prog{flex-direction:column;align-items:stretch;gap:12px;padding:17px 18px}
+  .prog-pct{text-align:left;font-size:1.8rem;min-width:0}
+  .chrono{flex-direction:column;align-items:stretch;gap:14px;padding:18px 20px}
+  .chrono .c-time{font-size:2.3rem}
+  .chrono-actions{margin-left:0;flex-wrap:wrap}
+  .chrono-actions .btn{flex:1;min-width:calc(50% - 4px)}
+  .draw{padding:20px 18px}
+  .draw .d-title{font-size:1.2rem}
+  .obj{gap:11px}
+  .obj .o-n{font-size:1.25rem;min-width:26px}
+  .grid.g3,.grid.g4{grid-template-columns:1fr}
+  .nav-btns{flex-direction:column-reverse}
+  .nav-btns .btn{width:100%}
+  .btn,.btn-download{min-height:42px}
+  .chip{min-height:36px;padding:7px 14px}
+  .opt{padding:13px 15px 13px 46px;min-height:46px}
+  table{font-size:.83rem}
+  .field input,.field textarea,.field select{font-size:16px}  /* évite le zoom iOS */
+  .toast{left:16px;right:16px;transform:translateY(80px);width:auto;text-align:center}
+  .toast.on{transform:none}
+}
+@media(max-width:380px){
+  .brand .code{display:none}
+  main{padding:16px 13px 56px}
+  .card{padding:16px 14px}
+  nav#sidebar{width:92vw}
 }
 @media print{
   header,nav#sidebar,.btn,.btn-row,.nav-btns,.chrono,.chips{display:none!important}
@@ -313,40 +394,50 @@ fieldset legend{font-family:var(--serif);font-size:1.02rem;font-weight:600;color
   </div>
   <div class="hdr-right">
     <span class="hdr-stat">Progression <b id="hdr-prog">0%</b></span>
-    <button class="btn btn-ghost btn-sm" style="color:#fff;border-color:rgba(255,255,255,.25)"
-            onclick="document.getElementById('sidebar').classList.toggle('open')">Menu</button>
   </div>
 </header>
 
+<div class="mobilebar">
+  <span class="mb-lbl">
+    <span class="mb-where">Vous consultez</span>
+    <span class="mb-title" id="mb-title">Tableau de bord</span>
+  </span>
+  <button class="mb-btn" type="button" id="mb-btn" aria-controls="sidebar"
+          aria-expanded="false" onclick="toggleNav()">Menu</button>
+</div>
+
+<div class="backdrop" id="backdrop" onclick="closeNav()" aria-hidden="true"></div>
+
 <div class="shell">
-<nav id="sidebar">
+<nav id="sidebar" aria-label="Navigation principale" aria-hidden="false">
+<div class="drawer-head"><span class="dh-t">Navigation</span><button class="dh-x" type="button" onclick="closeNav()">Fermer</button></div>
 <div class="nav-sec">Pilotage</div>
-<a data-page="home" onclick="showPage('home')"><span class="n">00</span><span>Tableau de bord</span></a>
+<a data-page="home" data-label="Tableau de bord" role="link" tabindex="0" onclick="showPage('home')" onkeydown="navKey(event,'home')"><span class="n">00</span><span>Tableau de bord</span></a>
 <div class="nav-sec">Épreuve — outils actifs</div>
-<a data-page="sim" onclick="showPage('sim')"><span class="n">A</span><span>Simulateur d&#x27;épreuve</span></a>
-<a data-page="plan" onclick="showPage('plan')"><span class="n">B</span><span>Plan de séance</span></a>
-<a data-page="jury" onclick="showPage('jury')"><span class="n">C</span><span>Entretien avec le jury</span></a>
-<a data-page="saison" onclick="showPage('saison')"><span class="n">D</span><span>Planification de saison</span></a>
-<a data-page="exos" onclick="showPage('exos')"><span class="n">E</span><span>Banque d&#x27;exercices</span></a>
+<a data-page="sim" data-label="Simulateur d&#x27;épreuve" role="link" tabindex="0" onclick="showPage('sim')" onkeydown="navKey(event,'sim')"><span class="n">A</span><span>Simulateur d&#x27;épreuve</span></a>
+<a data-page="plan" data-label="Plan de séance" role="link" tabindex="0" onclick="showPage('plan')" onkeydown="navKey(event,'plan')"><span class="n">B</span><span>Plan de séance</span></a>
+<a data-page="jury" data-label="Entretien avec le jury" role="link" tabindex="0" onclick="showPage('jury')" onkeydown="navKey(event,'jury')"><span class="n">C</span><span>Entretien avec le jury</span></a>
+<a data-page="saison" data-label="Planification de saison" role="link" tabindex="0" onclick="showPage('saison')" onkeydown="navKey(event,'saison')"><span class="n">D</span><span>Planification de saison</span></a>
+<a data-page="exos" data-label="Banque d&#x27;exercices" role="link" tabindex="0" onclick="showPage('exos')" onkeydown="navKey(event,'exos')"><span class="n">E</span><span>Banque d&#x27;exercices</span></a>
 <div class="nav-sec">Modules de connaissances</div>
-<a data-page="m1" data-track="1" data-status="a_completer" onclick="showPage('m1')"><span class="n">01</span><span>Yoseikan Budo — histoire, filiation, principes</span><span class="flag"></span></a>
-<a data-page="m2" data-track="1" data-status="a_completer" onclick="showPage('m2')"><span class="n">02</span><span>Contenu technique Yoseikan Budo</span><span class="flag"></span></a>
-<a data-page="m3" data-track="1" data-status="pret" onclick="showPage('m3')"><span class="n">03</span><span>Pédagogie et méthodologie d&#x27;enseignement</span><span class="flag"></span></a>
-<a data-page="m4" data-track="1" data-status="pret" onclick="showPage('m4')"><span class="n">04</span><span>Environnement fédéral, réglementation et vie du club</span><span class="flag"></span></a>
-<a data-page="m5" data-track="1" data-status="pret" onclick="showPage('m5')"><span class="n">05</span><span>Anatomie, physiologie et sécurité du pratiquant</span><span class="flag"></span></a>
-<a data-page="m6" data-track="1" data-status="a_completer" onclick="showPage('m6')"><span class="n">06</span><span>Vocabulaire et terminologie</span><span class="flag"></span></a>
+<a data-page="m1" data-label="Yoseikan Budo — histoire, filiation, principes" data-track="1" data-status="a_completer" role="link" tabindex="0" onclick="showPage('m1')" onkeydown="navKey(event,'m1')"><span class="n">01</span><span>Yoseikan Budo — histoire, filiation, principes</span><span class="flag"></span></a>
+<a data-page="m2" data-label="Contenu technique Yoseikan Budo" data-track="1" data-status="a_completer" role="link" tabindex="0" onclick="showPage('m2')" onkeydown="navKey(event,'m2')"><span class="n">02</span><span>Contenu technique Yoseikan Budo</span><span class="flag"></span></a>
+<a data-page="m3" data-label="Pédagogie et méthodologie d&#x27;enseignement" data-track="1" data-status="pret" role="link" tabindex="0" onclick="showPage('m3')" onkeydown="navKey(event,'m3')"><span class="n">03</span><span>Pédagogie et méthodologie d&#x27;enseignement</span><span class="flag"></span></a>
+<a data-page="m4" data-label="Environnement fédéral, réglementation et vie du club" data-track="1" data-status="pret" role="link" tabindex="0" onclick="showPage('m4')" onkeydown="navKey(event,'m4')"><span class="n">04</span><span>Environnement fédéral, réglementation et vie du club</span><span class="flag"></span></a>
+<a data-page="m5" data-label="Anatomie, physiologie et sécurité du pratiquant" data-track="1" data-status="pret" role="link" tabindex="0" onclick="showPage('m5')" onkeydown="navKey(event,'m5')"><span class="n">05</span><span>Anatomie, physiologie et sécurité du pratiquant</span><span class="flag"></span></a>
+<a data-page="m6" data-label="Vocabulaire et terminologie" data-track="1" data-status="a_completer" role="link" tabindex="0" onclick="showPage('m6')" onkeydown="navKey(event,'m6')"><span class="n">06</span><span>Vocabulaire et terminologie</span><span class="flag"></span></a>
 <div class="nav-sec">Évaluation</div>
-<a data-page="q1" data-track="1" data-status="a_completer" onclick="showPage('q1')"><span class="n">Q1</span><span>Histoire et principes</span><span class="flag"></span></a>
-<a data-page="q2" data-track="1" data-status="a_completer" onclick="showPage('q2')"><span class="n">Q2</span><span>Contenu technique</span><span class="flag"></span></a>
-<a data-page="q3" data-track="1" data-status="pret" onclick="showPage('q3')"><span class="n">Q3</span><span>Pédagogie et méthodologie</span><span class="flag"></span></a>
-<a data-page="q4" data-track="1" data-status="pret" onclick="showPage('q4')"><span class="n">Q4</span><span>Environnement fédéral et vie du club</span><span class="flag"></span></a>
-<a data-page="q5" data-track="1" data-status="pret" onclick="showPage('q5')"><span class="n">Q5</span><span>Physiologie et sécurité</span><span class="flag"></span></a>
-<a data-page="q6" data-track="1" data-status="a_completer" onclick="showPage('q6')"><span class="n">Q6</span><span>Terminologie</span><span class="flag"></span></a>
-<a data-page="exam" onclick="showPage('exam')"><span class="n">EB</span><span>Examen blanc</span></a>
+<a data-page="q1" data-label="Histoire et principes" data-track="1" data-status="a_completer" role="link" tabindex="0" onclick="showPage('q1')" onkeydown="navKey(event,'q1')"><span class="n">Q1</span><span>Histoire et principes</span><span class="flag"></span></a>
+<a data-page="q2" data-label="Contenu technique" data-track="1" data-status="a_completer" role="link" tabindex="0" onclick="showPage('q2')" onkeydown="navKey(event,'q2')"><span class="n">Q2</span><span>Contenu technique</span><span class="flag"></span></a>
+<a data-page="q3" data-label="Pédagogie et méthodologie" data-track="1" data-status="pret" role="link" tabindex="0" onclick="showPage('q3')" onkeydown="navKey(event,'q3')"><span class="n">Q3</span><span>Pédagogie et méthodologie</span><span class="flag"></span></a>
+<a data-page="q4" data-label="Environnement fédéral et vie du club" data-track="1" data-status="pret" role="link" tabindex="0" onclick="showPage('q4')" onkeydown="navKey(event,'q4')"><span class="n">Q4</span><span>Environnement fédéral et vie du club</span><span class="flag"></span></a>
+<a data-page="q5" data-label="Physiologie et sécurité" data-track="1" data-status="pret" role="link" tabindex="0" onclick="showPage('q5')" onkeydown="navKey(event,'q5')"><span class="n">Q5</span><span>Physiologie et sécurité</span><span class="flag"></span></a>
+<a data-page="q6" data-label="Terminologie" data-track="1" data-status="a_completer" role="link" tabindex="0" onclick="showPage('q6')" onkeydown="navKey(event,'q6')"><span class="n">Q6</span><span>Terminologie</span><span class="flag"></span></a>
+<a data-page="exam" data-label="Examen blanc" role="link" tabindex="0" onclick="showPage('exam')" onkeydown="navKey(event,'exam')"><span class="n">EB</span><span>Examen blanc</span></a>
 <div class="nav-sec">Données</div>
-<a data-page="data" onclick="showPage('data')"><span class="n">--</span><span>Sauvegarde et restauration</span></a>
+<a data-page="data" data-label="Sauvegarde et restauration" role="link" tabindex="0" onclick="showPage('data')" onkeydown="navKey(event,'data')"><span class="n">--</span><span>Sauvegarde et restauration</span></a>
 </nav>
-<main>
+<main id="main">
 <div id="page-home" class="page">
 
 <div class="card hero">
@@ -1050,13 +1141,38 @@ function toast(msg) {
   clearTimeout(t._h); t._h = setTimeout(() => t.classList.remove('on'), 2400);
 }
 
-/* ══ Navigation ══ */
+/* ══ Navigation ══════════════════════════════════════════
+   Un seul point d'entrée : showPage(). Le tiroir mobile,
+   le voile de fond et le verrou de défilement sont pilotés
+   par openNav / closeNav, jamais en dehors.               */
+function openNav() {
+  $('sidebar').classList.add('open');
+  $('backdrop').classList.add('on');
+  document.body.classList.add('nav-open');
+  $('mb-btn').setAttribute('aria-expanded', 'true');
+  $('mb-btn').textContent = 'Fermer';
+  const cur = document.querySelector('#sidebar a.active') || document.querySelector('#sidebar a');
+  if (cur) { try { cur.focus({ preventScroll: true }); } catch (e) { cur.focus(); } }
+}
+function closeNav() {
+  $('sidebar').classList.remove('open');
+  $('backdrop').classList.remove('on');
+  document.body.classList.remove('nav-open');
+  $('mb-btn').setAttribute('aria-expanded', 'false');
+  $('mb-btn').textContent = 'Menu';
+}
+function toggleNav() { $('sidebar').classList.contains('open') ? closeNav() : openNav(); }
+function navKey(e, id) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showPage(id); } }
+
 function showPage(id) {
+  const link = document.querySelector('#sidebar a[data-page="' + id + '"]');
+  if (!$('page-' + id)) id = 'home';
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-  const p = $('page-' + id); if (p) p.classList.add('active');
+  $('page-' + id).classList.add('active');
   document.querySelectorAll('#sidebar a').forEach(a => a.classList.toggle('active', a.dataset.page === id));
-  document.getElementById('sidebar').classList.remove('open');
-  window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
+  closeNav();
+  const t = $('mb-title'); if (t) t.textContent = (link && link.dataset.label) || 'Tableau de bord';
+  window.scrollTo(0, 0);
   Store.set('lastPage', id);
   if (id === 'home') renderHome();
 }
@@ -1408,7 +1524,25 @@ document.addEventListener('DOMContentLoaded', () => {
   juryStart('*'); renderProgress(); renderHome();
   if (!Store.available) $('warn-storage').style.display = 'block';
   showPage(Store.get('lastPage', 'home'));
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') $('sidebar').classList.remove('open'); });
+
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+  // Le tiroir n'a plus lieu d'être si l'on repasse en affichage large.
+  if (typeof window.matchMedia === 'function') {
+    const wide = window.matchMedia('(min-width: 901px)');
+    const onWide = e => { if (e.matches) closeNav(); };
+    if (wide.addEventListener) wide.addEventListener('change', onWide);
+    else if (wide.addListener) wide.addListener(onWide);
+  } else {
+    window.addEventListener('resize', () => { if (window.innerWidth > 900) closeNav(); });
+  }
+  // Fermeture au balayage vers la gauche, sans dépendance externe.
+  let x0 = null;
+  document.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  document.addEventListener('touchend', e => {
+    if (x0 === null || !$('sidebar').classList.contains('open')) { x0 = null; return; }
+    if (e.changedTouches[0].clientX - x0 < -55) closeNav();
+    x0 = null;
+  }, { passive: true });
 });
 
 </script>

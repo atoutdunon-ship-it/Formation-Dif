@@ -276,12 +276,93 @@ fieldset legend{font-family:var(--serif);font-size:1.02rem;font-weight:600;color
   background:var(--navy-900);color:#fff;padding:12px 24px;border-radius:var(--r);font-size:.85rem;
   box-shadow:var(--sh-3);z-index:900;opacity:0;transition:.28s;pointer-events:none}
 .toast.on{transform:translateX(-50%);opacity:1}
-@media(max-width:860px){
-  nav#sidebar{position:fixed;left:0;transform:translateX(-100%);transition:.25s;z-index:250}
-  nav#sidebar.open{transform:none}
-  main{padding:20px 18px 70px}
-  .prog{flex-direction:column;align-items:stretch;gap:14px}
-  .chrono{flex-wrap:wrap}
+/* ── NAVIGATION MOBILE ──────────────────────────────────
+   Éléments masqués sur grand écran, activés sous 900 px. */
+.mobilebar{display:none}
+.drawer-head{display:none}
+.backdrop{position:fixed;inset:0;background:rgba(5,13,27,.55);z-index:350;
+  opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s;
+  -webkit-backdrop-filter:blur(2px);backdrop-filter:blur(2px)}
+.backdrop.on{opacity:1;visibility:visible}
+
+@media(max-width:900px){
+  body.nav-open{overflow:hidden}
+
+  /* En-tête réduit : le titre long ne doit jamais chasser la navigation */
+  header{padding:0 16px;height:56px}
+  .brand{gap:10px;min-width:0}
+  .brand h1{font-size:.98rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .brand span,.hdr-stat{display:none}
+  .hdr-right{gap:8px}
+
+  /* Barre de contexte : où je suis, et comment aller ailleurs */
+  .mobilebar{display:flex;align-items:center;gap:12px;position:sticky;top:56px;z-index:280;
+    background:var(--white);border-bottom:1px solid var(--line);padding:9px 16px;
+    box-shadow:0 1px 3px rgba(10,20,40,.05)}
+  .mobilebar .mb-where{font-size:.62rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--muted);display:block;margin-bottom:1px}
+  .mobilebar .mb-title{font-weight:700;color:var(--navy-900);font-size:.9rem;line-height:1.25;
+    display:block;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .mobilebar .mb-lbl{flex:1;min-width:0}
+  .mobilebar .mb-btn{flex-shrink:0;min-height:40px;padding:0 18px;font-size:.82rem;font-weight:700;
+    letter-spacing:.06em;text-transform:uppercase;background:var(--navy-800);color:#fff;
+    border:none;border-radius:var(--r);cursor:pointer;font-family:var(--sans)}
+  .mobilebar .mb-btn:active{background:var(--navy-600)}
+
+  /* Tiroir de navigation */
+  nav#sidebar{position:fixed;top:0;left:0;bottom:0;height:100%;height:100dvh;
+    width:min(86vw,330px);transform:translateX(-101%);transition:transform .24s cubic-bezier(.4,0,.2,1);
+    z-index:400;padding:0 0 40px;overscroll-behavior:contain;
+    box-shadow:none;border-right:none}
+  nav#sidebar.open{transform:none;box-shadow:14px 0 40px rgba(5,13,27,.4)}
+  .drawer-head{display:flex;align-items:center;gap:12px;padding:14px 18px;
+    background:var(--navy-900);border-bottom:1px solid rgba(255,255,255,.1);
+    position:sticky;top:0;z-index:2}
+  .drawer-head .dh-t{font-family:var(--serif);font-size:.95rem;color:#fff;font-weight:600}
+  .drawer-head .dh-x{margin-left:auto;min-height:38px;padding:0 14px;font-size:.76rem;
+    font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;
+    background:transparent;border:1px solid rgba(255,255,255,.3);border-radius:var(--r);
+    cursor:pointer;font-family:var(--sans)}
+  .drawer-head .dh-x:active{background:rgba(255,255,255,.12)}
+  .nav-sec{padding:16px 18px 6px}
+  nav#sidebar a{padding:11px 18px;font-size:.9rem;min-height:44px;border-left-width:3px}
+  nav#sidebar a .n{min-width:26px}
+  nav#sidebar a span:not(.n):not(.flag){flex:1;min-width:0}
+
+  /* Contenu */
+  main{padding:18px 16px 64px}
+  .card{padding:18px 17px;margin-bottom:13px}
+  .hero{padding:24px 20px 22px}
+  .hero h2{font-size:1.24rem}
+  .hero::before,.hero::after{display:none}
+  .banner{padding:20px 18px}
+  h2{font-size:1.12rem}
+  .prog{flex-direction:column;align-items:stretch;gap:12px;padding:17px 18px}
+  .prog-pct{text-align:left;font-size:1.8rem;min-width:0}
+  .chrono{flex-direction:column;align-items:stretch;gap:14px;padding:18px 20px}
+  .chrono .c-time{font-size:2.3rem}
+  .chrono-actions{margin-left:0;flex-wrap:wrap}
+  .chrono-actions .btn{flex:1;min-width:calc(50% - 4px)}
+  .draw{padding:20px 18px}
+  .draw .d-title{font-size:1.2rem}
+  .obj{gap:11px}
+  .obj .o-n{font-size:1.25rem;min-width:26px}
+  .grid.g3,.grid.g4{grid-template-columns:1fr}
+  .nav-btns{flex-direction:column-reverse}
+  .nav-btns .btn{width:100%}
+  .btn,.btn-download{min-height:42px}
+  .chip{min-height:36px;padding:7px 14px}
+  .opt{padding:13px 15px 13px 46px;min-height:46px}
+  table{font-size:.83rem}
+  .field input,.field textarea,.field select{font-size:16px}  /* évite le zoom iOS */
+  .toast{left:16px;right:16px;transform:translateY(80px);width:auto;text-align:center}
+  .toast.on{transform:none}
+}
+@media(max-width:380px){
+  .brand .code{display:none}
+  main{padding:16px 13px 56px}
+  .card{padding:16px 14px}
+  nav#sidebar{width:92vw}
 }
 @media print{
   header,nav#sidebar,.btn,.btn-row,.nav-btns,.chrono,.chips{display:none!important}
