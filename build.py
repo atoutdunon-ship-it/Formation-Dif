@@ -115,6 +115,7 @@ def sidebar(mods, quiz) -> str:
            link("jury", "C", "Entretien avec le jury"),
            link("saison", "D", "Planification de saison"),
            link("exos", "E", "Banque d'exercices"),
+           link("corriges", "F", "Corrigés types d'examen"),
            '<div class="nav-sec">Modules de connaissances</div>']
     out += [link(m["id"], f'{m["num"]:02d}', m["titre"], True, m["statut"]) for m in mods]
     out.append('<div class="nav-sec">Évaluation</div>')
@@ -154,6 +155,7 @@ def home(cfg, mods, quiz) -> str:
         ("jury", "Entretien avec le jury", f"{len(load('jury.json'))} questions classées, chronomètre et éléments de réponse."),
         ("saison", "Planification de saison", "Cycles annuels, objectifs et repères fédéraux, notes personnelles."),
         ("exos", "Banque d'exercices", "Situations filtrables par phase et par public, avec critères et variables."),
+        ("corriges", "Corrigés types d'examen", "Huit épreuves traitées de bout en bout, des quatre publics, avec l'entretien."),
     ]
     ocards = "".join(
         f'<div class="mcard" onclick="showPage(\'{i}\')"><div class="m-n">OUTIL</div>'
@@ -389,6 +391,39 @@ def page_exos(cfg, exos) -> str:
   et des consignes de sécurité : c'est la grille de lecture du jury.</p></div>""")
 
 
+
+def page_corriges(cfg, corriges) -> str:
+    chips = ('<button class="chip on" data-fc="*" onclick="corFilter(\'*\')">'
+             f'Les {len(corriges)} corrigés</button>')
+    vus = []
+    for c in corriges:
+        if c["public"] not in vus:
+            vus.append(c["public"])
+    chips += "".join(
+        f'<button class="chip" data-fc="{p}" onclick="corFilter(\'{p}\')">'
+        f'{E(cfg["epreuve"][p]["label"])}</button>' for p in vus)
+    return page("corriges", f"""
+<div class="banner"><div class="b-num">Outil F</div><h2>Corrigés types d'examen</h2>
+  <p>Huit épreuves traitées de bout en bout : analyse du thème, objectif, critère,
+  sécurité, plan minuté, régulation, puis l'entretien avec le jury et ses réponses modèles.</p>
+  <div class="b-tags"><span class="b-tag">8 corrigés</span><span class="b-tag">4 publics</span>
+  <span class="b-tag b-tag-gold">Imprimables</span></div></div>
+
+<div class="card"><h2>Comment s'en servir</h2>
+  <p>Ne les lisez pas d'abord. Tirez un thème au sort dans le simulateur, préparez votre
+  propre plan en 30 minutes, <strong>puis</strong> ouvrez le corrigé correspondant et
+  comparez. Un corrigé lu avant l'effort ne vous apprend rien : il vous rassure, ce qui
+  est exactement le contraire de ce dont vous avez besoin.</p>
+  <div class="memo"><span class="memo-icon">!</span><div class="memo-body"><strong>Ce que le jury note vraiment</strong>
+  Aucun de ces corrigés n'est « la » bonne réponse. Ce qui est évalué, c'est la cohérence
+  entre votre objectif, vos situations et votre critère de réussite — puis votre capacité
+  à la défendre. Un plan différent, mais cohérent et assumé, vaut mieux qu'un plan recopié.</div></div>
+  <div class="chips">{chips}</div>
+</div>
+
+<div id="cor-list"></div>""")
+
+
 def page_module(m) -> str:
     tags = "".join(f'<span class="b-tag">{E(t)}</span>' for t in m["tags"])
     nav_prev = f'<button class="btn btn-ghost" onclick="showPage(\'m{m["num"]-1}\')">Module précédent</button>' if m["num"] > 1 else "<span></span>"
@@ -473,15 +508,16 @@ def build(out: Path) -> Path:
     exos = load("exercices.json")
     saison = load("saison.json")
     plan = load("plan_modele.json")
+    corriges = load("corriges.json")
 
     data = {"config": cfg, "modules": [{k: v for k, v in m.items() if k != "html"} for m in mods],
             "quiz": quiz, "themes": themes, "jury": jury, "exercices": exos,
-            "saison": saison, "plan": plan}
+            "saison": saison, "plan": plan, "corriges": corriges}
 
     body = "\n".join([
         home(cfg, mods, quiz),
         page_sim(cfg, themes), page_plan(cfg, plan), page_jury(jury),
-        page_saison(saison), page_exos(cfg, exos),
+        page_saison(saison), page_exos(cfg, exos), page_corriges(cfg, corriges),
         *[page_module(m) for m in mods],
         *[page_quiz(q, quiz[q], i) for i, q in enumerate(quiz)],
         page_exam(quiz), page_data(cfg),

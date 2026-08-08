@@ -1,0 +1,1249 @@
+[
+ {
+  "id": "CO1",
+  "public": "enfants",
+  "theme_id": "TH01",
+  "theme": "Construire et conserver la distance (ma-ai)",
+  "contexte": {
+   "effectif": "14 enfants de 8 à 11 ans",
+   "niveau": "ceintures blanches à orange, 1 à 2 ans de pratique",
+   "duree": "50 minutes",
+   "surface": "tatami 10 × 10 m",
+   "materiel": "12 plots, 7 cibles souples (pattes d'ours ou boucliers)"
+  },
+  "analyse": [
+   "Le mot clé est <strong>conserver</strong>, pas seulement « prendre ». Le jury attend que la distance varie et que l'enfant s'y adapte, pas qu'il apprenne trois positions immobiles.",
+   "Chez l'enfant de cet âge, la distance ne se comprend pas par le discours : elle se construit par le corps et par le regard. Toute explication verbale de plus de vingt secondes est perdue.",
+   "Piège majeur du thème : rester en travail à vide. Sans partenaire ni cible, il n'y a pas de distance — il n'y a qu'un geste."
+  ],
+  "objectif": "À la fin de la séance, l'enfant est capable d'ajuster sa distance à un partenaire mobile pour toucher une cible sans se faire toucher.",
+  "critere": "Sur 10 échanges en opposition aménagée, l'enfant touche la cible au moins 6 fois sans être touché lui-même.",
+  "prerequis": "Déplacement avant/arrière en garde, direct du bras avant, notion d'arrêt au signal.",
+  "securite": {
+   "risques": [
+    "Collision entre binômes lors des déplacements simultanés",
+    "Contact non contrôlé au visage lors du passage à l'opposition",
+    "Chute arrière lors d'un recul rapide"
+   ],
+   "mesures": [
+    "Espacement de 2 m minimum entre binômes, matérialisé par les plots",
+    "Toutes les touches se font sur cible tenue, jamais sur le corps du partenaire",
+    "Signal d'arrêt commun : « Yame », vérifié en début de séance par un test à blanc",
+    "Recul interdit au-delà de la ligne de plots : au-delà, l'enfant tourne au lieu de reculer"
+   ],
+   "verifications": [
+    "Ongles courts, aucun bijou",
+    "Tatami sans interstice",
+    "Effectif compté et binômes formés par gabarit"
+   ]
+  },
+  "plan": [
+   {
+    "temps": "0 – 3′",
+    "titre": "Rituel d'entrée",
+    "objet": "Poser le cadre",
+    "consigne": "Rassemblement, salut, annonce de l'objectif du jour en une phrase : « aujourd'hui on apprend à être toujours à la bonne distance ».",
+    "organisation": "En ligne face à l'enseignant.",
+    "critere": "Tout le groupe est attentif et a reformulé l'objectif.",
+    "variables": [
+     "Faire reformuler par un enfant"
+    ],
+    "securite": "Aucun."
+   },
+   {
+    "temps": "3 – 11′",
+    "titre": "Échauffement orienté distance",
+    "objet": "Préparer déplacements et appuis",
+    "consigne": "Déplacements libres dans l'espace, puis au signal : se figer à un bras du camarade le plus proche, puis à deux bras, puis hors de portée.",
+    "organisation": "Dispersion libre sur tout le tatami, signal à la voix.",
+    "critere": "L'enfant se place à la bonne distance en moins de 2 secondes.",
+    "variables": [
+     "Signal visuel au lieu de sonore",
+     "Déplacement en pas chassés imposé",
+     "Réduire l'espace disponible"
+    ],
+    "securite": "Yeux ouverts, pas de course."
+   },
+   {
+    "temps": "11 – 20′",
+    "titre": "Les trois maisons",
+    "objet": "Faire vivre les trois distances",
+    "consigne": "Trois zones matérialisées : loin (hors de portée), moyenne (touche avec un pas), près (touche sans bouger). L'enseignant annonce une maison, l'enfant s'y place par rapport à son partenaire.",
+    "organisation": "Par deux, une paire de plots par binôme. Rôles fixes pendant 4 minutes, puis inversion.",
+    "critere": "8 placements corrects sur 10 annonces.",
+    "variables": [
+     "Le partenaire se déplace lentement",
+     "Puis librement",
+     "Annonce remplacée par un geste"
+    ],
+    "securite": "Aucun contact à ce stade."
+   },
+   {
+    "temps": "20 – 33′",
+    "titre": "Toucher la cible mobile",
+    "objet": "Ajuster la distance pour agir",
+    "consigne": "Le partenaire tient la cible et se déplace lentement. L'attaquant doit toucher la cible d'un direct, en ajustant sa distance. Séries de 30 secondes, puis inversion.",
+    "organisation": "Par deux, une cible par binôme, colonnes espacées de 2 m.",
+    "critere": "Le direct atteint la cible bras tendu sans être écrasé ni trop court : 7 touches nettes sur 10.",
+    "variables": [
+     "Cible plus rapide",
+     "Cible qui recule",
+     "L'attaquant part de plus loin"
+    ],
+    "securite": "Touche sur cible uniquement. Vitesse du porteur imposée par l'enseignant."
+   },
+   {
+    "temps": "33 – 43′",
+    "titre": "Toucher sans être touché",
+    "objet": "Mise en opposition aménagée",
+    "consigne": "Les deux ont une cible. Chacun essaie de toucher celle de l'autre. Séquences de 40 secondes, rotation des partenaires à chaque séquence.",
+    "organisation": "Par deux, appariement par gabarit, 5 binômes maximum en simultané, les autres observent avec une consigne.",
+    "critere": "Au moins 6 touches réussies sur 10 échanges sans être touché en retour.",
+    "variables": [
+     "Interdire le recul",
+     "Zone réduite",
+     "Un seul des deux attaque, l'autre esquive"
+    ],
+    "securite": "Intensité annoncée : « on cherche à toucher, pas à frapper ». Arrêt immédiat au moindre contact hors cible."
+   },
+   {
+    "temps": "43 – 50′",
+    "titre": "Retour au calme et bilan",
+    "objet": "Fixer l'acquis",
+    "consigne": "Retour en cercle, respiration, puis question au groupe : « qu'est-ce qui vous a permis de toucher sans être touché ? ». Annonce de la séance suivante.",
+    "organisation": "Cercle assis.",
+    "critere": "Deux enfants au moins formulent la notion de distance avec leurs mots.",
+    "variables": [
+     "Faire montrer plutôt que dire"
+    ],
+    "securite": "Sol non froid."
+   }
+  ],
+  "regulation": {
+   "difficulte": "Réduire l'incertitude : le partenaire ne bouge plus, ou se déplace sur une ligne unique. Donner un repère au sol pour matérialiser la bonne distance.",
+   "avance": "Supprimer le repère, imposer une feinte avant la touche, ou donner le rôle d'observateur-arbitre sur un binôme.",
+   "planb": "Si l'opposition dégénère en bagarre ou si le groupe n'a pas les appuis : revenir aux « trois maisons » avec partenaire fixe, et retravailler le signal d'arrêt. Mieux vaut une situation maîtrisée qu'une opposition subie."
+  },
+  "jury_observe": [
+   "L'objectif est-il annoncé, unique, et tenu jusqu'au bout de la séance ?",
+   "Le temps de pratique réel : combien de minutes les enfants ont-ils été en action ?",
+   "L'opposition est-elle cadrée — cibles, intensité, signal d'arrêt, appariement ?",
+   "Les consignes sont-elles courtes et vérifiées, ou l'enseignant parle-t-il trop ?",
+   "La progression va-t-elle bien du sûr vers l'incertain ?"
+  ],
+  "entretien": [
+   [
+    "Quel était votre objectif ?",
+    "Rendre l'enfant capable d'ajuster sa distance à un partenaire mobile pour toucher sans être touché. Un seul objectif, formulé en capacité, et non « travailler la distance » qui n'est que le thème."
+   ],
+   [
+    "Comment avez-vous su qu'il était atteint ?",
+    "J'avais fixé 6 touches réussies sur 10 sans être touché. Je l'ai observé sur la situation d'opposition. Quatre enfants l'ont atteint largement, six l'ont atteint, quatre restaient sous le seuil — pour ces derniers, j'ai figé le partenaire pour réduire l'incertitude."
+   ],
+   [
+    "Pourquoi passer par des cibles plutôt que travailler directement au corps ?",
+    "Pour trois raisons : la sécurité d'abord, à cet âge le contrôle n'est pas acquis ; la lisibilité ensuite, la cible rend la réussite visible et immédiate ; l'engagement enfin, l'enfant ose aller au contact d'une cible alors qu'il se retient face à un camarade."
+   ],
+   [
+    "Votre échauffement préparait-il vraiment la séance ?",
+    "Oui, volontairement. Il ne comportait aucun étirement long : uniquement des déplacements et des arrêts à distance imposée, c'est-à-dire exactement la tâche du corps de séance, à intensité plus faible. C'est le même problème posé sous une forme plus simple."
+   ]
+  ],
+  "erreurs": [
+   "Faire une longue démonstration technique du direct : le thème n'est pas la frappe, c'est la distance.",
+   "Laisser les binômes se former par affinité : les écarts de gabarit rendent l'opposition dangereuse et faussent le critère.",
+   "Enchaîner les trois distances sans jamais mettre de partenaire mobile : la distance reste alors une notion abstraite.",
+   "Oublier de faire tourner les rôles : celui qui tient la cible ne travaille pas l'objectif."
+  ]
+ },
+ {
+  "id": "CO2",
+  "public": "enfants",
+  "theme_id": "TH02",
+  "theme": "Découverte des chutes et protection du corps",
+  "contexte": {
+   "effectif": "16 enfants de 7 à 10 ans",
+   "niveau": "débutants, première année",
+   "duree": "50 minutes",
+   "surface": "tatami 10 × 12 m",
+   "materiel": "aucun"
+  },
+  "analyse": [
+   "Thème de sécurité pure. Le jury va observer <strong>votre</strong> gestion du risque avant d'observer la technique : c'est le critère qui domine tout le reste.",
+   "La progression doit être strictement ascendante : assis, accroupi, debout. Sauter une étape devant un jury est éliminatoire.",
+   "Une chute n'est pas une acrobatie : l'objectif est de protéger la tête et de répartir le choc, pas de faire joli."
+  ],
+  "objectif": "À la fin de la séance, l'enfant est capable de chuter en arrière depuis la position accroupie en gardant le menton rentré et en frappant des deux bras.",
+  "critere": "Sur 5 chutes consécutives, le menton reste rentré et les deux bras frappent le tatami avant ou en même temps que le dos, sans que la tête ne touche.",
+  "prerequis": "Aucun. Séance conçue pour des débutants complets.",
+  "securite": {
+   "risques": [
+    "Choc de la tête sur le tatami — risque principal",
+    "Collision entre deux enfants qui chutent dans le même axe",
+    "Réception sur le coude ou le poignet tendu",
+    "Enfant qui refuse et se crispe, donc chute mal"
+   ],
+   "mesures": [
+    "Un seul rang chute à la fois, les autres observent assis",
+    "Axe de chute unique imposé pour tout le rang, vérifié avant chaque série",
+    "1,5 m minimum entre deux enfants du même rang",
+    "Consigne unique et répétée avant chaque répétition : « menton sur la poitrine, je regarde ma ceinture »",
+    "Bras à 45°, paume vers le sol, jamais de bras tendu derrière",
+    "Aucun passage au niveau supérieur tant que le rang entier n'a pas réussi le niveau en cours"
+   ],
+   "verifications": [
+    "Tatami sans interstice ni bord relevé",
+    "Aucun objet sur ou autour du tatami",
+    "Enfants sans lunettes, ou lunettes retirées",
+    "Signalement d'éventuels antécédents cervicaux"
+   ]
+  },
+  "plan": [
+   {
+    "temps": "0 – 3′",
+    "titre": "Rituel et annonce",
+    "objet": "Poser le cadre et le sérieux",
+    "consigne": "Salut, puis annonce : « aujourd'hui on apprend à tomber sans se faire mal. C'est ce qui protège toute la vie. »",
+    "organisation": "En ligne.",
+    "critere": "Le groupe est calme et attentif.",
+    "variables": [],
+    "securite": "Aucun."
+   },
+   {
+    "temps": "3 – 12′",
+    "titre": "Échauffement au sol",
+    "objet": "Préparer nuque, dos et appuis",
+    "consigne": "Roulades avant sur le côté, déplacements en quadrupédie, bascules assis-couché-assis, jeu du « rouler-se relever ».",
+    "organisation": "Dispersion, l'enseignant circule.",
+    "critere": "Chaque enfant bascule et se relève seul, sans appui de la tête.",
+    "variables": [
+     "Ajouter un signal pour se figer",
+     "Enchaîner deux bascules"
+    ],
+    "securite": "Aucune roulade arrière à ce stade."
+   },
+   {
+    "temps": "12 – 22′",
+    "titre": "Niveau 1 — assis",
+    "objet": "Installer le réflexe de protection",
+    "consigne": "Assis, jambes fléchies, menton rentré, bras en diagonale. Bascule lente vers l'arrière, les deux bras frappent le tatami au moment du contact du dos.",
+    "organisation": "Deux rangs de 8, un rang travaille, l'autre observe et compte à voix haute les bras qui frappent.",
+    "critere": "5 chutes consécutives, menton rentré, deux bras frappant, tête ne touchant jamais.",
+    "variables": [
+     "Enseignant qui donne le tempo",
+     "Enfant qui compte pour son camarade",
+     "Yeux fixés sur la ceinture"
+    ],
+    "securite": "Un rang à la fois, axe unique, 1,5 m d'écart."
+   },
+   {
+    "temps": "22 – 32′",
+    "titre": "Niveau 2 — accroupi",
+    "objet": "Élever le point de départ",
+    "consigne": "Même chose depuis la position accroupie : je m'assois d'abord, puis je bascule. Le fessier touche avant le dos.",
+    "organisation": "Idem, rangs alternés. L'enseignant valide individuellement le passage au niveau 2.",
+    "critere": "5 chutes consécutives sans que la tête ne touche, avec passage par le fessier.",
+    "variables": [
+     "Ralentir encore",
+     "Ajouter un comptage",
+     "Départ d'une position légèrement plus haute pour ceux qui maîtrisent"
+    ],
+    "securite": "Passage individuel validé par l'enseignant, jamais collectif."
+   },
+   {
+    "temps": "32 – 42′",
+    "titre": "Jeu du miroir tombé",
+    "objet": "Rendre le geste automatique sous contrainte",
+    "consigne": "Par deux, face à face. L'un s'accroupit et chute, l'autre observe et annonce « menton » ou « bras » selon ce qui a manqué. Puis inversion.",
+    "organisation": "Par deux, espacés, axes de chute parallèles jamais opposés.",
+    "critere": "L'observateur donne un retour juste sur au moins 3 chutes sur 5.",
+    "variables": [
+     "Ajouter un troisième critère d'observation",
+     "Chute sur signal inattendu"
+    ],
+    "securite": "Les deux ne chutent jamais en même temps."
+   },
+   {
+    "temps": "42 – 50′",
+    "titre": "Retour au calme et bilan",
+    "objet": "Fixer et valoriser",
+    "consigne": "Cercle assis, respiration. Question : « qu'est-ce qui protège la tête ? ». Rappel que la chute se travaille à chaque séance.",
+    "organisation": "Cercle.",
+    "critere": "Le groupe énonce les deux consignes clés : menton rentré, bras qui frappent.",
+    "variables": [
+     "Faire démontrer par un enfant volontaire"
+    ],
+    "securite": "Aucun."
+   }
+  ],
+  "regulation": {
+   "difficulte": "Rester au niveau assis toute la séance sans hésiter. Accompagner la bascule à la main dans le dos. Un enfant qui a peur ne progresse pas : le rassurer, réduire l'amplitude, valoriser la moindre réussite.",
+   "avance": "Passer au départ debout genoux fléchis, ou introduire la chute latérale. Confier un rôle d'observateur-référent.",
+   "planb": "Si le groupe est trop dispersé ou si un enfant se fait peur : retour immédiat au niveau assis pour tout le monde, et travail du seul menton rentré, sans chute. Devant un jury, redescendre d'un niveau est un signe de maîtrise, jamais un aveu d'échec."
+  },
+  "jury_observe": [
+   "La progression est-elle réellement ascendante, sans saut d'étape ?",
+   "L'espace de chute est-il organisé, l'axe imposé, l'écart respecté ?",
+   "Les consignes de sécurité sont-elles répétées avant chaque série, ou données une seule fois au début ?",
+   "Le passage au niveau supérieur est-il validé individuellement ?",
+   "L'enseignant voit-il tout le groupe, ou tourne-t-il le dos à une partie ?"
+  ],
+  "entretien": [
+   [
+    "Pourquoi commencer assis ?",
+    "Parce que la hauteur de chute est le facteur de risque principal. Assis, la distance parcourue par la tête est minimale : l'enfant peut se tromper sans se blesser. J'installe le réflexe — menton, bras — là où l'erreur est sans conséquence, puis j'élève progressivement."
+   ],
+   [
+    "Un enfant refuse de chuter. Que faites-vous ?",
+    "Je ne le force pas et je ne le laisse pas de côté. Je réduis encore l'exigence : bascule à demi, avec ma main dans son dos. Je lui donne le rôle d'observateur, qui le maintient dans la tâche. Et je valorise la première réussite, même partielle. Forcer un enfant qui a peur produit une crispation, donc une mauvaise chute, donc une blessure."
+   ],
+   [
+    "Comment gérez-vous seize enfants sur une tâche à risque ?",
+    "Par le fractionnement. Jamais seize en même temps : deux rangs de huit, un seul actif, l'autre en observation avec une consigne précise. Ça divise le risque par deux, ça me permet de voir chaque chute, et ça donne un rôle au rang inactif — l'observation est elle-même un apprentissage."
+   ],
+   [
+    "Quelle est votre responsabilité si un enfant se blesse malgré tout ?",
+    "J'ai une obligation de moyens : sécurité, surveillance effective, adaptation au niveau et à l'âge. Si j'ai respecté la progression, organisé l'espace et surveillé, j'ai rempli cette obligation. En cas d'accident : arrêt du cours, mise en sécurité du groupe, bilan et alerte si nécessaire, information des responsables légaux et du président, déclaration à l'assurance dans les délais."
+   ]
+  ],
+  "erreurs": [
+   "Passer au debout dans la séance de découverte : sanction immédiate.",
+   "Faire chuter tout le groupe en même temps sans axe imposé.",
+   "Donner les consignes de sécurité une seule fois en début de séance.",
+   "Valoriser l'amplitude ou le bruit de la chute plutôt que la protection de la tête."
+  ]
+ },
+ {
+  "id": "CO3",
+  "public": "enfants",
+  "theme_id": "TH15",
+  "theme": "Le contrôle : toucher sans blesser",
+  "contexte": {
+   "effectif": "12 enfants de 9 à 11 ans",
+   "niveau": "ceintures jaunes à vertes, 2 à 3 ans de pratique",
+   "duree": "55 minutes",
+   "surface": "tatami 10 × 10 m",
+   "materiel": "6 cibles souples, 6 ballons de baudruche, 12 plots"
+  },
+  "analyse": [
+   "Thème piégeux : la tentation est de faire un discours sur les valeurs du budo. Le jury attend l'inverse — que le contrôle devienne <strong>observable et mesurable</strong> dans une situation.",
+   "Contrôler, ce n'est pas frapper faiblement. C'est maîtriser l'arrêt de la technique à un endroit choisi, avec la vitesse et l'intention intactes. La nuance doit apparaître dans vos consignes.",
+   "Le ballon de baudruche est l'outil de référence sur ce thème : il rend l'excès de force immédiatement visible et sanctionné, sans qu'aucun adulte n'ait à juger."
+  ],
+  "objectif": "À la fin de la séance, l'enfant est capable d'arrêter sa technique au contact de la cible sans la déformer, tout en conservant vitesse et engagement.",
+  "critere": "Sur 10 techniques, 8 touchent le ballon de baudruche sans le faire éclater ni le repousser de plus de 20 cm, avec un départ franc.",
+  "prerequis": "Direct et fouetté du bras avant, garde stable, arrêt au signal.",
+  "securite": {
+   "risques": [
+    "Escalade de l'intensité dès que l'opposition arrive",
+    "Contact au visage lors du travail à deux",
+    "Éclatement de ballon provoquant un sursaut et un geste réflexe"
+   ],
+   "mesures": [
+    "Toutes les cibles sont tenues ou portées, jamais le corps nu du partenaire",
+    "Zone visage interdite pendant toute la séance, annoncée et rappelée",
+    "Signal d'arrêt testé à blanc en début de séance",
+    "Rotation des partenaires toutes les 90 secondes pour éviter l'installation d'un duel"
+   ],
+   "verifications": [
+    "Ongles, bijoux",
+    "Ballons gonflés modérément, jamais à pleine tension",
+    "Effectif pair, appariement par gabarit"
+   ]
+  },
+  "plan": [
+   {
+    "temps": "0 – 3′",
+    "titre": "Rituel et annonce",
+    "objet": "Poser l'enjeu",
+    "consigne": "Salut, puis : « aujourd'hui, celui qui frappe le plus fort perd. On cherche à toucher juste, pas à faire mal. »",
+    "organisation": "En ligne.",
+    "critere": "Le groupe reformule la règle du jour.",
+    "variables": [
+     "Faire reformuler par un enfant"
+    ],
+    "securite": "Aucun."
+   },
+   {
+    "temps": "3 – 12′",
+    "titre": "Échauffement rythmé",
+    "objet": "Dissocier vitesse et force",
+    "consigne": "Déplacements et techniques à vide, sur trois tempos annoncés : lent, normal, explosif. Puis : explosif mais s'arrêter net au bout du geste.",
+    "organisation": "Dispersion, comptage à la voix.",
+    "critere": "L'enfant produit un geste rapide qui s'arrête net, sans rebond.",
+    "variables": [
+     "Comptage plus rapide",
+     "Arrêt sur signal inattendu"
+    ],
+    "securite": "Aucun partenaire."
+   },
+   {
+    "temps": "12 – 24′",
+    "titre": "Le ballon intouchable",
+    "objet": "Rendre le contrôle visible",
+    "consigne": "Le partenaire tient un ballon de baudruche au bout du bras. L'attaquant frappe : le ballon doit être touché sans éclater ni partir. Séries de 10, puis inversion.",
+    "organisation": "Par deux, un ballon par binôme, colonnes espacées.",
+    "critere": "8 touches sur 10 sans éclatement ni recul de plus de 20 cm.",
+    "variables": [
+     "Ballon tenu plus haut ou plus bas",
+     "Ballon mobile",
+     "Deux techniques enchaînées"
+    ],
+    "securite": "Ballon tenu à distance du visage du porteur, bras tendu sur le côté."
+   },
+   {
+    "temps": "24 – 36′",
+    "titre": "Cible annoncée, arrêt imposé",
+    "objet": "Transférer sur cible ferme",
+    "consigne": "Le porteur annonce une zone (ventre, côté, épaule) sur la cible souple. L'attaquant frappe cette zone et doit s'arrêter au contact, sans pousser.",
+    "organisation": "Par deux, rotation des partenaires toutes les 90 secondes.",
+    "critere": "La cible n'est pas repoussée : le porteur ne recule pas d'un pas.",
+    "variables": [
+     "Annonce au dernier moment",
+     "Deux zones possibles",
+     "Porteur qui se déplace"
+    ],
+    "securite": "Zones limitées au tronc. Le porteur peut arrêter à tout moment."
+   },
+   {
+    "temps": "36 – 47′",
+    "titre": "Duel au ballon",
+    "objet": "Opposition sous contrainte de contrôle",
+    "consigne": "Chacun tient un ballon de la main avant. Il faut toucher le ballon de l'autre sans le faire éclater. Un ballon éclaté fait perdre le point. Séquences de 45 secondes.",
+    "organisation": "Par deux, appariement par gabarit, 4 binômes en simultané, les autres arbitrent.",
+    "critere": "Au moins 3 touches valides et aucun ballon éclaté sur la séquence.",
+    "variables": [
+     "Interdire le recul",
+     "Zone réduite",
+     "Rôle d'arbitre confié à un troisième"
+    ],
+    "securite": "Intensité annoncée. Arrêt immédiat si un enfant cherche la puissance."
+   },
+   {
+    "temps": "47 – 55′",
+    "titre": "Retour au calme et bilan",
+    "objet": "Relier au sens",
+    "consigne": "Cercle, respiration. Question : « pourquoi apprend-on à s'arrêter ? ». Faire le lien avec le partenaire, puis avec l'extérieur du dojo.",
+    "organisation": "Cercle assis.",
+    "critere": "Deux enfants au moins formulent le lien entre contrôle et respect du partenaire.",
+    "variables": [
+     "Faire montrer un geste contrôlé"
+    ],
+    "securite": "Aucun."
+   }
+  ],
+  "regulation": {
+   "difficulte": "Revenir au ballon fixe, tenu par l'enseignant, distance imposée. Ralentir le tempo : la précision précède la vitesse.",
+   "avance": "Ajouter une esquive du porteur, imposer une feinte, ou confier l'arbitrage d'un binôme.",
+   "planb": "Si l'intensité monte malgré tout : suppression immédiate de l'opposition, retour au travail sur cible tenue par l'enseignant. Reprendre la règle et la faire reformuler avant toute reprise."
+  },
+  "jury_observe": [
+   "Le contrôle est-il rendu observable, ou reste-t-il un discours ?",
+   "L'enseignant distingue-t-il clairement contrôle et manque d'engagement ?",
+   "Les règles d'opposition sont-elles annoncées avant, et tenues pendant ?",
+   "La rotation des partenaires est-elle effective ?",
+   "Le lien avec les valeurs est-il fait à partir du vécu, ou plaqué en fin de séance ?"
+  ],
+  "entretien": [
+   [
+    "Contrôler, est-ce frapper moins fort ?",
+    "Non, et c'est le cœur du thème. Frapper moins fort, c'est réduire l'engagement — le geste perd sa vérité martiale. Contrôler, c'est conserver la vitesse et l'intention, mais maîtriser l'arrêt. C'est pourquoi mon échauffement dissocie explicitement vitesse et force : les enfants produisent du rapide qui s'arrête net."
+   ],
+   [
+    "Pourquoi le ballon de baudruche ?",
+    "Parce qu'il arbitre à ma place. L'excès de force est sanctionné immédiatement et visiblement, sans que j'aie à juger ni à sermonner. L'enfant reçoit un retour objectif à chaque tentative. C'est un aménagement du milieu, pas un gadget."
+   ],
+   [
+    "Comment avez-vous relié la séance aux valeurs du budo ?",
+    "Uniquement à la fin, et à partir de ce qui venait d'être vécu. Ils avaient passé une heure à devoir s'arrêter : la question « pourquoi apprend-on à s'arrêter ? » avait alors un sens concret. Un discours sur le respect en début de séance n'aurait rien produit."
+   ],
+   [
+    "Un enfant frappe trop fort de façon répétée. Que faites-vous ?",
+    "D'abord je vérifie que ce n'est pas de l'incompréhension de la consigne : je le fais reformuler. Si c'est une incapacité à réguler, je réduis la difficulté — cible fixe, tempo lent. Si c'est un choix délibéré, je l'arrête, je le sors de la situation, et je reprends avec lui après le cours. Je n'humilie jamais devant le groupe."
+   ]
+  ],
+  "erreurs": [
+   "Ouvrir la séance par un exposé sur les valeurs du budo.",
+   "Confondre contrôle et mollesse dans les consignes : « doucement » n'est pas une consigne de contrôle.",
+   "Autoriser les techniques au visage même contrôlées, sur ce public.",
+   "Laisser deux enfants s'affronter plusieurs séquences de suite : le duel s'installe et l'intensité monte."
+  ]
+ },
+ {
+  "id": "CO4",
+  "public": "baby",
+  "theme_id": "TH06",
+  "theme": "Parcours moteur et imaginaire du budoka",
+  "contexte": {
+   "effectif": "10 enfants de 4 à 6 ans",
+   "niveau": "éveil, première ou deuxième année",
+   "duree": "45 minutes",
+   "surface": "tatami 8 × 10 m",
+   "materiel": "8 plots, 4 cerceaux, 2 bancs bas, 6 cibles souples, une corde"
+  },
+  "analyse": [
+   "À cet âge, l'échec ne vient jamais du contenu technique : il vient de <strong>l'attente</strong>. Une file de dix enfants devant un atelier, et la séance est perdue.",
+   "Une seule consigne à la fois, énoncée en moins de dix secondes, si possible montrée plutôt que dite.",
+   "La technique codifiée n'a pas sa place. On travaille la motricité, les repères spatiaux, le rituel et le plaisir. Le budo est ici un habillage imaginaire, pas un programme."
+  ],
+  "objectif": "À la fin de la séance, l'enfant est capable d'enchaîner un parcours de quatre actions motrices en respectant le sens de circulation et le signal d'arrêt.",
+  "critere": "Chaque enfant réalise le parcours complet au moins quatre fois, sans attendre plus de dix secondes à aucune station, et s'arrête au signal à chaque fois.",
+  "prerequis": "Aucun. Marche, course, saut à pieds joints.",
+  "securite": {
+   "risques": [
+    "Collision à contresens sur le parcours",
+    "Chute d'un banc bas",
+    "Éparpillement hors du tatami",
+    "Enfant qui s'isole et sort du champ de vision"
+   ],
+   "mesures": [
+    "Sens de circulation unique, matérialisé par les plots et rappelé à chaque tour",
+    "Bancs à hauteur maximale de 25 cm, réception sur tatami dégagé",
+    "Limites du tatami matérialisées par la corde, règle annoncée : « on ne sort jamais du tapis »",
+    "L'enseignant se place toujours de façon à voir les quatre stations d'un seul regard",
+    "Effectif compté à voix haute à chaque rassemblement"
+   ],
+   "verifications": [
+    "Aucun objet dur au sol",
+    "Bancs stables",
+    "Pieds nus, cheveux attachés",
+    "Comptage de l'effectif"
+   ]
+  },
+  "plan": [
+   {
+    "temps": "0 – 4′",
+    "titre": "Rituel d'entrée",
+    "objet": "Marquer le passage dans le dojo",
+    "consigne": "Entrée en file, salut collectif court, comptage à voix haute par les enfants, annonce : « aujourd'hui on est des explorateurs. »",
+    "organisation": "Ligne face à l'enseignant.",
+    "critere": "Tous les enfants saluent et se placent seuls sur la ligne.",
+    "variables": [
+     "Faire compter par un enfant"
+    ],
+    "securite": "Comptage de l'effectif."
+   },
+   {
+    "temps": "4 – 12′",
+    "titre": "Réveil en histoire",
+    "objet": "Mobiliser le corps par l'imaginaire",
+    "consigne": "Déplacements en imitant : le chat qui se réveille, la grenouille, le crabe, le géant. Au signal du tambour ou de la voix : statue.",
+    "organisation": "Dispersion libre, l'enseignant au centre.",
+    "critere": "L'enfant se fige au signal en moins de 2 secondes.",
+    "variables": [
+     "Changer d'animal plus vite",
+     "Ajouter une direction imposée"
+    ],
+    "securite": "Yeux ouverts, pas de course sur les autres."
+   },
+   {
+    "temps": "12 – 30′",
+    "titre": "Le parcours des explorateurs",
+    "objet": "Cœur de séance : quatre stations, aucune attente",
+    "consigne": "Quatre stations enchaînées : franchir le banc, sauter dans les cerceaux à pieds joints, ramper sous la corde, toucher la cible avec la main annoncée. Départ toutes les 15 secondes.",
+    "organisation": "Deux parcours identiques en parallèle, 5 enfants par parcours, sens unique. L'enseignant se place au point de croisement.",
+    "critere": "Chaque enfant réalise le parcours complet 4 fois, sans attente supérieure à 10 secondes.",
+    "variables": [
+     "Inverser le sens du parcours",
+     "Annoncer la main droite ou gauche",
+     "Ajouter une couleur de cible",
+     "Chronométrer pour les plus grands"
+    ],
+    "securite": "Un seul enfant par station. Sens unique strict. Réception au sol dégagée."
+   },
+   {
+    "temps": "30 – 38′",
+    "titre": "Le trésor du dojo",
+    "objet": "Coopération et respect de la règle",
+    "consigne": "Jeu : rapporter les cibles une par une de l'autre côté du tatami, sans courir, sans se toucher. Au signal, tout le monde se fige.",
+    "organisation": "Deux équipes de 5, couloirs séparés.",
+    "critere": "Le groupe rapporte toutes les cibles et s'immobilise à chaque signal.",
+    "variables": [
+     "Réduire le couloir",
+     "Transporter à deux",
+     "Interdire d'utiliser les mains"
+    ],
+    "securite": "Marche imposée, pas de course. Couloirs séparés."
+   },
+   {
+    "temps": "38 – 45′",
+    "titre": "Rituel de sortie",
+    "objet": "Fermer le cadre",
+    "consigne": "Rassemblement en cercle, respiration du dragon (souffle long), un mot de chacun sur ce qu'il a préféré, salut final.",
+    "organisation": "Cercle assis.",
+    "critere": "Chaque enfant s'assoit, souffle et prend la parole s'il le souhaite.",
+    "variables": [
+     "Faire mener le souffle par un enfant"
+    ],
+    "securite": "Sol non froid, cercle éloigné des bancs."
+   }
+  ],
+  "regulation": {
+   "difficulte": "Simplifier la station : supprimer le banc, élargir les cerceaux, remonter la corde. Accompagner l'enfant sur le parcours en le nommant.",
+   "avance": "Ajouter une contrainte de latéralité, un chronomètre, ou confier le rôle de guide pour un camarade.",
+   "planb": "Si le groupe se disperse ou si l'attente s'installe : passer à un seul atelier collectif mené par l'enseignant, en dispersion. À cet âge, un groupe dispersé ne se récupère pas en haussant la voix, mais en réduisant la complexité."
+  },
+  "jury_observe": [
+   "Le temps d'attente réel : c'est le premier critère sur ce public.",
+   "La longueur des consignes et le nombre d'idées par consigne.",
+   "Le placement de l'enseignant : voit-il tout le groupe en permanence ?",
+   "L'existence et le respect d'un rituel d'entrée et de sortie.",
+   "L'adaptation à l'âge : absence de technique codifiée, présence du jeu et de l'imaginaire."
+  ],
+  "entretien": [
+   [
+    "Quel est le premier risque d'échec sur ce public ?",
+    "L'attente. Un enfant de cinq ans qui patiente vingt secondes décroche, et une fois décroché il entraîne les autres. C'est pourquoi j'ai doublé le parcours : deux circuits parallèles de cinq, avec un départ toutes les quinze secondes. Aucun enfant ne reste immobile plus de dix secondes."
+   ],
+   [
+    "Où est le budo dans cette séance ?",
+    "Dans le cadre, pas dans la technique. Le salut, le comptage, le signal d'arrêt, la règle de ne pas sortir du tapis, le respect du sens de circulation : c'est le rituel et l'obéissance à la règle qui construisent le budoka à cet âge. La technique viendra à six ou sept ans, sur un corps qui sait déjà se déplacer et s'arrêter."
+   ],
+   [
+    "Comment donnez-vous une consigne à des enfants de quatre ans ?",
+    "Courte, unique, et montrée. Une seule idée : « on saute dans les ronds ». Je montre plutôt que je décris. Et je vérifie en faisant faire, pas en demandant si c'est compris — à cet âge, ils répondent oui par principe."
+   ],
+   [
+    "Comment évaluez-vous sur ce public ?",
+    "Pas par une note ni un passage de grade. Par l'observation de la participation, de la capacité à respecter le signal d'arrêt, et de l'autonomie sur le parcours. J'ai fixé un critère observable — quatre tours complets, arrêt au signal à chaque fois — que je peux vérifier sans interrompre la séance."
+   ]
+  ],
+  "erreurs": [
+   "Un atelier unique avec dix enfants en file : erreur fatale sur ce public.",
+   "Des consignes de trente secondes : l'attention est perdue à la dixième.",
+   "Introduire une technique codifiée pour « faire sérieux » devant le jury.",
+   "Se placer dos à une partie du tatami, ne serait-ce que pour aider un enfant.",
+   "Supprimer le rituel par manque de temps : c'est justement ce que le jury vient voir."
+  ]
+ },
+ {
+  "id": "CO5",
+  "public": "ados",
+  "theme_id": "TH03",
+  "theme": "Enchaîner percussion et projection",
+  "contexte": {
+   "effectif": "12 pratiquants de 14 à 17 ans",
+   "niveau": "ceintures bleues à marron, 4 à 6 ans de pratique",
+   "duree": "75 minutes",
+   "surface": "tatami 12 × 12 m",
+   "materiel": "6 cibles souples, protections de poings"
+  },
+  "analyse": [
+   "Le mot décisif est <strong>enchaîner</strong>. Le jury n'attend pas une percussion puis une projection : il attend que vous traitiez <em>le lien</em> — ce que la percussion produit chez l'adversaire et qui rend la projection possible.",
+   "Ce lien a un nom concret : la réaction. Une frappe provoque un recul, une protection, un déséquilibre. La projection exploite cette réaction. Si vous ne montrez pas cela, le thème n'est pas traité.",
+   "Cette liaison percussion-projection est au cœur de l'identité du Yoseikan Budo : c'est le thème sur lequel le jury attend le plus de cohérence avec la discipline.",
+   "Piège : la complexité. Deux techniques enchaînées, c'est déjà beaucoup. N'en ajoutez pas une troisième."
+  ],
+  "objectif": "À la fin de la séance, le pratiquant est capable d'exploiter la réaction provoquée par une percussion pour entrer et projeter.",
+  "critere": "Sur 10 tentatives en opposition souple, le pratiquant enchaîne percussion et entrée dans le même temps au moins 6 fois, sans temps d'arrêt marqué entre les deux actions.",
+  "prerequis": "Direct et fouetté maîtrisés, une projection de base acquise, chute arrière et latérale assurées.",
+  "securite": {
+   "risques": [
+    "Projection sur un partenaire qui ne maîtrise pas la chute",
+    "Percussion non contrôlée au moment de l'entrée",
+    "Collision entre binômes lors des projections",
+    "Réception sur le bras tendu"
+   ],
+   "mesures": [
+    "Vérification des chutes en échauffement : aucun binôme ne projette avant validation",
+    "Zone de projection délimitée, un seul axe par binôme, 3 m entre binômes",
+    "Percussion contrôlée obligatoire, protections de poings, aucune technique au visage",
+    "Uke accompagne et ne résiste pas tant que le niveau 3 n'est pas atteint",
+    "Signal d'arrêt commun, testé en début de séance"
+   ],
+   "verifications": [
+    "Protections disponibles pour tous",
+    "Tatami sans interstice",
+    "Appariement par gabarit et par niveau de chute"
+   ]
+  },
+  "plan": [
+   {
+    "temps": "0 – 4′",
+    "titre": "Accueil et annonce",
+    "objet": "Poser l'objectif",
+    "consigne": "Salut, annonce de l'objectif et du critère de réussite. Rappel du signal d'arrêt, testé à blanc.",
+    "organisation": "En ligne.",
+    "critere": "Le groupe a entendu l'objectif et testé le signal d'arrêt.",
+    "variables": [],
+    "securite": "Test du signal."
+   },
+   {
+    "temps": "4 – 16′",
+    "titre": "Échauffement spécifique",
+    "objet": "Préparer appuis, entrées et chutes",
+    "consigne": "Élévation générale, mobilisation articulaire, puis déplacements avec entrée sur cible. Batterie de chutes : arrière, latérale, avant roulée. Validation individuelle des chutes.",
+    "organisation": "Dispersion puis rangs pour les chutes.",
+    "critere": "Chaque pratiquant réalise 5 chutes de chaque type sans faute de protection : condition d'accès à la suite.",
+    "variables": [
+     "Chute sur déséquilibre du partenaire"
+    ],
+    "securite": "Aucun binôme non validé ne projette ensuite."
+   },
+   {
+    "temps": "16 – 30′",
+    "titre": "Décomposition : la réaction",
+    "objet": "Isoler ce qui rend la projection possible",
+    "consigne": "Uke tient une cible. Tori frappe. Uke exagère volontairement sa réaction : recul, protection, ouverture. Tori observe et nomme ce qui s'ouvre.",
+    "organisation": "Par deux, rotation toutes les 3 minutes.",
+    "critere": "Tori nomme correctement la réaction produite sur au moins 3 frappes sur 5.",
+    "variables": [
+     "Changer la technique de percussion",
+     "Uke réagit différemment sans prévenir"
+    ],
+    "securite": "Percussion contrôlée sur cible uniquement."
+   },
+   {
+    "temps": "30 – 46′",
+    "titre": "Recomposition : entrer sur la réaction",
+    "objet": "Lier les deux temps",
+    "consigne": "Tori frappe, Uke réagit, Tori entre immédiatement dans l'espace ouvert et amène la projection. Trois niveaux : Uke coopère, Uke réagit normalement, Uke résiste légèrement.",
+    "organisation": "Par deux, axe de projection imposé, 3 m entre binômes. Passage au niveau supérieur validé par l'enseignant.",
+    "critere": "L'entrée se fait dans le prolongement de la frappe, sans temps d'arrêt : 6 réussites sur 10.",
+    "variables": [
+     "Niveau de résistance d'Uke",
+     "Distance de départ",
+     "Percussion imposée ou libre"
+    ],
+    "securite": "Progression stricte des niveaux. Uke accompagne au niveau 1 et 2."
+   },
+   {
+    "temps": "46 – 62′",
+    "titre": "Opposition souple à thème",
+    "objet": "Faire vivre le lien sous incertitude",
+    "consigne": "Randori souple de 90 secondes. Seule contrainte : toute projection doit être précédée d'une percussion. Rotation des partenaires à chaque séquence.",
+    "organisation": "Par deux, 4 binômes en simultané, les autres observent avec deux critères écrits.",
+    "critere": "Le lien percussion-entrée apparaît au moins 3 fois dans la séquence.",
+    "variables": [
+     "Limiter les cibles de percussion",
+     "Handicaper l'un des deux",
+     "Réduire l'espace"
+    ],
+    "securite": "Intensité annoncée. Appariement par gabarit. Arrêt immédiat sur perte de contrôle."
+   },
+   {
+    "temps": "62 – 75′",
+    "titre": "Retour au calme et bilan",
+    "objet": "Formaliser l'acquis",
+    "consigne": "Étirements légers, puis question au groupe : « qu'est-ce qui rendait la projection possible ? ». Formalisation de la notion de réaction. Annonce de la séance suivante.",
+    "organisation": "Cercle.",
+    "critere": "Le groupe formule que c'est la réaction de l'adversaire, non la force, qui ouvre la projection.",
+    "variables": [
+     "Faire démontrer par un binôme"
+    ],
+    "securite": "Pas d'étirement passif intense après opposition."
+   }
+  ],
+  "regulation": {
+   "difficulte": "Revenir au niveau 1 : Uke annonce sa réaction avant la frappe. Réduire à une seule percussion et une seule projection, imposées.",
+   "avance": "Laisser le choix de la percussion et de la projection, ou imposer que la projection change à chaque réussite. Confier un rôle d'observateur-analyste.",
+   "planb": "Si les chutes ne sont pas assurées : la séance devient percussion + entrée + contrôle du déséquilibre, sans projection au sol. On ne projette jamais sur un partenaire qui ne sait pas chuter, même si le thème le demande — et on l'explique au jury."
+  },
+  "jury_observe": [
+   "Le lien entre les deux actions est-il traité, ou les deux techniques sont-elles simplement juxtaposées ?",
+   "La décomposition est-elle suivie d'une recomposition, ou la séance reste-t-elle analytique ?",
+   "Les chutes sont-elles vérifiées avant d'autoriser les projections ?",
+   "La montée en incertitude est-elle progressive et maîtrisée ?",
+   "Le temps de pratique par rapport au temps de démonstration."
+  ],
+  "entretien": [
+   [
+    "Qu'est-ce qui fait qu'on enchaîne, et qu'on ne juxtapose pas ?",
+    "La réaction de l'adversaire. Une percussion provoque un recul, une protection ou une ouverture. La projection n'est pas une deuxième technique décidée d'avance : c'est l'exploitation de cette réaction. C'est pour cela que j'ai construit une situation entière — quatorze minutes — uniquement sur l'observation et la nomination de la réaction, avant toute projection."
+   ],
+   [
+    "Analytique ou global : où vous situez-vous sur cette séance ?",
+    "Les deux, dans cet ordre : global au départ pour donner du sens, analytique pour isoler la réaction, global à nouveau en opposition pour réintégrer. L'analytique seul produit des pratiquants qui exécutent une combinaison apprise mais ne la retrouvent jamais en opposition."
+   ],
+   [
+    "Un pratiquant chute mal. Vous êtes en pleine séance de projection. Que faites-vous ?",
+    "Je l'arrête immédiatement sur les projections, sans exception et sans négociation. Je le repositionne sur le travail percussion-entrée-déséquilibre contrôlé, avec un partenaire qui accompagne. Et je reprends la chute avec lui en fin de séance. Ma responsabilité est une obligation de moyens : faire projeter quelqu'un qui ne sait pas chuter, c'est manquer à cette obligation."
+   ],
+   [
+    "En quoi cette séance est-elle spécifique au Yoseikan Budo ?",
+    "Parce que la liaison entre percussion et projection est précisément ce qui caractérise la discipline : elle ne juxtapose pas des registres empruntés à d'autres arts, elle les articule autour de principes communs de déséquilibre et de mouvement. Une séance qui traiterait la percussion puis la projection sans le lien serait techniquement correcte mais passerait à côté de l'identité de la discipline."
+   ]
+  ],
+  "erreurs": [
+   "Enseigner la percussion puis la projection sans jamais traiter le lien.",
+   "Autoriser les projections sans avoir vérifié les chutes.",
+   "Ajouter une troisième technique pour « enrichir » : le groupe ne réussira rien.",
+   "Passer directement à l'opposition sans les trois niveaux de résistance progressifs.",
+   "Faire une démonstration de cinq minutes : le temps de pratique s'effondre."
+  ]
+ },
+ {
+  "id": "CO6",
+  "public": "ados",
+  "theme_id": "TH12",
+  "theme": "Randori aménagé : gérer l'intensité et la sécurité",
+  "contexte": {
+   "effectif": "14 pratiquants de 15 à 18 ans",
+   "niveau": "hétérogène, ceintures vertes à marron",
+   "duree": "75 minutes",
+   "surface": "tatami 12 × 12 m",
+   "materiel": "protège-dents, protections de poings et pieds, chasubles de 2 couleurs, chronomètre"
+  },
+  "analyse": [
+   "Thème le plus risqué du tirage. Une opposition libre sans cadre est <strong>éliminatoire</strong> : le jury juge d'abord votre capacité à contenir l'intensité.",
+   "« Aménagé » est le mot central. Un randori aménagé, ce n'est pas un randori raccourci : c'est un randori dont on a modifié les règles pour cibler un apprentissage précis.",
+   "Sur un public adolescent hétérogène, l'appariement est un acte pédagogique majeur — il ne se délègue jamais au hasard ni aux affinités."
+  ],
+  "objectif": "À la fin de la séance, le pratiquant est capable de maintenir une intensité adaptée à son partenaire tout en poursuivant un objectif technique imposé.",
+  "critere": "Sur trois séquences d'opposition, aucun arrêt pour intensité excessive n'est nécessaire, et le thème imposé apparaît au moins trois fois par séquence.",
+  "prerequis": "Techniques de base maîtrisées, chutes assurées, expérience de l'opposition codifiée.",
+  "securite": {
+   "risques": [
+    "Escalade réciproque de l'intensité, particulièrement entre pratiquants de même niveau",
+    "Écart de gabarit ou de niveau produisant une domination unilatérale",
+    "Fatigue de fin de séance entraînant une dégradation technique et des chocs",
+    "Contentieux personnel entre deux pratiquants réglé sur le tatami"
+   ],
+   "mesures": [
+    "Protections obligatoires, vérifiées individuellement avant la première séquence",
+    "Appariement décidé par l'enseignant, par gabarit et par niveau, jamais par affinité",
+    "Séquences courtes de 90 secondes, récupération complète entre chaque",
+    "Règles annoncées avant chaque séquence : cibles autorisées, intensité, ce qui est interdit",
+    "Signal d'arrêt commun, plus un arrêt possible par tout pratiquant à tout moment sans justification",
+    "Un binôme au repos observe et peut alerter l'enseignant"
+   ],
+   "verifications": [
+    "Protections complètes et en bon état",
+    "Effectif et appariement notés avant de commencer",
+    "État de santé du jour demandé au groupe",
+    "Espace dégagé, aucun binôme près du bord"
+   ]
+  },
+  "plan": [
+   {
+    "temps": "0 – 5′",
+    "titre": "Cadre et règles",
+    "objet": "Poser le contrat avant toute opposition",
+    "consigne": "Annonce de l'objectif. Énoncé explicite des règles : cibles autorisées, intensité attendue, signal d'arrêt, droit d'arrêter à tout moment. Vérification des protections.",
+    "organisation": "En ligne, protections portées.",
+    "critere": "Chaque pratiquant a reformulé une règle. Protections vérifiées individuellement.",
+    "variables": [],
+    "securite": "Aucune opposition avant cette étape."
+   },
+   {
+    "temps": "5 – 20′",
+    "titre": "Échauffement progressif",
+    "objet": "Préparer au contact",
+    "consigne": "Élévation générale, mobilisation, puis travail à deux non opposé : déplacements en miroir, touches légères sur cible, chutes.",
+    "organisation": "Par deux, binômes définis par l'enseignant.",
+    "critere": "Chaque pratiquant est en sueur, mobile, et a repris contact avec un partenaire.",
+    "variables": [
+     "Miroir plus rapide",
+     "Ajouter une touche"
+    ],
+    "securite": "Contact léger uniquement."
+   },
+   {
+    "temps": "20 – 34′",
+    "titre": "Randori à contrainte unique",
+    "objet": "Aménager par la règle",
+    "consigne": "Séquences de 90 secondes. Contrainte : une seule famille de techniques autorisée, annoncée avant chaque séquence. Récupération de 60 secondes.",
+    "organisation": "Par deux, 5 binômes en simultané, rotation imposée. Un binôme observe.",
+    "critere": "Le thème imposé apparaît au moins 3 fois. Aucun arrêt pour intensité.",
+    "variables": [
+     "Changer la famille autorisée",
+     "Interdire le recul",
+     "Réduire la zone"
+    ],
+    "securite": "Chronométrage strict. Arrêt du binôme observateur sur alerte."
+   },
+   {
+    "temps": "34 – 50′",
+    "titre": "Randori à rôles dissymétriques",
+    "objet": "Réguler l'intensité par la tâche",
+    "consigne": "Un attaque, l'autre défend uniquement. Inversion à mi-temps. Le défenseur ne peut pas riposter : il esquive, contrôle, sort.",
+    "organisation": "Par deux, appariement modifié pour croiser les niveaux, le plus fort en défenseur.",
+    "critere": "Le défenseur tient 45 secondes sans être touché plus de 3 fois.",
+    "variables": [
+     "Autoriser une riposte",
+     "Limiter l'espace du défenseur",
+     "Deux attaquants successifs"
+    ],
+    "securite": "Le rôle de défenseur est attribué au plus fort ou au plus lourd : c'est ce qui neutralise l'écart."
+   },
+   {
+    "temps": "50 – 64′",
+    "titre": "Randori libre encadré",
+    "objet": "Opposition complète, cadre maintenu",
+    "consigne": "Séquences de 90 secondes, toutes techniques autorisées dans les cibles annoncées. Rotation à chaque séquence.",
+    "organisation": "Par deux, appariement resserré par gabarit, 4 binômes maximum en simultané.",
+    "critere": "Aucun arrêt pour intensité excessive sur l'ensemble des séquences.",
+    "variables": [
+     "Revenir à une contrainte unique si l'intensité monte"
+    ],
+    "securite": "Surveillance rapprochée. L'enseignant ne corrige personne pendant cette phase : il surveille."
+   },
+   {
+    "temps": "64 – 75′",
+    "titre": "Retour au calme et bilan",
+    "objet": "Analyser l'intensité vécue",
+    "consigne": "Récupération active, étirements légers. Question : « comment avez-vous su à quelle intensité aller avec votre partenaire ? ». Retour individuel bref à chacun.",
+    "organisation": "Cercle.",
+    "critere": "Chaque pratiquant formule un repère personnel de régulation de l'intensité.",
+    "variables": [
+     "Faire échanger les binômes sur leur ressenti"
+    ],
+    "securite": "Récupération réelle avant les étirements."
+   }
+  ],
+  "regulation": {
+   "difficulte": "Réduire à un seul rôle : le pratiquant en difficulté reste défenseur, ou passe en observateur-arbitre. Raccourcir les séquences à 45 secondes.",
+   "avance": "Handicap volontaire : main faible uniquement, espace réduit, deux adversaires successifs sans récupération.",
+   "planb": "Si l'intensité devient incontrôlable ou si le groupe est trop hétérogène : suppression du randori libre, retour définitif aux rôles dissymétriques. Devant un jury, renoncer à l'opposition libre par sécurité est valorisé — la subir ne l'est jamais."
+  },
+  "jury_observe": [
+   "Les règles sont-elles énoncées avant chaque séquence, ou une seule fois au début ?",
+   "L'appariement est-il raisonné et visiblement décidé par l'enseignant ?",
+   "Les protections sont-elles vérifiées individuellement ?",
+   "L'enseignant surveille-t-il, ou se met-il à corriger la technique pendant l'opposition ?",
+   "Les temps de récupération sont-ils réels ?",
+   "L'enseignant sait-il arrêter une situation qui dérape, et le fait-il assez tôt ?"
+  ],
+  "entretien": [
+   [
+    "Qu'est-ce qui distingue un randori aménagé d'un randori libre ?",
+    "L'aménagement porte sur les règles, pas sur la durée. Je modifie une variable — les techniques autorisées, les rôles, l'espace, le nombre — pour cibler un apprentissage précis et contenir l'intensité. Un randori simplement raccourci reste un randori libre, avec les mêmes risques."
+   ],
+   [
+    "Vous avez mis le plus fort en défenseur. Pourquoi ?",
+    "Parce que c'est ce qui neutralise l'écart sans humilier personne. Le plus fort a une tâche exigeante — tenir sans riposter — et le plus faible peut enfin construire ses attaques. Les deux travaillent réellement. Séparer les niveaux en deux groupes aurait été plus simple, mais aurait privé les faibles de partenaires exigeants."
+   ],
+   [
+    "Pendant le randori libre, vous n'avez corrigé personne. C'est un oubli ?",
+    "Non, c'est un choix. Pendant une opposition libre, ma tâche prioritaire est la surveillance : je dois voir les quatre binômes en permanence. Corriger un pratiquant, c'est cesser de voir les trois autres. Je note ce que j'observe et je le traite au retour au calme ou à la séance suivante."
+   ],
+   [
+    "Deux pratiquants montent en intensité l'un contre l'autre. Que faites-vous ?",
+    "J'arrête la séquence, pas seulement le binôme — arrêter tout le monde évite de désigner des coupables. Je rappelle la règle et je la fais reformuler. Puis je change l'appariement : je ne les remets pas ensemble. Si cela se reproduit, je les sors de l'opposition et je les mets en rôle d'arbitre. Et j'en parle après le cours, jamais au bord du tatami."
+   ]
+  ],
+  "erreurs": [
+   "Lancer une opposition libre sans avoir énoncé les cibles, l'intensité et le signal d'arrêt.",
+   "Laisser les pratiquants choisir leur partenaire.",
+   "Enchaîner les séquences sans récupération réelle : la fatigue produit les chocs.",
+   "Corriger la technique au lieu de surveiller pendant l'opposition.",
+   "Attendre l'incident pour arrêter : le jury juge le moment où vous intervenez."
+  ]
+ },
+ {
+  "id": "CO7",
+  "public": "ados",
+  "theme_id": "TH07",
+  "theme": "Saisies et libérations",
+  "contexte": {
+   "effectif": "10 adultes de 25 à 52 ans",
+   "niveau": "hétérogène, du débutant au 1er dan, dont deux reprises après interruption",
+   "duree": "75 minutes",
+   "surface": "tatami 10 × 12 m",
+   "materiel": "aucun"
+  },
+  "analyse": [
+   "Le thème n'est pas « se libérer » mais <strong>saisies et libérations</strong> : les deux rôles doivent être enseignés. Un saisisseur sans consigne rend toute la situation fausse.",
+   "L'erreur classique est de chercher la force. Le principe à faire découvrir est mécanique : on sort par le point faible de la prise — l'ouverture entre pouce et doigts — et par le déplacement du corps entier, pas par la traction du bras.",
+   "Public adulte hétérogène avec des reprises : la vigilance articulaire prime. L'épaule et le poignet sont les zones à risque.",
+   "Le jury attend une montée en incertitude en trois temps : saisie consentie, résistante, dynamique. Sauter directement au dynamique est une faute de progression."
+  ],
+  "objectif": "À la fin de la séance, le pratiquant est capable de se libérer d'une saisie résistante au poignet en utilisant le déplacement de son corps plutôt que la force du bras.",
+  "critere": "Sur 10 saisies résistantes, le pratiquant se libère au moins 7 fois en déplaçant ses appuis, sans traction en force et sans que le saisisseur ne lâche volontairement.",
+  "prerequis": "Notions de garde et de déplacement. Aucun prérequis technique sur les saisies.",
+  "securite": {
+   "risques": [
+    "Torsion du poignet lors d'une libération en force",
+    "Sollicitation de l'épaule chez les pratiquants en reprise",
+    "Saisie devenant clé articulaire par excès d'engagement",
+    "Écart de force important entre deux adultes"
+   ],
+   "mesures": [
+    "Aucun blocage ni torsion articulaire pendant toute la séance : annoncé et rappelé",
+    "Signal d'arrêt tactile : double frappe sur le partenaire ou sur soi, testé en début de séance",
+    "Le saisisseur a une consigne d'intensité explicite à chaque niveau",
+    "Appariement par gabarit ; les deux pratiquants en reprise sont appariés avec des partenaires expérimentés",
+    "Sondage de l'état de santé du jour avant de commencer"
+   ],
+   "verifications": [
+    "Ongles courts, alliances retirées",
+    "Antécédents épaule et poignet demandés",
+    "Tatami dégagé"
+   ]
+  },
+  "plan": [
+   {
+    "temps": "0 – 5′",
+    "titre": "Accueil et cadrage",
+    "objet": "Recueillir l'état du jour",
+    "consigne": "Salut, annonce de l'objectif. Question ouverte au groupe sur les blessures ou gênes du jour. Annonce des règles : aucun blocage articulaire, signal d'arrêt tactile testé immédiatement.",
+    "organisation": "Cercle.",
+    "critere": "Chaque pratiquant a signalé ou non une gêne, et testé le signal d'arrêt.",
+    "variables": [],
+    "securite": "Le sondage conditionne les appariements."
+   },
+   {
+    "temps": "5 – 17′",
+    "titre": "Échauffement orienté préhension",
+    "objet": "Préparer poignets, épaules et appuis",
+    "consigne": "Élévation générale, mobilisation complète poignets-coudes-épaules, puis déplacements en garde avec changements de direction. Jeu des mains : toucher l'avant-bras du partenaire sans être touché.",
+    "organisation": "Dispersion puis par deux.",
+    "critere": "Amplitude articulaire complète sans douleur, et mobilité des appuis en place.",
+    "variables": [
+     "Jeu des mains sur un pied",
+     "Espace réduit"
+    ],
+    "securite": "Aucune amplitude forcée."
+   },
+   {
+    "temps": "17 – 32′",
+    "titre": "Niveau 1 — comprendre la prise",
+    "objet": "Découvrir le point faible",
+    "consigne": "Saisie du poignet consentie, sans résistance. Le saisi explore : où la prise est-elle faible ? Recherche libre de deux minutes, puis mise en commun des trouvailles.",
+    "organisation": "Par deux, rotation à mi-temps.",
+    "critere": "Le pratiquant identifie et nomme l'ouverture pouce-doigts comme point de sortie.",
+    "variables": [
+     "Saisie à deux mains",
+     "Saisie croisée",
+     "Yeux fermés pour privilégier la sensation"
+    ],
+    "securite": "Aucune résistance à ce niveau."
+   },
+   {
+    "temps": "32 – 48′",
+    "titre": "Niveau 2 — sortir par le corps",
+    "objet": "Substituer le déplacement à la force",
+    "consigne": "Saisie résistante mais statique. Consigne au saisisseur : « tu tiens fermement mais tu ne bouges pas les pieds ». Le saisi doit sortir en déplaçant ses appuis, bras relâché.",
+    "organisation": "Par deux, rotation toutes les 4 minutes, appariements croisés en force.",
+    "critere": "7 libérations sur 10 obtenues par déplacement, sans traction du bras.",
+    "variables": [
+     "Saisie plus haute ou plus basse",
+     "Deux mains",
+     "Saisi qui part d'une position désavantageuse"
+    ],
+    "securite": "Consigne explicite au saisisseur. Aucune torsion. Arrêt sur double frappe."
+   },
+   {
+    "temps": "48 – 62′",
+    "titre": "Niveau 3 — saisie dynamique",
+    "objet": "Ajouter l'incertitude",
+    "consigne": "Le saisisseur se déplace et saisit au moment de son choix. Le saisi se libère et enchaîne par une action simple : reprise de distance ou contrôle.",
+    "organisation": "Par deux, espace délimité, 4 binômes en simultané.",
+    "critere": "La libération intervient dans les deux secondes suivant la saisie, 6 fois sur 10.",
+    "variables": [
+     "Le saisisseur peut choisir entre deux saisies",
+     "Enchaînement imposé après la libération",
+     "Espace réduit"
+    ],
+    "securite": "Intensité annoncée. Le saisisseur ne verrouille jamais."
+   },
+   {
+    "temps": "62 – 75′",
+    "titre": "Retour au calme et bilan",
+    "objet": "Formaliser le principe",
+    "consigne": "Récupération, étirements doux des membres supérieurs. Question : « qu'est-ce qui vous a permis de sortir sans forcer ? ». Formalisation du principe : le point faible et le déplacement du corps.",
+    "organisation": "Cercle.",
+    "critere": "Le groupe formule le principe mécanique en ses propres termes.",
+    "variables": [
+     "Faire démontrer par un binôme"
+    ],
+    "securite": "Étirements doux, pas de traction sur l'épaule."
+   }
+  ],
+  "regulation": {
+   "difficulte": "Rester au niveau 2 avec une saisie moins ferme. Guider physiquement le déplacement des appuis. Pour les reprises après interruption : réduire le volume, augmenter les temps de rotation.",
+   "avance": "Saisies multiples, saisie du vêtement, libération suivie d'une entrée. Confier l'observation d'un binôme avec deux critères.",
+   "planb": "Si une gêne articulaire apparaît chez un pratiquant : il passe en rôle de saisisseur exclusif, puis d'observateur si nécessaire. Si le groupe part en force partout, retour collectif au niveau 1 : la force est le symptôme d'un principe non compris."
+  },
+  "jury_observe": [
+   "Les deux rôles sont-ils enseignés, ou le saisisseur est-il un simple accessoire ?",
+   "La montée en résistance est-elle réellement progressive et annoncée ?",
+   "Les consignes de sécurité articulaire sont-elles posées et tenues ?",
+   "L'hétérogénéité du groupe est-elle prise en compte dans les appariements ?",
+   "Le principe mécanique est-il découvert par les pratiquants, ou asséné par l'enseignant ?"
+  ],
+  "entretien": [
+   [
+    "Pourquoi une phase de recherche libre au lieu de montrer la solution ?",
+    "Parce que le principe se sent avant de se comprendre. En deux minutes d'exploration, la plupart trouvent seuls l'ouverture entre pouce et doigts. Ce qu'ils ont trouvé, ils le retiennent ; ce que j'aurais montré, ils l'auraient oublié. Je formalise ensuite en mise en commun, ce qui valide leur découverte."
+   ],
+   [
+    "Votre groupe va de débutant à 1er dan. Comment gérez-vous cet écart ?",
+    "Objectif commun, exigences différenciées. Le débutant travaille la sortie sur saisie statique ; le 1er dan travaille sur saisie dynamique avec enchaînement. Et j'apparie volontairement en croisant les niveaux : l'expérimenté a la responsabilité de doser sa résistance, ce qui est en soi un apprentissage exigeant pour lui."
+   ],
+   [
+    "Deux pratiquants reprennent après une longue interruption. Qu'avez-vous adapté ?",
+    "Trois choses. J'ai sondé leur état articulaire avant de commencer. Je les ai appariés avec des partenaires expérimentés, capables de doser. Et j'ai réduit leur volume : rotations plus fréquentes, donc plus de temps en rôle de saisisseur, qui est moins sollicitant pour l'épaule. L'objectif reste le même, le chemin diffère."
+   ],
+   [
+    "Où est la limite entre une saisie et une clé articulaire ?",
+    "La saisie contrôle un segment, la clé le met en tension au-delà de son amplitude. J'ai posé la règle en début de séance et je l'ai rappelée à chaque niveau : aucune torsion, aucun verrouillage. C'est une règle de sécurité, pas une limitation technique — les clés s'enseignent, mais pas dans une séance de découverte des libérations, et pas sur un groupe hétérogène."
+   ]
+  ],
+  "erreurs": [
+   "Laisser le saisisseur sans consigne d'intensité : la situation perd toute valeur.",
+   "Passer directement à la saisie dynamique.",
+   "Enseigner la libération comme une technique à mémoriser plutôt qu'un principe à comprendre.",
+   "Négliger le sondage de l'état de santé sur un public adulte.",
+   "Rester sur une seule saisie pendant toute la séance."
+  ]
+ },
+ {
+  "id": "CO8",
+  "public": "adapte",
+  "theme_id": "TH09",
+  "theme": "Adapter une séance à un public à besoins spécifiques",
+  "contexte": {
+   "effectif": "8 pratiquants adultes, dont 3 en situation de handicap : un pratiquant malvoyant, un pratiquant avec déficience motrice du membre inférieur droit, un pratiquant avec trouble de l'attention",
+   "niveau": "mixte, 1 à 4 ans de pratique",
+   "duree": "75 minutes",
+   "surface": "tatami 10 × 10 m",
+   "materiel": "6 cibles souples, 8 plots, une bande sonore ou clochette, 2 chaises"
+  },
+  "analyse": [
+   "Le piège absolu de ce thème est la <strong>sous-sollicitation</strong>. Par prudence, le candidat propose une séance appauvrie — et le jury sanctionne, parce que c'est une forme d'exclusion.",
+   "La règle est : <strong>même objectif pour tous, moyens différenciés</strong>. On n'abaisse jamais l'objectif, on modifie le chemin.",
+   "Deuxième piège : constituer un groupe à part. Créer un atelier « pour eux » à côté du groupe est une exclusion de fait, même bien intentionnée.",
+   "Le jury attend que vous nommiez la contrainte, annonciez l'adaptation retenue, et la justifiiez. L'adaptation implicite ne compte pas."
+  ],
+  "objectif": "À la fin de la séance, le pratiquant est capable de percevoir l'arrivée d'une attaque et d'y répondre par une action de protection adaptée à ses possibilités.",
+  "critere": "Sur 10 attaques annoncées puis non annoncées, le pratiquant produit une réponse de protection cohérente au moins 7 fois, quelle que soit la forme de cette réponse.",
+  "prerequis": "Aucun prérequis technique commun exigé. La séance est conçue pour un groupe mixte.",
+  "securite": {
+   "risques": [
+    "Désorientation du pratiquant malvoyant lors des déplacements collectifs",
+    "Déséquilibre et chute du pratiquant à déficience motrice",
+    "Décrochage et sortie de tâche du pratiquant à trouble attentionnel",
+    "Sur-sollicitation par méconnaissance des limites réelles de chacun"
+   ],
+   "mesures": [
+    "Repères sonores et tactiles constants : bordure du tatami repérée, partenaire référent identifié à la voix",
+    "Espace de travail fixe et jamais réorganisé en cours de séance pour le pratiquant malvoyant",
+    "Travail possible assis sur chaise, sans que cela constitue une situation à part : plusieurs postes assis pour tous",
+    "Consignes courtes, une seule à la fois, avec vérification individuelle",
+    "Échange préalable avec chaque pratiquant sur ce qu'il peut et veut faire — jamais de présupposé"
+   ],
+   "verifications": [
+    "Espace libre de tout obstacle, y compris en périphérie",
+    "Chaises stables et testées",
+    "Point sur l'état du jour avec chacun",
+    "Partenaires référents désignés avant le début"
+   ]
+  },
+  "plan": [
+   {
+    "temps": "0 – 6′",
+    "titre": "Accueil et contrat",
+    "objet": "Nommer les adaptations, sans mise à l'écart",
+    "consigne": "Salut. Annonce de l'objectif commun. Annonce explicite au groupe entier des trois adaptations retenues et de leur raison. Désignation des partenaires référents.",
+    "organisation": "Cercle, tout le monde ensemble.",
+    "critere": "Chacun sait ce qu'il va faire et avec qui. Aucun pratiquant n'est mis à part.",
+    "variables": [],
+    "securite": "Repérage du tatami avec le pratiquant malvoyant."
+   },
+   {
+    "temps": "6 – 18′",
+    "titre": "Échauffement en place",
+    "objet": "Préparer sans exclure",
+    "consigne": "Échauffement articulaire complet réalisé sur place, debout ou assis au choix de chacun. Rythme donné à la voix et par la clochette. Aucun déplacement collectif à ce stade.",
+    "organisation": "En cercle, tout le monde au même endroit, sans déplacement.",
+    "critere": "Chaque pratiquant mobilise l'ensemble de ses articulations disponibles.",
+    "variables": [
+     "Rythme accéléré",
+     "Ajouter une rotation du tronc"
+    ],
+    "securite": "Sur place : le déplacement collectif est le premier facteur de désorientation."
+   },
+   {
+    "temps": "18 – 34′",
+    "titre": "Percevoir l'attaque annoncée",
+    "objet": "Installer la perception",
+    "consigne": "Par deux. Le partenaire annonce à la voix « haut » ou « bas » puis attaque lentement avec la cible. Le pratiquant produit une protection : bras, déplacement, esquive du buste — la forme est libre.",
+    "organisation": "Par deux, positions fixes, chacun à son poste. Rotation par déplacement des attaquants uniquement.",
+    "critere": "7 protections cohérentes sur 10 attaques annoncées.",
+    "variables": [
+     "Réduire le délai entre annonce et attaque",
+     "Ajouter une troisième zone",
+     "Attaque plus rapide"
+    ],
+    "securite": "Cible souple uniquement. Le pratiquant assis travaille les mêmes zones. Rotation des attaquants, jamais des postes."
+   },
+   {
+    "temps": "34 – 50′",
+    "titre": "Percevoir sans annonce",
+    "objet": "Augmenter l'incertitude",
+    "consigne": "Même dispositif, sans annonce verbale. Pour le pratiquant malvoyant, l'annonce est remplacée par un contact préalable à l'avant-bras qui signale l'imminence, non la zone.",
+    "organisation": "Idem, rotation des attaquants toutes les 3 minutes.",
+    "critere": "7 protections cohérentes sur 10 attaques non annoncées.",
+    "variables": [
+     "Varier le rythme des attaques",
+     "Deux attaques successives",
+     "Attaquant plus proche"
+    ],
+    "securite": "Le signal tactile est une adaptation du canal d'information, pas une facilitation de la tâche."
+   },
+   {
+    "temps": "50 – 64′",
+    "titre": "Protéger et sortir",
+    "objet": "Réintégrer une réponse complète",
+    "consigne": "Après la protection, le pratiquant produit une action de dégagement : pas de côté, rotation du buste, poussée sur la cible — selon ses possibilités.",
+    "organisation": "Par deux, espace élargi mais repères maintenus.",
+    "critere": "La protection est suivie d'une action de dégagement dans 6 cas sur 10.",
+    "variables": [
+     "Imposer le côté du dégagement",
+     "Attaquant qui suit"
+    ],
+    "securite": "Zone de dégagement délimitée et repérée pour chacun."
+   },
+   {
+    "temps": "64 – 75′",
+    "titre": "Retour au calme et bilan",
+    "objet": "Valoriser et projeter",
+    "consigne": "Cercle, respiration. Chacun dit une chose qu'il a réussie. Retour individuel bref de l'enseignant à chaque pratiquant, sur un point réussi et un axe.",
+    "organisation": "Cercle.",
+    "critere": "Chaque pratiquant énonce une réussite. Chacun a reçu un retour personnel.",
+    "variables": [],
+    "securite": "Aucun."
+   }
+  ],
+  "regulation": {
+   "difficulte": "Ralentir l'attaque, réaugmenter le délai d'annonce, réduire à une seule zone. Passer le partenaire référent en accompagnement rapproché.",
+   "avance": "Supprimer tout signal préalable, ajouter une deuxième attaque, imposer une réponse différente à chaque fois.",
+   "planb": "Si un pratiquant décroche ou se met en difficulté : je change son rôle sans le sortir du groupe — il devient attaquant, tâche plus simple à réguler et tout aussi valorisée. Si le dispositif à deux ne fonctionne pas, je reviens à un travail en vagues face à moi, où je maîtrise entièrement le rythme."
+  },
+  "jury_observe": [
+   "L'objectif est-il le même pour tous, ou abaissé pour certains ?",
+   "Les adaptations sont-elles nommées et justifiées, ou laissées implicites ?",
+   "Le groupe reste-t-il un groupe, ou un sous-groupe est-il créé de fait ?",
+   "Le niveau d'exigence est-il maintenu, ou la séance est-elle appauvrie par prudence ?",
+   "Les repères spatiaux sont-ils stables tout au long de la séance ?",
+   "Chaque pratiquant reçoit-il un retour individualisé ?"
+  ],
+  "entretien": [
+   [
+    "Quelle est votre règle de base pour adapter une séance ?",
+    "Même objectif pour tous, moyens différenciés. Je n'abaisse jamais l'objectif, je modifie le chemin. Ici l'objectif était de percevoir une attaque et d'y répondre : il vaut pour les huit pratiquants. Ce qui change, c'est le canal d'information — voix, contact tactile — et la forme de la réponse, debout ou assise."
+   ],
+   [
+    "Vous avez annoncé les adaptations devant tout le groupe. N'est-ce pas stigmatisant ?",
+    "C'est l'inverse. L'adaptation cachée crée le malaise : les autres constatent une différence de traitement sans en comprendre la raison, et l'interprètent comme une faveur ou une infériorité. Annoncée et justifiée, elle devient une modalité de travail parmi d'autres. J'ai d'ailleurs proposé les postes assis à tout le monde, pas seulement à celui qui en avait besoin."
+   ],
+   [
+    "Quel est le principal risque d'erreur sur ce thème ?",
+    "La sous-sollicitation. Par prudence, on propose une séance appauvrie, et on prive les pratiquants de ce qu'ils sont venus chercher. C'est une forme d'exclusion, plus insidieuse que la mise à l'écart. Ma séance monte en incertitude comme n'importe quelle autre : annonce verbale, puis suppression de l'annonce, puis réponse complète."
+   ],
+   [
+    "Comment avez-vous su ce que chacun pouvait faire ?",
+    "En le leur demandant, avant la séance. Je ne présuppose jamais des limites de quelqu'un à partir de son diagnostic : deux personnes avec la même déficience n'ont ni les mêmes possibilités ni les mêmes envies. L'échange préalable fait partie de la préparation de la séance, au même titre que le matériel."
+   ]
+  ],
+  "erreurs": [
+   "Abaisser l'objectif pour les pratiquants en situation de handicap.",
+   "Créer un atelier séparé : c'est une exclusion, même bienveillante.",
+   "Adapter sans le dire, en espérant que personne ne remarque.",
+   "Réorganiser l'espace en cours de séance quand un pratiquant s'appuie sur des repères spatiaux.",
+   "Présupposer les capacités à partir du handicap plutôt que de les demander à la personne.",
+   "Oublier le retour individualisé, qui est ici plus déterminant qu'ailleurs."
+  ]
+ }
+]

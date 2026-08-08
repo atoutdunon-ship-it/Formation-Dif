@@ -16,6 +16,7 @@ ouvrir le dossier, **Cmd + A**, glisser dans GitHub. Une seule opération.
 | `style.css` | charte : noir + bleu navy + blanc |
 | `app.js` | moteur applicatif |
 | `*.json` | les données — c'est ici qu'on édite le contenu |
+| `corriges.json` | les 8 corrigés types |
 | `make_*.py` | scripts de production des données |
 | `Ouvrir-le-site.command` / `.bat` | ouvrir le site en local |
 | `Regenerer-le-site.command` | reconstruire après modification |
@@ -55,6 +56,7 @@ seraient perdues.
 | les questions du jury | `jury.json` |
 | la banque d'exercices | `exercices.json` |
 | les cycles de la saison | `saison.json` |
+| les corrigés types | `make_corriges.py` puis `python3 make_corriges.py` |
 | la trame du plan de séance | `plan_modele.json` |
 | le contenu des modules | `modules.json` |
 | les quiz | `quiz.json` |
@@ -75,7 +77,7 @@ techniques alimentant `make_modules.py` et `make_quiz.py` : ne pas les éditer.
 
 Le DIF n'évalue pas un stock de connaissances mais une **compétence** : concevoir,
 animer, planifier et adapter un enseignement. Le site est donc organisé autour de
-cinq outils actifs, les modules de connaissances venant en appui.
+six outils actifs, les modules de connaissances venant en appui.
 
 | Outil | Ce qu'il travaille | Objectif DIF |
 |---|---|---|
@@ -84,6 +86,18 @@ cinq outils actifs, les modules de connaissances venant en appui.
 | C — Entretien avec le jury | 63 questions en 7 domaines, éléments attendus | 1, 3, 4, 5 |
 | D — Planification de saison | 5 cycles annuels éditables | 2 |
 | E — Banque d'exercices | 12 situations filtrables, critères et variables | 1, 3 |
+| F — Corrigés types d'examen | 8 épreuves traitées de bout en bout, imprimables | 1, 2, 3, 4, 5 |
+
+### Les corrigés types
+
+Huit épreuves complètes : 3 enfants, 3 ados/adultes, 1 baby, 1 public adapté.
+Chacune couvre les trois phases — analyse du thème, objectif opérationnel, critère
+observable, sécurité, plan minuté séquence par séquence, régulation et plan B, ce que
+le jury observe, quatre questions d'entretien avec réponses modèles, erreurs à éviter.
+
+**Méthode d'usage.** Tirez d'abord un thème au sort dans le simulateur, préparez votre
+propre plan en 30 minutes, *puis seulement* ouvrez le corrigé et comparez. Lu avant
+l'effort, un corrigé ne vous apprend rien : il vous rassure.
 
 ## État du contenu
 

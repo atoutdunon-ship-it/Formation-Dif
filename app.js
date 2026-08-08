@@ -339,6 +339,136 @@ function renderEx() {
     : '<div class="empty">Aucun exercice ne correspond à ces filtres.</div>';
 }
 
+/* ══ Corrigés types ══════════════════════════════════════ */
+let CORF = '*';
+const pubLbl = k => (D.config.epreuve[k] || {}).label || k;
+
+function corFilter(p) {
+  CORF = p;
+  document.querySelectorAll('[data-fc]').forEach(c => c.classList.toggle('on', c.dataset.fc === p));
+  renderCor();
+}
+function corToggle(id) {
+  const b = $('cor-body-' + id), t = $('cor-tgl-' + id);
+  const ouvert = b.style.display === 'block';
+  b.style.display = ouvert ? 'none' : 'block';
+  t.textContent = ouvert ? 'Ouvrir le corrigé' : 'Replier';
+  if (!ouvert) b.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+function corHTML(c) {
+  const ctx = c.contexte;
+  const ligne = (k, v) => '<tr><th>' + esc(k) + '</th><td>' + esc(v) + '</td></tr>';
+  const liste = a => '<ul>' + a.map(x => '<li>' + x + '</li>').join('') + '</ul>';
+  const listeEsc = a => '<ul>' + a.map(x => '<li>' + esc(x) + '</li>').join('') + '</ul>';
+
+  const plan = c.plan.map(b =>
+    '<div class="seq"><div class="seq-h"><span class="seq-t">' + esc(b.temps) + '</span>' +
+    '<span class="seq-n">' + esc(b.titre) + '</span>' +
+    '<span class="seq-o">' + esc(b.objet) + '</span></div>' +
+    '<dl><dt>Consigne</dt><dd>' + esc(b.consigne) + '</dd>' +
+    '<dt>Organisation</dt><dd>' + esc(b.organisation) + '</dd>' +
+    '<dt>Critère de réussite</dt><dd>' + esc(b.critere) + '</dd>' +
+    (b.variables.length ? '<dt>Variables</dt><dd>' + b.variables.map(esc).join(' · ') + '</dd>' : '') +
+    '<dt>Sécurité</dt><dd>' + esc(b.securite) + '</dd></dl></div>').join('');
+
+  const entretien = c.entretien.map((q, i) =>
+    '<div class="qa"><div class="qa-q">' + (i + 1) + '. ' + esc(q[0]) + '</div>' +
+    '<div class="qa-a">' + esc(q[1]) + '</div></div>').join('');
+
+  return '' +
+   '<h3>Analyse du thème</h3>' + liste(c.analyse) +
+
+   '<h3>Contexte</h3><div class="table-wrap"><table>' +
+   ligne('Public et effectif', ctx.effectif) + ligne('Niveau', ctx.niveau) +
+   ligne('Durée', ctx.duree) + ligne('Surface', ctx.surface) + ligne('Matériel', ctx.materiel) +
+   '</table></div>' +
+
+   '<div class="cle"><div class="cle-k">Objectif opérationnel</div>' +
+   '<div class="cle-v">' + esc(c.objectif) + '</div></div>' +
+   '<div class="cle"><div class="cle-k">Critère de réussite observable</div>' +
+   '<div class="cle-v">' + esc(c.critere) + '</div></div>' +
+   '<div class="cle"><div class="cle-k">Prérequis supposés</div>' +
+   '<div class="cle-v">' + esc(c.prerequis) + '</div></div>' +
+
+   '<h3>Sécurité</h3>' +
+   '<h4>Risques identifiés</h4>' + listeEsc(c.securite.risques) +
+   '<h4>Mesures de prévention</h4>' + listeEsc(c.securite.mesures) +
+   '<h4>Vérifications avant la séance</h4>' + listeEsc(c.securite.verifications) +
+
+   '<h3>Plan de séance minuté</h3>' + plan +
+
+   '<h3>Régulation</h3><div class="table-wrap"><table>' +
+   ligne('Pratiquant en difficulté', c.regulation.difficulte) +
+   ligne('Pratiquant en avance', c.regulation.avance) +
+   ligne('Plan B', c.regulation.planb) +
+   '</table></div>' +
+
+   '<h3>Ce que le jury observe pendant l\'animation</h3>' + listeEsc(c.jury_observe) +
+
+   '<h3>Entretien pédagogique — questions probables et réponses modèles</h3>' + entretien +
+
+   '<h3>Erreurs à ne pas commettre</h3>' + listeEsc(c.erreurs);
+}
+function renderCor() {
+  const l = D.corriges.filter(c => CORF === '*' || c.public === CORF);
+  const h = $('cor-list');
+  if (!l.length) { h.innerHTML = '<div class="empty">Aucun corrigé pour ce public.</div>'; return; }
+  h.innerHTML = l.map(c =>
+    '<div class="card cor"><div class="cor-h">' +
+    '<span class="cor-id">' + esc(c.id) + ' · ' + esc(c.theme_id) + '</span>' +
+    '<span class="tag">' + esc(pubLbl(c.public)) + '</span>' +
+    '<span class="tag">' + esc(c.contexte.duree) + '</span></div>' +
+    '<h2>' + esc(c.theme) + '</h2>' +
+    '<p>' + esc(c.contexte.effectif) + ' — ' + esc(c.contexte.niveau) + '</p>' +
+    '<div class="btn-row">' +
+    '<button class="btn btn-primary" id="cor-tgl-' + c.id + '" onclick="corToggle(\'' + c.id + '\')">Ouvrir le corrigé</button>' +
+    '<button class="btn btn-ghost" onclick="corPrint(\'' + c.id + '\')">Imprimer ce corrigé</button></div>' +
+    '<div class="cor-body" id="cor-body-' + c.id + '" style="display:none">' + corHTML(c) + '</div></div>').join('');
+}
+function corPrint(id) {
+  const c = D.corriges.find(x => x.id === id); if (!c) return;
+  const w = window.open('', '_blank');
+  if (!w) { toast('Autorisez les fenêtres pop-up pour imprimer'); return; }
+  w.document.write('<!DOCTYPE html><html lang="fr"><head><meta charset="utf-8">' +
+   '<title>Corrigé ' + esc(c.id) + ' — ' + esc(c.theme) + '</title><style>' +
+   'body{font-family:Georgia,serif;color:#151B24;max-width:800px;margin:32px auto;padding:0 22px;line-height:1.55;font-size:12.5px}' +
+   'header{border-bottom:3px solid #0B1B33;padding-bottom:12px;margin-bottom:20px}' +
+   '.k{font-family:monospace;font-size:10px;letter-spacing:.2em;color:#17457F;text-transform:uppercase}' +
+   'h1{font-size:19px;color:#050D1B;margin:6px 0 4px}.sub{font-size:11.5px;color:#5E6A7A}' +
+   'h3{font-size:12.5px;text-transform:uppercase;letter-spacing:.1em;color:#10294B;margin:20px 0 7px;' +
+   'border-bottom:1px solid #DFE4EB;padding-bottom:4px}' +
+   'h4{font-size:10.5px;text-transform:uppercase;letter-spacing:.08em;color:#5E6A7A;margin:12px 0 4px}' +
+   'table{width:100%;border-collapse:collapse;font-family:Helvetica,Arial,sans-serif;font-size:11.5px;margin:6px 0}' +
+   'th{text-align:left;width:30%;vertical-align:top;padding:6px 10px 6px 0;color:#5E6A7A;font-weight:600;' +
+   'font-size:10px;text-transform:uppercase;border-bottom:1px solid #EDF0F4}' +
+   'td{padding:6px 0;border-bottom:1px solid #EDF0F4;vertical-align:top}' +
+   'ul{margin:4px 0 8px 18px}li{margin-bottom:3px}' +
+   '.cle{border-left:3px solid #1D4E8F;background:#F2F6FC;padding:9px 13px;margin:9px 0}' +
+   '.cle-k{font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;color:#10294B;font-weight:700}' +
+   '.cle-v{font-family:Helvetica,Arial,sans-serif;font-size:12px;color:#151B24;margin-top:2px}' +
+   '.seq{border:1px solid #DFE4EB;border-radius:4px;padding:10px 13px;margin-bottom:8px;break-inside:avoid}' +
+   '.seq-h{display:flex;gap:10px;align-items:baseline;margin-bottom:6px;flex-wrap:wrap}' +
+   '.seq-t{font-family:monospace;font-size:11px;color:#17457F;font-weight:700}' +
+   '.seq-n{font-weight:700;color:#050D1B;font-size:12.5px}' +
+   '.seq-o{font-size:10.5px;color:#5E6A7A;font-style:italic}' +
+   'dl{font-family:Helvetica,Arial,sans-serif;font-size:11.5px;margin:0}' +
+   'dt{font-size:9.5px;text-transform:uppercase;letter-spacing:.08em;color:#17457F;font-weight:700;margin-top:6px}' +
+   'dd{margin:1px 0 0;color:#2A3441}' +
+   '.qa{margin-bottom:11px;break-inside:avoid}' +
+   '.qa-q{font-weight:700;color:#10294B;font-size:12.5px}' +
+   '.qa-a{font-family:Helvetica,Arial,sans-serif;font-size:11.5px;color:#2A3441;margin-top:3px;' +
+   'border-left:2px solid #DFE4EB;padding-left:11px}' +
+   'footer{margin-top:28px;padding-top:10px;border-top:1px solid #DFE4EB;font-size:9.5px;color:#5E6A7A}' +
+   '@media print{body{margin:0}}</style></head><body>' +
+   '<header><div class="k">' + esc(D.config.code) + ' · Corrigé ' + esc(c.id) + '</div>' +
+   '<h1>' + esc(c.theme) + '</h1><div class="sub">' + esc(pubLbl(c.public)) + ' — ' +
+   esc(c.contexte.effectif) + ' — ' + esc(c.contexte.duree) + '</div></header>' +
+   corHTML(c) +
+   '<footer>' + esc(D.config.titre) + ' — ' + esc(D.config.sous_titre) +
+   '. Ce corrigé est une proposition cohérente, non une réponse unique.</footer></body></html>');
+  w.document.close(); setTimeout(() => w.print(), 350);
+}
+
 /* ══ Saison ══ */
 function saisonSave() {
   const o = {}; document.querySelectorAll('[data-cyc]').forEach(t => o[t.dataset.cyc] = t.value);
@@ -411,7 +541,7 @@ function importData(input) {
 /* ══ Amorçage ══ */
 document.addEventListener('DOMContentLoaded', () => {
   Object.keys(D.quiz).forEach(renderQuiz);
-  simSetPublic('ados'); renderEx(); renderSessions(); saisonLoad();
+  simSetPublic('ados'); renderEx(); renderSessions(); saisonLoad(); renderCor();
   juryStart('*'); renderProgress(); renderHome();
   if (!Store.available) $('warn-storage').style.display = 'block';
   showPage(Store.get('lastPage', 'home'));
