@@ -28,6 +28,73 @@ def load(name: str):
     return json.loads((CONTENT / name).read_text(encoding="utf-8"))
 
 
+
+# ─────────────────────────────────────────────────── contraste
+# Règle permanente : aucun texte ne descend sous 4,5:1. Les titres, les menus
+# et les libellés d'accent visent 7:1. Le contrôle tourne à chaque build ;
+# une régression fait échouer la génération, elle ne passe pas en silence.
+
+SEUIL_TEXTE, SEUIL_TITRE = 4.5, 7.0
+
+
+def _lum(h: str) -> float:
+    c = [int(h[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+    c = [x / 12.92 if x <= .03928 else ((x + .055) / 1.055) ** 2.4 for x in c]
+    return .2126 * c[0] + .7152 * c[1] + .0722 * c[2]
+
+
+def contraste(a: str, b: str) -> float:
+    la, lb = _lum(a), _lum(b)
+    return (max(la, lb) + .05) / (min(la, lb) + .05)
+
+
+def _jetons(css: str) -> dict:
+    return dict(re.findall(r"(--[\w-]+)\s*:\s*(#[0-9A-Fa-f]{6})", css))
+
+
+# (libellé, jeton texte, jeton fond, seuil)
+PAIRES = [
+    ("Titre de bandeau / navy",        "--on-dark",        "--navy-900", SEUIL_TITRE),
+    ("Accent bandeau / navy",          "--accent-on-dark", "--navy-900", SEUIL_TITRE),
+    ("Texte bandeau / navy",           "--on-dark-2",      "--navy-900", SEUIL_TITRE),
+    ("Libellé bandeau / navy",         "--on-dark-3",      "--navy-900", SEUIL_TITRE),
+    ("Accent bannière / navy 600",     "--on-dark-2",      "--navy-600", SEUIL_TITRE),
+    ("Texte bannière / navy 600",      "--on-dark-2",      "--navy-600", SEUIL_TITRE),
+    ("Menu : entrée / navy 850",       "--on-dark-2",      "--navy-850", SEUIL_TITRE),
+    ("Menu : section / navy 850",      "--on-dark-3",      "--navy-850", SEUIL_TITRE),
+    ("Menu : numéro / navy 850",       "--on-dark-3",      "--navy-850", SEUIL_TITRE),
+    ("Menu : actif / navy 850",        "--on-dark",        "--navy-850", SEUIL_TITRE),
+    ("En-tête : code / navy",          "--accent-on-dark", "--navy-900", SEUIL_TITRE),
+    ("En-tête : sous-titre / navy",    "--on-dark-3",      "--navy-900", SEUIL_TITRE),
+    ("Titre de section / blanc",       "--navy-900",       "--white",    SEUIL_TITRE),
+    ("Sous-titre / blanc",             "--navy-700",       "--white",    SEUIL_TITRE),
+    ("Accent typographique / blanc",   "--accent-on-light", "--white",   SEUIL_TITRE),
+    ("Texte courant / fond",           "--body",           "--bg",       SEUIL_TEXTE),
+    ("Texte courant / blanc",          "--body",           "--white",    SEUIL_TEXTE),
+    ("Texte fort / blanc",             "--ink",            "--white",    SEUIL_TEXTE),
+    ("Libellé secondaire / blanc",     "--gray",           "--white",    SEUIL_TEXTE),
+    ("Libellé discret / blanc",        "--muted",          "--white",    SEUIL_TEXTE),
+    ("Encadré mémo",                   "--ink",            "--steel-soft", SEUIL_TEXTE),
+    ("Succès",                         "--ok",             "--ok-bg",    SEUIL_TEXTE),
+    ("Avertissement",                  "--warn",           "--warn-bg",  SEUIL_TEXTE),
+    ("Alerte",                         "--alert",          "--alert-bg", SEUIL_TEXTE),
+]
+
+
+def auditer_contraste(css: str) -> list:
+    j = _jetons(css)
+    lignes, fautes = [], []
+    for nom, ct, cf, seuil in PAIRES:
+        if ct not in j or cf not in j:
+            fautes.append(f"{nom} : jeton absent ({ct} ou {cf})"); continue
+        r = contraste(j[ct], j[cf])
+        note = "AAA" if r >= 7 else "AA" if r >= 4.5 else "INSUFFISANT"
+        lignes.append(f"    {nom:32} {r:5.2f}  {note}")
+        if r < seuil:
+            fautes.append(f"{nom} : {r:.2f} < {seuil} ({j[ct]} sur {j[cf]})")
+    return lignes, fautes
+
+
 # ─────────────────────────────────────────────────────────── fragments
 def sidebar(mods, quiz) -> str:
     def link(pid, num, label, track=False, statut="pret"):
@@ -477,6 +544,18 @@ def build(out: Path) -> Path:
     stray = EMOJI.findall(doc)
     if stray:
         print(f"  ATTENTION : {len(stray)} pictogramme(s) résiduel(s) : {set(stray)}", file=sys.stderr)
+
+    css = (ROOT / "style.css").read_text(encoding="utf-8")
+    if re.search(r"(?<![-\w])color:\s*rgba\(255,\s*255,\s*255", css):
+        raise SystemExit("  ARRÊT : un texte est défini par une opacité sur fond sombre. "
+                         "Utiliser --on-dark, --on-dark-2 ou --on-dark-3.")
+    lignes, fautes = auditer_contraste(css)
+    print("  Contraste :")
+    for l in lignes:
+        print(l)
+    if fautes:
+        raise SystemExit("  ARRÊT : contraste insuffisant\n    - " + "\n    - ".join(fautes))
+
     out.write_text(doc, encoding="utf-8")
     return out
 
