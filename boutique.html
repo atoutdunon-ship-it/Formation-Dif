@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Boutique — Rotary Club du François</title>
+<meta name="description" content="Billetterie, produits du club, tombola : chaque achat finance les actions du Rotary Club du François en Martinique.">
+<link rel="stylesheet" href="assets/css/polices.css?v=20260809-2200">
+<link rel="stylesheet" href="assets/css/style.css?v=20260809-2200">
+</head>
+<body data-page="boutique">
+
+<header class="site-header">
+  <div class="site-header__top">
+    <a href="index.html" class="brand"><img src="assets/img/logo-header.png" alt="Rotary Club du François"></a>
+    <div class="site-header__actions">
+      <a href="espace-membre.html" data-espace-membre class="btn btn--ghost" data-i18n="nav.espace_membre">Espace membre</a>
+      <a href="espace-membre.html" data-administration class="btn btn--ghost" data-i18n="nav.administration">Administration</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="site-header__nav">
+    <nav class="nav" id="site-nav">
+      <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+      <a href="club.html" data-i18n="nav.club">Le Club</a>
+      <a href="le-rotary.html" data-i18n="nav.le_rotary">Le Rotary</a>
+      <a href="interact.html" data-i18n="nav.interact">Interact La Yole</a>
+      <a href="membres.html" data-i18n="nav.membres">Nos Membres</a>
+      <a href="district.html" data-i18n="nav.district">District 7030</a>
+      <a href="actions.html" data-i18n="nav.actions">Nos Actions</a>
+      <a href="boutique.html" class="active" data-i18n="nav.boutique">Boutique</a>
+      <a href="agenda.html" data-i18n="nav.agenda">Agenda</a>
+      <a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+      <a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero hero--page">
+  <div class="container">
+    <div class="hero__eyebrow" data-block="banniere:eyebrow" data-i18n="boutique.eyebrow">Boutique du club</div>
+    <h1 data-block="banniere:title" data-i18n="boutique.titre">Chaque achat finance une action</h1>
+    <p data-block="banniere:body" data-i18n="boutique.texte">Billetterie de nos manifestations, produits aux couleurs du club, carnets de tombola : l'intégralité des recettes est affectée aux actions du Rotary Club du François.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="boutique-agencement">
+
+      <!-- ---------------- Catalogue ---------------- -->
+      <div class="boutique-catalogue">
+        <div class="boutique-filtres" id="boutique-filtres" hidden>
+          <button type="button" class="boutique-filtre is-active" data-famille="">Tout</button>
+        </div>
+
+        <div id="boutique-contenu">
+          <p class="boutique-attente" data-i18n="boutique.chargement">Chargement du catalogue…</p>
+        </div>
+      </div>
+
+      <!-- ---------------- Panier ---------------- -->
+      <aside class="panier" id="panier" aria-label="Panier">
+        <h2 data-i18n="boutique.panier">Votre panier</h2>
+
+        <div id="panier-lignes">
+          <p class="panier__vide" data-i18n="boutique.panier_vide">Votre panier est vide.</p>
+        </div>
+
+        <div class="panier__total">
+          <span data-i18n="boutique.total">Total</span>
+          <strong id="panier-total">0,00 €</strong>
+        </div>
+
+        <button type="button" class="btn btn--primary panier__valider" id="panier-valider" disabled
+                data-i18n="boutique.commander">Passer commande</button>
+
+        <p class="panier__mention" data-i18n="boutique.mention_securite">
+          Aucune donnée bancaire ne vous est demandée sur ce site. Le règlement s'effectue
+          ensuite sur la page sécurisée de notre prestataire, ou par virement.
+        </p>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+<!-- ---------------- Formulaire de commande (fenêtre) ---------------- -->
+<div class="modale" id="modale-commande" hidden>
+  <div class="modale__fond" data-fermer-modale></div>
+  <div class="modale__boite" role="dialog" aria-modal="true" aria-labelledby="titre-commande">
+    <button type="button" class="modale__fermer" data-fermer-modale aria-label="Fermer">&times;</button>
+
+    <h2 id="titre-commande" data-i18n="boutique.finaliser">Finaliser la commande</h2>
+
+    <div class="recap" id="recap-commande"></div>
+
+    <form id="form-commande" novalidate>
+      <label>
+        <span data-i18n="boutique.champ_nom">Nom et prénom *</span>
+        <input type="text" name="nom" required autocomplete="name">
+      </label>
+      <label>
+        <span data-i18n="boutique.champ_email">Adresse e-mail *</span>
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+      <label>
+        <span data-i18n="boutique.champ_tel">Téléphone</span>
+        <input type="tel" name="telephone" autocomplete="tel">
+      </label>
+      <label>
+        <span data-i18n="boutique.champ_paiement">Mode de règlement souhaité</span>
+        <select name="moyen_paiement">
+          <option value="lien" data-i18n="boutique.paiement_lien">Paiement en ligne (carte bancaire)</option>
+          <option value="virement" data-i18n="boutique.paiement_virement">Virement bancaire</option>
+          <option value="sur_place" data-i18n="boutique.paiement_place">Sur place, auprès du Trésorier</option>
+        </select>
+      </label>
+      <label>
+        <span data-i18n="boutique.champ_message">Message (facultatif)</span>
+        <textarea name="message" rows="3"></textarea>
+      </label>
+
+      <p class="form-erreur" id="commande-erreur" hidden></p>
+
+      <p class="form-mention" data-i18n="boutique.rgpd">Vos coordonnées servent à traiter votre
+      commande, à vous la remettre et à tenir la comptabilité du club. Elles sont conservées dix
+      ans, durée légale de conservation des pièces comptables.
+      <a href="confidentialite.html">En savoir plus</a>.</p>
+      <p class="form-mention" data-i18n="boutique.cgv_acceptation">En validant, vous acceptez les
+      <a href="cgv.html">conditions générales de vente</a>. Vous disposez de quatorze jours pour
+      vous rétracter, sauf pour les billets à date déterminée et les articles personnalisés.</p>
+      <button type="submit" class="btn btn--primary" data-i18n="boutique.valider">Valider la commande</button>
+    </form>
+
+    <div class="confirmation" id="commande-confirmation" hidden></div>
+  </div>
+</div>
+
+
+<section class="lettre" data-lettre>
+  <div class="container">
+    <div class="lettre__grille">
+      <div>
+        <h2 data-block="lettre:title" data-i18n="lettre.titre">La lettre du club</h2>
+        <p data-block="lettre:body" data-i18n="lettre.texte">Chaque mois, les actions du club, le thème rotarien du moment et les rendez-vous à venir, directement dans votre boîte aux lettres. Un courriel par mois, pas davantage.</p>
+      </div>
+      <form data-lettre-formulaire novalidate>
+        <div class="lettre__champs">
+          <input type="text" name="nom" autocomplete="name" placeholder="Votre nom (facultatif)" aria-label="Votre nom">
+          <input type="email" name="email" autocomplete="email" required placeholder="Votre adresse e-mail" aria-label="Votre adresse e-mail">
+        </div>
+        <label class="lettre__accord">
+          <input type="checkbox" name="consentement" required>
+          <span>J'accepte de recevoir la lettre d'information du Rotary Club du François et j'ai pris connaissance des <a href="mentions-legales.html">mentions légales</a> et de la <a href="confidentialite.html">politique de confidentialité</a>.</span>
+        </label>
+        <button type="submit" class="lettre__bouton">Je m'inscris</button>
+        <div class="lettre__reponse" data-lettre-reponse hidden></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h4 data-block="pied:title">Rotary Club du François</h4>
+      <p style="max-width:320px;font-size:0.9rem;" data-block="pied:body" data-multiline>Centre International de Séjour — Étang Zabricot<br>97200 Fort-de-France, Martinique<br>District 7030 — Zone 34</p>
+      <p style="max-width:320px;font-size:0.9rem;margin-top:10px;" data-block="pied:eyebrow">0696 88 28 29 — rotaryclubdufrancois@gmail.com</p>
+      <a href="https://www.facebook.com/rotaryclubdufrancois/" style="margin-top:14px;" data-block="pied:link1">Facebook</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer.navigation">Navigation</h4>
+      <a href="club.html" data-i18n="nav.club">Le Club</a>
+      <a href="interact.html" data-i18n="nav.interact">Interact La Yole</a>
+      <a href="membres.html" data-i18n="nav.membres">Nos Membres</a>
+      <a href="district.html" data-i18n="nav.district">District 7030</a>
+      <a href="actions.html" data-i18n="nav.actions">Nos Actions</a>
+      <a href="boutique.html" data-i18n="nav.boutique">Boutique</a>
+      <a href="agenda.html" data-i18n="nav.agenda">Agenda</a>
+      <a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer.informations">Informations</h4>
+      <a href="le-rotary.html" data-i18n="nav.le_rotary">Le Rotary</a>
+      <a href="mentions-legales.html" data-i18n="footer.mentions">Mentions légales</a>
+      <a href="confidentialite.html" data-i18n="footer.confidentialite">Confidentialité</a>
+      <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
+      <a href="cgv.html" data-i18n="footer.cgv">Conditions de vente</a>
+      <a href="cgu.html" data-i18n="footer.cgu">Conditions d'utilisation</a>
+      <a href="retractation.html" data-i18n="footer.retractation">Se rétracter</a>
+      <a href="accessibilite.html" data-i18n="footer.accessibilite">Accessibilité</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer.espace_prive">Espace privé</h4>
+      <a href="adherer.html" data-i18n="footer.adherer">Devenir membre</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a href="espace-membre.html" data-espace-membre>Espace membre</a>
+      <a href="espace-membre.html" data-administration data-i18n="nav.administration">Administration</a>
+    </div>
+  </div>
+  <div class="container bottom" data-i18n="footer.droits">© 2026 Rotary Club du François — Martinique. Tous droits réservés.</div>
+</footer>
+
+<script src="assets/js/config.js?v=20260809-2200"></script>
+<!-- EDITO en ligne. Sans séance d'édition ouverte, ce script s'arrête
+     à sa première ligne : aucune requête, aucun style, aucun coût pour
+     le visiteur. -->
+<script src="assets/js/edition.js?v=20260809-2200" defer></script>
+<script src="assets/js/i18n.js?v=20260809-2200" defer></script>
+<script src="assets/js/site-content.js?v=20260809-2200" defer></script>
+<script src="assets/js/nav.js?v=20260809-2200" defer></script>
+<script src="assets/js/newsletter.js?v=20260809-2200" defer></script>
+<script src="assets/js/mentions.js?v=20260809-2200" defer></script>
+<script src="assets/js/boutique.js?v=20260809-2200" defer></script>
+<script src="assets/js/chat-widget.js?v=20260809-2200" defer></script>
+</body>
+</html>

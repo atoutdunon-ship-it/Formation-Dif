@@ -1,0 +1,442 @@
+/* ==========================================================================
+   EDITO en ligne — habillage du mode édition
+   --------------------------------------------------------------------------
+   Cette feuille n'est chargée que lorsqu'une séance d'édition est ouverte et
+   validée par le serveur. Un visiteur ordinaire ne la télécharge jamais.
+
+   Parti pris : aucun pictogramme. Les zones modifiables se signalent par un
+   liseré et un fond très légèrement teinté, les commandes sont nommées en
+   toutes lettres.
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   Bandeau
+   ------------------------------------------------------------------------- */
+
+.edito-bandeau {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9000;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 18px;
+  padding: 10px 20px;
+  background: var(--navy-deep);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.24);
+}
+
+.edito-bandeau__etat {
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 2px;
+}
+
+.edito-bandeau__nom { font-weight: 600; }
+
+.edito-bandeau__aide {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.8rem;
+}
+
+.edito-bandeau__actions {
+  margin-left: auto;
+  display: flex;
+  gap: 8px;
+}
+
+/* Le bandeau est fixe : sans ce décalage il masquerait l'en-tête du site. */
+body.edito-decale { padding-top: 52px; }
+
+.edito-btn {
+  height: 32px;
+  padding: 0 14px;
+  font-family: inherit;
+  font-size: 0.82rem;
+  color: var(--white);
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.edito-btn:hover { background: rgba(255, 255, 255, 0.14); }
+
+.edito-btn--sortie {
+  background: var(--white);
+  color: var(--navy-deep);
+  border-color: var(--white);
+  font-weight: 600;
+}
+
+.edito-btn--sortie:hover { background: #e6ecf4; }
+
+.edito-btn--valider {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+  font-weight: 600;
+}
+
+.edito-btn--valider:disabled { opacity: 0.55; cursor: default; }
+
+/* -------------------------------------------------------------------------
+   Zones modifiables
+   ------------------------------------------------------------------------- */
+
+.edito-actif .edito-zone {
+  outline: 1px dashed rgba(12, 60, 124, 0.45);
+  outline-offset: 3px;
+  cursor: pointer;
+  transition: background 0.15s ease, outline-color 0.15s ease;
+}
+
+.edito-actif .edito-zone:hover {
+  outline: 2px solid var(--navy);
+  background: rgba(1, 159, 203, 0.09);
+}
+
+.edito-actif .edito-zone--en-cours {
+  outline: 2px solid var(--azure);
+  background: rgba(1, 159, 203, 0.13);
+}
+
+.edito-actif .edito-zone--image:hover { opacity: 0.82; }
+
+/* Zone traduite affichée dans une autre langue que le français : modifiable
+   uniquement en français, sous peine d'écrire de l'anglais dans le champ
+   français sans que rien ne le signale. */
+.edito-actif .edito-zone--verrouillee {
+  outline: 1px dotted rgba(88, 88, 90, 0.55);
+  outline-offset: 3px;
+  cursor: not-allowed;
+}
+
+.edito-actif .edito-zone--survol {
+  outline: 3px solid var(--azure);
+  outline-offset: 0;
+}
+
+.edito-actif .edito-zone--envoi {
+  opacity: 0.45;
+  pointer-events: none;
+}
+
+/* Hors mode édition (séance suspendue), plus aucun repère visuel. */
+body:not(.edito-actif) .edito-zone {
+  outline: none;
+  cursor: inherit;
+}
+
+.edito-fichier {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* -------------------------------------------------------------------------
+   Panneau d'édition
+   ------------------------------------------------------------------------- */
+
+.edito-panneau {
+  position: relative;
+  z-index: 8000;
+  margin: 14px 0 22px;
+  padding: 16px 18px;
+  background: var(--white);
+  border: 1px solid var(--navy);
+  border-radius: 4px;
+  box-shadow: 0 12px 34px rgba(8, 42, 88, 0.18);
+  text-align: left;
+}
+
+.edito-panneau__titre {
+  font-family: var(--font-body);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--navy);
+  margin-bottom: 12px;
+}
+
+.edito-champ {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.edito-champ span {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 4px;
+}
+
+.edito-champ input {
+  width: 100%;
+  height: 38px;
+  padding: 0 10px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--navy-deep);
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  border-radius: 3px;
+}
+
+.edito-champ input:focus {
+  outline: none;
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(12, 60, 124, 0.1);
+}
+
+.edito-panneau__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.edito-panneau__actions .edito-btn {
+  color: var(--navy-deep);
+  border-color: var(--grey-line);
+}
+
+.edito-panneau__actions .edito-btn:hover { background: var(--off-white); }
+
+.edito-panneau__actions .edito-btn--valider {
+  color: var(--white);
+  border-color: var(--navy);
+}
+
+.edito-panneau__retour {
+  font-size: 0.82rem;
+  color: var(--grey);
+}
+
+.edito-panneau__retour--erreur {
+  color: #8c2a2a;
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------------------
+   Message de confirmation
+   ------------------------------------------------------------------------- */
+
+.edito-message {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9100;
+  max-width: 320px;
+  padding: 12px 18px;
+  background: var(--navy-deep);
+  color: var(--white);
+  font-family: var(--font-body);
+  font-size: 0.86rem;
+  border-radius: 4px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.26);
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.edito-message--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.edito-message--erreur { background: #8c2a2a; }
+
+/* -------------------------------------------------------------------------
+   Écrans étroits
+   ------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .edito-bandeau {
+    padding: 8px 12px;
+    font-size: 0.8rem;
+  }
+
+  .edito-bandeau__aide { display: none; }
+
+  body.edito-decale { padding-top: 48px; }
+
+  .edito-panneau { padding: 12px; }
+
+  .edito-champ input {
+    /* 16 px empêche le zoom automatique de Safari sur iPhone. */
+    font-size: 1rem;
+  }
+
+  .edito-message {
+    left: 12px;
+    right: 12px;
+    max-width: none;
+  }
+}
+
+/* Le mode édition ne s'imprime pas. */
+@media print {
+  .edito-bandeau,
+  .edito-panneau,
+  .edito-message { display: none !important; }
+
+  body.edito-decale { padding-top: 0; }
+
+  .edito-zone { outline: none !important; background: none !important; }
+}
+
+/* ==========================================================================
+   Cadre rouge périmétrique — signal du mode édition
+   --------------------------------------------------------------------------
+   Le mode édition écrit dans la base que voient les visiteurs : chaque
+   enregistrement est immédiatement public. Un bandeau en haut de page se
+   perd dès qu'on descend ; le cadre reste dans le champ de vision, quelle
+   que soit la position dans la page.
+
+   Deux précautions.
+   * `pointer-events: none` — le cadre informe, il n'intercepte rien. Sans
+     cela, tout clic près d'un bord serait avalé par lui.
+   * `position: fixed` — il ceint la fenêtre, pas le document : il ne
+     défile pas et ne s'allonge pas avec le contenu.
+
+   Rouge #C62828 : blanc dessus à 5,9:1, au-dessus du seuil de 4,5.
+   ========================================================================== */
+
+.edito-cadre {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  pointer-events: none;
+  border: 4px solid #C62828;
+  box-shadow: inset 0 0 0 1px rgba(198, 40, 40, 0.35);
+}
+
+.edito-cadre__etiquette {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  background: #C62828;
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 5px 18px;
+  border-radius: 6px 6px 0 0;
+  white-space: nowrap;
+  max-width: calc(100vw - 24px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (max-width: 620px) {
+  .edito-cadre { border-width: 3px; }
+  .edito-cadre__etiquette { font-size: 0.62rem; padding: 4px 10px; }
+}
+
+/* Le cadre ne s'imprime pas : il appartient à l'outil, pas au document. */
+@media print { .edito-cadre { display: none; } }
+
+
+/* ==========================================================================
+   Édition à la volée — on écrit là où le texte s'affiche
+   ========================================================================== */
+
+.edito-zone--saisie {
+  outline: 2px solid #C62828;
+  outline-offset: 3px;
+  background: #FFF8F7;
+  border-radius: 3px;
+  /* Le champ garde la typographie de la page : c'est tout l'intérêt de
+     l'édition en place — voir le rendu réel avant d'enregistrer. */
+  min-height: 1.2em;
+  cursor: text;
+}
+
+.edito-zone--saisie:focus { outline-color: #A31A1A; }
+
+.edito-barre {
+  position: fixed;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #14162B;
+  border-radius: 8px;
+  padding: 6px 8px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.28);
+}
+
+.edito-barre__outil,
+.edito-barre__valider,
+.edito-barre__annuler {
+  font-family: inherit;
+  font-size: 0.76rem;
+  padding: 6px 12px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  min-height: 32px;
+}
+
+.edito-barre__outil {
+  background: #2A2D48;
+  color: #ffffff;              /* 12,1:1 */
+  min-width: 34px;
+}
+
+.edito-barre__outil:hover { background: #3A3E60; }
+
+.edito-barre__valider {
+  background: #15803D;         /* blanc dessus : 5,02:1 */
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.edito-barre__valider:hover { background: #106430; }
+
+.edito-barre__annuler {
+  background: transparent;
+  color: #ffffff;              /* sur #14162B : 15,6:1 */
+  border-color: #4A4E6C;
+}
+
+.edito-barre__annuler:hover { background: #2A2D48; }
+
+.edito-barre__separateur {
+  width: 1px;
+  height: 20px;
+  background: #3A3E60;
+  margin: 0 2px;
+}
+
+.edito-barre__aide {
+  font-size: 0.68rem;
+  color: #C9CCE0;              /* sur #14162B : 10,4:1 */
+  padding-left: 4px;
+}
+
+@media (max-width: 620px) {
+  .edito-barre__aide { display: none; }
+  .edito-barre { padding: 5px 6px; }
+}

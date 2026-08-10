@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Se rétracter d'une commande — Rotary Club du François</title>
+<meta name="description" content="Formulaire de rétractation en ligne du Rotary Club du François, conformément à l'article L221-21 du Code de la consommation.">
+<link rel="stylesheet" href="assets/css/polices.css?v=20260809-2200">
+<link rel="stylesheet" href="assets/css/style.css?v=20260809-2200">
+</head>
+<body data-page="retractation">
+
+<header class="site-header">
+  <div class="site-header__top">
+    <a href="index.html" class="brand"><img src="assets/img/logo-header.png" alt="Rotary Club du François"></a>
+    <div class="site-header__actions">
+      <a href="espace-membre.html" data-espace-membre class="btn btn--ghost" data-i18n="nav.espace_membre">Espace membre</a>
+      <a href="espace-membre.html" data-administration class="btn btn--ghost" data-i18n="nav.administration">Administration</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="site-header__nav">
+    <nav class="nav" id="site-nav">
+      <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+      <a href="club.html" data-i18n="nav.club">Le Club</a>
+      <a href="le-rotary.html" data-i18n="nav.le_rotary">Le Rotary</a>
+      <a href="interact.html" data-i18n="nav.interact">Interact La Yole</a>
+      <a href="membres.html" data-i18n="nav.membres">Nos Membres</a>
+      <a href="district.html" data-i18n="nav.district">District 7030</a>
+      <a href="actions.html" data-i18n="nav.actions">Nos Actions</a>
+      <a href="boutique.html" data-i18n="nav.boutique">Boutique</a>
+      <a href="agenda.html" data-i18n="nav.agenda">Agenda</a>
+      <a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+      <a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+      <a href="contact.html" class="active" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero hero--page">
+  <div class="container">
+    <div class="hero__eyebrow">Droit de rétractation</div>
+    <h1>Se rétracter d'une commande</h1>
+    <p>Vous avez quatorze jours pour revenir sur une commande, sans avoir à vous justifier. Ce formulaire suffit : vous recevez un accusé de réception immédiat.</p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <article class="doc">
+
+      <div class="doc__encart">
+        <p><strong>Avant de remplir ce formulaire</strong>, vérifiez que votre
+        commande ouvre bien droit à rétractation. Ce droit ne s'applique pas
+        aux billets pour une manifestation à date déterminée — dîner, soirée,
+        activité de loisir —, aux articles personnalisés à votre nom, ni aux
+        billets de tombola après tirage. Le détail figure au paragraphe 7 des
+        <a href="cgv.html">conditions générales de vente</a>.</p>
+      </div>
+
+      <form id="retractation-form" class="doc__form" novalidate>
+        <div class="doc__form-grille">
+          <label>
+            Numéro de commande *
+            <input type="text" name="reference" required placeholder="RCF-20260805-XXXX"
+                   autocomplete="off">
+            <small>Il figure sur la confirmation reçue lors de votre commande.</small>
+          </label>
+
+          <label>
+            Adresse électronique *
+            <input type="email" name="email" required autocomplete="email">
+            <small>Celle utilisée pour passer la commande.</small>
+          </label>
+
+          <label>
+            Nom et prénom *
+            <input type="text" name="nom" required autocomplete="name">
+          </label>
+
+          <label>
+            Adresse postale
+            <input type="text" name="adresse" autocomplete="street-address">
+          </label>
+
+          <label>
+            Date de commande
+            <input type="date" name="date_commande">
+          </label>
+
+          <label>
+            Date de réception
+            <input type="date" name="date_reception">
+            <small>Le délai de quatorze jours court à partir de cette date.</small>
+          </label>
+
+          <label class="doc__form-large">
+            Articles concernés
+            <input type="text" name="articles"
+                   placeholder="Laissez vide pour vous rétracter de la commande entière">
+          </label>
+
+          <label class="doc__form-large">
+            Précisions (facultatif)
+            <textarea name="message" rows="3"
+                      placeholder="Vous n'avez pas à motiver votre décision. Ce champ est libre."></textarea>
+          </label>
+        </div>
+
+        <p class="doc__form-mention">
+          En envoyant ce formulaire, vous notifiez au Rotary Club du François
+          votre décision de vous rétracter du contrat de vente correspondant.
+          Les données saisies servent uniquement à traiter votre demande et à
+          la justifier en comptabilité. Voir la
+          <a href="confidentialite.html">politique de confidentialité</a>.
+        </p>
+
+        <button type="submit" class="btn btn--primary">Envoyer ma rétractation</button>
+        <p class="doc__form-retour" role="status" aria-live="polite"></p>
+      </form>
+
+      <h2>Ce qui se passe ensuite</h2>
+      <ol class="doc__points doc__points--numerote">
+        <li>Vous recevez immédiatement à l'écran un numéro d'accusé de
+        réception. Notez-le : il prouve la date de votre demande.</li>
+        <li>Le Trésorier du club vous contacte pour organiser le renvoi de
+        l'article, si vous l'avez déjà reçu.</li>
+        <li>Le club vous rembourse l'intégralité des sommes versées, frais de
+        livraison standard compris, au plus tard quatorze jours après avoir
+        reçu l'article ou la preuve de son expédition.</li>
+      </ol>
+      <p>Les frais de renvoi restent à votre charge.</p>
+
+      <h2>Si le formulaire ne fonctionne pas</h2>
+      <p>Votre droit ne dépend pas de ce site. Une lettre, un courriel, un mot
+      remis en main propre suffisent, dès lors que votre volonté de vous
+      rétracter est sans ambiguïté. Écrivez à
+      <a data-mention-lien="email_contact" href="mailto:rotaryclubdufrancois@gmail.com"><span data-mention="email_contact">rotaryclubdufrancois@gmail.com</span></a>
+      ou à <span data-mention="adresse_siege">Centre International de Séjour — Étang Zabricot, 97200 Fort-de-France</span>.
+      Un formulaire type figure au paragraphe 12 des
+      <a href="cgv.html">conditions générales de vente</a>.</p>
+
+      <p class="doc__renvoi">Voir aussi :
+      <a href="cgv.html">Conditions générales de vente</a> ·
+      <a href="boutique.html">Boutique du club</a></p>
+
+      <p class="doc__maj">Dernière mise à jour : <span data-mention="mis_a_jour_le">5 août 2026</span>.</p>
+    </article>
+  </div>
+</section>
+
+
+<section class="lettre" data-lettre>
+  <div class="container">
+    <div class="lettre__grille">
+      <div>
+        <h2 data-block="lettre:title" data-i18n="lettre.titre">La lettre du club</h2>
+        <p data-block="lettre:body" data-i18n="lettre.texte">Chaque mois, les actions du club, le thème rotarien du moment et les rendez-vous à venir, directement dans votre boîte aux lettres. Un courriel par mois, pas davantage.</p>
+      </div>
+      <form data-lettre-formulaire novalidate>
+        <div class="lettre__champs">
+          <input type="text" name="nom" autocomplete="name" placeholder="Votre nom (facultatif)" aria-label="Votre nom">
+          <input type="email" name="email" autocomplete="email" required placeholder="Votre adresse e-mail" aria-label="Votre adresse e-mail">
+        </div>
+        <label class="lettre__accord">
+          <input type="checkbox" name="consentement" required>
+          <span>J'accepte de recevoir la lettre d'information du Rotary Club du François et j'ai pris connaissance des <a href="mentions-legales.html">mentions légales</a> et de la <a href="confidentialite.html">politique de confidentialité</a>.</span>
+        </label>
+        <button type="submit" class="lettre__bouton">Je m'inscris</button>
+        <div class="lettre__reponse" data-lettre-reponse hidden></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h4 data-block="pied:title">Rotary Club du François</h4>
+      <p style="max-width:320px;font-size:0.9rem;" data-block="pied:body" data-multiline>Centre International de Séjour — Étang Zabricot<br>97200 Fort-de-France, Martinique<br>District 7030 — Zone 34</p>
+      <p style="max-width:320px;font-size:0.9rem;margin-top:10px;" data-block="pied:eyebrow">0696 88 28 29 — rotaryclubdufrancois@gmail.com</p>
+      <a href="https://www.facebook.com/rotaryclubdufrancois/" style="margin-top:14px;" data-block="pied:link1">Facebook</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer.navigation">Navigation</h4>
+      <a href="club.html" data-i18n="nav.club">Le Club</a>
+      <a href="interact.html" data-i18n="nav.interact">Interact La Yole</a>
+      <a href="membres.html" data-i18n="nav.membres">Nos Membres</a>
+      <a href="district.html" data-i18n="nav.district">District 7030</a>
+      <a href="actions.html" data-i18n="nav.actions">Nos Actions</a>
+      <a href="boutique.html" data-i18n="nav.boutique">Boutique</a>
+      <a href="agenda.html" data-i18n="nav.agenda">Agenda</a>
+      <a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+      <a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer.informations">Informations</h4>
+      <a href="le-rotary.html" data-i18n="nav.le_rotary">Le Rotary</a>
+      <a href="mentions-legales.html" data-i18n="footer.mentions">Mentions légales</a>
+      <a href="confidentialite.html" data-i18n="footer.confidentialite">Confidentialité</a>
+      <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
+      <a href="cgv.html" data-i18n="footer.cgv">Conditions de vente</a>
+      <a href="cgu.html" data-i18n="footer.cgu">Conditions d'utilisation</a>
+      <a href="retractation.html" data-i18n="footer.retractation">Se rétracter</a>
+      <a href="accessibilite.html" data-i18n="footer.accessibilite">Accessibilité</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer.espace_prive">Espace privé</h4>
+      <a href="adherer.html" data-i18n="footer.adherer">Devenir membre</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a href="espace-membre.html" data-espace-membre>Espace membre</a>
+      <a href="espace-membre.html" data-administration data-i18n="nav.administration">Administration</a>
+    </div>
+  </div>
+  <div class="container bottom" data-i18n="footer.droits">© 2026 Rotary Club du François — Martinique. Tous droits réservés.</div>
+</footer>
+
+<script src="assets/js/config.js?v=20260809-2200"></script>
+<!-- EDITO en ligne. Sans séance d'édition ouverte, ce script s'arrête
+     à sa première ligne : aucune requête, aucun style, aucun coût pour
+     le visiteur. -->
+<script src="assets/js/edition.js?v=20260809-2200" defer></script>
+<script src="assets/js/i18n.js?v=20260809-2200" defer></script>
+<script src="assets/js/site-content.js?v=20260809-2200" defer></script>
+<script src="assets/js/nav.js?v=20260809-2200" defer></script>
+<script src="assets/js/newsletter.js?v=20260809-2200" defer></script>
+<script src="assets/js/mentions.js?v=20260809-2200" defer></script>
+<script src="assets/js/retractation.js?v=20260809-2200" defer></script>
+</body>
+</html>

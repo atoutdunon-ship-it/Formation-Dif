@@ -1,0 +1,81 @@
+/* ==========================================================================
+   Polices du site — servies depuis le site lui-même
+   --------------------------------------------------------------------------
+   POURQUOI CE FICHIER EXISTE
+
+   Le site chargeait auparavant ses polices depuis fonts.googleapis.com. Ce
+   simple chargement transmettait à Google l'adresse IP de chaque visiteur,
+   avant tout consentement et sans qu'il en soit informé. Plusieurs
+   juridictions européennes ont jugé cette pratique contraire au RGPD.
+
+   Les polices sont désormais déclarées ici et servies depuis le dossier
+   assets/fonts/ du site. Plus aucune donnée de visiteur ne quitte le site,
+   et l'affichage est plus rapide : une requête vers un domaine tiers de
+   moins, et pas de résolution DNS supplémentaire.
+
+   --------------------------------------------------------------------------
+   SI LE DOSSIER assets/fonts/ EST VIDE
+
+   Le site reste parfaitement lisible : les règles ci-dessous échouent
+   silencieusement et les polices de repli, présentes sur tous les
+   ordinateurs, prennent le relais — Georgia pour les titres, la police
+   d'interface du système pour le texte courant. Rien ne casse.
+
+   Pour retrouver l'aspect exact, voir assets/fonts/LISEZ-MOI.md.
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------
+   Open Sans — texte courant du site public
+   ------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;   /* le texte s'affiche tout de suite, sans page blanche */
+  src: url("../fonts/open-sans-300.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/open-sans-400.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/open-sans-600.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/open-sans-700.woff2") format("woff2");
+}
+
+/* -------------------------------------------------------------------------
+   Playfair Display — titres et mises en avant
+   ------------------------------------------------------------------------- */
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/playfair-display-500.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/playfair-display-600.woff2") format("woff2");
+}

@@ -1,0 +1,316 @@
+/* ==========================================================================
+   ASSO-CORE — Éditeur de texte enrichi
+   --------------------------------------------------------------------------
+   Barre d'outils entièrement textuelle : aucune icône, conformément à la
+   charte. Les commandes sont nommées en toutes lettres, les seules
+   abréviations étant les notations typographiques universelles G, I, S.
+   ========================================================================== */
+
+.editeur {
+  border: 1px solid var(--grey-line);
+  border-radius: 4px;
+  background: var(--white);
+  margin-bottom: 18px;
+  overflow: hidden;
+}
+
+.editeur:focus-within {
+  border-color: var(--navy);
+  box-shadow: 0 0 0 3px rgba(10, 26, 60, 0.08);
+}
+
+/* Le champ réellement soumis reste dans le formulaire, hors de vue. */
+.editeur__source {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* -------------------------------------------------------------------------
+   Barre d'outils
+   ------------------------------------------------------------------------- */
+
+.editeur__barre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 6px 18px;
+  padding: 10px 12px;
+  background: var(--off-white);
+  border-bottom: 1px solid var(--grey-line);
+}
+
+.editeur__groupe {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+/* Filet de séparation discret entre les groupes de commandes. */
+.editeur__groupe + .editeur__groupe {
+  padding-left: 18px;
+  border-left: 1px solid var(--grey-line);
+}
+
+.editeur__champ {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin: 0;
+}
+
+.editeur__etiquette {
+  font-size: 0.66rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--grey);
+  font-weight: 600;
+  line-height: 1;
+}
+
+.editeur__select {
+  height: 32px;
+  min-width: 118px;
+  padding: 0 26px 0 8px;
+  margin: 0;
+  font-size: 0.84rem;
+  font-family: inherit;
+  color: var(--navy-deep);
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.editeur__select:focus-visible,
+.editeur__bouton:focus-visible,
+.editeur__pastille:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 1px;
+}
+
+.editeur__bouton {
+  height: 32px;
+  min-width: 32px;
+  padding: 0 10px;
+  font-size: 0.84rem;
+  font-family: inherit;
+  color: var(--navy-deep);
+  background: var(--white);
+  border: 1px solid var(--grey-line);
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+
+.editeur__bouton:hover {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: var(--white);
+}
+
+.editeur__bouton:active {
+  transform: translateY(1px);
+}
+
+.editeur__bouton--gras { font-weight: 700; }
+.editeur__bouton--italique { font-style: italic; font-family: Georgia, serif; }
+.editeur__bouton--souligne { text-decoration: underline; }
+.editeur__bouton--barre { text-decoration: line-through; }
+
+/* -------------------------------------------------------------------------
+   Pastilles de couleur — la palette de la charte, rien d'autre
+   ------------------------------------------------------------------------- */
+
+.editeur__pastilles {
+  display: flex;
+  gap: 4px;
+  height: 32px;
+  align-items: center;
+}
+
+.editeur__pastille {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 1px solid rgba(10, 10, 10, 0.22);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.12s ease;
+}
+
+.editeur__pastille:hover {
+  transform: scale(1.22);
+}
+
+/* -------------------------------------------------------------------------
+   Panneau d'insertion de lien
+   ------------------------------------------------------------------------- */
+
+.editeur__lien {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+  padding: 10px 12px;
+  background: var(--white);
+  border-bottom: 1px solid var(--grey-line);
+}
+
+.editeur__lien-champ {
+  flex: 1 1 260px;
+  height: 34px;
+  margin: 0;
+  padding: 0 10px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  border: 1px solid var(--grey-line);
+  border-radius: 3px;
+}
+
+.editeur__lien-btn {
+  height: 34px;
+  padding: 0 14px;
+  font-size: 0.84rem;
+  white-space: nowrap;
+}
+
+/* -------------------------------------------------------------------------
+   Zone de rédaction — rendu identique au site public
+   -------------------------------------------------------------------------
+   Les variables de couleur et de police sont redéfinies ici avec les valeurs
+   de la vitrine : ce que le rédacteur voit est exactement ce que le visiteur
+   verra, et non les teintes de l'espace membre.
+   ------------------------------------------------------------------------- */
+
+.editeur__zone {
+  --navy: #0c3c7c;
+  --navy-deep: #082a58;
+  --azure: #019fcb;
+  --gold: #f7a81b;
+  --black: #0a0a0a;
+  --grey: #58585a;
+  --white: #ffffff;
+  --font-body: "Open Sans", "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Playfair Display", Georgia, "Times New Roman", serif;
+  --grey-line: #e2e4e9;
+
+  /* La hauteur minimale est posée en ligne par editeur.js, d'après
+     l'attribut `rows` du champ d'origine. */
+  max-height: 60vh;
+  overflow-y: auto;
+  padding: 16px 18px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: var(--grey);
+  outline: none;
+}
+
+/* Invite affichée tant que rien n'est saisi. */
+.editeur__zone:not([data-rempli])::before {
+  content: attr(data-vide);
+  display: block;
+  color: #9aa1ad;
+  pointer-events: none;
+  height: 0;
+}
+
+.editeur__zone > *:first-child { margin-top: 0; }
+.editeur__zone > *:last-child { margin-bottom: 0; }
+
+.editeur__zone p { margin: 0 0 0.9em; }
+
+.editeur__zone h2,
+.editeur__zone h3,
+.editeur__zone h4 {
+  font-family: var(--font-display);
+  color: var(--navy-deep);
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 1.4em 0 0.5em;
+}
+
+.editeur__zone h2 { font-size: 1.45rem; }
+.editeur__zone h3 { font-size: 1.2rem; }
+.editeur__zone h4 { font-size: 1.03rem; }
+
+.editeur__zone ul,
+.editeur__zone ol { margin: 0 0 0.9em; padding-left: 1.4em; }
+.editeur__zone li { margin-bottom: 0.3em; }
+
+.editeur__zone blockquote {
+  margin: 1.2em 0;
+  padding: 4px 0 4px 18px;
+  border-left: 3px solid var(--azure);
+  font-style: italic;
+  color: var(--navy-deep);
+}
+
+.editeur__zone hr {
+  border: 0;
+  border-top: 1px solid #dfe3ea;
+  margin: 1.6em 0;
+}
+
+.editeur__zone a { color: var(--azure); }
+
+/* Un texte blanc sur fond blanc serait invisible pendant la saisie : on le
+   signale sans en modifier la valeur enregistrée. */
+.editeur__zone [style*="var(--white)"] {
+  background: var(--navy-deep);
+  padding: 0 2px;
+}
+
+/* -------------------------------------------------------------------------
+   Écrans étroits
+   ------------------------------------------------------------------------- */
+
+@media (max-width: 720px) {
+  .editeur__barre {
+    gap: 8px 10px;
+    padding: 8px;
+  }
+
+  .editeur__groupe + .editeur__groupe {
+    padding-left: 10px;
+  }
+
+  .editeur__select {
+    min-width: 0;
+    flex: 1 1 108px;
+  }
+
+  .editeur__bouton {
+    /* Cible tactile conforme aux recommandations d'accessibilité. */
+    min-height: 40px;
+    min-width: 40px;
+  }
+
+  .editeur__pastilles { height: 40px; }
+
+  .editeur__pastille {
+    width: 26px;
+    height: 26px;
+  }
+
+  .editeur__zone {
+    /* 16 px empêche le zoom automatique de Safari sur iPhone. */
+    font-size: 1rem;
+    padding: 14px;
+  }
+}
+
+/* Impression : la barre d'outils n'a pas lieu d'être. */
+@media print {
+  .editeur__barre,
+  .editeur__lien { display: none; }
+  .editeur { border: 0; }
+}

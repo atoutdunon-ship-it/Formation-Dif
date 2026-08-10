@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Interact La Yole — Rotary Club du François</title>
+<meta name="description" content="Le club Interact « La Yole », charté le 14 février 2023, réunit les jeunes de 12 à 18 ans du François autour d'actions de service. Parrainé par le Rotary Club du François.">
+<link rel="stylesheet" href="assets/css/polices.css?v=20260809-2200">
+<link rel="stylesheet" href="assets/css/style.css?v=20260809-2200">
+</head>
+<body data-page="interact">
+
+<header class="site-header">
+  <div class="site-header__top">
+    <a href="index.html" class="brand"><img src="assets/img/logo-header.png" alt="Rotary Club du François"></a>
+    <div class="site-header__actions">
+      <a href="espace-membre.html" data-espace-membre class="btn btn--ghost" data-i18n="nav.espace_membre">Espace membre</a>
+      <a href="espace-membre.html" data-administration class="btn btn--ghost" data-i18n="nav.administration">Administration</a>
+      <button type="button" class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="site-nav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <div class="site-header__nav">
+    <nav class="nav" id="site-nav">
+      <a href="index.html" data-i18n="nav.accueil">Accueil</a>
+      <a href="club.html" data-i18n="nav.club">Le Club</a>
+      <a href="le-rotary.html" data-i18n="nav.le_rotary">Le Rotary</a>
+      <a href="interact.html" class="active" data-i18n="nav.interact">Interact La Yole</a>
+      <a href="membres.html" data-i18n="nav.membres">Nos Membres</a>
+      <a href="district.html" data-i18n="nav.district">District 7030</a>
+      <a href="actions.html" data-i18n="nav.actions">Nos Actions</a>
+      <a href="boutique.html" data-i18n="nav.boutique">Boutique</a>
+      <a href="agenda.html" data-i18n="nav.agenda">Agenda</a>
+      <a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+      <a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<!-- Bandeau d'ouverture : le logo du club Interact tient lieu d'illustration
+     tant que le club ne dispose pas de photos de ses propres membres avec
+     l'autorisation parentale de publication. -->
+<section class="interact-une">
+  <div class="container interact-une__grille">
+    <img class="interact-une__logo" src="assets/img/interact-la-yole.png"
+         alt="Club Interact La Yole" onerror="this.style.display='none'">
+    <div>
+      <div class="interact-une__sur" data-block="interact_hero:eyebrow">Club Interact</div>
+      <h1 class="interact-une__titre" data-block="interact_hero:title">La Yole</h1>
+      <p class="interact-une__chapo" data-block="interact_hero:body">Des jeunes du François, de douze à dix-huit ans, qui choisissent eux-mêmes leurs actions et les mènent jusqu'au bout. Charté le 14 février 2023, sous le parrainage du Rotary Club du François.</p>
+      <div class="hero__actions">
+        <a href="#rejoindre" class="btn btn--primary">Rejoindre le club</a>
+        <a href="#actions" class="btn btn--ghost">Ce que nous faisons</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div style="background:var(--navy-deep);">
+  <div class="container">
+    <div class="stat-row">
+      <div><div class="number" style="color:#fff;" data-block="interact_stat_1:title">2023</div><div class="label" data-block="interact_stat_1:body">Charté le 14 février</div></div>
+      <div><div class="number" style="color:#fff;" data-block="interact_stat_2:title">12–18</div><div class="label" data-block="interact_stat_2:body">L'âge des membres</div></div>
+      <div><div class="number" style="color:#fff;" data-block="interact_stat_3:title">1962</div><div class="label" data-block="interact_stat_3:body">Naissance d'Interact</div></div>
+      <div><div class="number" style="color:#fff;" data-block="interact_stat_4:title">7030</div><div class="label" data-block="interact_stat_4:body">District Rotary</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== Qu'est-ce qu'Interact ? ===================== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__eyebrow" data-block="interact_quoi:eyebrow">Comprendre</div>
+      <h2 data-block="interact_quoi:title">Qu'est-ce qu'un club Interact ?</h2>
+    </div>
+
+    <div class="doc-texte">
+      <p data-block="interact_quoi:body">Interact est le programme du Rotary International destiné aux jeunes de douze à dix-huit ans. Un club Interact n'est pas une section de jeunes rattachée à un club d'adultes : c'est un <strong>club à part entière</strong>, qui élit son bureau, choisit ses projets, gère son budget et rend compte de son action.</p>
+
+      <p>Le Rotary club parrain — ici le Rotary Club du François — met à disposition son expérience, son réseau et un accompagnement. Il ne décide pas à la place des jeunes. Cette distinction fait toute la valeur formatrice de l'engagement : on n'apprend pas à conduire un projet en exécutant celui d'un autre.</p>
+
+      <p>Chaque club Interact s'engage à mener au moins deux actions par an : l'une au service de sa communauté proche, l'autre tournée vers l'international. Cette double exigence est constitutive du programme depuis son origine.</p>
+    </div>
+
+    <div class="grid grid--3" style="margin-top:40px;">
+      <div class="card">
+        <div class="card__meta">Autonomie</div>
+        <h3>Ils décident</h3>
+        <p>Le bureau est élu par les membres. Les projets sont choisis, budgétés et conduits par eux. Le club parrain conseille et garantit, il n'arbitre pas.</p>
+      </div>
+      <div class="card">
+        <div class="card__meta">Service</div>
+        <h3>Ils agissent</h3>
+        <p>Deux actions au minimum chaque année : une pour la commune, une tournée vers l'international. Des actions réelles, avec des bénéficiaires réels.</p>
+      </div>
+      <div class="card">
+        <div class="card__meta">Réseau</div>
+        <h3>Ils s'ouvrent</h3>
+        <p>Interact existe dans près de 160 pays. Un jeune du François peut correspondre et monter un projet avec un club de la Caraïbe, d'Europe ou d'Afrique.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Histoire ===================== -->
+<section style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__eyebrow" data-block="interact_histoire:eyebrow">Notre histoire</div>
+      <h2 data-block="interact_histoire:title">D'un lycée de Floride à la baie du François</h2>
+    </div>
+
+    <div class="doc-texte">
+      <p data-block="interact_histoire:body">Le premier club Interact voit le jour le <strong>5 novembre 1962</strong>, au lycée de Melbourne, en Floride. Le Rotary International cherchait alors une formule permettant aux adolescents de servir leur communauté sans être encadrés comme des enfants. Le nom lui-même dit le projet : <em>Inter</em> pour international, <em>act</em> pour action.</p>
+
+      <p>Soixante ans plus tard, le programme rassemble des milliers de clubs répartis sur presque tous les continents. Il reste l'un des rares cadres où des mineurs disposent d'un budget, d'une gouvernance élue et d'une responsabilité pleine sur leurs projets.</p>
+
+      <h3>La Yole, 14 février 2023</h3>
+      <p>Le club Interact « La Yole » a été <strong>charté le 14 février 2023</strong>, sous la présidence d'<strong>Astrid BAPTE</strong>, membre et présidente fondatrice. Il est placé sous le parrainage du Rotary Club du François.</p>
+
+      <p>Le nom n'a pas été choisi au hasard. La yole ronde est l'embarcation traditionnelle de la Martinique : sans quille, elle ne tient debout que par l'équilibre de son équipage, arc-bouté sur les bois dressés. Elle ne va vite que si chacun tient sa place et compte sur les autres. Le fanion du club en porte l'image, sous le vol d'une frégate, au-dessus des fonds blancs.</p>
+
+      <div class="doc-encadre">
+        <strong>Charte du 14 février 2023</strong> — Astrid BAPTE, présidente fondatrice. Le club Interact « La Yole » est le premier club Interact parrainé par le Rotary Club du François depuis sa fondation en 1983.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Ce que cela apporte ===================== -->
+<section>
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__eyebrow" data-block="interact_avantages:eyebrow">Pour un jeune</div>
+      <h2 data-block="interact_avantages:title">Ce que l'on y gagne</h2>
+      <p data-block="interact_avantages:body">Sans détour : un club Interact demande du temps et de la constance. Voici ce qu'il rend en échange.</p>
+    </div>
+
+    <div class="grid grid--3">
+      <div class="card">
+        <div class="card__meta">Compétence</div>
+        <h3>Conduire un projet</h3>
+        <p>Définir un objectif, établir un budget, répartir les rôles, tenir un calendrier, rendre compte. Des savoir-faire qui ne s'apprennent pas en classe, et qui se voient sur un dossier d'orientation.</p>
+      </div>
+      <div class="card">
+        <div class="card__meta">Prise de parole</div>
+        <h3>S'exprimer en public</h3>
+        <p>Présenter son projet devant le club parrain, défendre un budget, animer une réunion. La confiance vient de la pratique, pas des conseils.</p>
+      </div>
+      <div class="card">
+        <div class="card__meta">Ouverture</div>
+        <h3>Rencontrer ailleurs</h3>
+        <p>Correspondre avec des clubs Interact d'autres pays, participer aux rencontres du District 7030, découvrir que les mêmes questions se posent partout.</p>
+      </div>
+      <div class="card">
+        <div class="card__meta">Reconnaissance</div>
+        <h3>Une attestation officielle</h3>
+        <p>Le club délivre une attestation de membre Interact et des attestations de participation, signées du Président du Rotary Club du François. Elles valent pour un dossier d'orientation ou une candidature.</p>
+      </div>
+      <div class="card">
+        <div class="card__meta">Suite</div>
+        <h3>Un chemin qui continue</h3>
+        <p>À dix-huit ans, un Interactien peut rejoindre un club Rotaract, puis le Rotary. Beaucoup de Rotariens ont commencé là.</p>
+      </div>
+      <div class="card">
+        <div class="card__meta">Utilité</div>
+        <h3>Servir pour de vrai</h3>
+        <p>Les actions ne sont pas des exercices. Les paniers distribués sont mangés, les fournitures scolaires servent, les bénéficiaires existent.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Nos actions ===================== -->
+<section id="actions" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__eyebrow" data-block="interact_actions:eyebrow">Sur le terrain</div>
+      <h2 data-block="interact_actions:title">Les actions du club</h2>
+      <p data-block="interact_actions:body">Les actions menées par « La Yole », seule ou avec le club parrain.</p>
+    </div>
+    <div class="grid grid--3" data-dynamic="interact-actions">
+      <div class="card">
+        <div class="card__meta">À venir</div>
+        <h3>Les actions seront publiées ici</h3>
+        <p>Le responsable de la commission Jeune Génération publie les actions du club depuis l'espace membre, avec les photos des Interactiens dont la famille a autorisé la publication.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== Le calendrier ===================== -->
+<section id="calendrier">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__eyebrow" data-block="interact_agenda:eyebrow">Rendez-vous</div>
+      <h2 data-block="interact_agenda:title">Le calendrier du club</h2>
+      <p data-block="interact_agenda:body">Réunions, actions et rencontres à venir. Ce calendrier est ouvert à tous : membres du Rotary, Interactiens, familles et visiteurs.</p>
+    </div>
+    <div class="table-scroll">
+      <table data-dynamic="agenda">
+        <thead><tr><th>Date</th><th>Rendez-vous</th><th>Lieu</th><th>Pour qui</th></tr></thead>
+        <tbody>
+          <tr><td colspan="4" class="note">Le calendrier se remplit depuis l'espace membre du club.</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:18px;">
+      <a class="btn" href="agenda.html">Voir l'agenda complet du club</a>
+    </p>
+  </div>
+</section>
+
+<!-- ===================== Rejoindre ===================== -->
+<section id="rejoindre" style="background:var(--off-white);">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-head__eyebrow" data-block="interact_rejoindre:eyebrow">Nous rejoindre</div>
+      <h2 data-block="interact_rejoindre:title">Devenir Interactien</h2>
+      <p data-block="interact_rejoindre:body">Le club est ouvert aux jeunes de douze à dix-huit ans, scolarisés au François ou aux alentours. Aucune condition de résultats scolaires, aucune cotisation dissuasive : il faut de l'envie et de la régularité.</p>
+    </div>
+
+    <div class="doc-encadre" style="max-width:760px;margin:0 auto 30px;">
+      <strong>Comment cela se passe.</strong> Vous remplissez le formulaire ci-dessous. Votre demande est examinée par le Secrétaire, le Président ou l'Administrateur du Rotary Club du François. Une fois validée, vous recevez vos identifiants et accédez à l'espace Interactien : manuel de formation, calendrier, documents, actions du club. Si vous êtes mineur, une autorisation parentale signée vous sera demandée avant toute activité.
+    </div>
+
+    <div class="lettre" style="background:var(--navy);border-radius:0;">
+      <div class="container">
+        <div class="lettre__grille">
+          <div>
+            <h2 style="color:#fff;">Demander à rejoindre le club</h2>
+            <p>Vos coordonnées ne servent qu'à traiter votre demande. Elles ne sont ni cédées ni utilisées à d'autres fins.</p>
+          </div>
+          <form data-interact-formulaire novalidate>
+            <div class="lettre__champs">
+              <input type="text" name="prenom" required placeholder="Prénom" aria-label="Prénom">
+              <input type="text" name="nom" required placeholder="Nom" aria-label="Nom">
+              <input type="date" name="date_naissance" aria-label="Date de naissance">
+              <input type="text" name="etablissement" placeholder="Établissement scolaire" aria-label="Établissement">
+              <input type="email" name="email" required placeholder="Votre adresse e-mail" aria-label="Adresse e-mail">
+              <input type="text" name="telephone" placeholder="Téléphone" aria-label="Téléphone">
+              <input type="text" name="responsable_nom" placeholder="Nom du responsable légal" aria-label="Responsable légal">
+              <input type="email" name="responsable_email" placeholder="Courriel du responsable légal" aria-label="Courriel du responsable légal">
+            </div>
+            <textarea name="motivation" rows="3" placeholder="En quelques mots, pourquoi souhaitez-vous nous rejoindre ?" aria-label="Motivation"
+                      style="width:100%;margin-top:12px;padding:14px 16px;border:1px solid rgba(255,255,255,.34);background:rgba(255,255,255,.06);color:#fff;font:inherit;font-size:.96rem;"></textarea>
+            <label class="lettre__accord">
+              <input type="checkbox" name="consentement" required>
+              <span>J'accepte que ces informations soient transmises au Rotary Club du François pour l'examen de ma demande, et j'ai pris connaissance de la <a href="confidentialite.html">politique de confidentialité</a>. Si je suis mineur, mon responsable légal en est informé.</span>
+            </label>
+            <button type="submit" class="lettre__bouton">Envoyer ma demande</button>
+            <div class="lettre__reponse" data-interact-reponse hidden></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="lettre" data-lettre>
+  <div class="container">
+    <div class="lettre__grille">
+      <div>
+        <h2 data-block="lettre:title" data-i18n="lettre.titre">La lettre du club</h2>
+        <p data-block="lettre:body" data-i18n="lettre.texte">Chaque mois, les actions du club, le thème rotarien du moment et les rendez-vous à venir, directement dans votre boîte aux lettres. Un courriel par mois, pas davantage.</p>
+      </div>
+      <form data-lettre-formulaire novalidate>
+        <div class="lettre__champs">
+          <input type="text" name="nom" autocomplete="name" placeholder="Votre nom (facultatif)" aria-label="Votre nom">
+          <input type="email" name="email" autocomplete="email" required placeholder="Votre adresse e-mail" aria-label="Votre adresse e-mail">
+        </div>
+        <label class="lettre__accord">
+          <input type="checkbox" name="consentement" required>
+          <span>J'accepte de recevoir la lettre d'information du Rotary Club du François et j'ai pris connaissance des <a href="mentions-legales.html">mentions légales</a> et de la <a href="confidentialite.html">politique de confidentialité</a>.</span>
+        </label>
+        <button type="submit" class="lettre__bouton">Je m'inscris</button>
+        <div class="lettre__reponse" data-lettre-reponse hidden></div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div>
+      <h4 data-block="pied:title">Rotary Club du François</h4>
+      <p style="max-width:320px;font-size:0.9rem;" data-block="pied:body" data-multiline>Centre International de Séjour — Étang Zabricot<br>97200 Fort-de-France, Martinique<br>District 7030 — Zone 34</p>
+      <p style="max-width:320px;font-size:0.9rem;margin-top:10px;" data-block="pied:eyebrow">0696 88 28 29 — rotaryclubdufrancois@gmail.com</p>
+      <a href="https://www.facebook.com/rotaryclubdufrancois/" style="margin-top:14px;" data-block="pied:link1">Facebook</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer.navigation">Navigation</h4>
+      <a href="club.html" data-i18n="nav.club">Le Club</a>
+      <a href="interact.html" data-i18n="nav.interact">Interact La Yole</a>
+      <a href="membres.html" data-i18n="nav.membres">Nos Membres</a>
+      <a href="district.html" data-i18n="nav.district">District 7030</a>
+      <a href="actions.html" data-i18n="nav.actions">Nos Actions</a>
+      <a href="agenda.html" data-i18n="nav.agenda">Agenda</a>
+      <a href="actualites.html" data-i18n="nav.actualites">Actualités</a>
+      <a href="galerie.html" data-i18n="nav.galerie">Galerie</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer.informations">Informations</h4>
+      <a href="le-rotary.html" data-i18n="nav.le_rotary">Le Rotary</a>
+      <a href="mentions-legales.html" data-i18n="footer.mentions">Mentions légales</a>
+      <a href="confidentialite.html" data-i18n="footer.confidentialite">Confidentialité</a>
+      <a href="cookies.html" data-i18n="footer.cookies">Cookies</a>
+      <a href="cgv.html" data-i18n="footer.cgv">Conditions de vente</a>
+      <a href="cgu.html" data-i18n="footer.cgu">Conditions d'utilisation</a>
+      <a href="retractation.html" data-i18n="footer.retractation">Se rétracter</a>
+      <a href="accessibilite.html" data-i18n="footer.accessibilite">Accessibilité</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer.espace_prive">Espace privé</h4>
+      <a href="adherer.html" data-i18n="footer.adherer">Devenir membre</a>
+      <a href="contact.html" data-i18n="nav.contact">Contact</a>
+      <a href="espace-membre.html" data-espace-membre>Espace membre</a>
+      <a href="espace-membre.html" data-administration data-i18n="nav.administration">Administration</a>
+    </div>
+  </div>
+  <div class="container bottom" data-i18n="footer.droits">© 2026 Rotary Club du François — Martinique. Tous droits réservés.</div>
+</footer>
+
+<script src="assets/js/config.js?v=20260809-2200"></script>
+<script src="assets/js/edition.js?v=20260809-2200" defer></script>
+<script src="assets/js/i18n.js?v=20260809-2200" defer></script>
+<script src="assets/js/site-content.js?v=20260809-2200" defer></script>
+<script src="assets/js/nav.js?v=20260809-2200" defer></script>
+<script src="assets/js/newsletter.js?v=20260809-2200" defer></script>
+<script src="assets/js/interact.js?v=20260809-2200" defer></script>
+<script src="assets/js/mentions.js?v=20260809-2200" defer></script>
+<script src="assets/js/chat-widget.js?v=20260809-2200" defer></script>
+</body>
+</html>
