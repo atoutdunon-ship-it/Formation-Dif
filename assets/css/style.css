@@ -2766,3 +2766,139 @@ img, video, iframe { max-width: 100%; }
   line-height: 1.68;
   font-size: 0.96rem;
 }
+
+/* ==========================================================================
+   Page d'un événement
+   ========================================================================== */
+
+.evenement {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+@media (min-width: 900px) {
+  .evenement { grid-template-columns: 1fr 340px; gap: 40px; }
+}
+
+.evenement--absent .evenement__cote { display: none; }
+
+.evenement__erreur {
+  background: #FDF0EF;
+  border-left: 4px solid #B3261E;
+  color: #14213D;
+  padding: 14px 18px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 22px;
+}
+
+.evenement__infos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 18px;
+  padding: 20px 22px;
+  background: var(--off-white);
+  border-radius: 10px;
+  margin-bottom: 26px;
+}
+
+.evenement__infos dt {
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 4px;
+}
+
+.evenement__infos dd { margin: 0; font-weight: 600; color: var(--navy-deep); }
+
+.evenement__carte {
+  border: 1px solid var(--grey-line);
+  border-radius: 10px;
+  padding: 20px 22px;
+  margin-bottom: 18px;
+  background: #fff;
+  --contraste: var(--navy);
+  --contraste-inverse: var(--white);
+}
+
+.evenement__carte h2 { font-size: 1.05rem; margin: 0 0 8px; color: var(--navy-deep); }
+.evenement__carte p { font-size: 0.86rem; color: var(--grey); line-height: 1.55; margin: 0 0 14px; }
+
+.evenement__carte--inscription { border-color: var(--navy); border-width: 2px; }
+
+.evenement__jauge { font-weight: 700; color: var(--navy) !important; }
+
+.evenement__partage { display: flex; gap: 8px; }
+
+.evenement__partage input {
+  flex: 1;
+  min-width: 0;
+  font-size: 0.8rem;
+  padding: 9px 11px;
+  border: 1px solid var(--grey-line);
+  border-radius: 6px;
+  color: var(--navy-deep);
+  background: var(--off-white);
+}
+
+.evenement__copie { margin-top: 10px; font-size: 0.8rem; color: #15803D; font-weight: 600; }
+
+.evenement__carte form label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--navy-deep);
+  margin-bottom: 12px;
+}
+
+.evenement__carte form input,
+.evenement__carte form textarea {
+  display: block;
+  width: 100%;
+  margin-top: 5px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 10px 12px;
+  border: 1px solid var(--grey-line);
+  border-radius: 6px;
+  color: var(--navy-deep);
+  background: #fff;
+}
+
+.evenement__accord {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+  font-weight: 400 !important;
+  font-size: 0.76rem !important;
+  color: var(--grey) !important;
+  line-height: 1.5;
+}
+
+.evenement__accord input { width: auto !important; margin-top: 2px; }
+.evenement__accord a { color: var(--azure-fonce); text-decoration: underline; }
+
+.evenement__reponse {
+  margin-top: 12px;
+  padding: 11px 14px;
+  border-radius: 6px;
+  font-size: 0.84rem;
+  background: #EAF5EE;
+  color: #14532D;               /* 9,6:1 */
+  border-left: 4px solid #15803D;
+}
+
+.evenement__reponse--erreur {
+  background: #FDF0EF;
+  color: #7F1D1D;               /* 8,9:1 */
+  border-left-color: #B3261E;
+}
+
+/* 16 px minimum : en deçà, iOS agrandit la page à la mise au point du champ. */
+@media (max-width: 700px) {
+  .evenement__carte form input,
+  .evenement__carte form textarea,
+  .evenement__partage input { font-size: 16px; }
+}

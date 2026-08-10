@@ -1,0 +1,285 @@
+/* ==========================================================================
+   Calendrier du club — semaine, mois, année
+   --------------------------------------------------------------------------
+   Feuille partagée par le site public et l'espace membre : une seule
+   apparence à tenir, un seul comportement à apprendre.
+
+   La couleur ne décore rien. Elle dit le type du rendez-vous, et c'est tout
+   ce qu'elle dit. Quatre teintes, toutes vérifiées avec du texte blanc :
+   navy 10,75:1, prune 8,85:1, vert 5,02:1, ardoise 7,58:1. Le seuil est de
+   4,5:1 — voir `python3 verifier_contrastes.py`.
+
+   Le type est également écrit dans la légende et dans l'intitulé de chaque
+   événement : un daltonien ne distingue pas le vert du prune, et un
+   calendrier qui repose sur la seule couleur lui devient illisible.
+   ========================================================================== */
+
+.calendrier {
+  --cal-filet: #DDE2EC;
+  --cal-fond: #FFFFFF;
+  --cal-fond-hors: #F7F8FB;
+  --cal-encre: #14213D;
+  --cal-gris: #58606F;
+  --cal-jour: #EEF3FA;
+
+  --cal-reunion: #0C3C7C;
+  --cal-ceremonie: #7A2E5C;
+  --cal-action: #15803D;
+  --cal-autre: #475569;
+  --cal-prive: #5B6478;
+
+  color: var(--cal-encre);
+}
+
+/* ------------------------------------------------------------ barre haute */
+
+.cal-barre {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cal-barre__navigation { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+
+.cal-bouton,
+.cal-vue {
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 9px 15px;
+  min-height: 44px;              /* zone tactile confortable au doigt */
+  border: 1px solid var(--cal-filet);
+  background: #fff;
+  color: var(--cal-encre);       /* 14,3:1 sur blanc */
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.cal-bouton:hover,
+.cal-vue:hover { background: var(--cal-jour); }
+
+.cal-vue.is-active {
+  background: var(--cal-reunion);
+  color: #ffffff;                /* 10,75:1 */
+  border-color: var(--cal-reunion);
+}
+
+.cal-vues { display: flex; gap: 4px; }
+
+.cal-titre {
+  font-family: var(--font-display, Georgia, serif);
+  font-size: 1.2rem;
+  margin-left: 8px;
+  text-transform: capitalize;
+}
+
+.cal-attente { color: var(--cal-gris); padding: 40px 0; text-align: center; }
+
+/* -------------------------------------------------------------- vue mois */
+
+.cal-grille--mois {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 1px;
+  background: var(--cal-filet);
+  border: 1px solid var(--cal-filet);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cal-entete {
+  background: var(--cal-jour);
+  padding: 9px 6px;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--cal-reunion);     /* 8,4:1 sur #EEF3FA */
+  text-align: center;
+}
+
+.cal-entete__court { display: none; }
+
+.cal-case {
+  background: var(--cal-fond);
+  min-height: 104px;
+  padding: 6px;
+}
+
+.cal-case--hors { background: var(--cal-fond-hors); }
+.cal-case--hors .cal-case__numero { color: #9AA3B2; }
+
+.cal-case--aujourdhui { background: var(--cal-jour); }
+
+.cal-case__numero {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--cal-gris);
+  margin-bottom: 4px;
+}
+
+.cal-case--aujourdhui .cal-case__numero { color: var(--cal-reunion); }
+
+/* ----------------------------------------------------- pastille événement */
+
+.cal-evenement {
+  display: block;
+  background: var(--cal-autre);
+  color: #ffffff;
+  border-radius: 4px;
+  padding: 3px 6px;
+  margin-bottom: 3px;
+  font-size: 0.72rem;
+  line-height: 1.3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+a.cal-evenement:hover { filter: brightness(1.18); text-decoration: underline; }
+
+.cal-evenement--reunion { background: var(--cal-reunion); }
+.cal-evenement--ceremonie { background: var(--cal-ceremonie); }
+.cal-evenement--action { background: var(--cal-action); }
+.cal-evenement--autre { background: var(--cal-autre); }
+
+/* Un événement privé, visible du seul membre connecté. Le trait oblique le
+   distingue sans reposer sur la couleur : un daltonien le reconnaît aussi. */
+.cal-evenement--prive {
+  background: var(--cal-prive);
+  border-left: 3px solid #fff;
+}
+
+.cal-evenement--prive::before { content: "· privé · "; opacity: 1; font-weight: 700; }
+
+/* ----------------------------------------------------------- vue semaine */
+
+.cal-semaine {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1px;
+  background: var(--cal-filet);
+  border: 1px solid var(--cal-filet);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (min-width: 900px) {
+  .cal-semaine { grid-template-columns: repeat(7, 1fr); }
+}
+
+.cal-jour { background: var(--cal-fond); padding: 10px; min-height: 130px; }
+.cal-jour--aujourdhui { background: var(--cal-jour); }
+
+.cal-jour__entete {
+  font-size: 0.78rem;
+  color: var(--cal-gris);
+  padding-bottom: 8px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--cal-filet);
+}
+
+.cal-jour--aujourdhui .cal-jour__entete { color: var(--cal-reunion); }
+.cal-jour__entete strong { color: var(--cal-encre); }
+.cal-jour__vide { color: #9AA3B2; font-size: 0.8rem; }
+.cal-jour .cal-evenement { white-space: normal; }
+
+/* ------------------------------------------------------------ vue année */
+
+.cal-annee {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 16px;
+}
+
+.cal-mois {
+  border: 1px solid var(--cal-filet);
+  border-radius: 8px;
+  padding: 10px;
+  background: #fff;
+}
+
+.cal-mois__titre {
+  font-weight: 700;
+  font-size: 0.84rem;
+  text-transform: capitalize;
+  color: var(--cal-reunion);
+  margin-bottom: 8px;
+}
+
+.cal-mois__grille { display: grid; grid-template-columns: repeat(7, 1fr); gap: 2px; }
+
+.cal-mois__jour {
+  font-size: 0.6rem;
+  text-align: center;
+  color: var(--cal-gris);
+  font-weight: 700;
+  padding-bottom: 2px;
+}
+
+.cal-mois__case {
+  font-size: 0.68rem;
+  text-align: center;
+  padding: 4px 0;
+  border-radius: 3px;
+  color: var(--cal-encre);
+}
+
+.cal-mois__case--hors { color: #C3C9D4; }
+
+/* Une journée occupée est marquée par un aplat ET par un point : la couleur
+   seule ne suffirait pas à la distinguer sur un écran mal réglé. */
+.cal-mois__case--occupee {
+  background: var(--cal-reunion);
+  color: #ffffff;
+  font-weight: 700;
+}
+
+a.cal-mois__case--occupee:hover { filter: brightness(1.2); }
+
+.cal-mois__case--aujourdhui { outline: 2px solid var(--cal-ceremonie); outline-offset: -2px; }
+
+/* ------------------------------------------------------------- légende */
+
+.cal-legende {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 16px;
+  margin-top: 14px;
+  font-size: 0.76rem;
+  color: var(--cal-gris);
+}
+
+.cal-pastille {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 2px;
+  vertical-align: -1px;
+}
+
+.cal-pastille--reunion { background: var(--cal-reunion); }
+.cal-pastille--ceremonie { background: var(--cal-ceremonie); }
+.cal-pastille--action { background: var(--cal-action); }
+.cal-pastille--autre { background: var(--cal-autre); }
+
+/* --------------------------------------------------------------- mobile */
+
+@media (max-width: 700px) {
+  .cal-entete__long { display: none; }
+  .cal-entete__court { display: inline; }
+  .cal-case { min-height: 72px; padding: 4px; }
+  .cal-evenement { font-size: 0.64rem; padding: 2px 4px; }
+  .cal-titre { font-size: 1rem; margin-left: 0; width: 100%; }
+  .cal-annee { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); }
+}
+
+@media print {
+  .cal-barre, .cal-legende { display: none; }
+  .cal-case { min-height: 80px; }
+}
